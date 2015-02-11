@@ -1,0 +1,83 @@
+package umjdt.concepts;
+
+import umjdt.util.LockType;
+
+public class Lock {
+
+	private Transaction trasaction;
+	private Resource resource;
+	private boolean is_trylock;
+	private int lock_id;
+	private String lock_name;
+	private long timeout;
+	private LockType type;
+	
+	public Lock(){	
+	}
+	
+	public Lock(int _lock_id, String _lockName, Transaction _transaction){
+		setLock_id(_lock_id);
+		setLock_name(_lockName);
+		setTrasaction(_transaction);
+	}
+	
+	public Lock(int _lock_id, String _lockName, Resource _resouce, Transaction _transaction){
+		setLock_id(_lock_id);
+		setLock_name(_lockName);
+		setTrasaction(_transaction);
+		setResource(_resouce);
+	}
+	
+	public Lock(int _lock_id, String _lockName, Resource _resource,Transaction _transaction, long _timeout, LockType _type){
+		setLock_id(_lock_id);
+		setLock_name(_lockName);
+		setTrasaction(_transaction);
+		setTimeout(_timeout);
+		setType(_type);
+		setResource(_resource);
+	}
+	
+	public boolean isIs_trylock() {
+		return is_trylock;
+	}
+	public void setIs_trylock(boolean is_trylock) {
+		this.is_trylock = is_trylock;
+	}
+	public int getLock_id() {
+		return lock_id;
+	}
+	public void setLock_id(int lock_id) {
+		this.lock_id = lock_id;
+	}
+	public String getLock_name() {
+		return lock_name;
+	}
+	public void setLock_name(String lock_name) {
+		this.lock_name = lock_name;
+	}
+	public Transaction getTrasaction() {
+		return trasaction;
+	}
+	public void setTrasaction(Transaction trasaction) {
+		this.trasaction = trasaction;
+	}
+	public long getTimeout() {
+		return timeout;
+	}
+	public void setTimeout(long timeout) {
+		this.timeout = timeout;
+	}
+	public LockType getType() {
+		return type;
+	}
+	public void setType(LockType type) {
+		this.type = type;
+	}
+	public Resource getResource() {
+		return resource;
+	}
+
+	public void setResource(Resource resource) {
+		this.resource = resource;
+	}
+}
