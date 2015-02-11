@@ -1,39 +1,41 @@
 package umjdt.concepts;
 
+import java.lang.reflect.Method;
+
 import umjdt.util.AccessType;
 
 public class Operation implements Cloneable{
 
 	private String name = "";
+	private static int operationId=0;// keep unique id for all kinds operation in any thread
 	private AccessType type;
+	private Method method;
 	// return data 
 	private Object data = new Object();
-	//private TransactionEvent beforeEvent  = null;
-	//private TransactionEvent afterEvent  = null;
 	private Transaction transaction; 
 	private TransactionThread transactionThread; 
 		
 	public Operation(){
+		Operation.operationId= operationId+1;
+		setOperationId(operationId);
+	}
+	
+	public Operation(Method _method){
+		Operation.operationId= operationId+1;
+		setOperationId(operationId);
+		setMethod(_method);
+	}
+		
+	public Operation(String _name, AccessType _type)
+	{
+		Operation.operationId= operationId+1;
+		setOperationId(operationId);
+		this.setName(_name);
+		this.setType(_type);		
 	}
 	
 	public String getName(){
 		return this.name;
-	}
-	
-	public Operation(String _name, AccessType _type)
-	{
-		this.setId(_name);
-		this.setType(_type);		
-	}
-
-
-	public String getId()
-	{
-		return name;
-	}
-
-	public void setId(String _name) {
-		this.name = _name;
 	}
 
 	public AccessType getType() {
@@ -70,6 +72,22 @@ public class Operation implements Cloneable{
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public int getOperationId() {
+		return operationId;
+	}
+
+	public void setOperationId(int operationId) {
+		this.operationId = operationId;
+	}
+
+	public Method getMethod() {
+		return method;
+	}
+
+	public void setMethod(Method method) {
+		this.method = method;
 	}
 
 
