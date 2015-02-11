@@ -1,2 +1,4 @@
 1423643033463	Move compilation units
 1423644643263	Rename field 'method'
+1423673123136	Encapsulate field 'name'
+1423680902580	Encapsulate field 'type'

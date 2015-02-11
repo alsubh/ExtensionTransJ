@@ -1,0 +1,63 @@
+package umjdt.util;
+
+import java.io.Serializable;
+
+public class OperationType implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+	private AccessType type;
+
+	
+	public String AccessClassified.getAccessTypeOfMethod(String methodName)
+	{
+		Debugger.printMessage("AccessClassified",Debugger.OBJECT_ASPECT,this,"The aspect will start determining the access type of the method.",2);
+		
+		boolean annotationNotFound = false;
+		
+		String accessType = "";
+		
+		for (Method method : this.getClass().getMethods()) 
+		{
+			if((methodName.trim()).equalsIgnoreCase(method.getName()))
+			{        	 
+				if(method.isAnnotationPresent(ReadAccess.class))
+					accessType = AccessTypes.READ;
+
+				else if(method.isAnnotationPresent(WriteAccess.class))
+		        	accessType = AccessTypes.WRITE;
+
+				else if(method.isAnnotationPresent(UpdateAccess.class))
+		        	accessType = AccessTypes.UPDATE;
+		            
+				else
+					annotationNotFound = true;
+				
+				break;
+			}	 
+		}
+	   
+		// If there is no annotation, assume the worst case
+		if(annotationNotFound)
+			accessType = AccessTypes.WRITE;
+		
+		Debugger.printMessage("AccessClassified",Debugger.OBJECT_ASPECT,this,"The aspect returns the access type of the method.",1);
+		
+		return accessType;
+	}
+	
+	public OperationType()
+	{}
+	
+	public OperationType(AccessType _type)
+	{
+		this.type = _type;
+	}
+	public AccessType getType() {
+		return type;
+	}
+
+	public void setType(AccessType _type) {
+		this.type = _type;
+	}
+}
+

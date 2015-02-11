@@ -2,8 +2,6 @@ package umjdt.Events;
 
 import java.util.Timer;
 import java.util.TimerTask;
-
-import umjdt.Events.ReleaseLockEvent.LockTask;
 import umjdt.concepts.*;
 import umjdt.util.LockType;
 import umjdt.util.Timestamp;
