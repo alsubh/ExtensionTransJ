@@ -25,6 +25,12 @@ public class TransactionThread implements Runnable{
 		setThisThread(thread);
 	}
 	
+	public TransactionThread(String _name){
+		TransactionThread.threadId = threadId +1; 
+		setThreadId(threadId);
+		setThisThread(new Thread());
+		getThisThread().setName(_name);
+	}
 	public TransactionThread(Thread _thread, String _name){
 		TransactionThread.threadId = threadId +1; 
 		setThreadId(threadId);

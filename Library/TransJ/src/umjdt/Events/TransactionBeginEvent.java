@@ -20,11 +20,11 @@ public class TransactionBeginEvent extends TransactionEvent{
 		transactionThread = new TransactionThread();
 		_transaction.setTransactionThread(transactionThread);
 	}
-	public TransactionBeginEvent(String _name, Transaction _transaction)
+	public TransactionBeginEvent(String _threadName,Transaction _transaction)
 	{
 		iniilization(_transaction);
 		// add transaction to a new thread
-		transactionThread = new TransactionThread(_name);
+		transactionThread = new TransactionThread(_threadName);
 		_transaction.setTransactionThread(transactionThread);
 	}
 	private void iniilization(Transaction _transaction){

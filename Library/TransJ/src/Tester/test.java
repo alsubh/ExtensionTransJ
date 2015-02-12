@@ -1,5 +1,6 @@
-package umjdt.Events;
+package Tester;
 
+import umjdt.Events.IsBlockedEvent;
 import umjdt.util.Timestamp;
 
 public class test {
