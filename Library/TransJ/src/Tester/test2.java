@@ -1,7 +1,6 @@
 package Tester;
 
 import javax.transaction.NotSupportedException;
-
 import com.arjuna.ats.internal.arjuna.objectstore.CacheStore;
 import com.arjuna.ats.internal.jta.transaction.arjunacore.BaseTransaction;
 import com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionImple;

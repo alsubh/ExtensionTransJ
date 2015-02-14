@@ -3,6 +3,7 @@ package umjdt.concepts;
 import java.lang.reflect.Method;
 
 import umjdt.util.AccessType;
+import umjdt.util.LockType;
 
 public class Operation implements Cloneable{
 
@@ -10,10 +11,7 @@ public class Operation implements Cloneable{
 	private static int operationId=0;// keep unique id for all kinds operation in any thread
 	private AccessType type;
 	private Method method;
-	// return data 
-	private Object data = new Object();
-	private Transaction transaction; 
-	private TransactionThread transactionThread; 
+	private TransactionThread operationThread; // associate transaction with specific thread
 		
 	public Operation(){
 		Operation.operationId= operationId+1;
@@ -61,15 +59,6 @@ public class Operation implements Cloneable{
 	public void setTransaction(Transaction transaction) {
 		this.transaction = transaction;
 	}
-
-	public TransactionThread getTransactionThread() {
-		return transactionThread;
-	}
-
-	public void setTransactionThread(TransactionThread transactionThread) {
-		this.transactionThread = transactionThread;
-	}
-
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -88,6 +77,14 @@ public class Operation implements Cloneable{
 
 	public void setMethod(Method method) {
 		this.method = method;
+	}
+
+	public TransactionThread getOperationThread() {
+		return operationThread;
+	}
+
+	public void setOperationThread(TransactionThread operationThread) {
+		this.operationThread = operationThread;
 	}
 
 

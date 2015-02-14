@@ -2,6 +2,10 @@ package umjdt.concepts;
 
 import java.io.Serializable;
 import java.util.*;
+
+import org.apache.commons.collections4.MultiMap;
+import org.apache.commons.collections4.map.MultiValueMap;
+
 import umjdt.Events.Event;
 import umjdt.Events.TransactionEvent;
 
@@ -11,16 +15,20 @@ public class Transaction implements Serializable{//baseTransaciton
 	private TransId id;
 	private String currentState;
 	private int timeout;
+	
+	private TransactionThread transactionThread;// association Transaction with thread
+	private MultiMap<TransactionThread, ?> multiOperationMap = new MultiValueMap(); // add the operation threads of the transaction  
+	
 	private List<TransactionEvent> events = new ArrayList<TransactionEvent>();
+	private List<TransactionManager> listTMs = new ArrayList<>();
+	private List<ResourceManager> listRMs= new ArrayList<>();
 	private List<Operation> operations = new ArrayList<Operation>();
 	private List<Resource> resources = new ArrayList<Resource>();
+	
 	private TransactionManager transactionManager = new TransactionManager();
 	private ResourceManager resourceManager= new ResourceManager();
 	private TwoPhaseCommitProtocol twoPhaseCommitProtocol = new TwoPhaseCommitProtocol();
-	private TransactionThread transactionThread; 
-	private List<TransactionManager> listTMs = new ArrayList<>();
-	private List<ResourceManager> listRMs= new ArrayList<>();
-	
+	 	
 	public Transaction(TransId _id, String _currentState, int _timeout){	
 		super();
 		setId(_id);
@@ -168,5 +176,11 @@ public class Transaction implements Serializable{//baseTransaciton
 
 	public void setListRMs(List<ResourceManager> listRMs) {
 		this.listRMs = listRMs;
+	}
+	public MultiMap<TransactionThread, ?> getMultiOperationMap() {
+		return multiOperationMap;
+	}
+	public void setMultiOperationMap(MultiMap<TransactionThread, ?> multiOperationMap) {
+		this.multiOperationMap = multiOperationMap;
 	}
 }

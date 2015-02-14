@@ -10,11 +10,7 @@ import umjdt.util.Timestamp;
 
 public class TransactionThread implements Runnable{
 
-	private List<Event> events = new ArrayList<Event>();
-	// create multimap to store transaction's thread with its operation (values)
-	private MultiMap<TransactionThread, ?> multiEventMap = new MultiValueMap();
-	private MultiMap<TransactionThread, Operation> OperationMap = new MultiValueMap();
-	
+	private List<Event> events = new ArrayList<Event>();	
 	private Thread thisThread;
 	private String threadName;
 	private static int threadId=0;
@@ -31,6 +27,7 @@ public class TransactionThread implements Runnable{
 		setThisThread(new Thread());
 		getThisThread().setName(_name);
 	}
+	
 	public TransactionThread(Thread _thread, String _name){
 		TransactionThread.threadId = threadId +1; 
 		setThreadId(threadId);
@@ -51,9 +48,6 @@ public class TransactionThread implements Runnable{
 	
 	public void addEvent(TransactionEvent event){
 		events.add(event);
-	}
-	public void addMultiEvents(TransactionThread _transactionThread, OperationEvent _operationEvent){
-		multiEventMap.put(_transactionThread, _operationEvent);
 	}
 	public void removeEvent(TransactionEvent event){
 		events.remove(event);
@@ -81,18 +75,6 @@ public class TransactionThread implements Runnable{
 
 	public void setThreadName(String threadName) {
 		this.threadName = threadName;
-	}
-	public MultiMap<TransactionThread, ?> getMultiEventMap() {
-		return multiEventMap;
-	}
-	public void setMultiEventMap(MultiMap<TransactionThread, Operation> multiMap) {
-		this.multiEventMap = multiMap;
-	}
-	public MultiMap<TransactionThread, Operation> getOperationMap() {
-		return OperationMap;
-	}
-	public void setOperationMap(MultiMap<TransactionThread, Operation> operationMap) {
-		OperationMap = operationMap;
 	}
 	public static int getThreadId() {
 		return threadId;

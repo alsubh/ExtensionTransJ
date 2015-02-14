@@ -3,9 +3,6 @@ package umjdt.Events;
 import java.util.*;
 
 import javax.management.OperationsException;
-
-import com.arjuna.orbportability.logging.opLogger;
-
 import umjdt.concepts.*;
 
 public class TransactionEvent extends Event{
