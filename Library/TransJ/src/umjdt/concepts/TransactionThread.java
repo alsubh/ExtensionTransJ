@@ -6,43 +6,36 @@ import org.apache.commons.collections4.map.MultiValueMap;
 import umjdt.Events.Event;
 import umjdt.Events.OperationEvent;
 import umjdt.Events.TransactionEvent;
+import umjdt.util.RunnableThread;
 import umjdt.util.Timestamp;
 
-public class TransactionThread implements Runnable{
+public class TransactionThread extends RunnableThread{
 
-	private List<Event> events = new ArrayList<Event>();	
-	private Thread thisThread;
-	private String threadName;
-	private static int threadId=0;
+	private List<TransactionEvent> events = new ArrayList<TransactionEvent>();	
 	
 	public TransactionThread(){
-		Thread thread = new Thread();
-		TransactionThread.threadId = threadId +1;
-		setThisThread(thread);
+		getTimestamp();
 	}
 	
 	public TransactionThread(String _name){
-		TransactionThread.threadId = threadId +1; 
-		setThreadId(threadId);
-		setThisThread(new Thread());
 		getThisThread().setName(_name);
+		getTimestamp();
 	}
 	
 	public TransactionThread(Thread _thread, String _name){
-		TransactionThread.threadId = threadId +1; 
-		setThreadId(threadId);
 		_thread.setName(_name);
 		setThisThread(_thread); 
+		getTimestamp();
 	}
 	
-	public List<Event> getEvents() {
+	public List<TransactionEvent> getEvents() {
 		return events;
 	}
 
 	public Timestamp getTimestamp(){
 		return new Timestamp();
 	}
-	public void setEvents(List<Event> events) {
+	public void setEvents(List<TransactionEvent> events) {
 		this.events = events;	
 	}
 	
@@ -59,27 +52,5 @@ public class TransactionThread implements Runnable{
 	
 	@Override
 	public void run() {		
-	}
-	
-	public Thread getThisThread() {
-		return thisThread;
-	}
-	
-	public void setThisThread(Thread thisThread) {
-		this.thisThread = thisThread;
-	}
-
-	public String getThreadName() {
-		return threadName;
-	}
-
-	public void setThreadName(String threadName) {
-		this.threadName = threadName;
-	}
-	public static int getThreadId() {
-		return threadId;
-	}
-	public static void setThreadId(int threadId) {
-		TransactionThread.threadId = threadId;
 	}
 }

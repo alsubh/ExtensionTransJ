@@ -8,7 +8,6 @@ import umjdt.concepts.*;
 public class TransactionEvent extends Event{
 	
 	private Transaction transaction;
-	private int timeout;
 	private String markBoundary;
 	private Operation operation = new Operation();
 	private ResourceManager resourcemanager= new ResourceManager();
@@ -41,15 +40,6 @@ public class TransactionEvent extends Event{
 		// TODO Auto-generated method stub
 		return false;
 	}
-
-	public int getTimeout() {
-		return timeout;
-	}
-
-	public void setTimeout(int timeout) {
-		this.timeout = timeout;
-	}
-
 	public String getMarkBoundary() {
 		return markBoundary;
 	}

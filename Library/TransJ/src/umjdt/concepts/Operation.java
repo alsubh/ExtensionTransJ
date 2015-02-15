@@ -1,7 +1,11 @@
 package umjdt.concepts;
 
 import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
 
+import umjdt.Events.OperationEvent;
+import umjdt.Events.TransactionEvent;
 import umjdt.util.AccessType;
 import umjdt.util.LockType;
 import umjdt.util.OperationNumber;
@@ -13,8 +17,9 @@ public class Operation implements Cloneable{
     private TransId transactionId;
 	private AccessType type;
 	private Method method;
-	private TransactionThread operationThread; // associate transaction with specific thread
-		
+	private TransactionThread thread; // associate transaction with specific thread
+	private List<OperationEvent> operationEvents = new ArrayList<OperationEvent>();
+	
 	public Operation(){
 		setOperationNr(OperationNumber.Create());
 	}
@@ -57,14 +62,6 @@ public class Operation implements Cloneable{
 		this.method = method;
 	}
 
-	public TransactionThread getOperationThread() {
-		return operationThread;
-	}
-
-	public void setOperationThread(TransactionThread operationThread) {
-		this.operationThread = operationThread;
-	}
-
 	public OperationNumber getOperationNr() {
 		return operationNr;
 	}
@@ -79,5 +76,30 @@ public class Operation implements Cloneable{
 
 	public void setTransactionId(TransId transactionId) {
 		this.transactionId = transactionId;
+	}
+
+	public List<OperationEvent> getOperationEvents() {
+		return operationEvents;
+	}
+
+	public void setOperationEvents(List<OperationEvent> operationEvents) {
+		this.operationEvents = operationEvents;
+	}
+
+	public TransactionThread getThread() {
+		return thread;
+	}
+
+	public void setThread(TransactionThread thread) {
+		this.thread = thread;
+	}
+	
+	public void joinTo(Transaction _transaction){
+		// add operation thread to the its transaction thread
+		if(this.getThread() == null)
+		{
+			thread = new TransactionThread();
+		}
+		_transaction.getMultiOperationMap().put(_transaction.getTransactionThread(), this.getThread());
 	}
 }
