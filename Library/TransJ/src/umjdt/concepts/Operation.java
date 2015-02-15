@@ -4,30 +4,33 @@ import java.lang.reflect.Method;
 
 import umjdt.util.AccessType;
 import umjdt.util.LockType;
+import umjdt.util.OperationNumber;
 
 public class Operation implements Cloneable{
 
 	private String name = "";
-	private static int operationId=0;// keep unique id for all kinds operation in any thread
+    private OperationNumber operationNr; // keep unique id for all kinds operation in any thread
+    private TransId transactionId;
 	private AccessType type;
 	private Method method;
 	private TransactionThread operationThread; // associate transaction with specific thread
 		
 	public Operation(){
-		Operation.operationId= operationId+1;
-		setOperationId(operationId);
+		setOperationNr(OperationNumber.Create());
 	}
 	
-	public Operation(Method _method){
-		Operation.operationId= operationId+1;
-		setOperationId(operationId);
+	public Operation(TransId _transactionId){
+		setOperationNr(OperationNumber.Create(_transactionId));
+	}
+	
+	public Operation(TransId _transactionId, Method _method){
+		setOperationNr(OperationNumber.Create(_transactionId));
 		setMethod(_method);
 	}
 		
-	public Operation(String _name, AccessType _type)
+	public Operation(TransId _transactionId, String _name, AccessType _type)
 	{
-		Operation.operationId= operationId+1;
-		setOperationId(operationId);
+		setOperationNr(OperationNumber.Create(_transactionId));
 		this.setName(_name);
 		this.setType(_type);		
 	}
@@ -43,34 +46,9 @@ public class Operation implements Cloneable{
 	public void setType(AccessType _type) {
 		this.type = _type;
 	}
-
-	public Object getData() {
-		return data;
-	}
-
-	public void setData(Object _data) {
-		this.data = _data;
-	}
-	
-	public Transaction getTransaction() {
-		return transaction;
-	}
-
-	public void setTransaction(Transaction transaction) {
-		this.transaction = transaction;
-	}
 	public void setName(String name) {
 		this.name = name;
 	}
-
-	public int getOperationId() {
-		return operationId;
-	}
-
-	public void setOperationId(int operationId) {
-		this.operationId = operationId;
-	}
-
 	public Method getMethod() {
 		return method;
 	}
@@ -87,5 +65,19 @@ public class Operation implements Cloneable{
 		this.operationThread = operationThread;
 	}
 
+	public OperationNumber getOperationNr() {
+		return operationNr;
+	}
 
+	public void setOperationNr(OperationNumber operationNr) {
+		this.operationNr = operationNr;
+	}
+
+	public TransId getTransactionId() {
+		return transactionId;
+	}
+
+	public void setTransactionId(TransId transactionId) {
+		this.transactionId = transactionId;
+	}
 }

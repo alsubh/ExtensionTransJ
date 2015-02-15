@@ -80,16 +80,6 @@ public class Transaction implements Serializable{//baseTransaciton
 		events.remove(_event);
 	}
 		
-	public Event getEventForOperation(String _data, String _type){
-		synchronized(events){
-			for(TransactionEvent event : events){
-				if(event.getOperation().getData().toString().equals(_data) && event.getType()==_type)
-					return event;
-			}
-		}
-		return null;
-	}
-	
 	public String getCurrentState() {
 		return currentState;
 	}
