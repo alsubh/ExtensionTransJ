@@ -14,48 +14,56 @@ public class TransactionThread extends BackgroundThread{
 	private List<TransactionEvent> events = new ArrayList<TransactionEvent>();	
 	private Timestamp timestamp;
 	
-	public TransactionThread(){
+	public TransactionThread()
+	{
 		setTimestamp(getTimestamp());
 	}
 	
-	public TransactionThread(String _name){
+	public TransactionThread(String _name)
+	{
 		getThisThread().setName(_name);
-		setTimestamp(getTimestamp());
+		setTimestamp(new Timestamp());
 	}
 	
-	public TransactionThread(Thread _thread, String _name){
+	public TransactionThread(Thread _thread, String _name)
+	{
 		_thread.setName(_name);
 		setThisThread(_thread); 
-		getTimestamp();
+		setTimestamp(new Timestamp());
 	}
 	
-	public List<TransactionEvent> getEvents() {
+	public List<TransactionEvent> getEvents() 
+	{
 		return events;
 	}
-
-	public Timestamp getTimestamp(){
-		return new Timestamp();
-	}
-	public void setEvents(List<TransactionEvent> events) {
+	
+	public void setEvents(List<TransactionEvent> events) 
+	{
 		this.events = events;	
 	}
 	
-	public void addEvent(TransactionEvent event){
+	public void addEvent(TransactionEvent event)
+	{
 		events.add(event);
 	}
-	public void removeEvent(TransactionEvent event){
+	public void removeEvent(TransactionEvent event)
+	{
 		events.remove(event);
 	}
 	
-	public boolean contains(Event e) {
+	public boolean contains(Event e) 
+	{
 		return events.contains(e);
 	}
 	
 	@Override
-	public void run() {		
+	public void run() 
+	{
+		
 	}
 
-	public void setTimestamp(Timestamp timestamp) {
+	public void setTimestamp(Timestamp timestamp) 
+	{
 		this.timestamp = timestamp;
 	}
 }

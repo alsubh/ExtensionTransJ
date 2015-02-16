@@ -22,6 +22,7 @@ public class TransactionBeginCommitEvent extends TransactionEvent{
 		setTimeout(_localTransaction.getTimeout());
 		super.setTimeout(_localTransaction.getTimeout());
 		super.setState("BeginCommit");
+		setType("BeginCommit");
 		_localTransaction.setCurrentState(getState());
 		setMarkBoundary("BeginCommit");
 		super.setMarkBoundary("BeginCommit");

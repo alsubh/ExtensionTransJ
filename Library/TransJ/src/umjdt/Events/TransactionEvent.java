@@ -14,6 +14,7 @@ public class TransactionEvent extends Event{
 	
 	public TransactionEvent(){
 		super();
+		setType("TransactionEvent");
 	}
 	
 	public Transaction getTransaction() {

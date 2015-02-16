@@ -15,30 +15,38 @@ public class OperationThread extends BackgroundThread{
 	public OperationThread(){
 		Thread thread = new Thread();
 		setThisThread(thread);
-		setTimestamp(getTimestamp());
+		setTimestamp(new Timestamp());
 	}
 	
 	public OperationThread(String _name){
 		setThisThread(new Thread());
 		getThisThread().setName(_name);
-		setTimestamp(getTimestamp());
+		setTimestamp(new Timestamp());
 	}
+	
 	public OperationThread(Thread _thread, String _name){
 		_thread.setName(_name);
 		setThisThread(_thread);
-		setTimestamp(getTimestamp());
+		setTimestamp(new Timestamp());
 	}
+	
 	public List<OperationEvent> getOperationEvents() {
 		return operationEvents;
 	}
+	
 	public void setOperationEvents(List<OperationEvent> operationEvents) {
 		this.operationEvents = operationEvents;
 	}
+	
 	public Timestamp getTimestamp(){
-		return new Timestamp();
+		return timestamp;
 	}
 
 	public void setTimestamp(Timestamp timestamp) {
 		this.timestamp = timestamp;
+	}
+	
+	@Override
+	public void run() {		
 	}
 }

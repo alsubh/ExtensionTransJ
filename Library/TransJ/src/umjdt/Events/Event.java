@@ -11,7 +11,7 @@ public class Event {
 
 		private TransactionThread transactionThread = new TransactionThread();
 		private TransId transactionId;
-		private String type; // access and operation type
+		private String type;
 		private int timeout;
 		private String state;
 		private Timer timer;

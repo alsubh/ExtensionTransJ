@@ -10,7 +10,6 @@ import umjdt.util.Timestamp;
 
 public class OperationEvent extends Event{
 
-	private Transaction transaction;
 	private Operation operation;
 	private ResourceManager resourceManager;
 	private Timestamp beginOperation;
@@ -19,22 +18,21 @@ public class OperationEvent extends Event{
 	
 	public OperationEvent(OperationNumber _opNur)
 	{
+		super();
 		setOperationNumber(_opNur);
+		setType("OperationEvent");
 	}
 	
-	public OperationEvent(Operation _operation){ 
+	public OperationEvent(Operation _operation)
+	{ 
+		super();
 		setOperation(_operation);
 	}
-	public OperationEvent(Transaction _transaction, Operation _operation){ 
-		setTransaction(_transaction);
+	public OperationEvent(Transaction _transaction, Operation _operation)
+	{ 
+		super();
 		setOperation(_operation);
 		
-	}
-	public Transaction getTransaction() {
-		return transaction;
-	}
-	public void setTransaction(Transaction transaction) {
-		this.transaction = transaction;
 	}
 	public Operation getOperation() {
 		return operation;

@@ -1,5 +1,6 @@
 package umjdt.concepts;
 
+import java.io.Serializable;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +11,7 @@ import umjdt.util.AccessType;
 import umjdt.util.LockType;
 import umjdt.util.OperationNumber;
 
-public class Operation implements Cloneable{
+public class Operation implements Cloneable, Serializable{
 
 	private String name = "";
     private OperationNumber operationNr; // keep unique id for all kinds operation in any thread
@@ -18,7 +19,7 @@ public class Operation implements Cloneable{
 	private AccessType type;
 	private Method method;
 	private TransactionThread thread; // associate transaction with specific thread
-	private List<OperationEvent> operationEvents = new ArrayList<OperationEvent>();
+	private List<OperationEvent> operationEvents = new ArrayList<OperationEvent>(); // add the begin and end events 
 	
 	public Operation(){
 		setOperationNr(OperationNumber.Create());

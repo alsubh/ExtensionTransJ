@@ -12,6 +12,7 @@ public class TransactionCommitEvent extends TransactionEvent{
 	{
 		super.setTransaction(_localTransaction);
 		setCommitTime(getLocalTime());
+		setType("CommitTransaction");
 		setTransactionId(_localTransaction.getId());
 		super.setTransactionId(_localTransaction.getId());
 		setTimeout(_localTransaction.getTimeout());
