@@ -6,20 +6,21 @@ import org.apache.commons.collections4.map.MultiValueMap;
 import umjdt.Events.Event;
 import umjdt.Events.OperationEvent;
 import umjdt.Events.TransactionEvent;
-import umjdt.util.RunnableThread;
+import umjdt.util.BackgroundThread;
 import umjdt.util.Timestamp;
 
-public class TransactionThread extends RunnableThread{
+public class TransactionThread extends BackgroundThread{
 
 	private List<TransactionEvent> events = new ArrayList<TransactionEvent>();	
+	private Timestamp timestamp;
 	
 	public TransactionThread(){
-		getTimestamp();
+		setTimestamp(getTimestamp());
 	}
 	
 	public TransactionThread(String _name){
 		getThisThread().setName(_name);
-		getTimestamp();
+		setTimestamp(getTimestamp());
 	}
 	
 	public TransactionThread(Thread _thread, String _name){
@@ -52,5 +53,9 @@ public class TransactionThread extends RunnableThread{
 	
 	@Override
 	public void run() {		
+	}
+
+	public void setTimestamp(Timestamp timestamp) {
+		this.timestamp = timestamp;
 	}
 }
