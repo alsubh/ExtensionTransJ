@@ -30,6 +30,7 @@ public class TransactionBeginEvent extends TransactionEvent{
 	private void iniilization(Transaction _transaction){
 		super.setTransaction(_transaction);
 		setBeginTime(getLocalTime());
+		setType("BeginTransaction");
 		setTransactionId(_transaction.getId());
 		super.setTransactionId(_transaction.getId());
 		setTimeout(_transaction.getTimeout());

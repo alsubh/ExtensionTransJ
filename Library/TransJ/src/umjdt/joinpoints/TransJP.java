@@ -19,12 +19,21 @@ public class TransJP
 	
 	public TransJP()
 	{
+		
 	}
 	
 	public TransJP(Transaction _transaction, TransactionType _type)
 	{
-		this.setTranaction(_transaction);
-		this.setType(_type);
+		this.tranaction= _transaction;
+		this.type= _type;
+	}
+	
+	public TransJP(TransJP _transJp)
+	{
+		this.tranaction =_transJp.getTranaction();
+		this.operation= _transJp.getOperation();
+		this.resource =_transJp.getResource();
+		this.type= _transJp.getType();
 	}
 	
 	public void set(TransJP _transJp)

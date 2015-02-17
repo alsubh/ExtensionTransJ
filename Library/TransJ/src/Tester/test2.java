@@ -2,6 +2,7 @@ package Tester;
 
 import javax.transaction.NotSupportedException;
 import com.arjuna.ats.internal.arjuna.objectstore.CacheStore;
+import com.arjuna.ats.internal.jta.transaction.arjunacore.AtomicAction;
 import com.arjuna.ats.internal.jta.transaction.arjunacore.BaseTransaction;
 import com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionImple;
 import com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionManagerImple;
@@ -54,5 +55,17 @@ public class test2
 	{
 		test2 c2 =  new test2();
 		c2.test1();
+	}
+	
+	public void test3()
+	{
+		AtomicAction a = new AtomicAction();
+		AtomicAction b = new AtomicAction();
+		
+		a.begin();
+			b.begin();
+			b.abort();
+		a.end(true);
+		
 	}
 }
