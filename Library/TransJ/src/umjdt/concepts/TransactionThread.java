@@ -6,8 +6,8 @@ import org.apache.commons.collections4.map.MultiValueMap;
 import umjdt.Events.Event;
 import umjdt.Events.OperationEvent;
 import umjdt.Events.TransactionEvent;
-import umjdt.util.BackgroundThread;
 import umjdt.util.Timestamp;
+import umjdt.util.thread.BackgroundThread;
 
 public class TransactionThread extends BackgroundThread{
 

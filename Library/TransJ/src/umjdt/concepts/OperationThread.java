@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import umjdt.Events.OperationEvent;
-import umjdt.util.BackgroundThread;
 import umjdt.util.Timestamp;
+import umjdt.util.thread.BackgroundThread;
 
 public class OperationThread extends BackgroundThread{
 

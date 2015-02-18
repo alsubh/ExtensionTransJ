@@ -1,5 +1,7 @@
 package umjdt.util;
 
+import java.io.PrintWriter;
+
 import umjdt.concepts.TransId;
 
 public class Status{
@@ -7,66 +9,85 @@ public class Status{
 	private Object participant;
 	private String status;
 	private TransId transactionId;
-	
-	//A transaction is associated with the target object and it is in the active state.
-	//An implementation returns this status after a transaction has been started and prior to a Coordinator 
-	//issuing any prepares, unless the transaction has been marked for rollback.
-	public static final int	STATUS_ACTIVE=0;
-	
-	//A transaction is associated with the target object and it has been committed.
-	//It is likely that heuristics exist; otherwise, the transaction would have been destroyed and NoTransaction returned.
-	public static final int	STATUS_COMMITTED=3;
-		
-	//A transaction is associated with the target object and it is in the process of committing.
-	//An implementation returns this status if it has decided to commit but has not yet completed the committing process.
-	//This occurs because the implementation is probably waiting for responses from one or more Resources.
-	public static final int	STATUS_COMMITTING=8;
-	
-	//A transaction is associated with the target object and it has been marked for rollback,
-	//perhaps as a result of a setRollbackOnly operation.
-	public static final int	STATUS_MARKED_ROLLBACK=1;
-	
-	//No transaction is currently associated with the target object. This will occur after a transaction has completed.
-	public static final int	STATUS_NO_TRANSACTION=6;
-	
-	//A transaction is associated with the target object and it has been prepared. That is,
-	//all subordinates have agreed to commit. The target object may be waiting for instructions from a superior as to how to proceed.
-	public static final int	STATUS_PREPARED=2;
-	
-	//A transaction is associated with the target object and it is in the process of preparing.
-	//An implementation returns this status if it has started preparing, but has not yet completed the process. 
-	//The likely reason for this is that the implementation is probably waiting for responses to prepare from one or more Resources.
-	public static final int	STATUS_PREPARING=7;
-	
-	//A transaction is associated with the target object and it is in the process of rolling back. 
-	//An implementation returns this status if it has decided to rollback but has not yet completed the process. 
-	//The implementation is probably waiting for responses from one or more Resources.
-	public static final int	STATUS_ROLLEDBACK=4;
-	
-	//A transaction is associated with the target object and the outcome has been determined to be rollback. 
-	//It is likely that heuristics exist; otherwise, the transaction would have been destroyed and NoTransaction returned.
-	public static final int	STATUS_ROLLING_BACK=9;
-	
-	//A transaction is associated with the target object but its current status cannot be determined. 
-	//This is a transient condition and a subsequent invocation will ultimately return a different status.
-	public static final int	STATUS_UNKNOWN=	5;
-	
-	// mark status of the sub-transaction
-	public static final int provisional =10;
-	
-	// make status of the transaction 
-	public static final int	STATUS_BEGIN= 11;
-	public static final int	STATUS_BEGINNING=12;
-	
-	// make lock and unlock resources and Transactions
-	public static final int	STATUS_LOCKED=13;
-	public static final int	STATUS_UNLOCK=14;
-	
+	public static final int RUNNING = 0;
+    public static final int PREPARING = 1;
+    public static final int ABORTING = 2;
+    public static final int ABORT_ONLY = 3;
+    public static final int ABORTED = 4;
+    public static final int PREPARED = 5;
+    public static final int COMMITTING = 6;
+    public static final int COMMITTED = 7;
+    public static final int CREATED = 8;
+    public static final int INVALID = 9;
+    public static final int CLEANUP = 10;
+    public static final int H_ROLLBACK = 11;
+    public static final int H_COMMIT = 12;
+    public static final int H_MIXED = 13;
+    public static final int H_HAZARD = 14;
+    public static final int DISABLED = 15;
+    public static final int NO_ACTION = 16;
+    	
 	public Status(){
 
 	}
-	
 
+
+    /**
+     * @return <code>String</code> representation of the status.
+     */
+
+    public static String stringForm (int res)
+    {
+	switch (res)
+	{
+	case RUNNING:
+	    return "ActionStatus.RUNNING";
+	case PREPARING:
+	    return "ActionStatus.PREPARING";
+	case ABORTING:
+	    return "ActionStatus.ABORTING";
+	case ABORT_ONLY:
+	    return "ActionStatus.ABORT_ONLY";
+	case ABORTED:
+	    return "ActionStatus.ABORTED";
+	case PREPARED:
+	    return "ActionStatus.PREPARED";
+	case COMMITTING:
+	    return "ActionStatus.COMMITTING";
+	case COMMITTED:
+	    return "ActionStatus.COMMITTED";
+	case CREATED:
+	    return "ActionStatus.CREATED";
+	case INVALID:
+	    return "ActionStatus.INVALID";
+	case CLEANUP:
+	    return "ActionStatus.CLEANUP";
+	case H_ROLLBACK:
+	    return "ActionStatus.H_ROLLBACK";
+	case H_COMMIT:
+	    return "ActionStatus.H_COMMIT";
+	case H_MIXED:
+	    return "ActionStatus.H_MIXED";
+	case H_HAZARD:
+	    return "ActionStatus.H_HAZARD";
+	case DISABLED:
+	    return "ActionStatus.DISABLED";
+	case NO_ACTION:
+	    return "ActionStatus.NO_ACTION";
+	default:
+	    return "Unknown";
+	}
+    }
+
+    /**
+     * Print the status on the specified <code>PrintWriter</code>.
+     */
+
+    public static void print (PrintWriter strm, int res)
+    {
+	strm.print(Status.stringForm(res));
+    }
+    
 	public Object getParticipant() {
 		return participant;
 	}
