@@ -1,8 +1,7 @@
 package umjdt.util;
 
 import java.util.Hashtable;
-
-import com.arjuna.ats.arjuna.common.Uid;
+import umjdt.concepts.TransId;
 
 public class CheckedTransaction
 {
@@ -15,12 +14,12 @@ public class CheckedTransaction
      * The default implementation simply prints a warning.
      */
 
-    public void check (boolean isCommit, Uid actUid, Hashtable list)
+    public void check (boolean isCommit, TransId transId, Hashtable list)
     {
         if (isCommit)
-        	System.out.println(actUid + Integer.toString(list.size()));
+        	System.out.println(transId + Integer.toString(list.size()));
         else
-        	System.out.println(actUid + Integer.toString(list.size()));
+        	System.out.println(transId + Integer.toString(list.size()));
     }
 
 }

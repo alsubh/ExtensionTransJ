@@ -6,6 +6,8 @@ import umjdt.concepts.*;
 import java.util.logging.Logger;
 import org.aspectj.lang.JoinPoint;
 
+import com.arjuna.ats.internal.jta.xa.TxInfo;
+
 
 
 public class TransJP
@@ -13,8 +15,7 @@ public class TransJP
 	Logger logger = Logger.getLogger(TransJP.class.toString());
 	
 	private Transaction tranaction;
-	private Operation operation;
-	private Resource resource;
+	private TxInfo txInfo;
 	private TransactionType type;
 	
 	public TransJP()
@@ -31,16 +32,12 @@ public class TransJP
 	public TransJP(TransJP _transJp)
 	{
 		this.tranaction =_transJp.getTranaction();
-		this.operation= _transJp.getOperation();
-		this.resource =_transJp.getResource();
 		this.type= _transJp.getType();
 	}
 	
 	public void set(TransJP _transJp)
 	{
 		this.tranaction =_transJp.getTranaction();
-		this.operation= _transJp.getOperation();
-		this.resource =_transJp.getResource();
 		this.type= _transJp.getType();
 	}
 
@@ -60,19 +57,11 @@ public class TransJP
 		this.type = type;
 	}
 
-	public Operation getOperation() {
-		return operation;
+	public TxInfo getTxInfo() {
+		return txInfo;
 	}
 
-	public void setOperation(Operation operation) {
-		this.operation = operation;
-	}
-
-	public Resource getResource() {
-		return resource;
-	}
-
-	public void setResource(Resource resource) {
-		this.resource = resource;
+	public void setTxInfo(TxInfo txInfo) {
+		this.txInfo = txInfo;
 	}
 }

@@ -6,13 +6,16 @@ import java.util.*;
 import org.apache.commons.collections4.MultiMap;
 import org.apache.commons.collections4.map.MultiValueMap;
 
-import umjdt.Events.Event;
+import com.arjuna.ats.arjuna.coordinator.BasicAction;
+import com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionImple;
+import com.arjuna.ats.jta.UserTransaction;
+
 import umjdt.Events.TransactionEvent;
 import umjdt.util.CheckedTransaction;
 import umjdt.util.thread.ThreadUtil;
 import umjdt.util.*;
 
-public class Transaction implements Serializable{//baseTransaciton
+public class Transaction extends TransactionImple implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	private TransId id;
@@ -35,149 +38,17 @@ public class Transaction implements Serializable{//baseTransaciton
 	private Hashtable<String, Thread> _childThreads;
     private Hashtable<Transaction, Transaction> _ChildTransactions;
 	 	
-	public Transaction(TransId _id, String _currentState, int _timeout){	
+    private int transactionStatus;
+    private int transactionType;
+    private Transaction parentTransaction;
+    private CheckedTransaction _checkedTransaction;
+    
+	public Transaction() {
 		super();
-		setId(_id);
-		setCurrentState(_currentState);
-		setTimeout(_timeout);
-	}
-	public Transaction(TransId _id, String _currentState){	
-		super();
-		setId(_id);
-		setCurrentState(_currentState);
-	}
-	public Transaction(TransId _id){
-		super();
-		this.setId(_id);		
 	}
 
-	public String getBeginState(){
-		return "begin";			
-	}
-
-	public String getCommitState(){
-		return "commit";			
-	}
-	
-	public String getAbortState(){
-		return "rollback";			
-	}
-	
-	public TransId getId(){
-		return id;
-	}
-
-	public void setId(TransId _id) {
-		this.id = _id;
-	}
-	
-	public List<TransactionEvent> getEvents() {
-		return events;
-	}
-	public void setEvents(List<TransactionEvent> _events) {
-		this.events = _events;
-	}
-	
-	public void addEvent(TransactionEvent _event){		
-		events.add(_event);
-	}
-	
-	public void removeEvent(TransactionEvent _event){
-		events.remove(_event);
-	}
-		
-	public String getCurrentState() {
-		return currentState;
-	}
-	
-	public void setCurrentState(String _currentState) {
-		this.currentState = _currentState;
-	}
-	
-	// we have in JTA transaction an equal method to check the similarity between transaction
-	@Override
-	public boolean equals(Object _obj){ 
-		Transaction  tempTransaction = (Transaction)_obj;
-		if(tempTransaction.getId().equals(this.getId()))
-			return true;
-		return false;
-	}
-
-	public int getTimeout() {
-		return timeout;
-	}
-
-	public void setTimeout(int timeout) {
-		this.timeout = timeout;
-	}
-	public List<Operation> getOperations() {
-		return operations;
-	}
-
-	public void setOperations(List<Operation> operations) {
-		this.operations = operations;
-	}
-
-	public List<Resource> getResources() {
-		return resources;
-	}
-
-	public void setResources(List<Resource> resources) {
-		this.resources = resources;
-	}
-
-	public TransactionManager getTransactionManager() {
-		return transactionManager;
-	}
-
-	public void setTransactionManager(TransactionManager transactionManager) {
-		this.transactionManager = transactionManager;
-	}
-
-	public ResourceManager getResourceManager() {
-		return resourceManager;
-	}
-
-	public void setResourceManager(ResourceManager resourceManager) {
-		this.resourceManager = resourceManager;
-	}
-
-	public TwoPhaseCommitProtocol getTwoPhaseCommitProtocol() {
-		return twoPhaseCommitProtocol;
-	}
-
-	public void setTwoPhaseCommitProtocol(
-			TwoPhaseCommitProtocol twoPhaseCommitProtocol) {
-		this.twoPhaseCommitProtocol = twoPhaseCommitProtocol;
-	}
-
-	public TransactionThread getTransactionThread() {
-		return transactionThread;
-	}
-
-	public void setTransactionThread(TransactionThread transactionThread) {
-		this.transactionThread = transactionThread;
-	}
-	public List<TransactionManager> getListTMs() {
-		return listTMs;
-	}
-
-	public void setListTMs(List<TransactionManager> listTMs) {
-		this.listTMs = listTMs;
-	}
-
-	public List<ResourceManager> getListRMs() {
-		return listRMs;
-	}
-
-	public void setListRMs(List<ResourceManager> listRMs) {
-		this.listRMs = listRMs;
-	}
-	public MultiMap<TransactionThread, ?> getMultiOperationMap() {
-		return multiOperationMap;
-	}
-	public void setMultiOperationMap(MultiMap<TransactionThread, ?> multiOperationMap) {
-		this.multiOperationMap = multiOperationMap;
+	public Transaction(int timeout) {
+		super(timeout);
 	}
 	
 	// @return the number of threads associated with this transaction.
@@ -239,37 +110,33 @@ public class Transaction implements Serializable{//baseTransaciton
      *         under.
      */
 
-    public Uid getSavingUid ()
+    public TransId getSavingUid ()
     {
-        return get_uid();
+        return getId();
     }
-
-    /**
-     * Overloads Object.toString()
-     */
 
     public String toString ()
     {
-        return new String("Transaction: " + get_uid() + " status: "
-                + TransactionStatus.stringForm(transactionStatus));
+        return new String("Transaction: " + getId() + " status: "
+                + Status.stringForm(transactionStatus));
     }
     
     /**
-     * The following function returns the Uid of the top-level atomic action. If
+     * The following function returns the transId of the top-level atomic action. If
      * this is the top-level transaction then it is equivalent to calling
-     * get_uid().
+     * getId().
      *
      * @return the top-level transaction's <code>Uid</code>.
      */
 
-    public final Uid topLevelActionUid ()
+    public final TransId topLevelActionUid ()
     {
         Transaction root = this;
 
         while (root.parent() != null)
             root = root.parent();
 
-        return root.get_uid();
+        return root.getId();
     }
 
     /**
@@ -296,107 +163,7 @@ public class Transaction implements Serializable{//baseTransaciton
      *         otherwise.
      */
 
-    public boolean activate ()
-    {
-        return activate(null);
-    }
-
-    /**
-     * Overloaded version of activate -- sets up the store, performs read_state
-     * followed by restore_state. The root of the object store to use is
-     * specified in the <code>root</code> parameter.
-     *
-     * @return <code>true</code> if successful, <code>false</code>
-     *         otherwise.
-     */
-
-    public boolean activate (String root)
-    {
-        boolean restored = false;
-
-        // Set up store
-        ParticipantStore aaStore = getStore();
-
-        if (aaStore == null)
-            return false;
-
-        try
-        {
-            // Read object state
-
-            InputObjectState oState = aaStore.read_committed(getSavingUid(), type());
-
-            if (oState != null)
-            {
-                synchronized (this)
-                {
-                    restored = restore_state(oState, ObjectType.ANDPERSISTENT);
-                }
-
-                oState = null;
-            }
-            else {
-                restored = false;
-            }
-
-            return restored;
-        }
-        catch (ObjectStoreException e)
-        {
-            return false;
-        }
-    }
-
-    /**
-     * This operation deactivates a persistent object. It behaves in a similar
-     * manner to the activate operation, but has an extra argument which defines
-     * whether the object's state should be committed or written as a shadow.
-     *
-     * The root of the object store is <code>null</code>. It is assumed that
-     * this is being called during a transaction commit.
-     *
-     * @return <code>true</code> on success, <code>false</code> otherwise.
-     * 
-     */
-
-    public boolean deactivate ()
-    {
-        boolean deactivated = false;
-
-        // Set up store
-        ParticipantStore aaStore = getStore();
-
-        if (aaStore == null)
-            return false;
-
-        try
-        {
-            // Write object state
-            OutputObjectState oState = new OutputObjectState();
-
-            if (save_state(oState, ObjectType.ANDPERSISTENT))
-            {
-                deactivated = aaStore.write_committed(getSavingUid(), type(), oState);
-
-                oState = null;
-            }
-            else
-            {
-                deactivated = false;
-            }
-
-            /** If we failed to deactivate then output warning * */
-            if (!deactivated) {
-            }
-        }
-        catch (ObjectStoreException e)
-        {
-            deactivated = false;
-        }
-
-        return deactivated;
-    }
-
+   
     /**
      * Add the current thread to the list of threads associated with this
      * transaction.
@@ -429,7 +196,7 @@ public class Transaction implements Serializable{//baseTransaciton
 
         synchronized (this)
         {
-            if (transactionStatus <= TransactionStatus.ABORTING)
+            if (transactionStatus <= Status.ABORTING)
             {
                 if (_childThreads == null)
                     _childThreads = new Hashtable<String, Thread>();
@@ -541,7 +308,7 @@ public class Transaction implements Serializable{//baseTransaciton
                 * phase.
                 */
 
-            if (transactionStatus <= TransactionStatus.ABORTING)
+            if (transactionStatus <= Status.ABORTING)
             {
                 if (_ChildTransactions == null)
                     _ChildTransactions = new Hashtable<Transaction, Transaction>();
@@ -556,35 +323,15 @@ public class Transaction implements Serializable{//baseTransaciton
         return result;
     }
     
-    /**
-     * @return the depth of the current transaction hierarchy.
-     */
-
-    public final int hierarchyDepth ()
-    {
-        if (currentHierarchy != null)
-            return currentHierarchy.depth();
-        else
-            return 0; /* should never happen */
-    }
-
-    /**
-     * boolean function that checks whether the Uid passed as an argument is the
-     * Uid for an ancestor of the current atomic action.
-     *
-     * @return <code>true</code> if the parameter represents an ancestor,
-     *         <code>false</code> otherwise.
-     */
-
-    public final boolean isAncestor (Uid ancestor)
+    public final boolean isAncestor (TransId ancestor)
     {
         boolean res = false;
         
-        if (get_uid().equals(ancestor)) /* actions are their own ancestors */
+        if (getId().equals(ancestor)) /* actions are their own ancestors */
             res = true;
         else
         {
-            if ((parentTransaction != null) && (transactionType != ActionType.TOP_LEVEL))
+            if ((parentTransaction != null) && (transactionType != TransactionType.TOP_LEVEL))
                 res = parentTransaction.isAncestor(ancestor);
         }
 
@@ -597,23 +344,142 @@ public class Transaction implements Serializable{//baseTransaciton
 
     public final Transaction parent ()
     {
-        if (transactionType == ActionType.NESTED)
+        if (transactionType == TransactionType.NESTED)
             return parentTransaction;
         else
             return null;
     }
+    
+    // we have in JTA transaction an equal method to check the similarity between transaction
+ 	@Override
+ 	public boolean equals(Object _obj){ 
+ 		Transaction  tempTransaction = (Transaction)_obj;
+ 		if(tempTransaction.getId().equals(this.getId()))
+ 			return true;
+ 		return false;
+ 	}
 
-    public final int typeOfAction ()
+    public final int typeOfTransaction ()
     {
         return transactionType;
     }
-    
-    private int transactionStatus;
-    private int transactionType;
-    private Transaction parentTransaction;
-    private int heuristicDecision;
-    private CheckedTransaction _checkedTransaction; // control what happens if threads active when terminating.
-    private boolean pastFirstParticipant;  // remember where we are (were) in committing during recovery
-    private boolean internalError; // is there an error internal to the TM (such as write log errors, for example)
 
+    public String getBeginState(){
+		return "begin";			
+	}
+
+	public String getCommitState(){
+		return "commit";			
+	}
+	
+	public String getAbortState(){
+		return "rollback";			
+	}
+	
+	public TransId getId(){
+		return id;
+	}
+
+	public void setId(TransId _id) {
+		this.id = _id;
+	}
+	
+	public List<TransactionEvent> getEvents() {
+		return events;
+	}
+	public void setEvents(List<TransactionEvent> _events) {
+		this.events = _events;
+	}
+	
+	public void addEvent(TransactionEvent _event){		
+		events.add(_event);
+	}
+	
+	public void removeEvent(TransactionEvent _event){
+		events.remove(_event);
+	}
+		
+	public String getCurrentState() {
+		return currentState;
+	}
+	
+	public void setCurrentState(String _currentState) {
+		this.currentState = _currentState;
+	}
+	public int getTimeout() 
+	{
+		return timeout;
+	}
+
+	public void setTimeout(int timeout) 
+	{
+		this.timeout = timeout;
+	}
+	public List<Operation> getOperations() 
+	{
+		return operations;
+	}
+
+	public void setOperations(List<Operation> operations) 
+	{
+		this.operations = operations;
+	}
+
+	public void setResources(List<Resource> resources) {
+		this.resources = resources;
+	}
+
+	public TransactionManager getTransactionManager() {
+		return transactionManager;
+	}
+
+	public void setTransactionManager(TransactionManager transactionManager) {
+		this.transactionManager = transactionManager;
+	}
+
+	public ResourceManager getResourceManager() {
+		return resourceManager;
+	}
+
+	public void setResourceManager(ResourceManager resourceManager) {
+		this.resourceManager = resourceManager;
+	}
+
+	public TwoPhaseCommitProtocol getTwoPhaseCommitProtocol() {
+		return twoPhaseCommitProtocol;
+	}
+
+	public void setTwoPhaseCommitProtocol(
+			TwoPhaseCommitProtocol twoPhaseCommitProtocol) {
+		this.twoPhaseCommitProtocol = twoPhaseCommitProtocol;
+	}
+
+	public TransactionThread getTransactionThread() {
+		return transactionThread;
+	}
+
+	public void setTransactionThread(TransactionThread transactionThread) {
+		this.transactionThread = transactionThread;
+	}
+	public List<TransactionManager> getListTMs() {
+		return listTMs;
+	}
+
+	public void setListTMs(List<TransactionManager> listTMs) {
+		this.listTMs = listTMs;
+	}
+
+	public List<ResourceManager> getListRMs() {
+		return listRMs;
+	}
+
+	public void setListRMs(List<ResourceManager> listRMs) {
+		this.listRMs = listRMs;
+	}
+	public MultiMap<TransactionThread, ?> getMultiOperationMap() {
+		return multiOperationMap;
+	}
+	public void setMultiOperationMap(MultiMap<TransactionThread, ?> multiOperationMap) {
+		this.multiOperationMap = multiOperationMap;
+	}
 }

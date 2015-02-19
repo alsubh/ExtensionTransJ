@@ -2,49 +2,61 @@ package umjdt.concepts;
 
 import javax.transaction.xa.Xid;
 
-import com.arjuna.ats.arjuna.AtomicAction;
 import com.arjuna.ats.arjuna.common.Uid;
 import com.arjuna.ats.internal.jta.xa.XID;
 import com.arjuna.ats.jta.xa.XidImple;
 
-public class TransId extends XidImple{
-	
+public class TransId extends XidImple 
+{
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private Transaction transaction;
+	private Xid xid;
+	private XID xID;
 	
-	
-	public TransId() 
+	public TransId()
 	{
 		super();
-		// TODO Auto-generated constructor stub
-	}
-	public TransId(AtomicAction c) 
-	{
-		super(c);
-		// TODO Auto-generated constructor stub
-	}
-	public TransId(Uid arg0, boolean arg1, Integer arg2) 
-	{
-		super(arg0, arg1, arg2);
-		// TODO Auto-generated constructor stub
-	}
-	public TransId(Xid xid, boolean branch, Integer eisName) 
-	{
-		super(xid, branch, eisName);
-		// TODO Auto-generated constructor stub
+		this.xid= new XidImple();
+		setXid(xid);
 	}
 	
-	public TransId(Xid xid) 
+	public TransId(Xid _xid)
 	{
-		super(xid);
-		// TODO Auto-generated constructor stub
+		super(_xid);
+		this.xid= new XidImple(_xid);
+		setXid(xid);
 	}
-	public TransId(XID x) 
+	
+	public TransId(Transaction t)
 	{
-		super(x);
-		// TODO Auto-generated constructor stub
+		this(t.getId());
+		this.xid= new XidImple(t.getId());
+		setXid(xid);
 	}
+	
+	public TransId(XID xID)
+	{
+		super(xID);
+		setxID(xID);
+	}
+
+	public Xid getXid() {
+		return xid;
+	}
+
+	public void setXid(Xid xid) {
+		this.xid = xid;
+	}
+
+	public XID getxID() {
+		return xID;
+	}
+
+	public void setxID(XID xID) {
+		this.xID = xID;
+	}
+	
+	
 }

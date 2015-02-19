@@ -2,13 +2,9 @@ package umjdt.util;
 
 import java.io.PrintWriter;
 
-import umjdt.concepts.TransId;
-
-public class Status{
-
-	private Object participant;
-	private String status;
-	private TransId transactionId;
+public class Status 
+{
+	
 	public static final int RUNNING = 0;
     public static final int PREPARING = 1;
     public static final int ABORTING = 2;
@@ -26,11 +22,6 @@ public class Status{
     public static final int H_HAZARD = 14;
     public static final int DISABLED = 15;
     public static final int NO_ACTION = 16;
-    	
-	public Status(){
-
-	}
-
 
     /**
      * @return <code>String</code> representation of the status.
@@ -38,77 +29,53 @@ public class Status{
 
     public static String stringForm (int res)
     {
-	switch (res)
-	{
-	case RUNNING:
-	    return "ActionStatus.RUNNING";
-	case PREPARING:
-	    return "ActionStatus.PREPARING";
-	case ABORTING:
-	    return "ActionStatus.ABORTING";
-	case ABORT_ONLY:
-	    return "ActionStatus.ABORT_ONLY";
-	case ABORTED:
-	    return "ActionStatus.ABORTED";
-	case PREPARED:
-	    return "ActionStatus.PREPARED";
-	case COMMITTING:
-	    return "ActionStatus.COMMITTING";
-	case COMMITTED:
-	    return "ActionStatus.COMMITTED";
-	case CREATED:
-	    return "ActionStatus.CREATED";
-	case INVALID:
-	    return "ActionStatus.INVALID";
-	case CLEANUP:
-	    return "ActionStatus.CLEANUP";
-	case H_ROLLBACK:
-	    return "ActionStatus.H_ROLLBACK";
-	case H_COMMIT:
-	    return "ActionStatus.H_COMMIT";
-	case H_MIXED:
-	    return "ActionStatus.H_MIXED";
-	case H_HAZARD:
-	    return "ActionStatus.H_HAZARD";
-	case DISABLED:
-	    return "ActionStatus.DISABLED";
-	case NO_ACTION:
-	    return "ActionStatus.NO_ACTION";
-	default:
-	    return "Unknown";
-	}
+		switch (res)
+		{
+			case RUNNING:
+			    return "ActionStatus.RUNNING";
+			case PREPARING:
+			    return "ActionStatus.PREPARING";
+			case ABORTING:
+			    return "ActionStatus.ABORTING";
+			case ABORT_ONLY:
+			    return "ActionStatus.ABORT_ONLY";
+			case ABORTED:
+			    return "ActionStatus.ABORTED";
+			case PREPARED:
+			    return "ActionStatus.PREPARED";
+			case COMMITTING:
+			    return "ActionStatus.COMMITTING";
+			case COMMITTED:
+			    return "ActionStatus.COMMITTED";
+			case CREATED:
+			    return "ActionStatus.CREATED";
+			case INVALID:
+			    return "ActionStatus.INVALID";
+			case CLEANUP:
+			    return "ActionStatus.CLEANUP";
+			case H_ROLLBACK:
+			    return "ActionStatus.H_ROLLBACK";
+			case H_COMMIT:
+			    return "ActionStatus.H_COMMIT";
+			case H_MIXED:
+			    return "ActionStatus.H_MIXED";
+			case H_HAZARD:
+			    return "ActionStatus.H_HAZARD";
+			case DISABLED:
+			    return "ActionStatus.DISABLED";
+			case NO_ACTION:
+			    return "ActionStatus.NO_ACTION";
+			default:
+			    return "Unknown";
+		}
     }
-
+    
     /**
      * Print the status on the specified <code>PrintWriter</code>.
      */
 
     public static void print (PrintWriter strm, int res)
     {
-	strm.print(Status.stringForm(res));
+    	strm.print(Status.stringForm(res));
     }
-    
-	public Object getParticipant() {
-		return participant;
-	}
-
-	public void setParticipant(Object participant) {
-		this.participant = participant;
-	}
-
-	public String getStatus() {
-		return status;
-	}
-
-	public void setStatus(String status) {
-		this.status = status;
-	}
-
-	public TransId getTransactionId() {
-		return transactionId;
-	}
-
-	public void setTransactionId(TransId transactionId) {
-		this.transactionId = transactionId;
-	}
 }

@@ -2,21 +2,28 @@ package umjdt.concepts;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionManagerImple;
+
+
 import umjdt.Events.*;
 import umjdt.util.Status;
 
-public class TransactionManager{
+public class TransactionManager extends TransactionManagerImple{
 
 	private int tmId;
 	private String name;
 	private Status localTransactionStatus;
 	private Transaction localTransaction;
 	private TransId transId;
+	
 	private TransactionBeginEvent beginEvent;
 	private TransactionCommitEvent commitEvent;
 	private TransactionAbortEvent abortEvent;
+	
 	private ReleaseLockEvent releaseEvent;
 	private RequestLockEvent requestLockEvent;
+	
 	private List<ResourceManager> resources = new ArrayList<>();
 	private IsBlockedEvent isBlockEvent;
 	private TransactionThread transactionThread;
@@ -24,27 +31,14 @@ public class TransactionManager{
 	private TwoPhaseCommitProtocol twoPhaseCommit;
 	
 	public TransactionManager() {
+		super();
 		// TODO Auto-generated constructor stub
-	}
-	public TransactionManager(int _tmId){
-		this.tmId = _tmId;
-	}
-	public TransactionManager(int _tmId, String _name){
-		this.tmId = _tmId;
-		this.name=_name;
-	}
-	public TransactionManager(int _tmId, TransId _transId){
-		this.tmId = _tmId;
-		this.transId = _transId;
-	}
-	public TransactionManager(int _tmId, Transaction _trans){
-		this.tmId = _tmId;
-		this.localTransaction = _trans;
 	}
 	
 	public int getTmId() {
 		return tmId;
 	}
+	
 	public void setTmId(int tmId) {
 		this.tmId = tmId;
 	}
@@ -60,11 +54,9 @@ public class TransactionManager{
 	public void setLocalTransactionStatus(Status localTransactionStatus) {
 		this.localTransactionStatus = localTransactionStatus;
 	}
-	public TransId getTransaction() {
-		return transId;
-	}
+	
 	public void setTransaction(TransId transaction) {
-		this.transId = transaction;
+		this.setTransId(transaction);
 	}
 	public TransactionBeginEvent getBeginEvent() {
 		return beginEvent;
@@ -131,5 +123,13 @@ public class TransactionManager{
 	}
 	public void setLocalTransaction(Transaction localTransaction) {
 		this.localTransaction = localTransaction;
+	}
+
+	public TransId getTransId() {
+		return transId;
+	}
+
+	public void setTransId(TransId transId) {
+		this.transId = transId;
 	}
 }
