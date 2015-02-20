@@ -3,73 +3,79 @@ package umjdt.concepts;
 import java.io.Serializable;
 import java.util.*;
 
-import org.apache.commons.collections4.MultiMap;
-import org.apache.commons.collections4.map.MultiValueMap;
+import javax.swing.plaf.basic.BasicScrollPaneUI.HSBChangeListener;
 
-import com.arjuna.ats.arjuna.coordinator.BasicAction;
 import com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionImple;
-import com.arjuna.ats.jta.UserTransaction;
-
+import com.google.common.collect.HashMultimap;
 import umjdt.Events.TransactionEvent;
 import umjdt.util.CheckedTransaction;
+import umjdt.util.thread.BKThreadTransaction;
 import umjdt.util.thread.ThreadUtil;
 import umjdt.util.*;
 
 public class Transaction extends TransactionImple implements Serializable{
 
 	private static final long serialVersionUID = 1L;
+	
 	private TransId id;
 	private String currentState;
 	private int timeout;
-	
-	private TransactionThread transactionThread;// association Transaction with thread
-	private MultiMap<TransactionThread, ?> multiOperationMap = new MultiValueMap(); // add the operation threads of the transaction  
-	
-	private List<TransactionEvent> events = new ArrayList<TransactionEvent>();
-	private List<TransactionManager> listTMs = new ArrayList<>();
-	private List<ResourceManager> listRMs= new ArrayList<>();
-	private List<Operation> operations = new ArrayList<Operation>();
-	private List<Resource> resources = new ArrayList<Resource>();
-	
-	private TransactionManager transactionManager = new TransactionManager();
-	private ResourceManager resourceManager= new ResourceManager();
-	private TwoPhaseCommitProtocol twoPhaseCommitProtocol = new TwoPhaseCommitProtocol();
-	
-	private Hashtable<String, Thread> _childThreads;
-    private Hashtable<Transaction, Transaction> _ChildTransactions;
-	 	
-    private int transactionStatus;
+	private TransactionThread transactionThread;// make the transaction associated with current thread
+	private int transactionStatus;
     private int transactionType;
     private Transaction parentTransaction;
     private CheckedTransaction _checkedTransaction;
-    
+    private TransactionManager transactionManager= new TransactionManager();
+    private List<TransactionEvent> events = new ArrayList<TransactionEvent>();
+	private List<Operation> operations = new ArrayList<Operation>();
+	
+	//private MultiMap<TransactionThread, ?> multiOperationMap = new MultiValueMap(); // add the operation threads of the transaction  
+	//private HashMultimap<Transaction, List<Operation>> multiOperationMap;
+	private HashMultimap<Transaction, List<SubTransaction>> childTransactionMap;
+	private HashMap resources = new HashMap();
+	
+	private Hashtable<String, Thread> _childThreads;
+    private Hashtable<Transaction, SubTransaction> _ChildTransactions;
+	
 	public Transaction() {
 		super();
+		//this.multiOperationMap = HashMultimap.create();
+		this.childTransactionMap=HashMultimap.create();
 	}
 
 	public Transaction(int timeout) {
 		super(timeout);
+		//this.multiOperationMap = HashMultimap.create();
+		this.childTransactionMap=HashMultimap.create();
 	}
 	
-	// @return the number of threads associated with this transaction.
-	public final int activeThreads ()
+	
+	//Register the current thread with the transaction. This operation is not affected by the state of the transaction.
+	public boolean addThread()
 	{
-		 if (_childThreads != null)
-			 return _childThreads.size();
-		 else
-			 return 0;
+		return addThread(Thread.currentThread());
+	}
+	public boolean addThread(Thread _thread)
+	{
+		if(_thread !=null)
+		{
+			BKThreadTransaction.pushTransaction(this);
+			return true;
+		}
+		return false;
 	}
 	
+		
 	 /**
-     * Remove a child action.
+     * Remove a child transaction.
      *
      * @return <code>true</code> if successful, <code>false</code>
      *         otherwise.
      */
 
-    public final boolean removeChildTransaction (Transaction act)
+    public final boolean removeChildTransaction (Transaction trans)
     {
-        if (act == null)
+        if (trans == null)
             return false;
 
         boolean result = false;
@@ -80,7 +86,7 @@ public class Transaction extends TransactionImple implements Serializable{
         {
             if (_ChildTransactions != null)
             {
-                _ChildTransactions.remove(act);
+                _ChildTransactions.remove(trans);
                 result = true;
             }
         }
@@ -89,6 +95,16 @@ public class Transaction extends TransactionImple implements Serializable{
 
         return result;
     }
+    
+	// @return the number of threads associated with this transaction.
+	public final int activeThreads ()
+	{
+		 if (_childThreads != null)
+			 return _childThreads.size();
+		 else
+			 return 0;
+	}
+
 
     /**
      * Add the specified CheckedTransaction object to this transaction.
@@ -476,10 +492,20 @@ public class Transaction extends TransactionImple implements Serializable{
 	public void setListRMs(List<ResourceManager> listRMs) {
 		this.listRMs = listRMs;
 	}
-	public MultiMap<TransactionThread, ?> getMultiOperationMap() {
+
+	public HashMultimap<Transaction, List<Operation>> getMultiOperationMap() {
 		return multiOperationMap;
 	}
-	public void setMultiOperationMap(MultiMap<TransactionThread, ?> multiOperationMap) {
+
+	public void setMultiOperationMap(HashMultimap<Transaction, List<Operation>> multiOperationMap) {
 		this.multiOperationMap = multiOperationMap;
+	}
+
+	public HashMultimap<Transaction, List<SubTransaction>> getChildTransactionMap() {
+		return childTransactionMap;
+	}
+
+	public void setChildTransactionMap(HashMultimap<Transaction, List<SubTransaction>> multiSubTransactionMap) {
+		this.childTransactionMap = multiSubTransactionMap;
 	}
 }

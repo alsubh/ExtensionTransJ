@@ -59,20 +59,20 @@ import umjdt.concepts.*;
 	    
 	        
 	         // Put back the entire hierarchy, removing whatever is already there.
-	       public static void restoreTransactions (Transaction act)
+	       public static void restoreTransactions (Transaction trans)
 	       {
 	           purgeTransactions();
 	   
-	           if (act != null)
+	           if (trans != null)
 	           {
 	               /*
 	                * First get the hierarchy from the bottom up.
 	                */
 	   
 	               java.util.Stack s = new java.util.Stack();
-	               Transaction nextLevel = act.parent();
+	               Transaction nextLevel = trans.parent();
 	   
-	               s.push(act);
+	               s.push(trans);
 	   
 	               while (nextLevel != null)
 	               {

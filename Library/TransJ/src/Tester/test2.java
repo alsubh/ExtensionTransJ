@@ -14,12 +14,10 @@ import com.arjuna.ats.jta.TransactionManager;
 import com.arjuna.ats.jta.xa.XidImple;
 import com.arjuna.mw.wsas.exceptions.SystemException;
 import com.sun.beans.util.Cache;
-
 import umjdt.concepts.SubTransaction;
 import umjdt.concepts.TransId;
 import umjdt.concepts.Transaction;
 import umjdt.util.thread.BKThreadTransaction;
-
 import java.lang.Object.*;
 import org.infinispan.transaction.lookup.JBossStandaloneJTAManagerLookup;
 
