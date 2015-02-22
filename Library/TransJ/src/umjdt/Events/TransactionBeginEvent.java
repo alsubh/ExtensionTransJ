@@ -5,6 +5,7 @@ import java.util.TimerTask;
 
 import umjdt.concepts.Transaction;
 import umjdt.concepts.TransactionThread;
+import umjdt.util.Status;
 import umjdt.util.Timestamp;
 
 public class TransactionBeginEvent extends TransactionEvent{
@@ -20,31 +21,39 @@ public class TransactionBeginEvent extends TransactionEvent{
 		transactionThread = new TransactionThread();
 		_transaction.setTransactionThread(transactionThread);
 	}
+	
 	public TransactionBeginEvent(String _threadName,Transaction _transaction)
 	{
 		iniilization(_transaction);
 		// add transaction to a new thread
 		transactionThread = new TransactionThread(_threadName);
 		_transaction.setTransactionThread(transactionThread);
+		
+		_transaction.addEvent(this);
 	}
-	private void iniilization(Transaction _transaction){
+	
+	private void iniilization(Transaction _transaction)
+	{
 		super.setTransaction(_transaction);
 		setBeginTime(getLocalTime());
-		setType("BeginTransaction");
+		setEventType("BeginEvent");
 		setTransactionId(_transaction.getId());
 		super.setTransactionId(_transaction.getId());
 		setTimeout(_transaction.getTimeout());
 		super.setTimeout(_transaction.getTimeout());
-		setState("Begin");
-		_transaction.setCurrentState(getState());
+		setStatus(Status.CREATED); // begin
 		setMarkBoundary("Begin");
 		super.setMarkBoundary("Begin");
 		
 		setTimer(new Timer());
 		getTimer().schedule(new BeginTask(), _transaction.getTimeout());
 		
+		_transaction.addEvent(this);
+
 	}
-	public Timestamp getBeginTime() {
+
+	public Timestamp getBeginTime() 
+	{
 		return beginTime;
 	}
 	public void setBeginTime(Timestamp beginTime) {

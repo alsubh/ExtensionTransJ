@@ -7,6 +7,7 @@ import umjdt.Events.TransactionBeginEvent.BeginTask;
 import umjdt.concepts.TransId;
 import umjdt.concepts.Transaction;
 import umjdt.concepts.TransactionThread;
+import umjdt.util.Status;
 import umjdt.util.Timestamp;
 
 public class TransactionBeginCommitEvent extends TransactionEvent{
@@ -21,16 +22,18 @@ public class TransactionBeginCommitEvent extends TransactionEvent{
 		super.setTransactionId(_localTransaction.getId());
 		setTimeout(_localTransaction.getTimeout());
 		super.setTimeout(_localTransaction.getTimeout());
-		super.setState("BeginCommit");
-		setType("BeginCommit");
-		_localTransaction.setCurrentState(getState());
+		super.setStatus(Status.COMMITTING);
+		setEventType("BeginCommit");
 		setMarkBoundary("BeginCommit");
 		super.setMarkBoundary("BeginCommit");
-		setTransactionThread(_localTransaction.getTransactionThread());
-		super.setTransactionThread(_localTransaction.getTransactionThread());
+		setTheThread(_localTransaction.getTransactionThread());
+		super.setTheThread(_localTransaction.getTransactionThread());
 		
 		setTimer(new Timer());
 		getTimer().schedule(new BeginCommitTask(), _localTransaction.getTimeout());
+		
+		_localTransaction.addEvent(this);
+
 	}
 	 public Timestamp getBeginCommitTime() {
 		return beginCommitTime;

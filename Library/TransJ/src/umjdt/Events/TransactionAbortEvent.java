@@ -5,11 +5,13 @@ import java.util.TimerTask;
 
 import umjdt.Events.TransactionCommitEvent.CommitTask;
 import umjdt.concepts.Transaction;
+import umjdt.util.Status;
 import umjdt.util.Timestamp;
 
 public class TransactionAbortEvent extends TransactionEvent{
 	
 	private Timestamp abortTime; 
+	
 	public TransactionAbortEvent(Transaction _localTransaction)
 	{
 		super.setTransaction(_localTransaction);
@@ -18,15 +20,17 @@ public class TransactionAbortEvent extends TransactionEvent{
 		super.setTransactionId(_localTransaction.getId());
 		setTimeout(_localTransaction.getTimeout());
 		super.setTimeout(_localTransaction.getTimeout());
-		super.setState("Aborted");
-		_localTransaction.setCurrentState(getState());
+		super.setStatus(Status.ABORTED);
 		setMarkBoundary("Abort");
 		super.setMarkBoundary("Abort");
-		setTransactionThread(_localTransaction.getTransactionThread());
-		super.setTransactionThread(_localTransaction.getTransactionThread());
+		setTheThread(_localTransaction.getTransactionThread());
+		super.setTheThread(_localTransaction.getTransactionThread());
 		
 		setTimer(new Timer());
 		getTimer().schedule(new CommitTask(), _localTransaction.getTimeout());
+
+		_localTransaction.addEvent(this);
+
 	}
 	
 	public Timestamp getAbortTime() {

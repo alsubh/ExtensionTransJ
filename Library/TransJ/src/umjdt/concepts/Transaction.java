@@ -1,78 +1,82 @@
 package umjdt.concepts;
 
 import java.io.Serializable;
-import java.util.*;
-
-import javax.swing.plaf.basic.BasicScrollPaneUI.HSBChangeListener;
-
 import com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionImple;
-import com.google.common.collect.HashMultimap;
+
+import umjdt.Events.Event;
 import umjdt.Events.TransactionEvent;
-import umjdt.util.CheckedTransaction;
 import umjdt.util.thread.BKThreadTransaction;
 import umjdt.util.thread.ThreadUtil;
 import umjdt.util.*;
+import java.util.*;
+import java.util.logging.Logger;
 
 public class Transaction extends TransactionImple implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
+	Logger log = Logger.getLogger(this.getClass().getName()); 
+	
 	private TransId id;
-	private String currentState;
+	private int status;
 	private int timeout;
-	private TransactionThread transactionThread;// make the transaction associated with current thread
-	private int transactionStatus;
-    private int transactionType;
-    private Transaction parentTransaction;
-    private CheckedTransaction _checkedTransaction;
-    private TransactionManager transactionManager= new TransactionManager();
-    private List<TransactionEvent> events = new ArrayList<TransactionEvent>();
+	private Timestamp timestamp;
+	private int transactionType;
+	private Transaction parentTransaction;
+	private Thread transactionThread;// make the transaction associated with current thread
+	private TransactionManager transactionManager= new TransactionManager();
+	private List<TransactionEvent> events = new ArrayList<TransactionEvent>();
 	private List<Operation> operations = new ArrayList<Operation>();
-	
-	//private MultiMap<TransactionThread, ?> multiOperationMap = new MultiValueMap(); // add the operation threads of the transaction  
-	//private HashMultimap<Transaction, List<Operation>> multiOperationMap;
-	private HashMultimap<Transaction, List<SubTransaction>> childTransactionMap;
-	private HashMap resources = new HashMap();
-	
+	private HashMap resources;
+	private Hashtable<TransId, SubTransaction> _ChildTransactions;
 	private Hashtable<String, Thread> _childThreads;
-    private Hashtable<Transaction, SubTransaction> _ChildTransactions;
+	//private HashMultimap<Transaction, List<SubTransaction>> childTransactionMap;
 	
-	public Transaction() {
+		
+	public Transaction() 
+	{
 		super();
 		//this.multiOperationMap = HashMultimap.create();
-		this.childTransactionMap=HashMultimap.create();
+		this.resources = new HashMap();
+		this._ChildTransactions=new Hashtable<TransId, SubTransaction>();
+		this._childThreads= new Hashtable<String, Thread>();
+		this.timestamp = new Timestamp();
+		addThread();
 	}
 
-	public Transaction(int timeout) {
+	public Transaction(int timeout) 
+	{
 		super(timeout);
 		//this.multiOperationMap = HashMultimap.create();
-		this.childTransactionMap=HashMultimap.create();
+		this.resources = new HashMap();
+		this._ChildTransactions=new Hashtable<TransId, SubTransaction>();
+		this._childThreads= new Hashtable<String, Thread>();
+		this.timestamp = new Timestamp(timeout);
+		addThread();
 	}
 	
-	
-	//Register the current thread with the transaction. This operation is not affected by the state of the transaction.
+	/**
+	 * Register the current thread with the transaction. This operation is not affected by the state of the transaction.
+	 */
 	public boolean addThread()
 	{
 		return addThread(Thread.currentThread());
 	}
+	
 	public boolean addThread(Thread _thread)
 	{
 		if(_thread !=null)
 		{
+			setTransactionThread(_thread);
 			BKThreadTransaction.pushTransaction(this);
 			return true;
 		}
 		return false;
 	}
-	
 		
 	 /**
      * Remove a child transaction.
-     *
-     * @return <code>true</code> if successful, <code>false</code>
-     *         otherwise.
      */
-
     public final boolean removeChildTransaction (Transaction trans)
     {
         if (trans == null)
@@ -86,17 +90,18 @@ public class Transaction extends TransactionImple implements Serializable{
         {
             if (_ChildTransactions != null)
             {
-                _ChildTransactions.remove(trans);
+                _ChildTransactions.remove(trans.getId());
                 result = true;
             }
         }
-
         criticalEnd();
-
         return result;
     }
     
-	// @return the number of threads associated with this transaction.
+	/**
+	 * @return the number of threads associated with this transaction.
+	 * 
+	 */
 	public final int activeThreads ()
 	{
 		 if (_childThreads != null)
@@ -104,29 +109,11 @@ public class Transaction extends TransactionImple implements Serializable{
 		 else
 			 return 0;
 	}
-
-
-    /**
-     * Add the specified CheckedTransaction object to this transaction.
-     *
-     * @see com.arjuna.ats.arjuna.coordinator.CheckedTransaction
+    
+	/**
+     * @return the TransId that the transaction's intentions list will be saved under.
      */
-
-    protected final synchronized void setCheckedTransaction (CheckedTransaction c)
-    {
-        criticalStart();
-
-        _checkedTransaction = c;
-
-        criticalEnd();
-    }
-
-    /**
-     * @return the Uid that the transaction's intentions list will be saved
-     *         under.
-     */
-
-    public TransId getSavingUid ()
+    public TransId getSavingId ()
     {
         return getId();
     }
@@ -134,18 +121,17 @@ public class Transaction extends TransactionImple implements Serializable{
     public String toString ()
     {
         return new String("Transaction: " + getId() + " status: "
-                + Status.stringForm(transactionStatus));
+                + Status.stringForm(status));
     }
     
     /**
-     * The following function returns the transId of the top-level atomic action. If
+     * The following function returns the transId of the top-level transaction. If
      * this is the top-level transaction then it is equivalent to calling
      * getId().
      *
-     * @return the top-level transaction's <code>Uid</code>.
      */
 
-    public final TransId topLevelActionUid ()
+    public final TransId topLevelActionId ()
     {
         Transaction root = this;
 
@@ -161,7 +147,7 @@ public class Transaction extends TransactionImple implements Serializable{
      *         returned.
      */
 
-    public final Transaction topLevelAction ()
+    public final Transaction topLevelTransaction ()
     {
         Transaction root = this;
 
@@ -170,37 +156,32 @@ public class Transaction extends TransactionImple implements Serializable{
 
         return root;
     }
-
+    
     /**
-     * Overloaded version of activate -- sets up the store, performs read_state
-     * followed by restore_state. The store root is <code>null</code>.
-     *
-     * @return <code>true</code> if successful, <code>false</code>
-     *         otherwise.
+     * @return a reference to the parent Transaction
      */
 
+    public final Transaction parent ()
+    {
+        if (transactionType == TransactionType.NESTED)
+            return parentTransaction;
+        else
+            return null;
+    }
    
     /**
      * Add the current thread to the list of threads associated with this
      * transaction.
-     *
-     * @return <code>true</code> if successful, <code>false</code>
-     *         otherwise.
      */
-
-    public final boolean addChildThread () // current thread
+    public final boolean addChildThread ()
     {
         return addChildThread(Thread.currentThread());
     }
-
+    
     /**
      * Add the specified thread to the list of threads associated with this
      * transaction.
-     *
-     * @return <code>true</code> if successful, <code>false</code>
-     *         otherwise.
      */
-
     public final boolean addChildThread (Thread t)
     {
         if (t == null)
@@ -212,45 +193,26 @@ public class Transaction extends TransactionImple implements Serializable{
 
         synchronized (this)
         {
-            if (transactionStatus <= Status.ABORTING)
+            if (status <= Status.ABORTING)
             {
                 if (_childThreads == null)
                     _childThreads = new Hashtable<String, Thread>();
-
-                _childThreads.put(ThreadUtil.getThreadId(t), t); // makes sure so we don't get
-                // duplicates
+                _childThreads.put(ThreadUtil.getThreadId(t), t); // makes sure so we don't get duplicates
 
                 result = true;
             }
         }
-
         criticalEnd();
-
         return result;
     }
 
-    /*
-      * Can be done at any time (Is this correct?)
-      */
-
     /**
      * Remove a child thread. The current thread is removed.
-     *
-     * @return <code>true</code> if successful, <code>false</code>
-     *         otherwise.
      */
-
-    public final boolean removeChildThread () // current thread
+    public final boolean removeChildThread ()
     {
         return removeChildThread(ThreadUtil.getThreadId());
     }
-
-    /**
-     * Remove the specified thread from the transaction.
-     *
-     * @return <code>true</code> if successful, <code>false</code>
-     *         otherwise.
-     */
 
     /**
      * Defines the start of a critical region by setting the critical flag. If
@@ -274,7 +236,6 @@ public class Transaction extends TransactionImple implements Serializable{
     {
         //	_lock.unlock();
     }
-
     
     public final boolean removeChildThread (String threadId)
     {
@@ -301,41 +262,31 @@ public class Transaction extends TransactionImple implements Serializable{
     }
 
     /**
-     * Add a new child action to the atomic action.
-     *
-     * @return <code>true</code> if successful, <code>false</code>
-     *         otherwise.
+     * Add a new child transaction to the transaction.
      */
-
-    public final boolean addChildTransaction (Transaction act)
+    public final boolean addChildTransaction (SubTransaction trans)
     {
-
-        if (act == null)
+        if (trans == null)
             return false;
 
         boolean result = false;
-
         criticalStart();
-
         synchronized (this)
         {
-            /*
-                * Must be <= as we sometimes need to do processing during commit
-                * phase.
-                */
+               /*
+                * Must be <= as we sometimes need to do processing during commit phase.
+               */
 
-            if (transactionStatus <= Status.ABORTING)
+            if (status <= Status.ABORTING)
             {
                 if (_ChildTransactions == null)
-                    _ChildTransactions = new Hashtable<Transaction, Transaction>();
-
-                _ChildTransactions.put(act, act);
+                    _ChildTransactions = new Hashtable<TransId, SubTransaction>();
+                _ChildTransactions.put(trans.getId(), trans);
                 result = true;
             }
         }
 
         criticalEnd();
-
         return result;
     }
     
@@ -350,23 +301,9 @@ public class Transaction extends TransactionImple implements Serializable{
             if ((parentTransaction != null) && (transactionType != TransactionType.TOP_LEVEL))
                 res = parentTransaction.isAncestor(ancestor);
         }
-
         return res;
     }
-
-    /**
-     * @return a reference to the parent Transaction
-     */
-
-    public final Transaction parent ()
-    {
-        if (transactionType == TransactionType.NESTED)
-            return parentTransaction;
-        else
-            return null;
-    }
     
-    // we have in JTA transaction an equal method to check the similarity between transaction
  	@Override
  	public boolean equals(Object _obj){ 
  		Transaction  tempTransaction = (Transaction)_obj;
@@ -379,18 +316,6 @@ public class Transaction extends TransactionImple implements Serializable{
     {
         return transactionType;
     }
-
-    public String getBeginState(){
-		return "begin";			
-	}
-
-	public String getCommitState(){
-		return "commit";			
-	}
-	
-	public String getAbortState(){
-		return "rollback";			
-	}
 	
 	public TransId getId(){
 		return id;
@@ -407,20 +332,8 @@ public class Transaction extends TransactionImple implements Serializable{
 		this.events = _events;
 	}
 	
-	public void addEvent(TransactionEvent _event){		
-		events.add(_event);
-	}
-	
 	public void removeEvent(TransactionEvent _event){
 		events.remove(_event);
-	}
-		
-	public String getCurrentState() {
-		return currentState;
-	}
-	
-	public void setCurrentState(String _currentState) {
-		this.currentState = _currentState;
 	}
 	public int getTimeout() 
 	{
@@ -441,10 +354,6 @@ public class Transaction extends TransactionImple implements Serializable{
 		this.operations = operations;
 	}
 
-	public void setResources(List<Resource> resources) {
-		this.resources = resources;
-	}
-
 	public TransactionManager getTransactionManager() {
 		return transactionManager;
 	}
@@ -453,59 +362,37 @@ public class Transaction extends TransactionImple implements Serializable{
 		this.transactionManager = transactionManager;
 	}
 
-	public ResourceManager getResourceManager() {
-		return resourceManager;
+	public Timestamp getTimestamp() {
+		return timestamp;
 	}
 
-	public void setResourceManager(ResourceManager resourceManager) {
-		this.resourceManager = resourceManager;
+	public void setTimestamp(Timestamp timestamp) {
+		this.timestamp = timestamp;
 	}
 
-	public TwoPhaseCommitProtocol getTwoPhaseCommitProtocol() {
-		return twoPhaseCommitProtocol;
+	public HashMap getResources() {
+		return resources;
 	}
 
-	public void setTwoPhaseCommitProtocol(
-			TwoPhaseCommitProtocol twoPhaseCommitProtocol) {
-		this.twoPhaseCommitProtocol = twoPhaseCommitProtocol;
+	public void setResources(HashMap resources) {
+		this.resources = resources;
 	}
 
-	public TransactionThread getTransactionThread() {
+	public Thread getTransactionThread() {
 		return transactionThread;
 	}
 
-	public void setTransactionThread(TransactionThread transactionThread) {
+	public void setTransactionThread(Thread transactionThread) {
 		this.transactionThread = transactionThread;
 	}
-	public List<TransactionManager> getListTMs() {
-		return listTMs;
-	}
-
-	public void setListTMs(List<TransactionManager> listTMs) {
-		this.listTMs = listTMs;
-	}
-
-	public List<ResourceManager> getListRMs() {
-		return listRMs;
-	}
-
-	public void setListRMs(List<ResourceManager> listRMs) {
-		this.listRMs = listRMs;
-	}
-
-	public HashMultimap<Transaction, List<Operation>> getMultiOperationMap() {
-		return multiOperationMap;
-	}
-
-	public void setMultiOperationMap(HashMultimap<Transaction, List<Operation>> multiOperationMap) {
-		this.multiOperationMap = multiOperationMap;
-	}
-
-	public HashMultimap<Transaction, List<SubTransaction>> getChildTransactionMap() {
-		return childTransactionMap;
-	}
-
-	public void setChildTransactionMap(HashMultimap<Transaction, List<SubTransaction>> multiSubTransactionMap) {
-		this.childTransactionMap = multiSubTransactionMap;
+	
+	public boolean addEvent(TransactionEvent event)
+	{
+		if(event !=null)
+		{
+			events.add(event);
+			return true;
+		}
+		return false;
 	}
 }

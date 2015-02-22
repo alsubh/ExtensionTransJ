@@ -32,39 +32,39 @@ public class Status
 		switch (res)
 		{
 			case RUNNING:
-			    return "ActionStatus.RUNNING";
+			    return "Status.RUNNING";
 			case PREPARING:
-			    return "ActionStatus.PREPARING";
+			    return "Status.PREPARING";
 			case ABORTING:
-			    return "ActionStatus.ABORTING";
+			    return "Status.ABORTING";
 			case ABORT_ONLY:
-			    return "ActionStatus.ABORT_ONLY";
+			    return "Status.ABORT_ONLY";
 			case ABORTED:
-			    return "ActionStatus.ABORTED";
+			    return "Status.ABORTED";
 			case PREPARED:
-			    return "ActionStatus.PREPARED";
+			    return "Status.PREPARED";
 			case COMMITTING:
-			    return "ActionStatus.COMMITTING";
+			    return "Status.COMMITTING";
 			case COMMITTED:
-			    return "ActionStatus.COMMITTED";
+			    return "Status.COMMITTED";
 			case CREATED:
-			    return "ActionStatus.CREATED";
+			    return "Status.CREATED";
 			case INVALID:
-			    return "ActionStatus.INVALID";
+			    return "Status.INVALID";
 			case CLEANUP:
-			    return "ActionStatus.CLEANUP";
+			    return "Status.CLEANUP";
 			case H_ROLLBACK:
-			    return "ActionStatus.H_ROLLBACK";
+			    return "Status.H_ROLLBACK";
 			case H_COMMIT:
-			    return "ActionStatus.H_COMMIT";
+			    return "Status.H_COMMIT";
 			case H_MIXED:
-			    return "ActionStatus.H_MIXED";
+			    return "Status.H_MIXED";
 			case H_HAZARD:
-			    return "ActionStatus.H_HAZARD";
+			    return "Status.H_HAZARD";
 			case DISABLED:
-			    return "ActionStatus.DISABLED";
+			    return "Status.DISABLED";
 			case NO_ACTION:
-			    return "ActionStatus.NO_ACTION";
+			    return "Status.NO_ACTION";
 			default:
 			    return "Unknown";
 		}

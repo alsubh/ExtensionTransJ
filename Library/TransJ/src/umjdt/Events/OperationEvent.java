@@ -20,7 +20,7 @@ public class OperationEvent extends Event{
 	{
 		super();
 		setOperationNumber(_opNur);
-		setType("OperationEvent");
+		setEventType("OperationEvent");
 	}
 	
 	public OperationEvent(Operation _operation)

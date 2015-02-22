@@ -8,7 +8,11 @@ import umjdt.concepts.TransId;
 
 public class OperationNumber implements Comparable, Serializable {
 
-    private static short nextSeqNumber = 1;  // Start with operation #1
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static short nextSeqNumber = 1;  // Start with operation #1
     public static OperationNumber Empty;
     //public static short LocalTransactionId; // Local transaction Id -- set once when the operation joins the transaction application
     //public short transactionId;

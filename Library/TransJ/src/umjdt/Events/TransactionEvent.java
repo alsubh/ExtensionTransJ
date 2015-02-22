@@ -1,59 +1,69 @@
 package umjdt.Events;
 
-import java.util.*;
-
-import javax.management.OperationsException;
+import java.util.logging.Logger;
 import umjdt.concepts.*;
 
-public class TransactionEvent extends Event{
-	
+public class TransactionEvent extends Event
+{	
 	private Transaction transaction;
 	private String markBoundary;
-	private Operation operation = new Operation();
-	private ResourceManager resourcemanager= new ResourceManager();
+	private TransactionManager transactionmanager= new TransactionManager();
+	private int status;
 	
-	public TransactionEvent(){
+	Logger log = Logger.getLogger(TransactionEvent.class.getName());
+	
+	public TransactionEvent()
+	{		
 		super();
-		setType("TransactionEvent");
+		setEventType("TransactionEvent");
+		setTheThread(Thread.currentThread());
+		log.info("Creating Transaction Event");
 	}
 	
-	public Transaction getTransaction() {
+	public Transaction getTransaction() 
+	{
 		return transaction;
 	}
 
-	public void setTransaction(Transaction _transaction) {
+	public void setTransaction(Transaction _transaction) 
+	{
 		this.transaction = _transaction;
 	}
-			
-	public ResourceManager getResourceManager() {
-		return resourcemanager;
-	}
 
-	public void setResourceManager(ResourceManager _resourceManager) {
-		this.resourcemanager = _resourceManager;
-	}
-
-	public boolean involves(Operation _operation) {
+	public boolean involves(Operation _operation) 
+	{
 		// TODO Auto-generated method stub
 		return false;
 	}
-	public boolean occursOn(Transaction _transaction) {
+	
+	public boolean occursOn(Transaction _transaction) 
+	{
 		// TODO Auto-generated method stub
 		return false;
 	}
-	public String getMarkBoundary() {
+	public String getMarkBoundary() 
+	{
 		return markBoundary;
 	}
 
-	public void setMarkBoundary(String markBoundary) {
+	public void setMarkBoundary(String markBoundary) 
+	{
 		this.markBoundary = markBoundary;
 	}
 
-	public Operation getOperation() {
-		return operation;
+	public TransactionManager getTransactionmanager() {
+		return transactionmanager;
 	}
 
-	public void setOperation(Operation operation) {
-		this.operation = operation;
+	public void setTransactionmanager(TransactionManager transactionmanager) {
+		this.transactionmanager = transactionmanager;
+	}
+
+	public int getStatus() {
+		return status;
+	}
+
+	public void setStatus(int _status) {
+		this.status = _status;
 	}
 }

@@ -1,6 +1,8 @@
 package umjdt.util;
 
 import java.util.Hashtable;
+import java.util.logging.Logger;
+
 import umjdt.concepts.TransId;
 
 public class CheckedTransaction
@@ -13,13 +15,23 @@ public class CheckedTransaction
      * 
      * The default implementation simply prints a warning.
      */
-
-    public void check (boolean isCommit, TransId transId, Hashtable list)
+	
+	Logger log = Logger.getLogger(CheckedTransaction.class.getName());
+	String msg ="";
+    public void check (boolean isCommit, TransId transId, Hashtable list) // list of the subtransactions
     {
         if (isCommit)
+        {
         	System.out.println(transId + Integer.toString(list.size()));
+        	msg = "Transaction Id : "+ transId + "Number of SubTransactions :" +Integer.toString(list.size());
+        	log.info(msg);
+        }
         else
+        {
         	System.out.println(transId + Integer.toString(list.size()));
+        	msg = "Transaction Id : "+ transId + "Number of SubTransactions :" +Integer.toString(list.size());
+            	log.info(msg);
+        }
     }
 
 }
