@@ -4,8 +4,8 @@ import java.util.Timer;
 import java.util.UUID;
 
 import umjdt.concepts.TransId;
-import umjdt.concepts.TransactionThread;
 import umjdt.util.Timestamp;
+import umjdt.util.thread.TransactionThread;
 
 public class Event {
 

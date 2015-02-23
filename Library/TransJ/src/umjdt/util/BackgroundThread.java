@@ -3,7 +3,7 @@ package umjdt.util;
 import java.util.ArrayList;
 import java.util.List;
 import umjdt.Events.Event;
-import umjdt.concepts.TransactionThread;
+import umjdt.util.thread.TransactionThread;
 
 
 public class BackgroundThread extends Thread implements Runnable{

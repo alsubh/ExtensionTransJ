@@ -8,6 +8,7 @@ import com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionManagerImpl
 
 import umjdt.Events.*;
 import umjdt.util.Status;
+import umjdt.util.thread.TransactionThread;
 
 public class TransactionManager extends TransactionManagerImple{
 

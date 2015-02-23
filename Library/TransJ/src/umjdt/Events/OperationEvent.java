@@ -11,8 +11,6 @@ import umjdt.util.Timestamp;
 public class OperationEvent extends Event{
 
 	private Operation operation;
-	private OperationNumber operationNumber;
-	private ResourceManager resourceManager;
 	private Timestamp beginOperation;
 	private Timestamp endOperation;
 	
@@ -39,17 +37,7 @@ public class OperationEvent extends Event{
 			return true;
 		return false; 
 	}
-	
-	public ResourceManager getResourceManager() 
-	{
-		return resourceManager;
-	}
-	
-	public void setResourceManager(ResourceManager resourceManager) 
-	{
-		this.resourceManager = resourceManager;
-	}
-	
+		
 	public umjdt.util.Timestamp getBeginOperation() 
 	{
 		return beginOperation;
@@ -68,15 +56,5 @@ public class OperationEvent extends Event{
 	public void setEndOperation(umjdt.util.Timestamp endOperation) 
 	{
 		this.endOperation = endOperation;
-	}
-	
-	public OperationNumber getOperationNumber() 
-	{
-		return operationNumber;
-	}
-	
-	public void setOperationNumber(OperationNumber operationNumber) 
-	{
-		this.operationNumber = operationNumber;
 	}
 }

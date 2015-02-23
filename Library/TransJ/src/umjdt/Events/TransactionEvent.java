@@ -7,7 +7,6 @@ public class TransactionEvent extends Event
 {	
 	private Transaction transaction;
 	private String markBoundary;
-	private TransactionManager transactionmanager= new TransactionManager();
 	private int status;
 	
 	Logger log = Logger.getLogger(TransactionEvent.class.getName());
@@ -49,14 +48,6 @@ public class TransactionEvent extends Event
 	public void setMarkBoundary(String markBoundary) 
 	{
 		this.markBoundary = markBoundary;
-	}
-
-	public TransactionManager getTransactionmanager() {
-		return transactionmanager;
-	}
-
-	public void setTransactionmanager(TransactionManager transactionmanager) {
-		this.transactionmanager = transactionmanager;
 	}
 
 	public int getStatus() {

@@ -10,10 +10,7 @@ public class Timestamp implements Comparable<Timestamp>{
 	private Date localTime;
 	private long deltaTime = 0;
 	private long timestampPluDelta ;
-	// 1) create a java calendar instance
 	Calendar calendar = Calendar.getInstance();
-	// 2) get a java.util.Date from the calendar instance.
-	// this date will represent the current instant, or "now".
 	Date now = calendar.getTime();
 
 	public Timestamp()
@@ -63,7 +60,7 @@ public class Timestamp implements Comparable<Timestamp>{
 	}
 	
 	public Timestamp currentTimeStamp(){
-		// 3) a java current time (now) instance
+		//a java current time (now) instance
 		Timestamp currentTimestamp = new Timestamp(now.getTime());
 		return currentTimestamp;
 	}

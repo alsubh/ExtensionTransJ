@@ -395,4 +395,17 @@ public class Transaction extends TransactionImple implements Serializable{
 		}
 		return false;
 	}
+	
+	public int getTransactionType(Transaction _transaction)
+	{
+		if(_transaction.getChildTransactions()> 1)
+			return TransactionType.NESTED;
+		return TransactionType.TOP_LEVEL;
+	}
+	
+	public int getChildTransactions()
+	{
+		int number = this._ChildTransactions.size();
+		return number;
+	}
 }

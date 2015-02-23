@@ -11,6 +11,7 @@ public class TransJP
 {
 	Logger logger = Logger.getLogger(TransJP.class.toString());
 	
+	private Thread theThread;
 	private Transaction tranaction;
 	private List<Event> events;
 	private TransactionType type;
@@ -19,7 +20,6 @@ public class TransJP
 	{
 		
 	}
-	
 	public TransJP(TransJP _transJp)
 	{
 		this.tranaction =_transJp.getTranaction();
@@ -56,5 +56,13 @@ public class TransJP
 
 	public void setEvents(List<Event> events) {
 		this.events = events;
+	}
+
+	public Thread getTheThread() {
+		return theThread;
+	}
+
+	public void setTheThread(Thread theThread) {
+		this.theThread = theThread;
 	}
 }

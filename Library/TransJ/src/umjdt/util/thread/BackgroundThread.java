@@ -3,7 +3,6 @@ package umjdt.util.thread;
 import java.util.ArrayList;
 import java.util.List;
 import umjdt.Events.Event;
-import umjdt.concepts.TransactionThread;
 import umjdt.util.Timestamp;
 
 

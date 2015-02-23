@@ -6,9 +6,9 @@ import java.util.TimerTask;
 import umjdt.Events.TransactionBeginEvent.BeginTask;
 import umjdt.concepts.TransId;
 import umjdt.concepts.Transaction;
-import umjdt.concepts.TransactionThread;
 import umjdt.util.Status;
 import umjdt.util.Timestamp;
+import umjdt.util.thread.TransactionThread;
 
 public class TransactionBeginCommitEvent extends TransactionEvent{
 	

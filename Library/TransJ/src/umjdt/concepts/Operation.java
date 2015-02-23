@@ -10,6 +10,7 @@ import umjdt.util.AccessType;
 import umjdt.util.LockType;
 import umjdt.util.OperationNumber;
 import umjdt.util.Timestamp;
+import umjdt.util.thread.TransactionThread;
 
 public class Operation implements Cloneable, Serializable{
 

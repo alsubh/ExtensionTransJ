@@ -4,9 +4,9 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import umjdt.concepts.Transaction;
-import umjdt.concepts.TransactionThread;
 import umjdt.util.Status;
 import umjdt.util.Timestamp;
+import umjdt.util.thread.TransactionThread;
 
 public class TransactionBeginEvent extends TransactionEvent{
 	
@@ -58,8 +58,9 @@ public class TransactionBeginEvent extends TransactionEvent{
 	{
 		return beginTime;
 	}
-	public void setBeginTime(Timestamp beginTime) {
-		this.beginTime = beginTime;
+	public void setBeginTime(Timestamp _beginTime) 
+	{
+		this.beginTime = _beginTime;
 	}
 	 class BeginTask extends TimerTask {
 	    public void run() {

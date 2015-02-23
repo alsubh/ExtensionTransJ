@@ -2,12 +2,16 @@ package umjdt.contexts;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Hashtable;
 import java.util.List;
 
 import org.apache.commons.collections4.MultiMap;
 import org.apache.commons.collections4.map.MultiValueMap;
 
-import umjdt.concepts.TransactionThread;
+import umjdt.concepts.SubTransaction;
+import umjdt.concepts.TransId;
+import umjdt.concepts.Transaction;
+import umjdt.util.thread.TransactionThread;
 import utilities.Participant;
 
 public class Context implements Serializable{
@@ -19,8 +23,7 @@ public class Context implements Serializable{
 	private String type;
 	private int numberOfParticipants = 1;
 	private Participant workingParticipant = null;
-	private MultiMap<TransactionThread , ?> ContextThreads;
-	private List<TransactionThread> threads;  
+	private Hashtable<String, Transaction> threads;
 	
 	public Context()
 	{
