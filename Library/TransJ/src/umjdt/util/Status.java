@@ -22,6 +22,8 @@ public class Status
     public static final int H_HAZARD = 14;
     public static final int DISABLED = 15;
     public static final int NO_ACTION = 16;
+    public static final int BLOCKED = 17;
+    public static final int RELEASED = 18;
 
     /**
      * @return <code>String</code> representation of the status.
@@ -65,6 +67,10 @@ public class Status
 			    return "Status.DISABLED";
 			case NO_ACTION:
 			    return "Status.NO_ACTION";
+			case BLOCKED:
+			    return "Status.BLOCKED";
+			case RELEASED:
+			    return "Status.RELEASED";
 			default:
 			    return "Unknown";
 		}

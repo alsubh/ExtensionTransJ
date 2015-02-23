@@ -11,7 +11,7 @@ import umjdt.util.Timestamp;
 public class TransactionBeginEvent extends TransactionEvent{
 	
 	private Timestamp beginTime; 
-	TransactionThread transactionThread;
+	private TransactionThread transactionThread;
 	
 	
 	public TransactionBeginEvent(Transaction _transaction)
@@ -20,6 +20,8 @@ public class TransactionBeginEvent extends TransactionEvent{
 		// add transaction to a new thread
 		transactionThread = new TransactionThread();
 		_transaction.setTransactionThread(transactionThread);
+		
+		_transaction.addEvent(this);
 	}
 	
 	public TransactionBeginEvent(String _threadName,Transaction _transaction)

@@ -11,63 +11,72 @@ import umjdt.util.Timestamp;
 public class OperationEvent extends Event{
 
 	private Operation operation;
+	private OperationNumber operationNumber;
 	private ResourceManager resourceManager;
 	private Timestamp beginOperation;
 	private Timestamp endOperation;
-	private OperationNumber operationNumber;
 	
-	public OperationEvent(OperationNumber _opNur)
-	{
+	public OperationEvent()
+	{ 
 		super();
-		setOperationNumber(_opNur);
 		setEventType("OperationEvent");
 	}
 	
-	public OperationEvent(Operation _operation)
-	{ 
-		super();
-		setOperation(_operation);
-	}
-	public OperationEvent(Transaction _transaction, Operation _operation)
-	{ 
-		super();
-		setOperation(_operation);
-		
-	}
-	public Operation getOperation() {
+	public Operation getOperation() 
+	{
 		return operation;
 	}
-	public void setOperation(Operation operation) {
+	
+	public void setOperation(Operation operation) 
+	{
 		this.operation = operation;
 	}
-	public boolean occursOn(Transaction _transaction, Operation _operation) {
+	
+	public boolean occursOn(Transaction _transaction, Operation _operation) 
+	{
 		// TODO Auto-generated method stub
 		if(_transaction.getOperations().contains(_operation))
 			return true;
 		return false; 
 	}
-	public ResourceManager getResourceManager() {
+	
+	public ResourceManager getResourceManager() 
+	{
 		return resourceManager;
 	}
-	public void setResourceManager(ResourceManager resourceManager) {
+	
+	public void setResourceManager(ResourceManager resourceManager) 
+	{
 		this.resourceManager = resourceManager;
 	}
-	public umjdt.util.Timestamp getBeginOperation() {
+	
+	public umjdt.util.Timestamp getBeginOperation() 
+	{
 		return beginOperation;
 	}
-	public void setBeginOperation(Timestamp beginOperation) {
+	
+	public void setBeginOperation(Timestamp beginOperation) 
+	{
 		this.beginOperation = beginOperation;
 	}
-	public umjdt.util.Timestamp getEndOperation() {
+	
+	public umjdt.util.Timestamp getEndOperation() 
+	{
 		return endOperation;
 	}
-	public void setEndOperation(umjdt.util.Timestamp endOperation) {
+	
+	public void setEndOperation(umjdt.util.Timestamp endOperation) 
+	{
 		this.endOperation = endOperation;
 	}
-	public OperationNumber getOperationNumber() {
+	
+	public OperationNumber getOperationNumber() 
+	{
 		return operationNumber;
 	}
-	public void setOperationNumber(OperationNumber operationNumber) {
+	
+	public void setOperationNumber(OperationNumber operationNumber) 
+	{
 		this.operationNumber = operationNumber;
 	}
 }

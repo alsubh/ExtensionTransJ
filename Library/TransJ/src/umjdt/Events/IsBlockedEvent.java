@@ -3,7 +3,10 @@ package umjdt.Events;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import javax.transaction.SystemException;
+
 import umjdt.concepts.*;
+import umjdt.util.Status;
 
 public class IsBlockedEvent extends Event{
 
@@ -12,43 +15,61 @@ public class IsBlockedEvent extends Event{
 	private Transaction transaction;
 	Timer timer = new Timer();
 	
-	public boolean IsBlocked(Transaction _transaction){
+	public boolean IsBlocked(Transaction _transaction) throws SystemException
+	{
 		this.transaction = _transaction;
-		if(transaction.getCurrentState()=="BLOCKED")
+		
+		if(transaction.getStatus()== Status.BLOCKED)
 			return true;
 		return false;
 	}
 
-	public void checkStatus(){
+	public void checkStatus()
+	{
 		timer.schedule( new TimerTask() 
 		{ 
-		    public void run() { 
-		    	IsBlocked(getTransaction());
+		    public void run() 
+		    { 
+		    	try
+		    	{
+					IsBlocked(getTransaction());
+				} 
+		    	catch (SystemException e) 
+				{
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 		    } 
 		}, 0, 60*(1000*1));
 	}
 	
-	public Resource getResource() {
+	public Resource getResource() 
+	{
 		return resource;
 	}
 
-	public void setResource(Resource resource) {
+	public void setResource(Resource resource) 
+	{
 		this.resource = resource;
 	}
 
-	public boolean isIsblocked() {
+	public boolean isIsblocked() 
+	{
 		return isblocked;
 	}
 
-	public void setIsblocked(boolean isblocked) {
+	public void setIsblocked(boolean isblocked) 
+	{
 		this.isblocked = isblocked;
 	}
 
-	public Transaction getTransaction() {
+	public Transaction getTransaction() 
+	{
 		return transaction;
 	}
 
-	public void setTransaction(Transaction transaction) {
+	public void setTransaction(Transaction transaction) 
+	{
 		this.transaction = transaction;
 	}
 
@@ -62,7 +83,8 @@ public class IsBlockedEvent extends Event{
 	
 	
 	// run 
-	private static final class TimeoutTask extends Thread {
+	private static final class TimeoutTask extends Thread 
+	{
         private final long _timeoutMs;
         private Runnable _runnable;
 
@@ -72,9 +94,11 @@ public class IsBlockedEvent extends Event{
         }
 
         @Override
-        public void run() {
+        public void run() 
+        {
             long start = System.currentTimeMillis();
-            while (System.currentTimeMillis() < (start + _timeoutMs)) {
+            while (System.currentTimeMillis() < (start + _timeoutMs)) 
+            {
                 _runnable.run();
             }
             System.out.println("execution took " + (System.currentTimeMillis() - start) +" ms");

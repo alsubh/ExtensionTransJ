@@ -1,21 +1,18 @@
 package umjdt.joinpoints;
 
-import java.util.*;
-import umjdt.util.*;
-import umjdt.concepts.*;
+import java.util.List;
 import java.util.logging.Logger;
 import org.aspectj.lang.JoinPoint;
-
-import com.arjuna.ats.internal.jta.xa.TxInfo;
-
-
+import umjdt.Events.Event;
+import umjdt.concepts.Transaction;
+import umjdt.util.TransactionType;
 
 public class TransJP
 {
 	Logger logger = Logger.getLogger(TransJP.class.toString());
 	
 	private Transaction tranaction;
-	private TxInfo txInfo;
+	private List<Event> events;
 	private TransactionType type;
 	
 	public TransJP()
@@ -23,22 +20,18 @@ public class TransJP
 		
 	}
 	
-	public TransJP(Transaction _transaction, TransactionType _type)
-	{
-		this.tranaction= _transaction;
-		this.type= _type;
-	}
-	
 	public TransJP(TransJP _transJp)
 	{
 		this.tranaction =_transJp.getTranaction();
 		this.type= _transJp.getType();
+		this.events=_transJp.getEvents();
 	}
 	
 	public void set(TransJP _transJp)
 	{
 		this.tranaction =_transJp.getTranaction();
 		this.type= _transJp.getType();
+		this.events= _transJp.getEvents();
 	}
 
 	public Transaction getTranaction() {
@@ -57,11 +50,11 @@ public class TransJP
 		this.type = type;
 	}
 
-	public TxInfo getTxInfo() {
-		return txInfo;
+	public List<Event> getEvents() {
+		return events;
 	}
 
-	public void setTxInfo(TxInfo txInfo) {
-		this.txInfo = txInfo;
+	public void setEvents(List<Event> events) {
+		this.events = events;
 	}
 }

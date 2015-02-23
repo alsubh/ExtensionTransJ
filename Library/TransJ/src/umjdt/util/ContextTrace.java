@@ -4,6 +4,10 @@ import java.io.Serializable;
 
 public class ContextTrace implements Serializable
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String trackedContext;
 	private String accessType;
 	
