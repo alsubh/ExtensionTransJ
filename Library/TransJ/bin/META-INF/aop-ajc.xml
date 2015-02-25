@@ -1,6 +1,0 @@
-<aspectj>
-<aspects>
-<aspect name="baseaspects.OperationAspect"/>
-</aspects>
-</aspectj>
-
