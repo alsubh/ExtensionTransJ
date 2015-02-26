@@ -2,7 +2,6 @@ package transaction;
 
 import java.io.Serializable;
 import com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionImple;
-
 import umjdt.TransactionEvent;
 import utilities.*;
 import java.util.*;
@@ -10,7 +9,6 @@ import java.util.logging.Logger;
 
 public class Transaction extends TransactionImple implements Serializable
 {
-
 	/**
 	 * 
 	 */
@@ -24,7 +22,7 @@ public class Transaction extends TransactionImple implements Serializable
 	private Timestamp timestamp;
 	private int transactionType;
 	private Transaction parentTransaction;
-	private Thread transactionThread;// make the transaction associated with current thread
+	private TransactionThread transactionThread;// make the transaction associated with current thread
 	private TransactionManager transactionManager= new TransactionManager();
 	private List<TransactionEvent> events = new ArrayList<TransactionEvent>();
 	private List<Operation> operations = new ArrayList<Operation>();
@@ -60,14 +58,13 @@ public class Transaction extends TransactionImple implements Serializable
 	 */
 	public boolean addThread()
 	{
-		return addThread(Thread.currentThread());
+		return addThread(TransactionThread.currentTransaction());
 	}
 	
-	public boolean addThread(Thread _thread)
+	public boolean addThread(Transaction _transaction)
 	{
-		if(_thread !=null)
+		if(_transaction !=null)
 		{
-			setTransactionThread(_thread);
 			TransactionThread.pushTransaction(this);
 			return true;
 		}
@@ -368,11 +365,11 @@ public class Transaction extends TransactionImple implements Serializable
 		this.resources = resources;
 	}
 
-	public Thread getTransactionThread() {
+	public TransactionThread getTransactionThread() {
 		return transactionThread;
 	}
 
-	public void setTransactionThread(Thread transactionThread) {
+	public void setTransactionThread(TransactionThread transactionThread) {
 		this.transactionThread = transactionThread;
 	}
 	
