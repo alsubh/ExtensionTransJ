@@ -17,7 +17,6 @@ public class TransactionEvent extends Event
 	{		
 		super();
 		setEventType("TransactionEvent");
-		setTheThread(Thread.currentThread());
 		log.info("Creating Transaction Event");
 	}
 	

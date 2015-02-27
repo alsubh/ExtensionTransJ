@@ -4,6 +4,7 @@ import java.io.Serializable;
 import com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionImple;
 import umjdt.TransactionEvent;
 import utilities.*;
+
 import java.util.*;
 import java.util.logging.Logger;
 
@@ -369,8 +370,8 @@ public class Transaction extends TransactionImple implements Serializable
 		return transactionThread;
 	}
 
-	public void setTransactionThread(TransactionThread transactionThread) {
-		this.transactionThread = transactionThread;
+	public void setTransactionThread(TransactionThread _transactionThread) {
+		this.transactionThread = _transactionThread;
 	}
 	
 	public boolean addEvent(TransactionEvent event)

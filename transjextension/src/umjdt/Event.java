@@ -4,12 +4,12 @@ import java.util.Timer;
 import java.util.UUID;
 
 import transaction.TID;
+import utilities.BackgroundThread;
 import utilities.Timestamp;
+import utilities.TransactionThread;
 
 public class Event 
 {
-
-		private Thread theThread = new Thread();
 		private TID transactionId;
 		private String eventType;
 		private int timeout;
@@ -20,7 +20,6 @@ public class Event
 
 		public Event()
 		{
-			
 		}
 				
 		public Timestamp getMinTime() 
@@ -45,8 +44,7 @@ public class Event
 		
 		public boolean threadEventHappensBefore(Event e)
 		{
-			if(e.getTheThread().getId() == this.getTheThread().getId())
-				if(e.getLocalTime().compareTo(this.getLocalTime()) > 0)
+			if(e.getLocalTime().compareTo(this.getLocalTime()) > 0)
 						return true;
 			return false;
 		}
@@ -94,13 +92,5 @@ public class Event
 		public void setEventType(String eventType)
 		{
 			this.eventType = eventType;
-		}
-
-		public Thread getTheThread() {
-			return theThread;
-		}
-
-		public void setTheThread(Thread theThread) {
-			this.theThread = theThread;
 		}
 	}
