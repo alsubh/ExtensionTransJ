@@ -1,5 +1,7 @@
 package context;
 
+import java.util.Hashtable;
+import java.util.List;
 import java.util.UUID;
 import transaction.*;
 import utilities.BackgroundThread;
@@ -9,11 +11,13 @@ import joinpoint.TransJP;
 public class Context 
 {
 	private UUID contextID;
+	private UUID joinpointID;
 	private TransJP transJp;
 	private Transaction transaction;
 	private TID tid;
 	private BackgroundThread contextThread;
 	private TransactionType type;
+	private Hashtable<TID, SubTransaction> childTransactions;
 	
 	public Context()
 	{
@@ -74,5 +78,29 @@ public class Context
 
 	public void setTid(TID tid) {
 		this.tid = tid;
+	}
+
+	public UUID getJoinpointID() {
+		return joinpointID;
+	}
+
+	public void setJoinpointID(UUID joinpointID) {
+		this.joinpointID = joinpointID;
+	}
+
+	public TransactionType getType() {
+		return type;
+	}
+
+	public void setType(TransactionType type) {
+		this.type = type;
+	}
+
+	public Hashtable<TID, SubTransaction> getChildTransactions() {
+		return childTransactions;
+	}
+
+	public void setChildTransactions(Hashtable<TID, SubTransaction> childTransactions) {
+		this.childTransactions = childTransactions;
 	}
 }

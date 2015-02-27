@@ -14,12 +14,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 import java.util.logging.Logger;
-
 import javax.transaction.SystemException;
-
 import org.aspectj.lang.JoinPoint;
 
-public class TransJP 
+public class TransJP
 {
 	Logger logger = Logger.getLogger(TransJP.class.toString());
 

@@ -1,10 +1,10 @@
-package umjdt.Events;
+package umjdt;
 
 import java.util.Timer;
 import java.util.TimerTask;
-import umjdt.concepts.Transaction;
-import umjdt.util.Status;
-import umjdt.util.Timestamp;
+import transaction.Transaction;
+import utilities.Status;
+import utilities.Timestamp;
 
 public class TransactionCommitEvent extends TransactionEvent{
 	
@@ -15,16 +15,13 @@ public class TransactionCommitEvent extends TransactionEvent{
 		super.setTransaction(_localTransaction);
 		setCommitTime(getLocalTime());
 		setEventType("CommitEvent");
-		setTransactionId(_localTransaction.getId());
-		super.setTransactionId(_localTransaction.getId());
+		setTransactionId(_localTransaction.getTId());
+		super.setTransactionId(_localTransaction.getTId());
 		setTimeout(_localTransaction.getTimeout());
 		super.setTimeout(_localTransaction.getTimeout());
 		super.setStatus(Status.COMMITTED);
 		setMarkBoundary("Commit");
-		super.setMarkBoundary("Commit");
-		setTheThread(_localTransaction.getTransactionThread());
-		super.setTheThread(_localTransaction.getTransactionThread());
-				
+		super.setMarkBoundary("Commit");			
 		
 		setTimer(new Timer());
 		getTimer().schedule(new CommitTask(), _localTransaction.getTimeout());
