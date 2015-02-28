@@ -1,5 +1,7 @@
 package context;
 
-public class TransactionContext {
 
+public class TransactionContext extends Context
+{
+	
 }

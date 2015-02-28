@@ -1,5 +1,7 @@
 package transaction;
 
+import utilities.OperationNumber;
+
 public class SubTransaction extends Transaction
 {
 	/**
@@ -14,6 +16,7 @@ public class SubTransaction extends Transaction
 	{
 		super();
 		subTID = new TID(super.getTId());
+		//OperationNumber op = OperationNumber.Create(subTID);
 		setTId(subTID);
 	}
 	
@@ -22,6 +25,9 @@ public class SubTransaction extends Transaction
 		super(_timeout);
 		this.timeout=_timeout;
 		setTimeout(_timeout);
+		subTID = new TID(super.getTId());
+		//OperationNumber op = OperationNumber.Create(subTID);
+		setTId(subTID);
 	}
 
 	public int getTimeout() 
