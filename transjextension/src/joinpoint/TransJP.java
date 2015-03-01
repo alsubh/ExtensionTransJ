@@ -2,7 +2,6 @@ package joinpoint;
 
 import context.Context;
 import umjdt.Event;
-import umjdt.TransactionEvent;
 import utilities.BackgroundThread;
 import utilities.Timestamp;
 import java.util.ArrayList;

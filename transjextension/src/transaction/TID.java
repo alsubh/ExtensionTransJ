@@ -3,7 +3,7 @@ package transaction;
 import javax.transaction.xa.Xid;
 
 import com.arjuna.ats.jta.xa.XidImple;
-import com.arjuna.ats.internal.jta.xa.XID;
+//import com.arjuna.ats.internal.jta.xa.XID;
 
 
 public class TID extends XidImple 
@@ -13,7 +13,7 @@ public class TID extends XidImple
 	 */
 	private static final long serialVersionUID = 1L;
 	private Xid _Xid;
-	private XID _XID;
+	//private XID _XID;
 	
 	public TID()
 	{
@@ -35,7 +35,13 @@ public class TID extends XidImple
 		this._Xid= new XidImple(_transaction.getTId());
 		setXid(_Xid);
 	}
+	public void setXid(Xid xid) 
+	{
+		this._Xid = xid;
+	}
 	
+	/**
+	 * 
 	public TID(XID _ID)
 	{
 		super(_ID);
@@ -46,12 +52,6 @@ public class TID extends XidImple
 	{
 		return _Xid;
 	}
-
-	public void setXid(Xid xid) 
-	{
-		this._Xid = xid;
-	}
-
 	public XID getxID() 
 	{
 		return _XID;
@@ -61,5 +61,5 @@ public class TID extends XidImple
 	{
 		this._XID = xID;
 	}
-
+	*/
 }
