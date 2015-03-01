@@ -1,6 +1,7 @@
 package joinpoint;
 
 import context.Context;
+import transaction.Transaction;
 import umjdt.Event;
 import utilities.BackgroundThread;
 import utilities.Timestamp;
@@ -13,7 +14,7 @@ public class TransJP
 {
 	Logger logger = Logger.getLogger(TransJP.class.toString());
 
-	private UUID uuid;
+	private UUID transJpID;
 	private Timestamp timestamp;
 	private BackgroundThread theJPThread;	
 	private List<Event> events;
@@ -32,9 +33,9 @@ public class TransJP
 		
 	private void initailization() 
 	{
-		this.uuid= UUID.randomUUID();
-		this.theJPThread = BackgroundThread.getInstance(uuid.toString());
-		this.setTimestamp(timestamp.currentTimeStamp());
+		this.transJpID= UUID.randomUUID();
+		this.theJPThread = BackgroundThread.getInstance(transJpID.toString());
+		timestamp= timestamp.currentTimeStamp();
 		this.events= new ArrayList<Event>();
 	}
 	
@@ -77,10 +78,6 @@ public class TransJP
 		return timestamp;
 	}
 
-	public void setTimestamp(Timestamp timestamp) {
-		this.timestamp = timestamp;
-	}
-
 	public String getStatus() {
 		return status;
 	}
@@ -98,4 +95,11 @@ public class TransJP
 		}
 		return result;
 	} 
+	
+	public boolean occurOn(Transaction _transaction)
+	{
+		boolean result= false;
+		
+		return result;
+	}
 }

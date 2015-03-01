@@ -4,34 +4,30 @@ import java.util.List;
 import java.util.UUID;
 
 import joinpoint.TransJP;
-import joinpoint.transaction.AbortEventJP;
-import joinpoint.transaction.BeginEventJP;
-import joinpoint.transaction.CommitEventJP;
-import joinpoint.transaction.InnerCompletionJP;
-import joinpoint.transaction.OuterCompletionJP;
 import joinpoint.transaction.TransactionJP;
+import transaction.Operation;
 import transaction.Resource;
 import transaction.TID;
 import transaction.Transaction;
+import utilities.BackgroundThread;
 import utilities.Participant;
+import utilities.Status;
+import utilities.Timestamp;
 import utilities.TransactionType;
 
 
 public class TransactionContext extends Context
 {
-	private UUID cid;
+	private UUID tcid;
 	private TransactionJP transactionJp;
 	private List<Resource> resources;
+	private List<Operation> operations;
 	// Transaction Manager, Resource Manager, or coordinator
 	private Participant participant;
-	
-	// transaction events
-	private BeginEventJP beginEventJp;
-	private AbortEventJP abortEventJp;
-	private CommitEventJP commitEventJp;
-	private InnerCompletionJP innerCompletionJp;
-	private OuterCompletionJP outerComplectionJp;
-	
+	private Status status;
+		
+	// Thread of the joinpoints 
+	private BackgroundThread transactionContextThread;
 	
 	public TransactionContext() 
 	{
@@ -39,143 +35,88 @@ public class TransactionContext extends Context
 		this.setCid(UUID.randomUUID());
 	}
 
-	public TransactionContext(TID _tid, Transaction _transaction,
-			TransJP _transJP, TransactionType _type) 
-	{
-		super(_tid, _transaction, _transJP, _type);
-		this.setCid(UUID.randomUUID());
-	}
-
 	public TransactionContext(TransJP _transJp)
 	{
 		super(_transJp);
 		this.setCid(UUID.randomUUID());
+		this.transactionJp.setEvents(_transJp.getEvents());
+		transactionContextThread = BackgroundThread.getInstance(getCid().toString(), this);
 	}
 	
-	public TransactionContext(UUID cid, TransactionJP transactionJp,
-			List<Resource> resources, Participant participant,
-			BeginEventJP beginEventJp, AbortEventJP abortEventJp,
-			CommitEventJP commitEventJp, InnerCompletionJP innerCompletionJp,
-			OuterCompletionJP outerComplectionJp)
+	public TransactionContext(UUID _tcid, TransactionJP _transactionJp,
+			List<Resource> _resources, List<Operation> _operations, Participant _participant)
 	{
 		super();
 		this.setCid(UUID.randomUUID());
-		this.setTransactionJp(transactionJp);
-		this.setResources(resources);
-		this.setParticipant(participant);
-		this.setBeginEventJp(beginEventJp);
-		this.setAbortEventJp(abortEventJp);
-		this.setCommitEventJp(commitEventJp);
-		this.setInnerCompletionJp(innerCompletionJp);
-		this.setOuterComplectionJp(outerComplectionJp);
+		this.setTransactionJp(_transactionJp);
+		this.setResources(_resources);
+		this.setOperations(_operations);
+		this.setParticipant(_participant);
 	}
 
-
-
-	public UUID getCid() {
-		return cid;
+	public UUID getCid() 
+	{
+		return tcid;
 	}
 
-
-
-	public void setCid(UUID cid) {
-		this.cid = cid;
+	public void setCid(UUID cid) 
+	{
+		this.tcid = cid;
 	}
 
-
-
-	public TransactionJP getTransactionJp() {
+	public TransactionJP getTransactionJp() 
+	{
 		return transactionJp;
 	}
 
-
-
-	public void setTransactionJp(TransactionJP transactionJp) {
+	public void setTransactionJp(TransactionJP transactionJp) 
+	{
 		this.transactionJp = transactionJp;
 	}
 
-
-
-	public List<Resource> getResources() {
+	public List<Resource> getResources() 
+	{
 		return resources;
 	}
 
-
-
-	public void setResources(List<Resource> resources) {
+	public void setResources(List<Resource> resources) 
+	{
 		this.resources = resources;
 	}
 
-
-
-	public Participant getParticipant() {
+	public Participant getParticipant() 
+	{
 		return participant;
 	}
 
-
-
-	public void setParticipant(Participant participant) {
+	public void setParticipant(Participant participant) 
+	{
 		this.participant = participant;
 	}
 
-
-
-	public BeginEventJP getBeginEventJp() {
-		return beginEventJp;
+	public List<Operation> getOperations() {
+		return operations;
 	}
 
-
-
-	public void setBeginEventJp(BeginEventJP beginEventJp) {
-		this.beginEventJp = beginEventJp;
-	}
-
-
-
-	public AbortEventJP getAbortEventJp() {
-		return abortEventJp;
-	}
-
-
-
-	public void setAbortEventJp(AbortEventJP abortEventJp) {
-		this.abortEventJp = abortEventJp;
-	}
-
-
-
-	public CommitEventJP getCommitEventJp() {
-		return commitEventJp;
-	}
-
-
-
-	public void setCommitEventJp(CommitEventJP commitEventJp) {
-		this.commitEventJp = commitEventJp;
-	}
-
-
-
-	public InnerCompletionJP getInnerCompletionJp() {
-		return innerCompletionJp;
-	}
-
-
-
-	public void setInnerCompletionJp(InnerCompletionJP innerCompletionJp) {
-		this.innerCompletionJp = innerCompletionJp;
-	}
-
-
-
-	public OuterCompletionJP getOuterComplectionJp() {
-		return outerComplectionJp;
-	}
-
-
-
-	public void setOuterComplectionJp(OuterCompletionJP outerComplectionJp) {
-		this.outerComplectionJp = outerComplectionJp;
+	public void setOperations(List<Operation> operations) {
+		this.operations = operations;
 	}
 	
+	public BackgroundThread getTransactionContextThread() {
+		return transactionContextThread;
+	}
+
+	public void setTransactionContextThread(BackgroundThread transactionContextThread) {
+		this.transactionContextThread = transactionContextThread;
+	}
+	
+	public boolean occurOn(TransactionJP _transactionJp)
+	{
+		boolean result= false;
+		if(_transactionJp.equals(_transactionJp))
+		{
+			result= true;
+		}
+		return result;
+	}
 }

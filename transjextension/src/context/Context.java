@@ -5,11 +5,11 @@ import transaction.*;
 import utilities.BackgroundThread;
 import utilities.TransactionType;
 import joinpoint.TransJP;
+import joinpoint.transaction.TransactionJP;
 
 public class Context 
 {
 	private UUID contextID;
-	private UUID joinpointID;
 	private TransJP transJp;
 	
 	private BackgroundThread contextThread;
@@ -25,12 +25,6 @@ public class Context
 		initialization();
 	}
 	
-	public Context(TID _tid, Transaction _transaction, TransJP _transJP, TransactionType _type)
-	{
-		setTransJp(_transJP);
-		initialization();
-	}
-
 	private void initialization() 
 	{
 		contextID = UUID.randomUUID();
@@ -56,12 +50,11 @@ public class Context
 	{
 		this.transJp = transJp;
 	}
-
-	public UUID getJoinpointID() {
-		return joinpointID;
-	}
-
-	public void setJoinpointID(UUID joinpointID) {
-		this.joinpointID = joinpointID;
+	
+	public boolean occurOn(TransJP _transJp)
+	{
+		boolean result= false;
+		
+		return result;
 	}
 }

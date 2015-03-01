@@ -23,10 +23,11 @@ public class TransactionJP extends TransJP
 	private UUID transJpID;
 	private TID tid;
 	private TransactionType type;
-	private Transaction transaction;
+	protected Transaction transaction;
 	private List<SubTransaction> childTransactions;
 	private List<TransactionEvent> transactionEvents; 
-	private Status status;
+	private Timestamp timestamp;
+
 	
 	public TransactionJP() 
 	{
@@ -47,7 +48,7 @@ public class TransactionJP extends TransJP
 		this.setTransJPID(UUID.randomUUID());
 		this.setTid(_tid);
 		this.setTransaction(_transaction);
-		this.setTimestamp(_timestamp);
+		this.setTimestamp(new Timestamp().currentTimeStamp());
 		this.setStatus(_status.toString());
 		this.setChildTransactions(_subtransactions);
 		this.setTransactionEvents(_transactionEvents);
@@ -57,7 +58,7 @@ public class TransactionJP extends TransJP
 	{
 		super(_transJp);
 		this.setTransJPID(UUID.randomUUID());
-		setTimestamp(new Timestamp().currentTimeStamp());
+		this.setTimestamp(new Timestamp().currentTimeStamp());
 		this.childTransactions= new ArrayList<SubTransaction>();
 		this.setStatus(_transJp.getStatus());
 		// add the begin event when begin the transaction
@@ -115,4 +116,24 @@ public class TransactionJP extends TransJP
 	public void setTransJPID(UUID _transJPID) {
 		this.transJpID = _transJPID;
 	}
+
+	public Timestamp getTimestamp() {
+		return timestamp;
+	}
+
+	public void setTimestamp(Timestamp timestamp) {
+		this.timestamp = timestamp;
+	}
+	
+	@Override
+	public boolean occurOn(Transaction _transaction)
+	{
+		boolean result= false;
+		if(_transaction.equals(transaction))
+		{
+			result = true;
+		}
+		return result;
+	}
+	
 }
