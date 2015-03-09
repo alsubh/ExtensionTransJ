@@ -7,11 +7,11 @@ import umjdt.util.BackgroundThread;
 import umjdt.util.Status;
 import umjdt.util.Timestamp;
 
-public class CommitJP extends EndEventJP
+public class CommitEventJP extends EndEventJP
 {
 	private Timer timer;
 	
-	public CommitJP(Transaction transaction) 
+	public CommitEventJP(Transaction transaction) 
 	{
 		super(transaction);
 		super.setEndID(transaction.getTId());
@@ -21,7 +21,7 @@ public class CommitJP extends EndEventJP
 		initialization(transaction);	
 	}
 
-	public CommitJP(TransJP _transJp) 
+	public CommitEventJP(TransJP _transJp) 
 	{
 		super(_transJp);
 		super.setTransaction(_transJp.getTransaction());

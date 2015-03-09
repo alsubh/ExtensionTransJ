@@ -7,11 +7,11 @@ import umjdt.util.BackgroundThread;
 import umjdt.util.Status;
 import umjdt.util.Timestamp;
 
-public class AbortJP extends EndEventJP
+public class AbortEventJP extends EndEventJP
 {
 private Timer timer;
 	
-	public AbortJP(Transaction transaction) 
+	public AbortEventJP(Transaction transaction) 
 	{
 		super(transaction);
 		super.setEndID(transaction.getTId());
@@ -22,7 +22,7 @@ private Timer timer;
 		initialization(transaction);	
 	}
 
-	public AbortJP(TransJP _transJp) 
+	public AbortEventJP(TransJP _transJp) 
 	{
 		super(_transJp);
 		super.setTransaction(_transJp.getTransaction());

@@ -2,8 +2,11 @@
  * 
  */
 package TransactionJoinpointTracker;
+import javax.transaction.xa.XAResource;
 import javax.transaction.xa.Xid;
 
+import umjdt.joinpoints.AbortResourceEventJP;
+import umjdt.joinpoints.CommitResourceEventJP;
 import umjdt.joinpoints.EndResourceEventJP;
 import umjdt.joinpoints.StartResourceEventJP;
 
@@ -15,36 +18,45 @@ public aspect ResourceTracker
 {
 
 	/**
-	 * The transaction manager uses the start method to associate the global transaction 
-	 * with the resource, and it uses the end method to disassociate the transaction
-	 * from the resource.
-	 * @param xid, resource, 
-	 */
-	pointcut StartLockResource(Xid xid, ): 
-		execution(* javax..*+.start(..)) && args(_startEventJP);
-		//javax.transaction.xa.XAResource+
-	/**
 	 * The resource manager is responsible for associating the global transaction
 	 * to all work performed on its data between the start and end method invocations.
 	 * Ends the work performed on behalf of a transaction branch. 
 	 * The resource manager disassociates the XA resource from 
 	 * the transaction branch specified and lets the transaction complete.
-	 * @param 
+	 * @param xid: A global transaction identifier to be associated with the resource.
+	 * @param resource, timeout
 	 */
-	pointcut EndTransaction(EndResourceEventJP _endEventJP): 
-		execution(* javax..*+.end(..)) && args(_endEventJP);
+	pointcut StartLockResource(Xid xid, XAResource resource): 
+		execution(* javax..*+.start(..)) && args(xid, resource,..);
+		//javax.transaction.xa.XAResource+
+	
+	pointcut EndLockResource(Xid xid, XAResource resource): 
+		execution(* javax..*+.end(..)) && args(xid, resource, ..);
 		
-	/** At transaction commit time, the resource managers are informed by 
-	 * the transaction manager to prepare, commit, or rollback 
-	 * a transaction according to the two-phase commit protocol.
-	 */
-	//pointcut CommitResource(CommitResourceEventJP _startEventJP): 
-		//execution(* javax.transaction.xa.XAResource+.commit(..)) && args(_startEventJP);
 	
-	
+	// Hold
     public void StartResourceJoinPoint(StartResourceEventJP _startResourceJp)
     {}
 
+    // UnHold
     public void EndResourceJoinPoint(EndResourceEventJP _endResourceJp)
+    {}
+    
+    
+    pointcut CommitResource(Xid xid, XAResource resource): 
+		execution(* javax.transaction.xa.XAResource+.commit(..)) && args(xid, resource, ..);
+    /**
+     * Informs the resource manager to roll back work done on 
+     * behalf of a transaction branch.
+     * @param xid
+     * @param resource
+     */
+    pointcut AbortResource(Xid xid, XAResource resource):
+    	execution(* javax.transaction.xa.XAResource+.rollback(..)) && args(xid, resource, ..);
+
+    public void CommitResourceJoinPoint(CommitResourceEventJP _commitResourceJp)
+    {}
+
+    public void AbortResourceJoinPoint(AbortResourceEventJP _abortResourceJp)
     {}
 }
