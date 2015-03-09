@@ -1,4 +1,4 @@
-package Tester;
+package test;
 
 import javax.transaction.HeuristicMixedException;
 import javax.transaction.HeuristicRollbackException;
@@ -9,8 +9,6 @@ import javax.transaction.SystemException;
 import javax.transaction.TransactionManager;
 import javax.transaction.UserTransaction;
 
-import com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionImple;
-import com.arjuna.ats.internal.jta.transaction.arjunacore.UserTransactionImple;
 
 public class TransactionExample {
 	
@@ -31,7 +29,7 @@ public class TransactionExample {
     public void commitUserTransaction() throws SystemException, NotSupportedException, RollbackException, HeuristicRollbackException, HeuristicMixedException {
 		//get UserTransaction
 		UserTransaction utx = com.arjuna.ats.jta.UserTransaction.userTransaction();
-
+		
 		// start transaction
 		utx.begin();
         // ... do some transactional work ...
