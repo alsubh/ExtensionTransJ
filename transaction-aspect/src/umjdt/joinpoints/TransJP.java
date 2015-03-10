@@ -14,10 +14,8 @@ public class TransJP extends EventJP
 {
 	Logger logger = Logger.getLogger(TransJP.class.toString());
 
-	private UUID JpID;
 	private Transaction transaction; 
-	private BackgroundThread theJPThread; // run the this joinpoint on the thread 	
-	private String status;// commit or abort(rollback)
+	private int status; // commit or abort(rollback)
 	private BeginEventJP beginDemarcate;
 	private EndEventJP endDemarcate;
 	
@@ -48,7 +46,6 @@ public class TransJP extends EventJP
 		return result;
 	}
 
-
 	public BackgroundThread getTheJPThread() 
 	{
 		return theJPThread;
@@ -58,16 +55,6 @@ public class TransJP extends EventJP
 	{
 		this.theJPThread = theJPThread;
 	}
-	
-//	public boolean addEvent(EventJP TransJpEvent)
-//	{
-//		boolean result=false;
-//		if (TransJpEvent !=null)
-//		{
-//			this.events.add(TransJpEvent);
-//		}
-//		return result;
-//	} 
 			
 	public boolean threadEventHappensBefore(EventJP e)
 	{
@@ -106,12 +93,12 @@ public class TransJP extends EventJP
 		this.transaction = transaction;
 	}
 
-	public String getStatus() 
+	public int getStatus() 
 	{
 		return status;
 	}
 
-	public void setStatus(String status) 
+	public void setStatus(int status) 
 	{
 		this.status = status;
 	}

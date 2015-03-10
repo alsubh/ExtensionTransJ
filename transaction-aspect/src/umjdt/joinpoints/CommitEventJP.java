@@ -1,49 +1,43 @@
 package umjdt.joinpoints;
 
 import java.util.Timer;
-import java.util.UUID;
-import umjdt.concepts.Transaction;
-import umjdt.util.BackgroundThread;
+import javax.transaction.Transaction;
+import javax.transaction.xa.Xid;
+
 import umjdt.util.Status;
 import umjdt.util.Timestamp;
 
 public class CommitEventJP extends EndEventJP
 {
 	private Timer timer;
-	
+			
 	public CommitEventJP(Transaction transaction) 
 	{
-		super(transaction);
-		super.setEndID(transaction.getTId());
-		super.setStatus(Status.stringForm(Status.COMMITTED));
-		super.setEndTime(new Timestamp().currentTimeStamp());
-		super.setTransaction(transaction);
+		super();
 		initialization(transaction);	
 	}
 
 	public CommitEventJP(TransJP _transJp) 
 	{
-		super(_transJp);
-		super.setTransaction(_transJp.getTransaction());
-		super.setStatus(Status.stringForm(Status.COMMITTED));
-		super.setTransactionId(_transJp.getTransactionId());
-		
-		super.setEndID(_transJp.getTransactionId());
-		super.setEndTime(_transJp.getLocalTime());
+		super();
+		setTransaction(_transJp.getTransaction());
+		setTransactionId(_transJp.getTransactionId());
 		initialization(_transJp.getTransaction());
 	}
 	
 	private void initialization(Transaction _transaction)
 	{
-		super.setEventType("Commit");
-		super.setTransactionId(_transaction.getTId());
-		super.setTimeout(_transaction.getTimeout());
-		super.setBkThread(BackgroundThread.getInstance(getEndID().toString(), this));
+		umjdt.concepts.Transaction umjdtTransaction = (umjdt.concepts.Transaction) _transaction;
+		setXatransaction(_transaction);
+		setTid(umjdtTransaction.getTid());
+		setManager(umjdtTransaction.getTransactionManager());
+		setStatus(Status.COMMITTED);
+		setTimeout(umjdtTransaction.getTimeout());
+		setEndTime(new Timestamp().currentTimeStamp());
 		
 		setTimer(new Timer());
-		getTimer().schedule(new EndTask(), _transaction.getTimeout());
-		super.setEndEvent(this);
-		addEvent(getEndEvent());
+		getTimer().schedule(new BeginTask(), getTimeout());
+		setEndDemarcate(this);
 	}
 	
 	public Timer getTimer() 

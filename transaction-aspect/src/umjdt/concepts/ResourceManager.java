@@ -3,6 +3,8 @@ package umjdt.concepts;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.transaction.TransactionManager;
+
 import umjdt.util.Participant;
 
 
@@ -12,7 +14,7 @@ public class ResourceManager implements Participant
 	private String name;
 	private int rmId;
 	private Resource resource;
-	private TransactionManager tm;
+	private TransactionManager manager;
 	private List<Resource> listResource = new ArrayList<>();
 	//private LockManager lockEvent;
 	
@@ -52,10 +54,10 @@ public class ResourceManager implements Participant
 		this.resource = resource;
 	}
 	public TransactionManager getTm() {
-		return tm;
+		return manager;
 	}
 	public void setTm(TransactionManager tm) {
-		this.tm = tm;
+		this.manager = tm;
 	}
 	public List<Resource> getListResource() {
 		return listResource;

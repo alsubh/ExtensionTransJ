@@ -3,27 +3,20 @@
  */
 package TransactionJoinpointTracker;
 
-<<<<<<< HEAD
-import org.apache.log4j.Logger;
-=======
 import java.util.Map;
 
 import javax.transaction.SystemException;
 import javax.transaction.Transaction;
 import javax.transaction.TransactionManager;
 import javax.transaction.UserTransaction;
-import javax.transaction.xa.XAResource;
 import javax.transaction.xa.Xid;
 
 import org.apache.log4j.Logger;
-import org.aspectj.lang.ProceedingJoinPoint;
 
 import com.arjuna.ats.arjuna.common.Uid;
-import com.arjuna.ats.internal.jta.transaction.arjunacore.BaseTransaction;
 import com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionImple;
-import com.arjuna.ats.internal.jta.xa.TxInfo;
->>>>>>> a4f88eb857dcc783b6bd1a3a8e9566d37c3c731e
 
+import umjdt.concepts.TID;
 import umjdt.joinpoints.BeginEventJP;
 
 /**
@@ -34,40 +27,16 @@ public abstract aspect InitiatorJPTracker
 {
 	private Logger logger = Logger.getLogger(TransactionTracker.class);
 	protected BeginEventJP beginEventJp=null;
+	private Transaction transaction= null;
+	private Uid transactionUid= null;;
+	private Xid globalID=null;
+	private int status=0;
+	private int timeout=-1;
 	
 	/**
 	 * Begin: Create a new transaction and associate it with the current thread.
 	 * @param before begin:  timeout , _supportSubtransactions
 	 * after begin : TransactionID, TransactionThread
-<<<<<<< HEAD
-	 */
-	 
-	pointcut BeginTransactionStyle1(): 
-		(call(* javax..*Transaction*+.begin(..)) 
-				|| (call(* com.arjuna..BaseTransaction+.begin(..))) //ats.internal.jta.transaction.arjunacore.BaseTransaction.
-				|| (call(* com.arjuna..Transaction+.begin(..))));//arjuna.ats.jta.transaction.Transaction+ 
-
-	
-	pointcut BeginTransactionStyle2(int timeout): 
-		(call(* javax..*Transaction*+.begin(..)) 
-				|| (call(* com.arjuna..BaseTransaction+.begin(..))) //ats.internal.jta.transaction.arjunacore.BaseTransaction.
-				|| (call(* com.arjuna..Transaction+.begin(..))))//arjuna.ats.jta.transaction.Transaction+ 
-				&& args(timeout); 
-	
-	
-	pointcut BeginTransactionStyle3(): 
-		(execution(* javax..*Transaction*+.begin(..)) 
-				|| (execution(* com.arjuna..BaseTransaction+.begin(..))) //ats.internal.jta.transaction.arjunacore.BaseTransaction.
-				|| (execution(* com.arjuna..Transaction+.begin(..))));//arjuna.ats.jta.transaction.Transaction+ 
-				 
-	
-	
-	pointcut BeginTransactionStyle4(int timeout): 
-		(execution(* javax..*Transaction*+.begin(..)) 
-				|| (execution(* com.arjuna..BaseTransaction+.begin(..))) //ats.internal.jta.transaction.arjunacore.BaseTransaction.
-				|| (execution(* com.arjuna..Transaction+.begin(..))))//arjuna.ats.jta.transaction.Transaction+ 
-				&& args(timeout); 
-=======
 	 * 
 	 * javax.transaction.Transaction+;
 	 * ats.internal.jta.transaction.arjunacore.BaseTransaction.
@@ -75,67 +44,83 @@ public abstract aspect InitiatorJPTracker
 	 * 
 	 */
 	 
-	pointcut BeginTransactionStyle(): call(* *Transaction*+.begin(..));
+	pointcut BeginTransactionStyle(): 
+		(call(* javax..*Transaction*+.begin(..)) 
+				|| (call(* com.arjuna..BaseTransaction+.begin(..))) 
+				|| (call(* com.arjuna..Transaction+.begin(..))))
+				&& target(Transaction);
+	
+	pointcut BeginTransactionStyle2(int timeout): 	
+		(call(* javax..*Transaction*+.begin(..)) 
+			|| (call(* com.arjuna..BaseTransaction+.begin(..))) 
+			|| (call(* com.arjuna..Transaction+.begin(..)))) && args(timeout);
+	
+	/*
 	pointcut BeginTransactionServerStyle1(TransactionManager tm):call(* *Transaction*+.begin(..)) && target(tm);
 	pointcut BeginTransactionServerStyle2(TransactionManager tm, int timeout): call(* *Transaction*+.begin(..)) && target(tm) && args(timeout); 
 	pointcut BeginTransactionServerStyle3(TransactionManager tm): execution(* *Transaction*+.begin(..)) && target(tm);
 	pointcut BeginTransactionServerStyle4(TransactionManager tm,int timeout): execution(* *Transaction*+.begin(..)) && target(tm) && args(timeout);
-	
 	pointcut BeginTransactionClientStyle(UserTransaction utx):call(* *Transaction*+.begin(..))&& target(utx);
+	*/
 	
 	before() : BeginTransactionStyle()
 	{
 		BeginEventJP beginEventJp = new BeginEventJP();
-		passContextInfo(beginEventJp, null, null, 0);
+		passContextInfo(beginEventJp, thisJoinPoint.getTarget(),null, null,null,0,0);
 	}
 	
-	after() : BeginTransactionStyle()
+	after(): BeginTransactionStyle()
 	{
-		BeginEventJP beginEventJp;
-		Transaction transaction;
-		TransactionManager tm;
-		TransactionImple t =new TransactionImple(0);
-		int status;
-		Uid transactionUid;
-		Map<Uid, Transaction> subtransactions;
-		Map<XAResource, TxInfo> resources;
-		Xid globalID;
+		Object target= thisJoinPoint.getTarget();	
+		beginContextInfo(target,-1);
+	}
+
+	Transaction around(): BeginTransactionStyle()
+	{
+		Transaction result= proceed();
+		beginContextInfo(thisJoinPoint.getTarget(),-1);
+		return result;
+	}
+	
+	
+	before(int time) : BeginTransactionStyle2(time)
+	{
+		BeginEventJP beginEventJp = new BeginEventJP();
+		passContextInfo(beginEventJp, thisJoinPoint.getTarget(),null, null,null,0,time);
+	}
+	
+	after(int time): BeginTransactionStyle2(time)
+	{
+		Object target= thisJoinPoint.getTarget();	
+		beginContextInfo(target, time);
+	}
+
+	void around(int time): BeginTransactionStyle2(time)
+	{
+		proceed(time);
+		beginContextInfo(thisJoinPoint.getTarget(), time);
+	}
+	
+	
+	/**
+	 * @param target
+	 */
+	private void beginContextInfo(Object target, int time) 
+	{
+		beginEventJp = new BeginEventJP();
 		
 		try
 		{ 
-			beginEventJp = new BeginEventJP();
-			transaction = TransactionImple.getTransaction();
+			//transaction currently associated with thread.
+			transaction = TransactionImple.getTransaction();			
 			transactionUid = TransactionImple.getTransaction().get_uid();
-			globalID =TransactionImple.getTransaction().getTxId();
-			status= transaction.getStatus();
-			subtransactions = TransactionImple.getTransactions();
-			resources = TransactionImple.getTransaction().getResources();
-			
-			
-			passContextInfo(beginEventJp, tm, transaction, status);
-		} 
-		catch (SystemException e) 
-		{
-			e.printStackTrace();
-		}
-	}
-
-	before(TransactionManager tm) : BeginTransactionStyle3(tm)
-	{
-		BeginEventJP beginEventJp = new BeginEventJP();
-		passContextInfo(beginEventJp, tm, null, 0);
-	}
-	
-	after(TransactionManager tm) returning (Transaction transaction): 
-		BeginTransactionStyle3(tm)
-	{
-		BeginEventJP beginEventJp;
-		try
-		{ 
-			beginEventJp = new BeginEventJP();
-			transaction = tm.getTransaction();
-			int status= transaction.getStatus();
-			passContextInfo(beginEventJp, tm, transaction, status);
+			globalID = TransactionImple.getTransaction().getTxId();
+			if(time < 0)
+				timeout = TransactionImple.getTransaction().getTimeout();
+			else
+				timeout = time;
+			status =transaction.getStatus();
+			passContextInfo(beginEventJp, target, transaction, transactionUid, globalID, status, timeout);
 		} 
 		catch (SystemException e) 
 		{
@@ -143,13 +128,17 @@ public abstract aspect InitiatorJPTracker
 		}
 	}
 	
-	private void passContextInfo(BeginEventJP _beginEventJp,
-			TransactionManager _tm, Transaction _transaction, int _status)
-	{
-		BeginEventJP beginJp= beginEventJp;
-		beginJp.setTm(_tm);
-		beginJp.setTransaction(_transaction);
+	private void passContextInfo(BeginEventJP eventJp, Object _target, Transaction _transaction, Uid _uid, Xid _globalxid, int _status, int _timeout) 
+	{	
+		BeginEventJP beginJp= eventJp;
+		
+		if((_target !=null) && (_target.getClass().equals(TransactionManager.class)))
+		{
+			beginJp.setManager((TransactionManager)_target);
+		}
+		beginJp.setXatransaction(_transaction);
 		beginJp.setStatus(_status);
+		beginJp.setTimeout(_timeout);
+		beginJp.setTid(new TID(_globalxid, _uid));
 	}
->>>>>>> a4f88eb857dcc783b6bd1a3a8e9566d37c3c731e
 }

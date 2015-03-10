@@ -2,6 +2,7 @@ package umjdt.concepts;
 
 import javax.transaction.xa.Xid;
 
+import com.arjuna.ats.arjuna.common.Uid;
 import com.arjuna.ats.jta.xa.XidImple;
 //import com.arjuna.ats.internal.jta.xa.XID;
 
@@ -12,54 +13,54 @@ public class TID extends XidImple
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private Xid _Xid;
-	//private XID _XID;
+	
+	
+	private Xid xid;	
+	private Uid uid;
 	
 	public TID()
 	{
 		super();
-		this._Xid= new XidImple();
-		setXid(_Xid);
+		this.xid= new XidImple();
+		this.uid= new Uid();
+		setUid(uid);
+		setXid(xid);
+	}
+	
+	public TID(Xid _xid, Uid _uid)
+	{
+		super();
+		setUid(uid);
+		setXid(xid);
 	}
 	
 	public TID(Xid _xid)
 	{
 		super(_xid);
-		this._Xid= new XidImple(_xid);
-		setXid(_xid);
+		setXid(new XidImple(_xid));
 	}
 	
-	public TID(Transaction _transaction)
+	public TID(Uid _uid)
 	{
-		this(_transaction.getTId());
-		this._Xid= new XidImple(_transaction.getTId());
-		setXid(_Xid);
-	}
-	public void setXid(Xid xid) 
-	{
-		this._Xid = xid;
+		super();
+		setUid(new Uid(_uid));
 	}
 	
-	/**
-	 * 
-	public TID(XID _ID)
+	public void setXid(Xid _xid) 
 	{
-		super(_ID);
-		setxID(_ID);
+		this.xid = _xid;
 	}
-
+	
 	public Xid getXid()
 	{
-		return _Xid;
-	}
-	public XID getxID() 
-	{
-		return _XID;
+		return xid;
 	}
 
-	public void setxID(XID xID) 
-	{
-		this._XID = xID;
+	public Uid getUid() {
+		return uid;
 	}
-	*/
+
+	public void setUid(Uid _uid) {
+		this.uid = _uid;
+	}
 }

@@ -6,6 +6,8 @@ import com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionImple;
 import java.util.*;
 import java.util.logging.Logger;
 
+import javax.transaction.TransactionManager;
+
 import umjdt.joinpoints.TransJP;
 import umjdt.util.BackgroundThread;
 import umjdt.util.Status;
@@ -28,9 +30,10 @@ public class Transaction extends TransactionImple implements Serializable
 	private int timeout=0;
 	private Timestamp timestamp;
 	private int transactionType;
+	//private javax.transaction.Transaction xaTransaction;
 	private Transaction parentTransaction;
 	private BackgroundThread transactionThread;// make the transaction associated with current thread
-	private TransactionManager transactionManager= new TransactionManager();
+	private TransactionManager transactionManager;;
 	private List<Operation> operations = new ArrayList<Operation>();
 	private HashMap resources;
 	private Hashtable<TID, SubTransaction> _ChildTransactions;
@@ -402,5 +405,50 @@ public class Transaction extends TransactionImple implements Serializable
 			result= true;
 		}
 		return result;
+	}
+	
+	public TID getTid() {
+		return tid;
+	}
+
+	public void setTid(TID tid) {
+		this.tid = tid;
+	}
+
+	public int getStatus() {
+		return status;
+	}
+
+	public void setStatus(int status) {
+		this.status = status;
+	}
+
+	public Transaction getParentTransaction() {
+		return parentTransaction;
+	}
+
+	public void setParentTransaction(Transaction parentTransaction) {
+		this.parentTransaction = parentTransaction;
+	}
+
+	public Hashtable<TID, SubTransaction> get_ChildTransactions() {
+		return _ChildTransactions;
+	}
+
+	public void set_ChildTransactions(
+			Hashtable<TID, SubTransaction> _ChildTransactions) {
+		this._ChildTransactions = _ChildTransactions;
+	}
+
+	public Hashtable<String, Thread> get_childThreads() {
+		return _childThreads;
+	}
+
+	public void set_childThreads(Hashtable<String, Thread> _childThreads) {
+		this._childThreads = _childThreads;
+	}
+
+	public void setTransactionType(int transactionType) {
+		this.transactionType = transactionType;
 	}
 }
