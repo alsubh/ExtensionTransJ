@@ -12,14 +12,13 @@ public class Operation implements Cloneable, Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	
 	private String name = "";
     private IdNumber operationNr; // keep unique id for all kinds operation in any thread
 	private AccessType type;
 	private Method method;
 	private Thread thread;
 	private Timestamp timestamp;
-	private Lock lock; // type of the lock 
-	private Resource resource; // path of the resource
 	
 	public Operation()
 	{
@@ -92,21 +91,6 @@ public class Operation implements Cloneable, Serializable{
 	public void setThread(Thread thread) {
 		this.thread = thread;
 	}
-	public Timestamp getTimestamp() {
-		return timestamp;
-	}
-
-	public void setTimestamp(Timestamp timestamp) {
-		this.timestamp = timestamp;
-	}
-
-	public Resource getResource() {
-		return resource;
-	}
-
-	public void setResource(Resource resource) {
-		this.resource = resource;
-	}
 
 	public Thread getThread() {
 		return thread;
@@ -121,11 +105,12 @@ public class Operation implements Cloneable, Serializable{
 	}
 	// in the context aspect, the thread of operation will be a list of the transaction thread
 
-	public Lock getLock() {
-		return lock;
+	public Timestamp getTimestamp() {
+		return timestamp;
 	}
 
-	public void setLock(Lock lock) {
-		this.lock = lock;
+	public void setTimestamp(Timestamp timestamp) {
+		this.timestamp = timestamp;
 	}
+
 }

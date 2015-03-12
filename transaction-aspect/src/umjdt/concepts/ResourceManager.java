@@ -1,5 +1,6 @@
 package umjdt.concepts;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,7 +9,7 @@ import javax.transaction.TransactionManager;
 import umjdt.util.Participant;
 
 
-public class ResourceManager implements Participant
+public class ResourceManager implements Participant, Serializable
 {
 
 	private String name;

@@ -1,41 +1,48 @@
 package umjdt.joinpoints;
 
 import context.Context;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
 import java.util.logging.Logger;
+
+import umjdt.concepts.TID;
 import umjdt.concepts.Transaction;
 import umjdt.util.BackgroundThread;
-import umjdt.util.Status;
-import umjdt.util.Timestamp;
 
 public class TransJP extends EventJP
 {
 	Logger logger = Logger.getLogger(TransJP.class.toString());
-
-	private Transaction transaction; 
-	private int status; // commit or abort(rollback)
+	
+	private int status; 
 	private BeginEventJP beginDemarcate;
 	private EndEventJP endDemarcate;
+	private Transaction transaction; 
+	private BackgroundThread thread;
 	
 	public TransJP()
 	{
-		initailization();
+		super();
+		this.thread = new BackgroundThread(Thread.currentThread());
 	}
 	
-	public TransJP(TransJP _transJp)
+	public TransJP(TID _tid)
 	{
-		initailization();
-		this.setLocalTime(_transJp.getLocalTime());
+		super(_tid);
+		this.thread = new BackgroundThread(Thread.currentThread());	
 	}
-		
-	private void initailization() 
+	
+	public TransJP(Transaction _transaction)
 	{
-		this.JpID= UUID.randomUUID();
-		this.theJPThread = BackgroundThread.getInstance(JpID.toString());
+		this.transaction = _transaction;
+		this.thread = new BackgroundThread(Thread.currentThread());
 	}
+	
+	public TransJP(TransJP _transjp)
+	{
+		this.transaction= _transjp.getTransaction();
+		this.status = _transjp.getStatus();
+		this.thread= _transjp.getThread();
 		
+	}
+	
 	public boolean occurredIn(Context _context, TransJP _tJP)
 	{
 		boolean result=false;
@@ -45,61 +52,20 @@ public class TransJP extends EventJP
 		}
 		return result;
 	}
-
-	public BackgroundThread getTheJPThread() 
-	{
-		return theJPThread;
-	}
-
-	public void setTheJPThread(BackgroundThread theJPThread)
-	{
-		this.theJPThread = theJPThread;
-	}
-			
-	public boolean threadEventHappensBefore(EventJP e)
-	{
-		if(e.getLocalTime().compareTo(this.getLocalTime()) > 0)
-					return true;
-		return false;
-	}
 	
-	public Logger getLogger() 
-	{
-		return logger;
-	}
-
-	public void setLogger(Logger logger) 
-	{
-		this.logger = logger;
-	}
-
-	public UUID getTransJpID() 
-	{
-		return JpID;
-	}
-
-	public void setTransJpID(UUID transJpID) 
-	{
-		this.JpID = transJpID;
-	}
-	
-	public Transaction getTransaction() 
-	{
+	public Transaction getTransaction() {
 		return transaction;
 	}
 
-	public void setTransaction(Transaction transaction) 
-	{
+	public void setTransaction(Transaction transaction) {
 		this.transaction = transaction;
 	}
 
-	public int getStatus() 
-	{
+	public int getStatus() {
 		return status;
 	}
 
-	public void setStatus(int status) 
-	{
+	public void setStatus(int status) {
 		this.status = status;
 	}
 
@@ -118,4 +84,13 @@ public class TransJP extends EventJP
 	public void setEndDemarcate(EndEventJP endDemarcate) {
 		this.endDemarcate = endDemarcate;
 	}
+
+	public BackgroundThread getThread() {
+		return thread;
+	}
+
+	public void setThread(BackgroundThread thread) {
+		this.thread = thread;
+	}
+
 }

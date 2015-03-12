@@ -7,35 +7,33 @@ import java.util.*;
 import java.util.logging.Logger;
 
 import javax.transaction.TransactionManager;
+import javax.transaction.UserTransaction;
+import javax.transaction.xa.XAResource;
+import javax.transaction.xa.Xid;
 
 import umjdt.joinpoints.TransJP;
 import umjdt.util.BackgroundThread;
 import umjdt.util.Status;
 import umjdt.util.ThreadUtil;
 import umjdt.util.Timestamp;
+import umjdt.util.TransType;
 import umjdt.util.TransactionThread;
-import umjdt.util.TransactionType;
 
 public class Transaction extends TransactionImple implements Serializable
 {
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
-
 	Logger log = Logger.getLogger(this.getClass().getName()); 
-	
-	private TID tid;
+		
 	private int status;
-	private int timeout=0;
+	private int timeout;
 	private Timestamp timestamp;
 	private int transactionType;
-	//private javax.transaction.Transaction xaTransaction;
 	private Transaction parentTransaction;
-	private BackgroundThread transactionThread;// make the transaction associated with current thread
-	private TransactionManager transactionManager;;
+	private BackgroundThread thread;
+	private TransactionManager manager;
+	private UserTransaction user;
 	private List<Operation> operations = new ArrayList<Operation>();
-	private HashMap resources;
+	private HashMap<Xid, Resource> resources;
 	private Hashtable<TID, SubTransaction> _ChildTransactions;
 	private Hashtable<String, Thread> _childThreads;
 	
@@ -57,12 +55,11 @@ public class Transaction extends TransactionImple implements Serializable
 	private void initialization(int timeout) 
 	{
 		//this.multiOperationMap = HashMultimap.create();
-		this.resources = new HashMap();
+		this.resources = new HashMap<Xid, Resource>();
 		this._ChildTransactions=new Hashtable<TID, SubTransaction>();
 		this._childThreads= new Hashtable<String, Thread>();
 		this.timestamp = new Timestamp(timeout);
 		addThread();
-		transactionThread = BackgroundThread.getInstance(tid.toString(), this);
 	}
 	
 	/**
@@ -171,7 +168,7 @@ public class Transaction extends TransactionImple implements Serializable
 
     public final Transaction parent ()
     {
-        if (transactionType == TransactionType.NESTED)
+        if (transactionType == TransType.NESTED)
             return parentTransaction;
         else
             return null;
@@ -306,7 +303,7 @@ public class Transaction extends TransactionImple implements Serializable
             res = true;
         else
         {
-            if ((parentTransaction != null) && (transactionType != TransactionType.TOP_LEVEL))
+            if ((parentTransaction != null) && (transactionType != TransType.TOP_LEVEL))
                 res = parentTransaction.isAncestor(ancestor);
         }
         return res;
@@ -352,14 +349,6 @@ public class Transaction extends TransactionImple implements Serializable
 		this.operations = operations;
 	}
 
-	public TransactionManager getTransactionManager() {
-		return transactionManager;
-	}
-
-	public void setTransactionManager(TransactionManager transactionManager) {
-		this.transactionManager = transactionManager;
-	}
-
 	public Timestamp getTimestamp() {
 		return timestamp;
 	}
@@ -375,20 +364,12 @@ public class Transaction extends TransactionImple implements Serializable
 	public void setResources(HashMap resources) {
 		this.resources = resources;
 	}
-
-	public BackgroundThread getTransactionThread() {
-		return transactionThread;
-	}
-
-	public void setTransactionThread(BackgroundThread _transactionThread) {
-		this.transactionThread = _transactionThread;
-	}
 	
 	public int getTransactionType()
 	{
 		if(this.getChildTransactions()> 1)
-			return TransactionType.NESTED;
-		return TransactionType.FLAT;
+			return TransType.NESTED;
+		return TransType.FLAT;
 	}
 	
 	public int getChildTransactions()
@@ -400,13 +381,14 @@ public class Transaction extends TransactionImple implements Serializable
 	public boolean occuredIn(TransJP _transjp)
 	{
 		boolean result= false;
-		if(_transjp.getTransactionId().equals(getTId()))
+		if(_transjp.getTid().equals(getTId()))
 		{
 			result= true;
 		}
 		return result;
 	}
 	
+	private TID tid;
 	public TID getTid() {
 		return tid;
 	}
@@ -431,6 +413,22 @@ public class Transaction extends TransactionImple implements Serializable
 		this.parentTransaction = parentTransaction;
 	}
 
+	public TransactionManager getManager() {
+		return manager;
+	}
+
+	public void setManager(TransactionManager manager) {
+		this.manager = manager;
+	}
+
+	public UserTransaction getUser() {
+		return user;
+	}
+
+	public void setUser(UserTransaction user) {
+		this.user = user;
+	}
+
 	public Hashtable<TID, SubTransaction> get_ChildTransactions() {
 		return _ChildTransactions;
 	}
@@ -451,4 +449,13 @@ public class Transaction extends TransactionImple implements Serializable
 	public void setTransactionType(int transactionType) {
 		this.transactionType = transactionType;
 	}
+	
+	public BackgroundThread getTransactionThread() {
+		return thread;
+	}
+
+	public void setTransactionThread(BackgroundThread transactionThread) {
+		this.thread = transactionThread;
+	}
+
 }

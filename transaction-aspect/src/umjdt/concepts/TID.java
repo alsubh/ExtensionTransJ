@@ -1,5 +1,7 @@
 package umjdt.concepts;
 
+import java.io.Serializable;
+
 import javax.transaction.xa.Xid;
 
 import com.arjuna.ats.arjuna.common.Uid;
@@ -7,13 +9,12 @@ import com.arjuna.ats.jta.xa.XidImple;
 //import com.arjuna.ats.internal.jta.xa.XID;
 
 
-public class TID extends XidImple 
+public class TID extends XidImple implements Serializable
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
 	
 	private Xid xid;	
 	private Uid uid;

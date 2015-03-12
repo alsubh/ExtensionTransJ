@@ -1,9 +1,11 @@
 package umjdt.concepts;
 
+import java.io.Serializable;
+
 import umjdt.util.IdNumber;
 
 
-public class SubTransaction extends Transaction
+public class SubTransaction extends Transaction implements Serializable
 {
 	/**
 	 * 
@@ -12,22 +14,19 @@ public class SubTransaction extends Transaction
 	
 	private int timeout;
 	private IdNumber subTid;
-	
-	public SubTransaction()
+		
+	public SubTransaction(TID _tid)
 	{
 		super();
-		TID id = new TID(super.getTId());
-		subTid = IdNumber.Create(id);
+		subTid = IdNumber.Create(_tid);
 		setSubTid(subTid);
 	}
 	
-	public SubTransaction(int _timeout)
+	public SubTransaction(TID _tid, int _timeout)
 	{
 		super(_timeout);
 		this.timeout=_timeout;
-		setTimeout(_timeout);
-		TID id = new TID(super.getTId());
-		subTid = IdNumber.Create(id);
+		subTid = IdNumber.Create(_tid);
 		setSubTid(subTid);
 	}
 
@@ -41,15 +40,18 @@ public class SubTransaction extends Transaction
 		this.timeout = timeout;
 	}
 	
-	public IdNumber getSubTid() {
+	public IdNumber getSubTid() 
+	{
 		return subTid;
 	}
 
-	public void setSubTid(IdNumber subTid) {
+	public void setSubTid(IdNumber subTid) 
+	{
 		this.subTid = subTid;
 	}
 
-	public static long getSerialversionuid() {
+	public static long getSerialversionuid() 
+	{
 		return serialVersionUID;
 	}
 }
