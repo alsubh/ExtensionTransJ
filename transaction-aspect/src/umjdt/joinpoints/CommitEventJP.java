@@ -7,8 +7,10 @@ import javax.transaction.TransactionManager;
 import javax.transaction.UserTransaction;
 
 import umjdt.concepts.Resource;
+import umjdt.concepts.SubTransaction;
 import umjdt.concepts.TID;
 import umjdt.concepts.Transaction;
+import umjdt.util.BackgroundThread;
 import umjdt.util.Timestamp;
 
 public class CommitEventJP extends EndEventJP
@@ -49,11 +51,10 @@ public class CommitEventJP extends EndEventJP
 	
 	public CommitEventJP(TID _tid, umjdt.concepts.Transaction _transaction,
 			TransactionManager _manager, UserTransaction _user, int _timeout,
-			int _status, List<umjdt.concepts.Transaction> transactionlist,
-			List<Resource> resources, Timestamp _endTime, Thread _thread) 
+			int _status, List<SubTransaction> transactionlist,
+			List<Resource> resources, Timestamp _endTime, BackgroundThread _thread) 
 	{
-		super(_tid, _transaction, _manager, _user, _timeout, _status, transactionlist,
-				resources, _endTime, _thread);
+		super(_tid, _transaction, _manager, _user, _timeout, _status, transactionlist, resources, _endTime, _thread);
 		
 		this.commitTimestamp= new Timestamp().currentTimeStamp();
 		super.setStatus(_status);

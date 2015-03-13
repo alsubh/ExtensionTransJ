@@ -23,9 +23,10 @@ import umjdt.joinpoints.BeginEventJP;
  * @author AnasAlsubh
  *
  */
-public abstract aspect InitiatorJoinpointTracker
+public abstract aspect InitiatorJoinpointTracker extends TransactionTracker
 {
 	private Logger logger = Logger.getLogger(TransactionTracker.class);
+	
 	protected BeginEventJP beginEventJp=null;
 	
 	private Transaction transaction= null;
@@ -34,57 +35,19 @@ public abstract aspect InitiatorJoinpointTracker
 	private int status=0;
 	private int timeout=-1;
 	
-	/**
-	 * Begin: Create a new transaction and associate it with the current thread.
-	 * after begin : TransactionID, TransactionThread
-	 * 
-	 * javax.transaction.Transaction+;
-	 * ats.internal.jta.transaction.arjunacore.BaseTransaction.
-	 * arjuna.ats.jta.transaction.Transaction+
-	 * 
-	 */
-	 
-	pointcut BeginTransactionStyle(): call(* javax..*Transaction*+.begin(..)) || call(* com.arjuna..BaseTransaction+.begin(..)) || call(* com.arjuna..*Transaction*+.begin(..));
-	
-	pointcut BeginTransactionStyle2(int timeout): (call(* javax..*Transaction*+.begin(..)) || (call(* com.arjuna..BaseTransaction+.begin(..))) || (call(* com.arjuna..Transaction+.begin(..)))) && args(timeout);
-	
-	/*
-	pointcut BeginTransactionServerStyle1(TransactionManager tm):call(* *Transaction*+.begin(..)) && target(tm);
-	pointcut BeginTransactionServerStyle2(TransactionManager tm, iuint timeout): call(* *Transaction*+.begin(..)) && target(tm) && args(timeout); 
-	pointcut BeginTransactionServerStyle3(TransactionManager tm): execution(* *Transaction*+.begin(..)) && target(tm);
-	pointcut BeginTransactionServerStyle4(TransactionManager tm,int timeout): execution(* *Transaction*+.begin(..)) && target(tm) && args(timeout);
-	pointcut BeginTransactionClientStyle(UserTransaction utx):call(* *Transaction*+.begin(..))&& target(utx);
-	*/
-		
-	before() : BeginTransactionStyle()
+	before() : BeginTransaction()
 	{
 		BeginEventJP beginEventJp = new BeginEventJP();
-		passContextInfo(beginEventJp, thisJoinPoint.getTarget(),null, null,null,0,0);
+		Object target = thisJoinPoint.getTarget();
+		//passContextInfo(beginEventJp, thisJoinPoint.getTarget(),null, null,null,0,_timeout);
 	}
 	
-	//after 
-	void around() throws SystemException: BeginTransactionStyle()
-	{
-		proceed();
-		Object target= thisJoinPoint.getTarget();	
-		beginContextInfo(target,-1);
+	after() throws SystemException: BeginTransaction()
+	{	
+		beginContextInfo(thisJoinPoint.getTarget());
 	}
 	
-	before(int time) : BeginTransactionStyle2(time)
-	{
-		BeginEventJP beginEventJp = new BeginEventJP(time);
-		passContextInfo(beginEventJp, thisJoinPoint.getTarget(),null, null,null,0,time);
-	}
-	
-	//after
-	void around(int time) throws SystemException: BeginTransactionStyle2(time)
-	{
-		proceed(time);
-		Object target= thisJoinPoint.getTarget();	
-		beginContextInfo(target, time);
-	}
-	
-	private void beginContextInfo(Object target, int time) throws SystemException 
+	private void beginContextInfo(Object target) throws SystemException 
 	{
 		beginEventJp = new BeginEventJP();
 		//transaction currently associated with thread.
@@ -92,10 +55,7 @@ public abstract aspect InitiatorJoinpointTracker
 		transactionUid = TransactionImple.getTransaction().get_uid();
 		globalID = TransactionImple.getTransaction().getTxId();
 		status =TransactionImple.getTransaction().getStatus();
-		if(time < 0)
-			timeout = TransactionImple.getTransaction().getTimeout();
-		else
-			timeout = time;
+		timeout = TransactionImple.getTransaction().getTimeout();
 		
 		passContextInfo(beginEventJp, target, transaction, transactionUid, globalID, status, timeout);		
 	}
@@ -106,11 +66,11 @@ public abstract aspect InitiatorJoinpointTracker
 		
 		if(_target !=null)
 		{
-			if(_target.getClass().equals(TransactionManager.class))
+			if(_target.getClass().isInstance(TransactionManager.class))
 			{
 				beginJp.setManager((TransactionManager)_target);
 			}
-			else if(_target.getClass().equals(UserTransaction.class))
+			else if(_target.getClass().isInstance(UserTransaction.class))
 			{
 				beginJp.setUser((UserTransaction)_target);
 			}
@@ -120,11 +80,6 @@ public abstract aspect InitiatorJoinpointTracker
 		beginJp.setStatus(_status);
 		beginJp.setTimeout(_timeout);
 		
-		Begin(beginJp);
+		BeginJoinPoint(beginJp);
 	}
-	
-	public void Begin(BeginEventJP _beginEventJp)
-	{
-		
-	}	
 }

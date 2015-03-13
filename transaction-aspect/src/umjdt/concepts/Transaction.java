@@ -19,7 +19,7 @@ import umjdt.util.Timestamp;
 import umjdt.util.TransType;
 import umjdt.util.TransactionThread;
 
-public class Transaction extends TransactionImple implements Serializable
+public class Transaction extends TransactionImple implements javax.transaction.Transaction, Serializable
 {
 	private static final long serialVersionUID = 1L;
 	Logger log = Logger.getLogger(this.getClass().getName()); 

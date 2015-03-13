@@ -34,132 +34,14 @@ import umjdt.joinpoints.EndEventJP;
  * @author AnasAlsubh
  *
  */
-public abstract aspect TerminatorJPTracker 
+public abstract aspect TerminatorJPTracker extends TransactionTracker
 {
 	private Logger logger = Logger.getLogger(TransactionTracker.class);
 	protected EndEventJP endEventJp=null;
 	protected CommitEventJP commitJp=null;
 	protected AbortEventJP abortJp=null;
 	
-	/**
-	 *Complete the transaction represented by this Transaction object.
-	 *Complete the transaction associated with the current thread. 
-	 *When this method completes, the thread is no longer associated with a transaction. 
-	 * @param TransactionID, Status, TransactionThread, parent transaction, transaction manager
-	 */
-
-	pointcut CommitTransactionStyle(TID tid): 
-		(call(* javax..*Transaction*+.commit(..)) 
-				|| (call(* com.arjuna..BaseTransaction+.commit(..))) //ats.internal.jta.transaction.arjunacore.BaseTransaction.
-				|| (call(* com.arjuna..Transaction+.commit(..)))) && args(tid,..);
-	
-	pointcut CommitTransactionStyle1(Transaction transaction): 
-		(call(* javax..*Transaction*+.commit(..)) 
-				|| (call(* com.arjuna..BaseTransaction+.commit(..))) //ats.internal.jta.transaction.arjunacore.BaseTransaction.
-				|| (call(* com.arjuna..Transaction+.commit(..))))//arjuna.ats.jta.transaction.Transaction+ 
-				&& target(transaction);
-
-	/*
-	pointcut CommitTransactionStyle2(Transaction transaction): 
-		(execution(* javax..*Transaction*+.commit(..)) 
-				|| (execution(* com.arjuna..BaseTransaction+.commit(..))) //ats.internal.jta.transaction.arjunacore.BaseTransaction.
-				|| (execution(* com.arjuna..Transaction+.commit(..))))//arjuna.ats.jta.transaction.Transaction+ 
-				&& target(transaction);
-
-	pointcut CommitTransactionStyle3(Transaction transaction, int status): 
-		(call(* javax..*Transaction*+.commit(..)) 
-				|| (call(* com.arjuna..BaseTransaction+.commit(..))) //ats.internal.jta.transaction.arjunacore.BaseTransaction.
-				|| (call(* com.arjuna..Transaction+.commit(..))))//arjuna.ats.jta.transaction.Transaction+ 
-				&& target(transaction) && args( status,..);
-
-	pointcut CommitTransactionStyle4(Transaction transaction, int status): 
-		(execution(* javax..*Transaction*+.commit(..)) 
-				|| (execution(* com.arjuna..BaseTransaction+.commit(..))) //ats.internal.jta.transaction.arjunacore.BaseTransaction.
-				|| (execution(* com.arjuna..Transaction+.commit(..))))//arjuna.ats.jta.transaction.Transaction+ 
-				&& target(transaction) && args(status,..);
-
-	pointcut CommitTransactionStyle5(Transaction transaction, int status, boolean parent, TransactionManager tm ): 
-		(call(* javax..*Transaction*+.commit(..)) 
-				|| (call(* com.arjuna..BaseTransaction+.commit(..))) //ats.internal.jta.transaction.arjunacore.BaseTransaction.
-				|| (call(* com.arjuna..Transaction+.commit(..))))//arjuna.ats.jta.transaction.Transaction+ 
-				&& target(transaction) && args(status, parent, tm,..);
-	
-	pointcut CommitTransactionStyle6(Transaction transaction, int status, boolean parent, TransactionManager tm ): 
-		(execution(* javax..*Transaction*+.commit(..)) 
-				|| (execution(* com.arjuna..BaseTransaction+.commit(..))) //ats.internal.jta.transaction.arjunacore.BaseTransaction.
-				|| (execution(* com.arjuna..Transaction+.commit(..))))//arjuna.ats.jta.transaction.Transaction+ 
-				&& target(transaction) && args(status, parent, tm,..);
-
-	pointcut CommitTransactionStyle7(Transaction transaction, TransactionManager tm ): 
-		(call(* javax..*Transaction*+.commit(..)) 
-				|| (call(* com.arjuna..BaseTransaction+.commit(..))) //ats.internal.jta.transaction.arjunacore.BaseTransaction.
-				|| (call(* com.arjuna..Transaction+.commit(..))))//arjuna.ats.jta.transaction.Transaction+ 
-				&& target(transaction) && args(tm,..);
-	
-	pointcut CommitTransactionStyle8(Transaction transaction, TransactionManager tm ): 
-		(execution(* javax..*Transaction*+.commit(..)) 
-				|| (execution(* com.arjuna..BaseTransaction+.commit(..))) //ats.internal.jta.transaction.arjunacore.BaseTransaction.
-				|| (execution(* com.arjuna..Transaction+.commit(..))))//arjuna.ats.jta.transaction.Transaction+ 
-				&& target(transaction) && args(tm,..);
-		
-
-	pointcut AbortTransactionStyle(Uid uid): 
-		(call(* javax..*Transaction*+.rollback(..)) 
-				|| (call(* com.arjuna..BaseTransaction+.rollback(..))) //ats.internal.jta.transaction.arjunacore.BaseTransaction.
-				|| (call(* com.arjuna..Transaction+.rollback(..))))//arjuna.ats.jta.transaction.Transaction+ 
-				&& args(uid,..);
-	
-	pointcut AbortTransactionStyle1(Transaction transaction): 
-		(call(* javax..*Transaction*+.rollback(..)) 
-				|| (call(* com.arjuna..BaseTransaction+.rollback(..))) //ats.internal.jta.transaction.arjunacore.BaseTransaction.
-				|| (call(* com.arjuna..Transaction+.rollback(..))))//arjuna.ats.jta.transaction.Transaction+ 
-				&& target(transaction);
-
-	pointcut AbortTransactionStyle2(Transaction transaction): 
-		(execution(* javax..*Transaction*+.rollback(..)) 
-				|| (execution(* com.arjuna..BaseTransaction+.rollback(..))) //ats.internal.jta.transaction.arjunacore.BaseTransaction.
-				|| (execution(* com.arjuna..Transaction+.rollback(..))))//arjuna.ats.jta.transaction.Transaction+ 
-				&& target(transaction);
-
-	pointcut AbortTransactionStyle3(Transaction transaction, int status): 
-		(call(* javax..*Transaction*+.rollback(..)) 
-				|| (call(* com.arjuna..BaseTransaction+.rollback(..))) //ats.internal.jta.transaction.arjunacore.BaseTransaction.
-				|| (call(* com.arjuna..Transaction+.rollback(..))))//arjuna.ats.jta.transaction.Transaction+ 
-				&& target(transaction) && args(status,..);
-
-	pointcut AbortTransactionStyle4(Transaction transaction, int status): 
-		(execution(* javax..*Transaction*+.rollback(..)) 
-				|| (execution(* com.arjuna..BaseTransaction+.rollback(..))) //ats.internal.jta.transaction.arjunacore.BaseTransaction.
-				|| (execution(* com.arjuna..Transaction+.rollback(..))))//arjuna.ats.jta.transaction.Transaction+ 
-				&& target(transaction) && args(status,..);
-
-	pointcut AbortTransactionStyle5(Transaction transaction, int status, boolean parent, TransactionManager tm ): 
-		(call(* javax..*Transaction*+.rollback(..)) 
-				|| (call(* com.arjuna..BaseTransaction+.rollback(..))) //ats.internal.jta.transaction.arjunacore.BaseTransaction.
-				|| (call(* com.arjuna..Transaction+.rollback(..))))//arjuna.ats.jta.transaction.Transaction+ 
-				&& target(transaction) && args(status, parent, tm,..);
-	
-	pointcut AbortTransactionStyle6(Transaction transaction, int status, boolean parent, TransactionManager tm ): 
-		(execution(* javax..*Transaction*+.rollback(..)) 
-				|| (execution(* com.arjuna..BaseTransaction+.rollback(..))) //ats.internal.jta.transaction.arjunacore.BaseTransaction.
-				|| (execution(* com.arjuna..Transaction+.rollback(..))))//arjuna.ats.jta.transaction.Transaction+ 
-				&& target(transaction) && args(status, parent, tm,..);
-
-	pointcut AbortTransactionStyle7(Transaction transaction, TransactionManager tm ): 
-		(call(* javax..*Transaction*+.rollback(..)) 
-				|| (call(* com.arjuna..BaseTransaction+.rollback(..))) //ats.internal.jta.transaction.arjunacore.BaseTransaction.
-				|| (call(* com.arjuna..Transaction+.rollback(..))))//arjuna.ats.jta.transaction.Transaction+ 
-				&& target(transaction) && args(tm,..);
-	
-	pointcut AbortTransactionStyle8(Transaction transaction, TransactionManager tm ): 
-		(execution(* javax..*Transaction*+.rollback(..)) 
-				|| (execution(* com.arjuna..BaseTransaction+.rollback(..))) //ats.internal.jta.transaction.arjunacore.BaseTransaction.
-				|| (execution(* com.arjuna..Transaction+.rollback(..))))//arjuna.ats.jta.transaction.Transaction+ 
-				&& target(transaction) && args(tm,..);
-	
-	*/
-	
-	before(TID tid): CommitTransactionStyle(tid)
+	before(Transaction _transaction): CommitTransaction(_transaction)
 	{		
 		try
 		{
@@ -170,9 +52,9 @@ public abstract aspect TerminatorJPTracker
 			Object _this = thisJoinPoint.getThis();
 			//System.out.println(_this.getClass());
 		
-			Transaction transaction = (Transaction) TransactionImple.getTransaction(tid.getUid());
-			commitJp = new CommitEventJP(transaction);
-			contexinfo(commitJp, target, transaction);
+			//Transaction transaction = (Transaction) TransactionImple.getTransaction(tid.getUid());
+			commitJp = new CommitEventJP(_transaction);
+			contexinfo(commitJp, target, _transaction);
 
 		}
 		catch(Exception ex)
@@ -181,7 +63,24 @@ public abstract aspect TerminatorJPTracker
 		}		
 	}
 	
-	before(Uid uid): AbortTransactionStyle(uid)
+	after(Transaction _transaction) throws SystemException: CommitTransaction(_transaction)
+	{
+		Object target= thisJoinPoint.getTarget();
+		//System.out.println(target.getClass());
+		Object[] args= thisJoinPoint.getArgs();
+		//System.out.println(args.getClass());
+		Object _this = thisJoinPoint.getThis();
+		//System.out.println(_this.getClass());
+
+		//Transaction transaction = (Transaction) TransactionImple.getTransaction(_tid.getUid());
+		CommitEventJP commitjp = new CommitEventJP(_transaction);
+		commitjp.setStatus(Status.STATUS_COMMITTED);
+		commitjp.setTid(_transaction.getTid());
+		
+		contexinfo(commitjp, target, _transaction);
+	}
+	
+	before(Transaction _transaction): AbortTransaction(_transaction)
 	{
 		try
 		{
@@ -192,9 +91,9 @@ public abstract aspect TerminatorJPTracker
 			Object _this = thisJoinPoint.getThis();
 			//System.out.println(_this.getClass());
 	
-			TransactionImple transaction = TransactionImple.getTransaction(uid);
-			abortJp = new AbortEventJP((umjdt.concepts.Transaction) transaction);
-			contexinfo(abortJp,target, transaction);
+			//Transaction transaction = (Transaction) TransactionImple.getTransaction(_tid.getUid());
+			abortJp = new AbortEventJP(_transaction);
+			contexinfo(abortJp,target, _transaction);
 
 		}
 		catch(Exception ex)
@@ -202,8 +101,8 @@ public abstract aspect TerminatorJPTracker
 			System.out.println(ex.getMessage());
 		}
 	}
-	
-	after(Uid uid): CommitTransactionStyle(uid)
+		
+	after(Transaction _transaction): AbortTransaction(_transaction)
 	{
 		Object target= thisJoinPoint.getTarget();
 		//System.out.println(target.getClass());
@@ -211,26 +110,19 @@ public abstract aspect TerminatorJPTracker
 		//System.out.println(args.getClass());
 		Object _this = thisJoinPoint.getThis();
 		//System.out.println(_this.getClass());
-
-		TransactionImple transaction = TransactionImple.getTransaction(uid);
-		CommitEventJP commitjp = new CommitEventJP(transaction);
-		commitjp.setStatus(Status.STATUS_COMMITTED);
-		commitjp.setTransactionId(new TID (transaction.getTxId(), transaction.get_uid()));
-	}
-	
-	after(Uid uid): AbortTransactionStyle(uid)
-	{
-		Object target= thisJoinPoint.getTarget();
-		//System.out.println(target.getClass());
-		Object[] args= thisJoinPoint.getArgs();
-		//System.out.println(args.getClass());
-		Object _this = thisJoinPoint.getThis();
-		//System.out.println(_this.getClass());
-
-		TransactionImple transaction = TransactionImple.getTransaction(uid);
-		AbortEventJP abortjp = new AbortEventJP(transaction);
-		abortjp.setStatus(Status.STATUS_ROLLEDBACK);
-		abortjp.setTransactionId(new TID (transaction.getTxId(), transaction.get_uid()));
+		try 
+		{
+			//Transaction transaction = (Transaction) TransactionImple.getTransaction(_tid.getUid());
+			AbortEventJP abortjp = new AbortEventJP(_transaction);
+			abortjp.setStatus(Status.STATUS_ROLLEDBACK);
+			abortjp.setTid(_transaction.getTid());
+			contexinfo(abortjp, target, _transaction);
+		} 
+		catch (SystemException e) 
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	private void contexinfo(EndEventJP _endJP,Object _target, Transaction _transaction) throws SystemException 
@@ -262,7 +154,7 @@ public abstract aspect TerminatorJPTracker
 			subtransactions.add(sub);
 		}
 		
-		if(_endJP.getClass().equals(CommitEventJP.class))
+		if(_endJP.getClass().isInstance(CommitEventJP.class))
 			passContextInfo(commitJp, _target, _transaction, subtransactions, xid, resourceList, status, timeout);
 		else
 			passContextInfo(abortJp, _target, _transaction, subtransactions, xid, resourceList, status, timeout);
@@ -284,6 +176,7 @@ public abstract aspect TerminatorJPTracker
 			commiteventJp.setManager((TransactionManager)_target);
 		
 		Commit(commiteventJp);
+		CommitJoinPoint(commiteventJp);
 	}
 	
 	private void passContextInfo(AbortEventJP abortJP, Object _target,
@@ -302,6 +195,7 @@ public abstract aspect TerminatorJPTracker
 			aborteventJp.setManager((TransactionManager)_target);
 		
 		Abort(aborteventJp);
+		AbortJoinPoint(aborteventJp);
 	}
 	
 	public void End(EndEventJP _endEventjp)
@@ -310,7 +204,6 @@ public abstract aspect TerminatorJPTracker
 	public void Commit(CommitEventJP _commitEventjp)
 	{	
 	}
-	
 	public void Abort(AbortEventJP _abortEventjp)
 	{	
 	}

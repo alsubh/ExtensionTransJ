@@ -6,8 +6,15 @@ import javax.transaction.NotSupportedException;
 import javax.transaction.RollbackException;
 import javax.transaction.Status;
 import javax.transaction.SystemException;
+import javax.transaction.Transaction;
 import javax.transaction.TransactionManager;
 import javax.transaction.UserTransaction;
+import javax.transaction.xa.XAException;
+import javax.transaction.xa.XAResource;
+
+import umjdt.concepts.Resource;
+
+import com.arjuna.ats.internal.jta.transaction.arjunacore.subordinate.jca.TransactionImple;
 
 
 public class TransactionExample
@@ -47,7 +54,16 @@ public class TransactionExample
 	
 		tm.commit();
 	}
+	
+	public void commitTransaction() throws NotSupportedException, RollbackException, SystemException, HeuristicMixedException, HeuristicRollbackException {
+		
+		Transaction tm =  TransactionImple.getTransaction();
 
+		//tm.begin();
+	
+		tm.commit();
+	}
+	
 	public void rollbackUserTransaction() throws SystemException, NotSupportedException {
 		UserTransaction utx = com.arjuna.ats.jta.UserTransaction.userTransaction();
 
@@ -100,5 +116,15 @@ public class TransactionExample
             throw new RuntimeException("Should have got an exception whilst committing a transaction that exceeded its timeout");
         } catch (RollbackException e) {
         }
+	}
+	
+	@SuppressWarnings("null")
+	public void transactionResource() throws XAException
+	{
+		umjdt.concepts.Transaction transaction = (umjdt.concepts.Transaction) TransactionImple.getTransaction();
+		XAResource resource = null;
+		resource.start(transaction.getTxId(), javax.transaction.Status.STATUS_ACTIVE);
+		
+		resource.end(transaction.getTxId(), javax.transaction.Status.STATUS_ACTIVE);
 	}
 }
