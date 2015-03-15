@@ -1,10 +1,10 @@
 package umjdt.joinpoints.lock;
 
+import umjdt.concepts.Lock;
 import umjdt.concepts.Operation;
 import umjdt.concepts.Resource;
 import umjdt.concepts.TID;
 import umjdt.concepts.Transaction;
-import umjdt.concepts.lock;
 import umjdt.joinpoints.EndResourceEventJP;
 import umjdt.joinpoints.StartResourceEventJP;
 import umjdt.joinpoints.TransJP;
@@ -13,7 +13,7 @@ import umjdt.util.AccessType;
 public class LockingJP extends TransJP
 {
 	private TID tid;
-	private lock _lock;
+	private Lock lock;
 	private Resource resource;
 	private Operation operation;
 	private AccessType lockType;
@@ -35,10 +35,10 @@ public class LockingJP extends TransJP
 		super(_transjp);
 	}
 	
-	public LockingJP(lock _lock, TID _tid, Resource _resource, AccessType _lockType) 
+	public LockingJP(Lock _lock, TID _tid, Resource _resource, AccessType _lockType) 
 	{
 		super();
-		this._lock = _lock;
+		this.lock = _lock;
 		this.tid = _tid;
 		this.resource = _resource;
 		this.lockType = _lockType;
@@ -53,12 +53,12 @@ public class LockingJP extends TransJP
 		this.endResourceEventJp = _endResourceEventJp;
 	}
 
-	public lock get_lock() {
-		return _lock;
+	public Lock get_lock() {
+		return lock;
 	}
 
-	public void set_lock(lock _lock) {
-		this._lock = _lock;
+	public void set_lock(Lock _lock) {
+		this.lock = _lock;
 	}
 
 	public TID getTid() {

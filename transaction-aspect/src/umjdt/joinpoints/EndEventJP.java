@@ -18,7 +18,6 @@ import umjdt.util.Timestamp;
 
 public class EndEventJP extends TransJP
 {
-	private TID tid;// Xid and Uid	
 	private TransactionManager manager;
 	private UserTransaction user;
 	private Timestamp endTime; 
@@ -37,14 +36,14 @@ public class EndEventJP extends TransJP
 	public EndEventJP(TID _tid)
 	{
 		super();
-		this.tid =_tid;
+		super.setTid(_tid);
 		super.getThread().stop();
 	}
 		
 	public EndEventJP(TID _tid, Transaction _transaction,TransactionManager _manager, UserTransaction _user, int _timeout, int _status, List<SubTransaction> transactionlist, List<Resource> resources, Timestamp _endTime, BackgroundThread _thread) 
 	{
 		super.setTransaction(_transaction);
-		this.tid = _tid;
+		super.setTid(_tid);
 		this.manager = _manager;
 		this.user= _user;
 		this.timeout = _timeout;
@@ -64,23 +63,18 @@ public class EndEventJP extends TransJP
 		}
 	}
 
-	public TID getTid() {
-		return tid;
-	}
-
-	public void setTid(TID tid) {
-		this.tid = tid;
-	}
-
-	public TransactionManager getManager() {
+	public TransactionManager getManager() 
+	{
 		return manager;
 	}
 
-	public void setManager(TransactionManager manager) {
+	public void setManager(TransactionManager manager) 
+	{
 		this.manager = manager;
 	}
 
-	public UserTransaction getUser() {
+	public UserTransaction getUser() 
+	{
 		return user;
 	}
 

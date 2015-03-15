@@ -6,7 +6,6 @@ import umjdt.util.Timestamp;
 
 public class EventJP 
 {
-	private TID tid;
 	private String eventType;
 	private int timeout;
 	private Timer timer;
@@ -17,12 +16,7 @@ public class EventJP
 	public EventJP()
 	{
 	}
-	
-	public EventJP(TID _tid)
-	{
-		this.setTid(_tid);
-	}
-			
+				
 	public Timestamp getMinTime() 
 	{
 		return minTime;
@@ -68,14 +62,7 @@ public class EventJP
 	{
 		this.timeout = timeout;
 	}
-	public TID getTid() 
-	{
-		return tid;
-	}
-	public void setTid(TID transactionId) 
-	{
-		this.tid = transactionId;
-	}
+
 	public Timer getTimer() 
 	{
 		return timer;

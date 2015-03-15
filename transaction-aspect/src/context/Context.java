@@ -27,7 +27,6 @@ public class Context
 	private void initialization() 
 	{
 		contextID = UUID.randomUUID();
-		setContextThread(BackgroundThread.getInstance(contextID.toString(), this));
 	}
 
 	public BackgroundThread getContextThread() 

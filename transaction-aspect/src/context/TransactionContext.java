@@ -14,7 +14,7 @@ import umjdt.util.Status;
 public class TransactionContext extends Context
 {
 	private UUID tcid;
-	private TransactionJP transactionJp;
+	private TransJP transactionJp;
 	private List<Resource> resources;
 	private List<Operation> operations;
 	// Transaction Manager, Resource Manager, or coordinator
@@ -34,11 +34,9 @@ public class TransactionContext extends Context
 	{
 		super(_transJp);
 		this.setCid(UUID.randomUUID());
-		this.transactionJp.setEvents(_transJp.getEvents());
-		transactionContextThread = BackgroundThread.getInstance(getCid().toString(), this);
 	}
 	
-	public TransactionContext(UUID _tcid, TransactionJP _transactionJp,
+	public TransactionContext(UUID _tcid, TransJP _transactionJp,
 			List<Resource> _resources, List<Operation> _operations, Participant _participant)
 	{
 		super();
@@ -59,12 +57,12 @@ public class TransactionContext extends Context
 		this.tcid = cid;
 	}
 
-	public TransactionJP getTransactionJp() 
+	public TransJP getTransactionJp() 
 	{
 		return transactionJp;
 	}
 
-	public void setTransactionJp(TransactionJP transactionJp) 
+	public void setTransactionJp(TransJP transactionJp) 
 	{
 		this.transactionJp = transactionJp;
 	}
@@ -105,7 +103,7 @@ public class TransactionContext extends Context
 		this.transactionContextThread = transactionContextThread;
 	}
 	
-	public boolean occurOn(TransactionJP _transactionJp)
+	public boolean occurOn(TransJP _transactionJp)
 	{
 		boolean result= false;
 		if(_transactionJp.equals(_transactionJp))

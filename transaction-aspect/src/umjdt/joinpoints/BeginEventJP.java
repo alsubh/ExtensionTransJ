@@ -19,7 +19,6 @@ public class BeginEventJP extends TransJP
 	private UserTransaction user;
 	private Timestamp beginTime; 
 	private int timeout;
-	private int status;
 	private TID tid;
 	
 	public BeginEventJP()
@@ -36,18 +35,36 @@ public class BeginEventJP extends TransJP
 		startThread();
 	}
 	
-	public BeginEventJP(TID _tid, Transaction _transaction, TransactionManager _manager, UserTransaction _user, BackgroundThread _thread,int _status, int _timeout) 
+	public BeginEventJP(TID _tid) 
+	{
+		super(_tid);
+		startThread();
+	}
+
+	public BeginEventJP(Transaction _transaction) 
+	{
+		super(_transaction);
+		startThread();
+	}
+
+	public BeginEventJP(TransJP _transjp) 
+	{
+		super(_transjp);
+		startThread();
+	}
+
+	public BeginEventJP(TID _tid, Transaction _transaction, TransactionManager _manager, UserTransaction _user, BackgroundThread _thread, int _timeout) 
 	{
 		super();
 		this.tid= _tid;
 		super.setTransaction(_transaction);
-		super.setStatus(_status);
 		this.manager = _manager;
 		this.user= _user;
 		this.setUser(_user);
 		this.beginTime = new Timestamp().currentTimeStamp();
 		super.setBeginDemarcate(this);
 		super.setThread(_thread);
+		startThread();
 	}	
 
 	private void startThread() 
@@ -64,7 +81,8 @@ public class BeginEventJP extends TransJP
 		}
 	}
 	
-	public TransactionManager getManager() {
+	public TransactionManager getManager() 
+	{
 		return manager;
 	}
 
@@ -94,14 +112,6 @@ public class BeginEventJP extends TransJP
 
 	public void setTimeout(int timeout) {
 		this.timeout = timeout;
-	}
-
-	public int getStatus() {
-		return status;
-	}
-
-	public void setStatus(int status) {
-		this.status = status;
 	}
 
 	public TID getTid() {

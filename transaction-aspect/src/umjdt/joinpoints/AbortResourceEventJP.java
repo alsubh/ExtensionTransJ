@@ -7,6 +7,7 @@ package umjdt.joinpoints;
  * @author AnasAlsubh
  *
  */
-public class AbortResourceEventJP {
+public class AbortResourceEventJP 
+{
 
 }

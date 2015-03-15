@@ -11,6 +11,7 @@ public class TransJP extends EventJP
 {
 	Logger logger = Logger.getLogger(TransJP.class.toString());
 	
+	private TID tid;
 	private int status; 
 	private BeginEventJP beginDemarcate;
 	private EndEventJP endDemarcate;
@@ -25,22 +26,24 @@ public class TransJP extends EventJP
 	
 	public TransJP(TID _tid)
 	{
-		super(_tid);
+		super();
+		this.tid= _tid;
 		this.thread = new BackgroundThread(Thread.currentThread());	
 	}
 	
 	public TransJP(Transaction _transaction)
 	{
 		this.transaction = _transaction;
+		this.tid= _transaction.getTid();
 		this.thread = new BackgroundThread(Thread.currentThread());
 	}
 	
 	public TransJP(TransJP _transjp)
 	{
 		this.transaction= _transjp.getTransaction();
-		this.status = _transjp.getStatus();
+		this.tid= _transjp.getTransaction().getTid();
+		this.status = _transjp.getTransaction().getStatus();
 		this.thread= _transjp.getThread();
-		
 	}
 	
 	public boolean occurredIn(Context _context, TransJP _tJP)
@@ -91,6 +94,14 @@ public class TransJP extends EventJP
 
 	public void setThread(BackgroundThread thread) {
 		this.thread = thread;
+	}
+
+	public TID getTid() {
+		return tid;
+	}
+
+	public void setTid(TID tid) {
+		this.tid = tid;
 	}
 
 }

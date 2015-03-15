@@ -3,7 +3,7 @@ package umjdt.joinpoints.operation;
 import java.lang.management.LockInfo;
 
 import test.operationNum;
-import umjdt.concepts.lock;
+import umjdt.concepts.Lock;
 import umjdt.concepts.Operation;
 import umjdt.concepts.Resource;
 import umjdt.concepts.TID;
@@ -18,7 +18,7 @@ public class OperationJP extends TransJP
 	private Object [] arguments;
 	private AccessType accessType;
 	private Timestamp timestamp;
-	private lock _lock; // type of the lock 
+	private Lock lock; // type of the lock 
 	private Resource resource; // path of the resource
 	
 	
@@ -103,12 +103,12 @@ public class OperationJP extends TransJP
 		this.resource = resource;
 	}
 
-	public lock getLock() {
-		return _lock;
+	public Lock getLock() {
+		return lock;
 	}
 
-	public void setLock(lock lock) {
-		this._lock = lock;
+	public void setLock(Lock lock) {
+		this.lock = lock;
 	}
 
 	public Operation getOperation() {
