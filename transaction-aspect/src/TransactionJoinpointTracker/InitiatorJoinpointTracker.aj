@@ -18,6 +18,7 @@ import com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionImple;
 import umjdt.concepts.TID;
 import umjdt.concepts.Transaction;
 import umjdt.joinpoints.BeginEventJP;
+import umjdt.util.Timestamp;
 
 /**
  * @author AnasAlsubh
@@ -39,11 +40,14 @@ public abstract aspect InitiatorJoinpointTracker extends TransactionTracker
 	{
 		BeginEventJP beginEventJp = new BeginEventJP();
 		Object target = thisJoinPoint.getTarget();
+		beginEventJp.setBeginTime(new Timestamp().currentTimeStamp());
 		//passContextInfo(beginEventJp, thisJoinPoint.getTarget(),null, null,null,0,_timeout);
 	}
 	
 	after() throws SystemException: BeginTransaction()
 	{	
+		BeginEventJP beginEventJp = new BeginEventJP();
+		beginEventJp.setBeginJP(thisJoinPoint);
 		beginContextInfo(thisJoinPoint.getTarget());
 	}
 	

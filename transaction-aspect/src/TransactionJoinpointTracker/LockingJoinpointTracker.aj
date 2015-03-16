@@ -18,7 +18,6 @@ import umjdt.joinpoints.StartResourceEventJP;
  */
 public aspect LockingJoinpointTracker extends TransactionTracker
 {
-
 	/**
 	 * The resource manager is responsible for associating the global transaction
 	 * to all work performed on its data between the start and end method invocations.

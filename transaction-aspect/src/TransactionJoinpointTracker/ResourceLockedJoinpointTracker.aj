@@ -24,11 +24,11 @@ public abstract aspect ResourceLockedJoinpointTracker extends TransactionTracker
 	{
 		try 
 		{
-			proceed(_transaction, _resource);
 			enlistResourceEventJp= new EnlistResourceEventJP();
 			enlistResourceEventJp.setTransaction(_transaction);
 			enlistResourceEventJp.setResource(new Resource(_resource));
 			enlistResourceEventJp.setEnlistResourceTimestamp(new Timestamp().currentTimeStamp());
+			proceed(_transaction, _resource);
 			LockResourceJoinPoint(enlistResourceEventJp);
 		} 
 		catch (XAException e) {
@@ -39,10 +39,20 @@ public abstract aspect ResourceLockedJoinpointTracker extends TransactionTracker
 	
 	void around (Transaction _transaction, XAResource _resource): UnlockTransaction(_transaction, _resource)
 	{
-		proceed(_transaction, _resource);
-		delistResourceEventJp = new DelistResourceEventJP();
-		
-		UnlockResourceJoinPoint(delistResourceEventJp);
+		try
+		{
+			
+			proceed(_transaction, _resource);
+			delistResourceEventJp = new DelistResourceEventJP();
+			delistResourceEventJp.setTransaction(_transaction);
+			delistResourceEventJp.setResource();
+			delistResourceEventJp.setDelistResourceTimestamp(new Timestamp().currentTimeStamp());
+			UnlockResourceJoinPoint(thisJoinPoint);
+		}
+		catch(Exception ex)
+		{
+			ex.printStackTrace();
+		}
 	}
 	
 }

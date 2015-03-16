@@ -16,7 +16,6 @@ import javax.transaction.xa.XAResource;
 import javax.transaction.xa.Xid;
 
 import org.apache.log4j.Logger;
-import org.omg.CORBA.IMP_LIMIT;
 
 import com.arjuna.ats.arjuna.common.Uid;
 import com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionImple;
@@ -27,7 +26,6 @@ import umjdt.concepts.SubTransaction;
 import umjdt.concepts.TID;
 import umjdt.concepts.Transaction;
 import umjdt.joinpoints.AbortEventJP;
-import umjdt.joinpoints.BeginEventJP;
 import umjdt.joinpoints.CommitEventJP;
 import umjdt.joinpoints.EndEventJP;
 
@@ -38,6 +36,7 @@ import umjdt.joinpoints.EndEventJP;
 public abstract aspect TerminatorJoinpointTracker extends TransactionTracker
 {
 	private Logger logger = Logger.getLogger(TransactionTracker.class);
+	
 	protected EndEventJP endEventJp=null;
 	protected CommitEventJP commitJp=null;
 	protected AbortEventJP abortJp=null;
@@ -55,6 +54,7 @@ public abstract aspect TerminatorJoinpointTracker extends TransactionTracker
 		
 			//Transaction transaction = (Transaction) TransactionImple.getTransaction(tid.getUid());
 			commitJp = new CommitEventJP(_transaction);
+			commitJp.setCommitJP(thisJoinPoint);
 			contexinfo(commitJp, target, _transaction);
 
 		}
@@ -75,6 +75,7 @@ public abstract aspect TerminatorJoinpointTracker extends TransactionTracker
 
 		//Transaction transaction = (Transaction) TransactionImple.getTransaction(_tid.getUid());
 		CommitEventJP commitjp = new CommitEventJP(_transaction);
+		commitjp.setCommitJP(thisJoinPoint);
 		commitjp.setStatus(Status.STATUS_COMMITTED);
 		commitjp.setTid(_transaction.getTid());
 		
@@ -94,6 +95,7 @@ public abstract aspect TerminatorJoinpointTracker extends TransactionTracker
 	
 			//Transaction transaction = (Transaction) TransactionImple.getTransaction(_tid.getUid());
 			abortJp = new AbortEventJP(_transaction);
+			abortJp.setAbortJP(thisJoinPoint);
 			contexinfo(abortJp,target, _transaction);
 
 		}
@@ -115,6 +117,7 @@ public abstract aspect TerminatorJoinpointTracker extends TransactionTracker
 		{
 			//Transaction transaction = (Transaction) TransactionImple.getTransaction(_tid.getUid());
 			AbortEventJP abortjp = new AbortEventJP(_transaction);
+			abortjp.setAbortJP(thisJoinPoint);
 			abortjp.setStatus(Status.STATUS_ROLLEDBACK);
 			abortjp.setTid(_transaction.getTid());
 			contexinfo(abortjp, target, _transaction);
@@ -184,7 +187,7 @@ public abstract aspect TerminatorJoinpointTracker extends TransactionTracker
 		if((_target !=null) && (_target.getClass().equals(TransactionManager.class)))
 			commiteventJp.setManager((TransactionManager)_target);
 		
-		Commit(commiteventJp);
+		//Commit(commiteventJp);
 		CommitJoinPoint(commiteventJp);
 	}
 	
@@ -203,7 +206,7 @@ public abstract aspect TerminatorJoinpointTracker extends TransactionTracker
 		if((_target !=null) && (_target.getClass().equals(TransactionManager.class)))
 			aborteventJp.setManager((TransactionManager)_target);
 		
-		Abort(aborteventJp);
+		//Abort(aborteventJp);
 		AbortJoinPoint(aborteventJp);
 	}
 	

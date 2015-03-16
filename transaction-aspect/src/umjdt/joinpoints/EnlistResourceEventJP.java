@@ -5,6 +5,8 @@ package umjdt.joinpoints;
 
 import java.util.Timer;
 
+import org.aspectj.lang.JoinPoint;
+
 import umjdt.concepts.Resource;
 import umjdt.concepts.TID;
 import umjdt.concepts.Transaction;
@@ -18,6 +20,7 @@ import umjdt.util.Timestamp;
 public class EnlistResourceEventJP extends LockingJP {
 	private Timer timer;
 	private Timestamp enlistResourceTimestamp;
+	private JoinPoint enlistResourceJP;
 
 	public EnlistResourceEventJP() {
 		super();
@@ -66,5 +69,13 @@ public class EnlistResourceEventJP extends LockingJP {
 
 	public void setEnlistResourceTimestamp(Timestamp enlistResourceTimestamp) {
 		this.enlistResourceTimestamp = enlistResourceTimestamp;
+	}
+
+	public JoinPoint getEnlistResourceJP() {
+		return enlistResourceJP;
+	}
+
+	public void setEnlistResourceJP(JoinPoint enlistResourceJP) {
+		this.enlistResourceJP = enlistResourceJP;
 	}
 }

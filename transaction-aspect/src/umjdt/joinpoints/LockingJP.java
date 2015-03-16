@@ -3,6 +3,8 @@
  */
 package umjdt.joinpoints;
 
+import org.aspectj.lang.JoinPoint;
+
 import umjdt.concepts.Lock;
 import umjdt.concepts.Resource;
 import umjdt.concepts.TID;
@@ -17,6 +19,7 @@ public class LockingJP extends TransJP {
 	private final Lock lock = null;
 	private Resource resource = null;
 	private AccessType lockType;
+	private JoinPoint lockingJP;
 
 	public LockingJP() {
 		super();
@@ -65,5 +68,13 @@ public class LockingJP extends TransJP {
 
 	public Lock getLock() {
 		return lock;
+	}
+
+	public JoinPoint getLockingJP() {
+		return lockingJP;
+	}
+
+	public void setLockingJP(JoinPoint lockingJP) {
+		this.lockingJP = lockingJP;
 	}
 }
