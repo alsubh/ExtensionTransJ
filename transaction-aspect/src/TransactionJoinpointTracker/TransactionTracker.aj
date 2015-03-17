@@ -11,6 +11,7 @@ import javax.transaction.xa.Xid;
 import org.apache.log4j.Logger;
 import org.apache.log4j.Priority;
 
+import umjdt.concepts.TID;
 import umjdt.concepts.Transaction;
 import umjdt.joinpoints.AbortEventJP;
 import umjdt.joinpoints.BeginEventJP;
@@ -72,7 +73,7 @@ public abstract aspect TransactionTracker
 	 * the transaction associated with the target Transaction object.
 	 * @param Xid, Resource, Thread,  
 	 */
-	pointcut LockTransaction(Transaction transaction, XAResource resource): 
+	pointcut LockTransaction(Transaction transaction , XAResource resource): 
 		(execution(* javax..*Transaction*+.enlistResource(..)) || execution(* com.arjuna..*+.lock(..)))
 		&& args(resource) && target(transaction); // TxInfo
 	
@@ -81,9 +82,9 @@ public abstract aspect TransactionTracker
 	 * the transaction associated with the target Transaction object.
 	 * @param : Resource, xid, 
 	 */
-	pointcut UnlockTransaction(Transaction transaction, XAResource resource):
+	pointcut UnlockTransaction(Transaction transaction):
 		(execution(* javax..*Transaction*+.delistResource(..)) || execution(* com.arjuna..*+.unlock(..))) 
-		&& args(resource) && target(transaction); // TxInfo;
+		&& target(transaction); // TxInfo;
 	
     
 	public void BeginJoinPoint(BeginEventJP _beginJp){}

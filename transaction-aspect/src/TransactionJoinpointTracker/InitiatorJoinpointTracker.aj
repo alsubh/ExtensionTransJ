@@ -39,6 +39,7 @@ public abstract aspect InitiatorJoinpointTracker extends TransactionTracker
 	before() : BeginTransaction()
 	{
 		BeginEventJP beginEventJp = new BeginEventJP();
+		beginEventJp.setBeginJP(thisJoinPoint);
 		Object target = thisJoinPoint.getTarget();
 		beginEventJp.setBeginTime(new Timestamp().currentTimeStamp());
 		//passContextInfo(beginEventJp, thisJoinPoint.getTarget(),null, null,null,0,_timeout);

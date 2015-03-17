@@ -18,6 +18,7 @@ import umjdt.util.Timestamp;
  * 
  */
 public class EnlistResourceEventJP extends LockingJP {
+
 	private Timer timer;
 	private Timestamp enlistResourceTimestamp;
 	private JoinPoint enlistResourceJP;

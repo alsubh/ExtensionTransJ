@@ -145,7 +145,7 @@ public abstract aspect TerminatorJoinpointTracker extends TransactionTracker
 			{
 				res = new Resource(xares);
 				res.setXid(resources.get(xares).xid());
-				res.setState(resources.get(xares).getState());
+				res.setState(resources.get(xares).getState());// TMFAIL for abort and TMSUCESS for commit
 				resourceList.add(res);
 			}
 			catch (XAException e) 
