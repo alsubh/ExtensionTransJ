@@ -1,0 +1,10 @@
+digraph cxf_services_ws_discovery_api_2_7_11_redhat_3_dependencies {
+  node [shape = box, fontsize=10.0];
+  cxf_services_ws_discovery_api_2_7_11_redhat_3 -> cxf_api_2_7_11_redhat_3;
+  cxf_services_ws_discovery_api_2_7_11_redhat_3 -> cxf_rt_databinding_jaxb_2_7_11_redhat_3;
+  cxf_services_ws_discovery_api_2_7_11_redhat_3 -> cxf_rt_frontend_jaxws_2_7_11_redhat_3;
+  cxf_services_ws_discovery_api_2_7_11_redhat_3 -> cxf_rt_ws_addr_2_7_11_redhat_3;
+  cxf_services_ws_discovery_api_2_7_11_redhat_3 -> jboss_jaxb_api_2_2_spec_1_0_4_Final_redhat_2;
+  cxf_services_ws_discovery_api_2_7_11_redhat_3 -> jboss_jaxws_api_2_2_spec_2_0_2_Final_redhat_1;
+  cxf_services_ws_discovery_api_2_7_11_redhat_3 -> jsr181_api_1_0_MR1_redhat_6;
+}

@@ -1,0 +1,4 @@
+digraph istack_commons_runtime_2_6_1_redhat_2_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  com_sun_istack_logging -> com_sun_istack;
+}

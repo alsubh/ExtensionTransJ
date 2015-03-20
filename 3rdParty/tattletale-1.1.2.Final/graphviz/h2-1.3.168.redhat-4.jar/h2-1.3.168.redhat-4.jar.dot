@@ -1,0 +1,7 @@
+digraph h2_1_3_168_redhat_4_dependencies {
+  node [shape = box, fontsize=10.0];
+  h2_1_3_168_redhat_4 -> jboss_client;
+  h2_1_3_168_redhat_4 -> jboss_servlet_api_2_5_spec_1_0_1_Final_redhat_2;
+  h2_1_3_168_redhat_4 -> org_osgi_core_4_2_0_redhat_4;
+  h2_1_3_168_redhat_4 -> slf4j_api_1_7_2_redhat_3;
+}

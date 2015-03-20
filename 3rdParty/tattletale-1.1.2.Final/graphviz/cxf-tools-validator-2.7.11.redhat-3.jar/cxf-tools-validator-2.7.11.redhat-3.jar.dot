@@ -1,0 +1,10 @@
+digraph cxf_tools_validator_2_7_11_redhat_3_dependencies {
+  node [shape = box, fontsize=10.0];
+  cxf_tools_validator_2_7_11_redhat_3 -> cxf_api_2_7_11_redhat_3;
+  cxf_tools_validator_2_7_11_redhat_3 -> cxf_rt_bindings_soap_2_7_11_redhat_3;
+  cxf_tools_validator_2_7_11_redhat_3 -> cxf_rt_core_2_7_11_redhat_3;
+  cxf_tools_validator_2_7_11_redhat_3 -> cxf_tools_common_2_7_11_redhat_3;
+  cxf_tools_validator_2_7_11_redhat_3 -> jsr181_api_1_0_MR1_redhat_6;
+  cxf_tools_validator_2_7_11_redhat_3 -> wsdl4j_1_6_3_redhat_1;
+  cxf_tools_validator_2_7_11_redhat_3 -> xmlschema_core_2_0_2_redhat_3;
+}

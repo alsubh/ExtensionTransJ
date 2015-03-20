@@ -1,0 +1,9 @@
+digraph hibernate_jpa_2_0_api_1_0_1_Final_redhat_2_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  javax_persistence -> javax_persistence_criteria;
+  javax_persistence -> javax_persistence_metamodel;
+  javax_persistence -> javax_persistence_spi;
+  javax_persistence_criteria -> javax_persistence;
+  javax_persistence_criteria -> javax_persistence_metamodel;
+  javax_persistence_spi -> javax_persistence;
+}

@@ -1,0 +1,7 @@
+digraph ironjacamar_jdbc_1_0_26_Final_redhat_1_dependencies {
+  node [shape = box, fontsize=10.0];
+  ironjacamar_jdbc_1_0_26_Final_redhat_1 -> ironjacamar_core_api_1_0_26_Final_redhat_1;
+  ironjacamar_jdbc_1_0_26_Final_redhat_1 -> jboss_cli_client;
+  ironjacamar_jdbc_1_0_26_Final_redhat_1 -> jboss_client;
+  ironjacamar_jdbc_1_0_26_Final_redhat_1 -> jboss_connector_api_1_6_spec_1_0_1_Final_redhat_2;
+}

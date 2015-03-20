@@ -1,0 +1,14 @@
+digraph hibernate_core_4_2_14_SP1_redhat_1_dependencies {
+  node [shape = box, fontsize=10.0];
+  hibernate_core_4_2_14_SP1_redhat_1 -> antlr_2_7_7_redhat_4;
+  hibernate_core_4_2_14_SP1_redhat_1 -> dom4j_1_6_1_redhat_6;
+  hibernate_core_4_2_14_SP1_redhat_1 -> hibernate_commons_annotations_4_0_1_Final_redhat_2;
+  hibernate_core_4_2_14_SP1_redhat_1 -> hibernate_jpa_2_0_api_1_0_1_Final_redhat_2;
+  hibernate_core_4_2_14_SP1_redhat_1 -> jandex_1_0_3_Final_redhat_2;
+  hibernate_core_4_2_14_SP1_redhat_1 -> javassist_3_18_1_GA_redhat_1;
+  hibernate_core_4_2_14_SP1_redhat_1 -> jboss_cli_client;
+  hibernate_core_4_2_14_SP1_redhat_1 -> jboss_client;
+  hibernate_core_4_2_14_SP1_redhat_1 -> jboss_jacc_api_1_4_spec_1_0_3_Final_redhat_1;
+  hibernate_core_4_2_14_SP1_redhat_1 -> jboss_jaxb_api_2_2_spec_1_0_4_Final_redhat_2;
+  hibernate_core_4_2_14_SP1_redhat_1 -> validation_api_1_0_0_GA_redhat_2;
+}

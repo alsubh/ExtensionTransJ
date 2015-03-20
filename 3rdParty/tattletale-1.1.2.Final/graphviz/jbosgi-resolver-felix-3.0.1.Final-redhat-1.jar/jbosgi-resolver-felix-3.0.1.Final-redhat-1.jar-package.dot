@@ -1,0 +1,11 @@
+digraph jbosgi_resolver_felix_3_0_1_Final_redhat_1_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_apache_felix_resolver -> org_osgi_framework;
+  org_apache_felix_resolver -> org_osgi_resource;
+  org_apache_felix_resolver -> org_osgi_service_resolver;
+  org_jboss_osgi_resolver_felix -> org_apache_felix_resolver;
+  org_jboss_osgi_resolver_felix -> org_jboss_osgi_resolver;
+  org_jboss_osgi_resolver_felix -> org_jboss_osgi_resolver_spi;
+  org_jboss_osgi_resolver_felix -> org_osgi_resource;
+  org_jboss_osgi_resolver_felix -> org_osgi_service_resolver;
+}

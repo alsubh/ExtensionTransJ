@@ -1,0 +1,20 @@
+digraph cxf_rt_ws_mex_2_7_11_redhat_3_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_apache_cxf_ws_mex -> org_apache_cxf;
+  org_apache_cxf_ws_mex -> org_apache_cxf_binding;
+  org_apache_cxf_ws_mex -> org_apache_cxf_binding_soap;
+  org_apache_cxf_ws_mex -> org_apache_cxf_common_util;
+  org_apache_cxf_ws_mex -> org_apache_cxf_endpoint;
+  org_apache_cxf_ws_mex -> org_apache_cxf_frontend;
+  org_apache_cxf_ws_mex -> org_apache_cxf_helpers;
+  org_apache_cxf_ws_mex -> org_apache_cxf_interceptor;
+  org_apache_cxf_ws_mex -> org_apache_cxf_jaxws;
+  org_apache_cxf_ws_mex -> org_apache_cxf_message;
+  org_apache_cxf_ws_mex -> org_apache_cxf_phase;
+  org_apache_cxf_ws_mex -> org_apache_cxf_service;
+  org_apache_cxf_ws_mex -> org_apache_cxf_service_invoker;
+  org_apache_cxf_ws_mex -> org_apache_cxf_service_model;
+  org_apache_cxf_ws_mex -> org_apache_cxf_ws_addressing;
+  org_apache_cxf_ws_mex -> org_apache_cxf_ws_mex_model__2004_09;
+  org_apache_cxf_ws_mex -> org_apache_cxf_ws_policy;
+}

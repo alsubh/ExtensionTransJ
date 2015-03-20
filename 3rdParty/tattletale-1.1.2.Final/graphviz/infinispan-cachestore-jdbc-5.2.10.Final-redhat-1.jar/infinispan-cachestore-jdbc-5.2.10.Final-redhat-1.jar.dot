@@ -1,0 +1,6 @@
+digraph infinispan_cachestore_jdbc_5_2_10_Final_redhat_1_dependencies {
+  node [shape = box, fontsize=10.0];
+  infinispan_cachestore_jdbc_5_2_10_Final_redhat_1 -> infinispan_core_5_2_10_Final_redhat_1;
+  infinispan_cachestore_jdbc_5_2_10_Final_redhat_1 -> jboss_cli_client;
+  infinispan_cachestore_jdbc_5_2_10_Final_redhat_1 -> jboss_client;
+}

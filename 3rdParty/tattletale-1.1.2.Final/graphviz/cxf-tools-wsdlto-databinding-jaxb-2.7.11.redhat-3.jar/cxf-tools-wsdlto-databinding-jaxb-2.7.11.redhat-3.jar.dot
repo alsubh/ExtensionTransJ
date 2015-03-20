@@ -1,0 +1,11 @@
+digraph cxf_tools_wsdlto_databinding_jaxb_2_7_11_redhat_3_dependencies {
+  node [shape = box, fontsize=10.0];
+  cxf_tools_wsdlto_databinding_jaxb_2_7_11_redhat_3 -> codemodel_2_6_redhat_2;
+  cxf_tools_wsdlto_databinding_jaxb_2_7_11_redhat_3 -> cxf_api_2_7_11_redhat_3;
+  cxf_tools_wsdlto_databinding_jaxb_2_7_11_redhat_3 -> cxf_rt_core_2_7_11_redhat_3;
+  cxf_tools_wsdlto_databinding_jaxb_2_7_11_redhat_3 -> cxf_tools_common_2_7_11_redhat_3;
+  cxf_tools_wsdlto_databinding_jaxb_2_7_11_redhat_3 -> cxf_tools_wsdlto_core_2_7_11_redhat_3;
+  cxf_tools_wsdlto_databinding_jaxb_2_7_11_redhat_3 -> jaxb_xjc_2_2_5_redhat_8;
+  cxf_tools_wsdlto_databinding_jaxb_2_7_11_redhat_3 -> jaxen_1_1_3_redhat_4;
+  cxf_tools_wsdlto_databinding_jaxb_2_7_11_redhat_3 -> xmlschema_core_2_0_2_redhat_3;
+}

@@ -1,0 +1,7 @@
+digraph cxf_rt_bindings_coloc_2_7_11_redhat_3_dependencies {
+  node [shape = box, fontsize=10.0];
+  cxf_rt_bindings_coloc_2_7_11_redhat_3 -> cxf_api_2_7_11_redhat_3;
+  cxf_rt_bindings_coloc_2_7_11_redhat_3 -> cxf_rt_core_2_7_11_redhat_3;
+  cxf_rt_bindings_coloc_2_7_11_redhat_3 -> jboss_jaxws_api_2_2_spec_2_0_2_Final_redhat_1;
+  cxf_rt_bindings_coloc_2_7_11_redhat_3 -> org_osgi_enterprise_4_2_0_redhat_4;
+}

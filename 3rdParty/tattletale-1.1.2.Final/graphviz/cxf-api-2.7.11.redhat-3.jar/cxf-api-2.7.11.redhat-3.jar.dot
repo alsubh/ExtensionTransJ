@@ -1,0 +1,17 @@
+digraph cxf_api_2_7_11_redhat_3_dependencies {
+  node [shape = box, fontsize=10.0];
+  cxf_api_2_7_11_redhat_3 -> activation_1_1_1_redhat_2;
+  cxf_api_2_7_11_redhat_3 -> asm_3_3_1_redhat_5;
+  cxf_api_2_7_11_redhat_3 -> jaxb_impl_2_2_5_redhat_8;
+  cxf_api_2_7_11_redhat_3 -> jaxen_1_1_3_redhat_4;
+  cxf_api_2_7_11_redhat_3 -> jboss_annotations_api_1_1_spec_1_0_1_Final_redhat_2;
+  cxf_api_2_7_11_redhat_3 -> jboss_jaxb_api_2_2_spec_1_0_4_Final_redhat_2;
+  cxf_api_2_7_11_redhat_3 -> log4j_jboss_logmanager_1_1_0_Final_redhat_2;
+  cxf_api_2_7_11_redhat_3 -> mail_1_4_5_redhat_1;
+  cxf_api_2_7_11_redhat_3 -> org_osgi_enterprise_4_2_0_redhat_4;
+  cxf_api_2_7_11_redhat_3 -> slf4j_api_1_7_2_redhat_3;
+  cxf_api_2_7_11_redhat_3 -> stax2_api_3_1_3_redhat_1;
+  cxf_api_2_7_11_redhat_3 -> woodstox_core_asl_4_2_0_redhat_4;
+  cxf_api_2_7_11_redhat_3 -> wsdl4j_1_6_3_redhat_1;
+  cxf_api_2_7_11_redhat_3 -> xmlschema_core_2_0_2_redhat_3;
+}

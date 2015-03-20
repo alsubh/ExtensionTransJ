@@ -1,0 +1,12 @@
+digraph hornetq_jms_server_2_3_20_Final_redhat_1_dependencies {
+  node [shape = box, fontsize=10.0];
+  hornetq_jms_server_2_3_20_Final_redhat_1 -> hornetq_commons_2_3_20_Final_redhat_1;
+  hornetq_jms_server_2_3_20_Final_redhat_1 -> hornetq_core_client_2_3_20_Final_redhat_1;
+  hornetq_jms_server_2_3_20_Final_redhat_1 -> hornetq_jms_client_2_3_20_Final_redhat_1;
+  hornetq_jms_server_2_3_20_Final_redhat_1 -> hornetq_journal_2_3_20_Final_redhat_1;
+  hornetq_jms_server_2_3_20_Final_redhat_1 -> hornetq_server_2_3_20_Final_redhat_1;
+  hornetq_jms_server_2_3_20_Final_redhat_1 -> jboss_cli_client;
+  hornetq_jms_server_2_3_20_Final_redhat_1 -> jboss_client;
+  hornetq_jms_server_2_3_20_Final_redhat_1 -> jboss_transaction_spi_7_1_0_Final_redhat_1;
+  hornetq_jms_server_2_3_20_Final_redhat_1 -> jbossjts_jacorb_4_17_21_Final_redhat_2;
+}

@@ -1,0 +1,11 @@
+digraph async_http_servlet_3_0_2_3_8_Final_redhat_3_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_resteasy_plugins_server_servlet -> javax_servlet;
+  org_jboss_resteasy_plugins_server_servlet -> javax_servlet_annotation;
+  org_jboss_resteasy_plugins_server_servlet -> javax_servlet_http;
+  org_jboss_resteasy_plugins_server_servlet -> javax_ws_rs_core;
+  org_jboss_resteasy_plugins_server_servlet -> org_jboss_resteasy_core;
+  org_jboss_resteasy_plugins_server_servlet -> org_jboss_resteasy_specimpl;
+  org_jboss_resteasy_plugins_server_servlet -> org_jboss_resteasy_spi;
+  org_jboss_resteasy_plugins_server_servlet -> org_jboss_resteasy_spi_interception;
+}

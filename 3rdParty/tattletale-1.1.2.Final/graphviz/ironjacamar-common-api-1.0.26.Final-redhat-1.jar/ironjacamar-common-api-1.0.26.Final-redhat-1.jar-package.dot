@@ -1,0 +1,31 @@
+digraph ironjacamar_common_api_1_0_26_Final_redhat_1_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_jca_common_api_metadata -> org_jboss_jca_common_api_metadata_common;
+  org_jboss_jca_common_api_metadata -> org_jboss_jca_common_api_metadata_ds;
+  org_jboss_jca_common_api_metadata -> org_jboss_jca_common_api_metadata_ra;
+  org_jboss_jca_common_api_metadata -> org_jboss_jca_common_api_validator;
+  org_jboss_jca_common_api_metadata_common -> org_jboss_jca_common_api_metadata;
+  org_jboss_jca_common_api_metadata_common -> org_jboss_jca_common_api_validator;
+  org_jboss_jca_common_api_metadata_common_v10 -> org_jboss_jca_common_api_metadata_common;
+  org_jboss_jca_common_api_metadata_ds -> org_jboss_jca_common_api_metadata;
+  org_jboss_jca_common_api_metadata_ds -> org_jboss_jca_common_api_metadata_common;
+  org_jboss_jca_common_api_metadata_ds_v10 -> org_jboss_jca_common_api_metadata_ds;
+  org_jboss_jca_common_api_metadata_ds_v11 -> org_jboss_jca_common_api_metadata_common;
+  org_jboss_jca_common_api_metadata_ds_v11 -> org_jboss_jca_common_api_metadata_ds;
+  org_jboss_jca_common_api_metadata_ironjacamar -> org_jboss_jca_common_api_metadata_common;
+  org_jboss_jca_common_api_metadata_ra -> org_jboss_jca_common_api_metadata;
+  org_jboss_jca_common_api_metadata_ra -> org_jboss_jca_common_api_metadata_common;
+  org_jboss_jca_common_api_metadata_ra -> org_jboss_jca_common_api_metadata_ra_ra15;
+  org_jboss_jca_common_api_metadata_ra -> org_jboss_jca_common_api_validator;
+  org_jboss_jca_common_api_metadata_ra_ra10 -> org_jboss_jca_common_api_metadata_common;
+  org_jboss_jca_common_api_metadata_ra_ra10 -> org_jboss_jca_common_api_metadata_ra;
+  org_jboss_jca_common_api_metadata_ra_ra10 -> org_jboss_jca_common_api_validator;
+  org_jboss_jca_common_api_metadata_ra_ra15 -> org_jboss_jca_common_api_metadata;
+  org_jboss_jca_common_api_metadata_ra_ra15 -> org_jboss_jca_common_api_metadata_ra;
+  org_jboss_jca_common_api_metadata_ra_ra16 -> org_jboss_jca_common_api_metadata_ra;
+  org_jboss_jca_common_api_metadata_ra_ra16 -> org_jboss_jca_common_api_metadata_ra_ra15;
+  org_jboss_jca_common_api_metadata_resourceadapter -> org_jboss_jca_common_api_metadata;
+  org_jboss_jca_common_api_metadata_resourceadapter -> org_jboss_jca_common_api_metadata_common;
+  org_jboss_jca_common_api_metadata_resourceadapter_v10 -> org_jboss_jca_common_api_metadata_common_v10;
+  org_jboss_jca_common_api_metadata_resourceadapter_v10 -> org_jboss_jca_common_api_metadata_resourceadapter;
+}

@@ -1,0 +1,14 @@
+digraph jbosgi_metadata_2_2_0_Final_redhat_1_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_osgi_metadata -> org_jboss_logging;
+  org_jboss_osgi_metadata -> org_jboss_logging_annotations;
+  org_jboss_osgi_metadata -> org_jboss_osgi_metadata_internal;
+  org_jboss_osgi_metadata -> org_jboss_osgi_metadata_spi;
+  org_jboss_osgi_metadata -> org_jboss_shrinkwrap_api_asset;
+  org_jboss_osgi_metadata -> org_osgi_framework;
+  org_jboss_osgi_metadata_internal -> org_jboss_osgi_metadata;
+  org_jboss_osgi_metadata_internal -> org_osgi_framework;
+  org_jboss_osgi_metadata_spi -> org_jboss_osgi_metadata;
+  org_jboss_osgi_metadata_spi -> org_jboss_osgi_metadata_internal;
+  org_jboss_osgi_metadata_spi -> org_osgi_framework;
+}

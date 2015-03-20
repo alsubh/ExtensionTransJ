@@ -1,0 +1,36 @@
+digraph cxf_tools_validator_2_7_11_redhat_3_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_apache_cxf_tools_validator -> javax_wsdl;
+  org_apache_cxf_tools_validator -> org_apache_cxf;
+  org_apache_cxf_tools_validator -> org_apache_cxf_common_i18n;
+  org_apache_cxf_tools_validator -> org_apache_cxf_service_model;
+  org_apache_cxf_tools_validator -> org_apache_cxf_tools_common;
+  org_apache_cxf_tools_validator -> org_apache_cxf_tools_common_toolspec;
+  org_apache_cxf_tools_validator -> org_apache_cxf_tools_common_toolspec_parser;
+  org_apache_cxf_tools_validator -> org_apache_cxf_tools_validator_internal;
+  org_apache_cxf_tools_validator_internal -> javax_wsdl;
+  org_apache_cxf_tools_validator_internal -> javax_wsdl_extensions;
+  org_apache_cxf_tools_validator_internal -> javax_wsdl_extensions_mime;
+  org_apache_cxf_tools_validator_internal -> javax_wsdl_extensions_soap;
+  org_apache_cxf_tools_validator_internal -> org_apache_cxf;
+  org_apache_cxf_tools_validator_internal -> org_apache_cxf_binding_soap;
+  org_apache_cxf_tools_validator_internal -> org_apache_cxf_binding_soap_wsdl_extensions;
+  org_apache_cxf_tools_validator_internal -> org_apache_cxf_catalog;
+  org_apache_cxf_tools_validator_internal -> org_apache_cxf_common_classloader;
+  org_apache_cxf_tools_validator_internal -> org_apache_cxf_common_i18n;
+  org_apache_cxf_tools_validator_internal -> org_apache_cxf_common_logging;
+  org_apache_cxf_tools_validator_internal -> org_apache_cxf_common_util;
+  org_apache_cxf_tools_validator_internal -> org_apache_cxf_common_xmlschema;
+  org_apache_cxf_tools_validator_internal -> org_apache_cxf_helpers;
+  org_apache_cxf_tools_validator_internal -> org_apache_cxf_resource;
+  org_apache_cxf_tools_validator_internal -> org_apache_cxf_service_model;
+  org_apache_cxf_tools_validator_internal -> org_apache_cxf_staxutils;
+  org_apache_cxf_tools_validator_internal -> org_apache_cxf_tools_common;
+  org_apache_cxf_tools_validator_internal -> org_apache_cxf_tools_validator;
+  org_apache_cxf_tools_validator_internal -> org_apache_cxf_tools_validator_internal_model;
+  org_apache_cxf_tools_validator_internal -> org_apache_cxf_wsdl;
+  org_apache_cxf_tools_validator_internal -> org_apache_cxf_wsdl11;
+  org_apache_cxf_tools_validator_internal -> org_apache_ws_commons_schema;
+  org_apache_cxf_tools_validator_internal_model -> org_apache_cxf_common;
+  org_apache_cxf_tools_validator_internal_model -> org_apache_cxf_common_util;
+}

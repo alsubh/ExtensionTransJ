@@ -1,0 +1,4 @@
+digraph apache_mime4j_0_6_redhat_3_dependencies {
+  node [shape = box, fontsize=10.0];
+  apache_mime4j_0_6_redhat_3 -> jcl_over_slf4j_1_7_2_redhat_3;
+}

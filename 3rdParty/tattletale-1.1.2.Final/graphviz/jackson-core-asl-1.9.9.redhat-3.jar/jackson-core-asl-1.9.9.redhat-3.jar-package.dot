@@ -1,0 +1,23 @@
+digraph jackson_core_asl_1_9_9_redhat_3_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_codehaus_jackson -> org_codehaus_jackson_annotate;
+  org_codehaus_jackson -> org_codehaus_jackson_format;
+  org_codehaus_jackson -> org_codehaus_jackson_impl;
+  org_codehaus_jackson -> org_codehaus_jackson_io;
+  org_codehaus_jackson -> org_codehaus_jackson_sym;
+  org_codehaus_jackson -> org_codehaus_jackson_type;
+  org_codehaus_jackson -> org_codehaus_jackson_util;
+  org_codehaus_jackson_format -> org_codehaus_jackson;
+  org_codehaus_jackson_format -> org_codehaus_jackson_io;
+  org_codehaus_jackson_impl -> org_codehaus_jackson;
+  org_codehaus_jackson_impl -> org_codehaus_jackson_format;
+  org_codehaus_jackson_impl -> org_codehaus_jackson_io;
+  org_codehaus_jackson_impl -> org_codehaus_jackson_sym;
+  org_codehaus_jackson_impl -> org_codehaus_jackson_util;
+  org_codehaus_jackson_io -> org_codehaus_jackson;
+  org_codehaus_jackson_io -> org_codehaus_jackson_util;
+  org_codehaus_jackson_sym -> org_codehaus_jackson_util;
+  org_codehaus_jackson_util -> org_codehaus_jackson;
+  org_codehaus_jackson_util -> org_codehaus_jackson_impl;
+  org_codehaus_jackson_util -> org_codehaus_jackson_io;
+}

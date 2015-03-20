@@ -1,0 +1,10 @@
+digraph httpserver_1_0_1_Final_redhat_3_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_com_sun_net_httpserver -> javax_net_ssl;
+  org_jboss_com_sun_net_httpserver -> org_jboss_com_sun_net_httpserver_spi;
+  org_jboss_com_sun_net_httpserver_spi -> org_jboss_com_sun_net_httpserver;
+  org_jboss_com_sun_net_httpserver_spi -> org_jboss_sun_net_httpserver;
+  org_jboss_sun_net_httpserver -> javax_net_ssl;
+  org_jboss_sun_net_httpserver -> org_jboss_com_sun_net_httpserver;
+  org_jboss_sun_net_httpserver -> org_jboss_com_sun_net_httpserver_spi;
+}

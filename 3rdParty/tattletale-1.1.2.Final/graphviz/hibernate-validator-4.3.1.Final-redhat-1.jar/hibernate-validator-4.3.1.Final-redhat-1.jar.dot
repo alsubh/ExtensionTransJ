@@ -1,0 +1,8 @@
+digraph hibernate_validator_4_3_1_Final_redhat_1_dependencies {
+  node [shape = box, fontsize=10.0];
+  hibernate_validator_4_3_1_Final_redhat_1 -> hibernate_jpa_2_0_api_1_0_1_Final_redhat_2;
+  hibernate_validator_4_3_1_Final_redhat_1 -> jboss_cli_client;
+  hibernate_validator_4_3_1_Final_redhat_1 -> jboss_jaxb_api_2_2_spec_1_0_4_Final_redhat_2;
+  hibernate_validator_4_3_1_Final_redhat_1 -> joda_time_1_6_2_redhat_4;
+  hibernate_validator_4_3_1_Final_redhat_1 -> validation_api_1_0_0_GA_redhat_2;
+}

@@ -1,0 +1,5 @@
+digraph jaxws_jboss_httpserver_httpspi_1_0_1_GA_redhat_2_dependencies {
+  node [shape = box, fontsize=10.0];
+  jaxws_jboss_httpserver_httpspi_1_0_1_GA_redhat_2 -> httpserver_1_0_1_Final_redhat_3;
+  jaxws_jboss_httpserver_httpspi_1_0_1_GA_redhat_2 -> jboss_jaxws_api_2_2_spec_2_0_2_Final_redhat_1;
+}

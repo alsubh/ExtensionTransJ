@@ -1,0 +1,11 @@
+digraph hibernate_commons_annotations_4_0_1_Final_redhat_2_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_hibernate_annotations_common -> org_hibernate_annotations_common_util_impl;
+  org_hibernate_annotations_common_reflection -> org_hibernate_annotations_common_reflection_java_generics;
+  org_hibernate_annotations_common_reflection_java -> org_hibernate_annotations_common;
+  org_hibernate_annotations_common_reflection_java -> org_hibernate_annotations_common_reflection;
+  org_hibernate_annotations_common_reflection_java -> org_hibernate_annotations_common_reflection_java_generics;
+  org_hibernate_annotations_common_reflection_java -> org_hibernate_annotations_common_util;
+  org_hibernate_annotations_common_util -> org_hibernate_annotations_common;
+  org_hibernate_annotations_common_util_impl -> org_jboss_logging;
+}

@@ -1,0 +1,22 @@
+digraph jbosgi_deployment_1_3_0_Final_redhat_1_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_osgi_deployment -> org_jboss_osgi_deployment_deployer;
+  org_jboss_osgi_deployment -> org_jboss_osgi_deployment_internal;
+  org_jboss_osgi_deployment -> org_osgi_framework;
+  org_jboss_osgi_deployment_deployer -> org_jboss_osgi_deployment_internal;
+  org_jboss_osgi_deployment_deployer -> org_jboss_osgi_spi;
+  org_jboss_osgi_deployment_deployer -> org_jboss_osgi_vfs;
+  org_jboss_osgi_deployment_deployer -> org_osgi_framework;
+  org_jboss_osgi_deployment_deployer -> org_osgi_service_startlevel;
+  org_jboss_osgi_deployment_interceptor -> org_jboss_osgi_deployment_internal;
+  org_jboss_osgi_deployment_interceptor -> org_jboss_osgi_spi;
+  org_jboss_osgi_deployment_interceptor -> org_jboss_osgi_vfs;
+  org_jboss_osgi_deployment_interceptor -> org_osgi_framework;
+  org_jboss_osgi_deployment_interceptor -> org_osgi_util_tracker;
+  org_jboss_osgi_deployment_internal -> org_jboss_logging;
+  org_jboss_osgi_deployment_internal -> org_jboss_osgi_deployment_deployer;
+  org_jboss_osgi_deployment_internal -> org_jboss_osgi_deployment_interceptor;
+  org_jboss_osgi_deployment_internal -> org_jboss_osgi_spi;
+  org_jboss_osgi_deployment_internal -> org_jboss_osgi_vfs;
+  org_jboss_osgi_deployment_internal -> org_osgi_framework;
+}

@@ -1,0 +1,7 @@
+digraph jbosgi_vfs30_1_2_1_Final_redhat_1_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_osgi_vfs30 -> org_jboss_osgi_vfs;
+  org_jboss_osgi_vfs30 -> org_jboss_osgi_vfs_internal;
+  org_jboss_osgi_vfs30 -> org_jboss_vfs;
+  org_jboss_osgi_vfs30 -> org_jboss_vfs_util;
+}

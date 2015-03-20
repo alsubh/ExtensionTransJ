@@ -1,0 +1,4 @@
+digraph commons_pool_1_6_redhat_6_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_apache_commons_pool_impl -> org_apache_commons_pool;
+}

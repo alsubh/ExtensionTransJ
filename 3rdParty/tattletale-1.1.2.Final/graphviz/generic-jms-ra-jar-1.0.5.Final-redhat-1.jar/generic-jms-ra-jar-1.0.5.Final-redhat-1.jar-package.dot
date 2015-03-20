@@ -1,0 +1,20 @@
+digraph generic_jms_ra_jar_1_0_5_Final_redhat_1_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_resource_adapter_jms -> javax_jms;
+  org_jboss_resource_adapter_jms -> javax_resource;
+  org_jboss_resource_adapter_jms -> javax_resource_spi;
+  org_jboss_resource_adapter_jms -> javax_resource_spi_endpoint;
+  org_jboss_resource_adapter_jms -> javax_resource_spi_security;
+  org_jboss_resource_adapter_jms -> javax_resource_spi_work;
+  org_jboss_resource_adapter_jms -> org_jboss_logging;
+  org_jboss_resource_adapter_jms -> org_jboss_resource_adapter_jms_inflow;
+  org_jboss_resource_adapter_jms -> org_jboss_util;
+  org_jboss_resource_adapter_jms_inflow -> javax_jms;
+  org_jboss_resource_adapter_jms_inflow -> javax_resource;
+  org_jboss_resource_adapter_jms_inflow -> javax_resource_spi;
+  org_jboss_resource_adapter_jms_inflow -> javax_resource_spi_endpoint;
+  org_jboss_resource_adapter_jms_inflow -> javax_resource_spi_work;
+  org_jboss_resource_adapter_jms_inflow -> javax_transaction;
+  org_jboss_resource_adapter_jms_inflow -> org_jboss_logging;
+  org_jboss_resource_adapter_jms_inflow -> org_jboss_resource_adapter_jms;
+}

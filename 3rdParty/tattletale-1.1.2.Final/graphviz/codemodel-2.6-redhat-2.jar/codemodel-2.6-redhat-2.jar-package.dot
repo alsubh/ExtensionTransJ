@@ -1,0 +1,8 @@
+digraph codemodel_2_6_redhat_2_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  com_sun_codemodel -> com_sun_codemodel_util;
+  com_sun_codemodel -> com_sun_codemodel_writer;
+  com_sun_codemodel_fmt -> com_sun_codemodel;
+  com_sun_codemodel_util -> com_sun_codemodel;
+  com_sun_codemodel_writer -> com_sun_codemodel;
+}

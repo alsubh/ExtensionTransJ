@@ -1,0 +1,5 @@
+digraph jansi_1_9_redhat_4_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_fusesource_jansi -> org_fusesource_jansi_internal;
+  org_fusesource_jansi_internal -> org_fusesource_hawtjni_runtime;
+}

@@ -1,0 +1,9 @@
+digraph commons_configuration_1_6_redhat_3_dependencies {
+  node [shape = box, fontsize=10.0];
+  commons_configuration_1_6_redhat_3 -> commons_beanutils_1_8_3_redhat_6;
+  commons_configuration_1_6_redhat_3 -> commons_codec_1_4_redhat_3;
+  commons_configuration_1_6_redhat_3 -> commons_collections_3_2_1_redhat_3;
+  commons_configuration_1_6_redhat_3 -> commons_lang_2_6_redhat_3;
+  commons_configuration_1_6_redhat_3 -> jboss_servlet_api_2_5_spec_1_0_1_Final_redhat_2;
+  commons_configuration_1_6_redhat_3 -> jcl_over_slf4j_1_7_2_redhat_3;
+}

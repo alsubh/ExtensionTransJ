@@ -1,0 +1,7 @@
+digraph jacorb_2_3_2_redhat_6_dependencies {
+  node [shape = box, fontsize=10.0];
+  jacorb_2_3_2_redhat_6 -> antlr_2_7_7_redhat_4;
+  jacorb_2_3_2_redhat_6 -> jboss_rmi_api_1_0_spec_1_0_4_Final_redhat_2;
+  jacorb_2_3_2_redhat_6 -> jbossjts_jacorb_4_17_21_Final_redhat_2;
+  jacorb_2_3_2_redhat_6 -> slf4j_api_1_7_2_redhat_3;
+}

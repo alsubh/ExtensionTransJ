@@ -1,0 +1,6 @@
+digraph jbosgi_metadata_2_2_0_Final_redhat_1_dependencies {
+  node [shape = box, fontsize=10.0];
+  jbosgi_metadata_2_2_0_Final_redhat_1 -> jboss_cli_client;
+  jbosgi_metadata_2_2_0_Final_redhat_1 -> org_osgi_core_4_2_0_redhat_4;
+  jbosgi_metadata_2_2_0_Final_redhat_1 -> shrinkwrap_api_1_1_2_redhat_1;
+}

@@ -1,0 +1,10 @@
+digraph jbosgi_repository_core_2_1_0_Final_redhat_1_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_osgi_repository_core -> org_jboss_osgi_repository;
+  org_jboss_osgi_repository_core -> org_jboss_osgi_repository_spi;
+  org_jboss_osgi_repository_core -> org_jboss_osgi_resolver;
+  org_jboss_osgi_repository_core -> org_osgi_framework;
+  org_jboss_osgi_repository_core -> org_osgi_resource;
+  org_jboss_osgi_repository_core -> org_osgi_service_repository;
+  org_jboss_osgi_repository_core -> org_osgi_util_tracker;
+}
