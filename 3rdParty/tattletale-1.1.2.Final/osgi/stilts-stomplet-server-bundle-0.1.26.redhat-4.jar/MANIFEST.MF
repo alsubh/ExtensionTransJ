@@ -1,0 +1,105 @@
+Manifest-Version: 1.0
+Bundle-License: http://repository.jboss.org/licenses/cc0-1.0.txt
+Bundle-SymbolicName: stilts-stomplet-server-bundle
+Built-By: mockbuild
+Bnd-LastModified: 1389207862921
+Implementation-Vendor-Id: org.projectodd.stilts
+Specification-Title: Stilts Stomplet Server Bundle
+Bundle-DocURL: http://www.jboss.org
+Import-Package: javax.transaction,javax.transaction.xa,org.jboss.loggi
+ ng;version="[3.0,4.0)",org.jboss.netty.bootstrap;version="[3.2,4.0)",
+ org.jboss.netty.buffer;version="[3.2,4.0)",org.jboss.netty.channel;ve
+ rsion="[3.2,4.0)",org.jboss.netty.channel.socket;version="[3.2,4.0)",
+ org.jboss.netty.channel.socket.nio;version="[3.2,4.0)",org.jboss.nett
+ y.handler.codec.frame;version="[3.2,4.0)",org.jboss.netty.handler.cod
+ ec.http;version="[3.2,4.0)",org.jboss.netty.handler.codec.oneone;vers
+ ion="[3.2,4.0)",org.jboss.netty.handler.codec.replay;version="[3.2,4.
+ 0)",org.jboss.netty.handler.execution;version="[3.2,4.0)",org.jboss.n
+ etty.util;version="[3.2,4.0)",org.osgi.framework;version="[1.5,2.0)",
+ org.osgi.util.tracker;version="[1.4,2.0)"
+Scm-Url: http://github.com/projectodd/stilts/stilts-stomplet-server-bu
+ ndle
+Export-Package: org.projectodd.stilts.stomp;uses:="org.jboss.netty.buf
+ fer";version="0.1.26.redhat-4",org.projectodd.stilts.stomp.spi;uses:=
+ "org.projectodd.stilts.stomp";version="0.1.26.redhat-4",org.projectod
+ d.stilts.stomplet;uses:="org.projectodd.stilts.stomp,org.projectodd.s
+ tilts.stomp.spi,javax.transaction.xa";version="0.1.26.redhat-4",org.p
+ rojectodd.stilts.stomplet.simple;uses:="org.projectodd.stilts.stomple
+ t,org.projectodd.stilts.stomp.spi,org.jboss.logging,org.projectodd.st
+ ilts.stomp,org.projectodd.stilts.stomplet.helpers";version="0.1.26.re
+ dhat-4",org.projectodd.stilts.stomplet.bundle;uses:="org.projectodd.s
+ tilts.stomplet,org.osgi.util.tracker,org.jboss.logging,org.osgi.frame
+ work,org.projectodd.stilts.stomplet.container,org.projectodd.stilts.s
+ tomp,javax.transaction,org.projectodd.stilts.stomplet.server";version
+ ="0.1.26.redhat-4",org.projectodd.stilts.stomplet.parser;version="0.1
+ .26.redhat-4",org.projectodd.stilts.stomplet.helpers;uses:="org.proje
+ ctodd.stilts.stomplet,org.projectodd.stilts.stomp,org.projectodd.stil
+ ts.stomp.spi";version="0.1.26.redhat-4",org.projectodd.stilts.stomple
+ t.server;uses:="javax.transaction,org.jboss.logging,org.projectodd.st
+ ilts.stomplet.container";version="0.1.26.redhat-4",org.projectodd.sti
+ lts.stomplet.container;uses:="org.projectodd.stilts.stomp,org.project
+ odd.stilts.stomplet,org.projectodd.stilts.stomp.spi,org.projectodd.st
+ ilts.stomplet.container.xa,javax.transaction.xa,javax.transaction,org
+ .jboss.logging";version="0.1.26.redhat-4",org.projectodd.stilts.stomp
+ let.container.xa;uses:="org.projectodd.stilts.stomplet,org.projectodd
+ .stilts.stomp.spi,javax.transaction.xa,org.projectodd.stilts.stomp,or
+ g.projectodd.stilts.stomplet.container,org.jboss.logging";version="0.
+ 1.26.redhat-4"
+Bundle-Name: Stilts Stomplet Server Bundle
+Bundle-Activator: org.projectodd.stilts.stomplet.bundle.StompletServer
+ Activator
+Bundle-Description: Stilts Stomplet Server Bundle
+Implementation-Title: Stilts Stomplet Server Bundle
+Build-Timestamp: Wed, 8 Jan 2014 14:04:00 -0500
+Implementation-Version: 0.1.26.redhat-4
+Java-Version: 1.6.0_28
+Scm-Connection: scm:git:git://github.com/projectodd/stilts.git/stilts-
+ stomplet-server-bundle
+Bundle-ManifestVersion: 2
+Embed-Dependency: commons-codec;inline=false,commons-lang;inline=false
+ ,stilts-conduit-server-core;inline=false,stilts-conduit-server-spi;in
+ line=false,stilts-stomp-api;inline=false,stilts-stomp-common;inline=f
+ alse,stilts-stomp-server-core;inline=false,stilts-stomp-server-spi;in
+ line=false,stilts-stomplet-api;inline=false,stilts-stomplet-server-co
+ re;inline=false,
+Os-Arch: i386
+Specification-Vendor: JBoss by Red Hat
+Bundle-Vendor: JBoss by Red Hat
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Tool: Bnd-1.50.0
+Implementation-Vendor: JBoss by Red Hat
+Embedded-Artifacts: commons-codec-1.4-redhat-2.jar;g="commons-codec";a
+ ="commons-codec";v="1.4-redhat-2",commons-lang-2.6-redhat-2.jar;g="co
+ mmons-lang";a="commons-lang";v="2.6-redhat-2",stilts-conduit-server-c
+ ore-0.1.26.redhat-4.jar;g="org.projectodd.stilts";a="stilts-conduit-s
+ erver-core";v="0.1.26.redhat-4",stilts-conduit-server-spi-0.1.26.redh
+ at-4.jar;g="org.projectodd.stilts";a="stilts-conduit-server-spi";v="0
+ .1.26.redhat-4",stilts-stomp-api-0.1.26.redhat-4.jar;g="org.projectod
+ d.stilts";a="stilts-stomp-api";v="0.1.26.redhat-4",stilts-stomp-commo
+ n-0.1.26.redhat-4.jar;g="org.projectodd.stilts";a="stilts-stomp-commo
+ n";v="0.1.26.redhat-4",stilts-stomp-server-core-0.1.26.redhat-4.jar;g
+ ="org.projectodd.stilts";a="stilts-stomp-server-core";v="0.1.26.redha
+ t-4",stilts-stomp-server-spi-0.1.26.redhat-4.jar;g="org.projectodd.st
+ ilts";a="stilts-stomp-server-spi";v="0.1.26.redhat-4",stilts-stomplet
+ -api-0.1.26.redhat-4.jar;g="org.projectodd.stilts";a="stilts-stomplet
+ -api";v="0.1.26.redhat-4",stilts-stomplet-server-core-0.1.26.redhat-4
+ .jar;g="org.projectodd.stilts";a="stilts-stomplet-server-core";v="0.1
+ .26.redhat-4"
+Os-Version: 2.6.32-358.18.1.el6.x86_64
+Bundle-Version: 0.1.26.redhat-4
+Scm-Revision: d9db39de69c023b02e27f3218005b83a7a6f8bd9
+Bundle-ClassPath: .,commons-codec-1.4-redhat-2.jar,commons-lang-2.6-re
+ dhat-2.jar,stilts-conduit-server-core-0.1.26.redhat-4.jar,stilts-cond
+ uit-server-spi-0.1.26.redhat-4.jar,stilts-stomp-api-0.1.26.redhat-4.j
+ ar,stilts-stomp-common-0.1.26.redhat-4.jar,stilts-stomp-server-core-0
+ .1.26.redhat-4.jar,stilts-stomp-server-spi-0.1.26.redhat-4.jar,stilts
+ -stomplet-api-0.1.26.redhat-4.jar,stilts-stomplet-server-core-0.1.26.
+ redhat-4.jar
+Embed-Transitive: true
+Build-Jdk: 1.6.0_28
+Created-By: Apache Maven Bundle Plugin
+Implementation-URL: http://www.jboss.org/stilts-stomplet-server-bundle
+ /
+Specification-Version: 0.1.26.redhat-4
+

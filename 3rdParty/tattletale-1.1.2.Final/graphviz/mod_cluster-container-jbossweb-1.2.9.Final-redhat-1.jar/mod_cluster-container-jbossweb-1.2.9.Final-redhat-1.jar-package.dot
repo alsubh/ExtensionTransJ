@@ -1,0 +1,10 @@
+digraph mod_cluster_container_jbossweb_1_2_9_Final_redhat_1_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_modcluster_container_jbossweb -> javax_servlet;
+  org_jboss_modcluster_container_jbossweb -> org_apache_catalina;
+  org_jboss_modcluster_container_jbossweb -> org_apache_catalina_connector;
+  org_jboss_modcluster_container_jbossweb -> org_apache_catalina_valves;
+  org_jboss_modcluster_container_jbossweb -> org_jboss_modcluster_container;
+  org_jboss_modcluster_container_jbossweb -> org_jboss_modcluster_container_catalina;
+  org_jboss_modcluster_container_jbossweb -> org_jboss_servlet_http;
+}

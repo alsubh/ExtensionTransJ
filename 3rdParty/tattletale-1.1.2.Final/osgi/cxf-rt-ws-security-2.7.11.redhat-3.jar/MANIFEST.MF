@@ -1,0 +1,119 @@
+Manifest-Version: 1.0
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-SymbolicName: org.apache.cxf.cxf-rt-ws-security
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Bnd-LastModified: 1401765398534
+Implementation-Vendor-Id: org.apache.cxf
+Specification-Title: Apache CXF Runtime WS Security
+Bundle-DocURL: http://cxf.apache.org
+Import-Package: javax.annotation,javax.crypto,javax.jws,javax.jws.soap
+ ,javax.security.auth,javax.security.auth.callback,javax.security.auth
+ .kerberos,javax.security.auth.x500,javax.wsdl,javax.xml.bind;version=
+ "[2.2,3)",javax.xml.bind.annotation;version="[2.2,3)",javax.xml.bind.
+ annotation.adapters;version="[2.2,3)",javax.xml.bind.util;version="[2
+ .2,3)",javax.xml.namespace,javax.xml.parsers,javax.xml.soap,javax.xml
+ .stream,javax.xml.transform,javax.xml.transform.dom,javax.xml.ws,java
+ x.xml.ws.handler,javax.xml.ws.soap,javax.xml.xpath,net.sf.ehcache;res
+ olution:=optional;version="[2.5,3.0.0)",net.sf.ehcache.config;resolut
+ ion:=optional;version="[2.5,3.0.0)",org.apache.cxf;version="[2.7,3)",
+ org.apache.cxf.binding;version="[2.7,3)",org.apache.cxf.binding.soap;
+ version="[2.7,3)",org.apache.cxf.binding.soap.interceptor;version="[2
+ .7,3)",org.apache.cxf.binding.soap.model;version="[2.7,3)",org.apache
+ .cxf.binding.soap.saaj;version="[2.7,3)",org.apache.cxf.buslifecycle;
+ version="[2.7,3)",org.apache.cxf.common.classloader;version="[2.7,3)"
+ ,org.apache.cxf.common.i18n;version="[2.7,3)",org.apache.cxf.common.i
+ njection;version="[2.7,3)",org.apache.cxf.common.jaxb;version="[2.7,3
+ )",org.apache.cxf.common.logging;version="[2.7,3)",org.apache.cxf.com
+ mon.security;version="[2.7,3)",org.apache.cxf.common.util;version="[2
+ .7,3)",org.apache.cxf.configuration;version="[2.7,3)",org.apache.cxf.
+ configuration.security;version="[2.7,3)",org.apache.cxf.databinding;v
+ ersion="[2.7,3)",org.apache.cxf.databinding.source;version="[2.7,3)",
+ org.apache.cxf.endpoint;version="[2.7,3)",org.apache.cxf.feature;vers
+ ion="[2.7,3)",org.apache.cxf.headers;version="[2.7,3)",org.apache.cxf
+ .helpers;version="[2.7,3)",org.apache.cxf.interceptor;version="[2.7,3
+ )",org.apache.cxf.interceptor.security;version="[2.7,3)",org.apache.c
+ xf.jaxws;version="[2.7,3)";resolution:=optional,org.apache.cxf.messag
+ e;version="[2.7,3)",org.apache.cxf.phase;version="[2.7,3)",org.apache
+ .cxf.resource;version="[2.7,3)",org.apache.cxf.security;version="[2.7
+ ,3)",org.apache.cxf.security.transport;version="[2.7,3)",org.apache.c
+ xf.service;version="[2.7,3)",org.apache.cxf.service.invoker;version="
+ [2.7,3)",org.apache.cxf.service.model;version="[2.7,3)",org.apache.cx
+ f.staxutils;version="[2.7,3)",org.apache.cxf.transport;version="[2.7,
+ 3)",org.apache.cxf.transport.http;version="[2.7,3)";resolution:=optio
+ nal,org.apache.cxf.transport.https;version="[2.7,3)";resolution:=opti
+ onal,org.apache.cxf.ws.addressing;version="[2.7,3)",org.apache.cxf.ws
+ .addressing.policy;version="[2.7,3)",org.apache.cxf.ws.mex;version="[
+ 2.7,3)";resolution:=optional,org.apache.cxf.ws.mex.model._2004_09;ver
+ sion="[2.7,3)";resolution:=optional,org.apache.cxf.ws.policy;version=
+ "[2.7,3)",org.apache.cxf.ws.policy.attachment.reference;version="[2.7
+ ,3)",org.apache.cxf.ws.policy.builder.primitive;version="[2.7,3)",org
+ .apache.cxf.wsdl;version="[2.7,3)",org.apache.cxf.wsdl11;version="[2.
+ 7,3)",org.apache.neethi;version="[3.0,4)",org.apache.neethi.builders;
+ version="[3.0,4)",org.apache.ws.security;version="[1.6,2)",org.apache
+ .ws.security.action;version="[1.6,2)",org.apache.ws.security.cache;ve
+ rsion="[1.6,2)",org.apache.ws.security.components.crypto;version="[1.
+ 6,2)",org.apache.ws.security.conversation;version="[1.6,2)",org.apach
+ e.ws.security.conversation.dkalgo;version="[1.6,2)",org.apache.ws.sec
+ urity.handler;version="[1.6,2)",org.apache.ws.security.message;versio
+ n="[1.6,2)",org.apache.ws.security.message.token;version="[1.6,2)",or
+ g.apache.ws.security.processor;version="[1.6,2)",org.apache.ws.securi
+ ty.saml;version="[1.6,2)",org.apache.ws.security.saml.ext;version="[1
+ .6,2)",org.apache.ws.security.spnego;version="[1.6,2)",org.apache.ws.
+ security.util;version="[1.6,2)",org.apache.ws.security.validate;versi
+ on="[1.6,2)",org.apache.xml.security.keys.content;version="[1.5,2)",o
+ rg.apache.xml.security.keys.content.keyvalues;version="[1.5,2)",org.a
+ pache.xml.security.utils;version="[1.5,2)",org.opensaml.common;resolu
+ tion:=optional,org.opensaml.saml1.core;resolution:=optional,org.opens
+ aml.saml2.core;resolution:=optional,org.opensaml.xml;resolution:=opti
+ onal,org.w3c.dom
+Scm-Url: http://github.com/jboss/jboss-parent-pom/cxf/cxf-parent/cxf-r
+ t-ws-security
+Export-Package: org.apache.cxf.ws.security.wss4j.policyvalidators;vers
+ ion="2.7.11.redhat-3",org.apache.cxf.ws.security.policy.custom;versio
+ n="2.7.11.redhat-3",org.apache.cxf.ws.security.sts.provider.model.sec
+ ext;version="2.7.11.redhat-3",org.apache.cxf.ws.security.sts.provider
+ .model;version="2.7.11.redhat-3",org.apache.cxf.ws.security.policy.bu
+ ilders;version="2.7.11.redhat-3",org.apache.cxf.ws.security.wss4j;ver
+ sion="2.7.11.redhat-3",org.apache.cxf.ws.security.sts.provider.model.
+ xmldsig;version="2.7.11.redhat-3",org.apache.cxf.ws.security.trust;ve
+ rsion="2.7.11.redhat-3",org.apache.cxf.ws.security.trust.claims;versi
+ on="2.7.11.redhat-3",org.apache.cxf.ws.security.trust.delegation;vers
+ ion="2.7.11.redhat-3",org.apache.cxf.ws.security.policy.model;version
+ ="2.7.11.redhat-3",org.apache.cxf.ws.security.sts.provider.model.util
+ ity;version="2.7.11.redhat-3",org.apache.cxf.ws.security.cache;versio
+ n="2.7.11.redhat-3",org.apache.cxf.ws.security.sts.provider.model.wst
+ rust14;version="2.7.11.redhat-3",org.apache.cxf.ws.security.policy;ve
+ rsion="2.7.11.redhat-3",org.apache.cxf.ws.security.sts.provider;versi
+ on="2.7.11.redhat-3",org.apache.cxf.ws.security.wss4j.policyhandlers;
+ version="2.7.11.redhat-3",org.apache.cxf.ws.security.sts.provider.ope
+ ration;version="2.7.11.redhat-3",org.apache.cxf.ws.security.policy.in
+ terceptors;version="2.7.11.redhat-3",org.apache.cxf.ws.security.token
+ store;version="2.7.11.redhat-3",org.apache.cxf.ws.security.kerberos;v
+ ersion="2.7.11.redhat-3",org.apache.cxf.ws.security;version="2.7.11.r
+ edhat-3"
+Bundle-Name: Apache CXF Runtime WS Security
+Implementation-Title: Apache CXF Runtime WS Security
+Bundle-Description: Apache CXF Runtime WS Security
+Build-Timestamp: Mon, 2 Jun 2014 23:09:45 -0400
+Implementation-Version: 2.7.11.redhat-3
+Java-Version: 1.6.0_30
+Scm-Connection: scm:git:http://git-wip-us.apache.org/repos/asf/cxf.git
+ /cxf-parent/cxf-rt-ws-security
+Specification-Vendor: The Apache Software Foundation
+Os-Arch: i386
+Bundle-ManifestVersion: 2
+Java-Vendor: Sun Microsystems Inc.
+Bundle-Vendor: The Apache Software Foundation
+Os-Name: Linux
+Tool: Bnd-1.50.0
+Implementation-Vendor: The Apache Software Foundation
+Os-Version: 2.6.32-431.17.1.el6.x86_64
+Originally-Created-By: Apache Maven Bundle Plugin
+Scm-Revision: effe56628b68fe805899d1cd3afdcf586879c3da
+Bundle-Version: 2.7.11.redhat-3
+Created-By: Apache Maven Bundle Plugin
+Implementation-URL: http://cxf.apache.org
+Build-Jdk: 1.6.0_30
+Specification-Version: 2.7.11.redhat-3
+

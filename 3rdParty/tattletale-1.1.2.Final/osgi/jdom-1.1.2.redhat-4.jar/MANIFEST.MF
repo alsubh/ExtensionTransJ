@@ -1,0 +1,97 @@
+Manifest-Version: 1.0
+Implementation-Title: JDOM
+Implementation-Version: 1.1.2.redhat-4
+Build-Timestamp: Thu, 24 Oct 2013 22:05:17 -0400
+Archiver-Version: Plexus Archiver
+Java-Version: 1.6.0_24
+Built-By: mockbuild
+Scm-Connection: scm:git:git@github.com:hunterhacker/jdom
+Specification-Vendor: JDOM
+Os-Arch: amd64
+Specification-Title: JDOM
+Implementation-Vendor-Id: org.jdom
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: git@github.com:/hunterhacker/jdom
+Implementation-Vendor: JDOM
+Os-Version: 2.6.32-358.18.1.el6.x86_64
+Scm-Revision: f6904c76b9f466db3e1683cac20b253c82b73de6
+Created-By: Apache Maven
+Build-Jdk: 1.6.0_24
+Specification-Version: 1.1.2.redhat-4
+Implementation-URL: http://www.jdom.org
+
+Name: org/jdom/
+Specification-Title: JDOM Classes
+Implementation-Title: org.jdom
+Implementation-Version: 1.1.2.redhat-4
+Specification-Version: 1.0
+Specification-Vendor: jdom.org
+Implementation-Vendor: jdom.org
+
+Name: org/jdom/xpath/
+Specification-Title: JDOM XPath Classes
+Implementation-Title: org.jdom.xpath
+Implementation-Version: 1.1.2.redhat-4
+Specification-Version: 1.0
+Specification-Vendor: jdom.org
+Implementation-Vendor: jdom.org
+
+Name: org/jdom/output/
+Specification-Title: JDOM Output Classes
+Implementation-Title: org.jdom.output
+Implementation-Version: 1.1.2.redhat-4
+Specification-Version: 1.0
+Specification-Vendor: jdom.org
+Implementation-Vendor: jdom.org
+
+Name: org/jdom/adapters/
+Specification-Title: JDOM Adapter Classes
+Implementation-Title: org.jdom.adapters
+Implementation-Version: 1.1.2.redhat-4
+Specification-Version: 1.0
+Specification-Vendor: jdom.org
+Implementation-Vendor: jdom.org
+
+Name: org/jdom/filter/
+Specification-Title: JDOM Filter Classes
+Implementation-Title: org.jdom.filter
+Implementation-Version: 1.1.2.redhat-4
+Specification-Version: 1.0
+Specification-Vendor: jdom.org
+Implementation-Vendor: jdom.org
+
+Name: org/jdom/transform/
+Specification-Title: JDOM Transformation Classes
+Implementation-Title: org.jdom.transform
+Implementation-Version: 1.1.2.redhat-4
+Specification-Version: 1.0
+Specification-Vendor: jdom.org
+Implementation-Vendor: jdom.org
+
+Name: org/jdom/input/
+Specification-Title: JDOM Input Classes
+Implementation-Title: org.jdom.input
+Implementation-Version: 1.1.2.redhat-4
+Specification-Version: 1.0
+Specification-Vendor: jdom.org
+Implementation-Vendor: jdom.org
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jdom
+Bundle-Description: jdom-1.1.2.redhat-4
+Bundle-Name: jdom-1.1.2.redhat-4
+Bundle-Version: 1.1.2.redhat-4
+Export-Package: org.jdom;uses:="org.jdom.filter,org.jdom.output",org.j
+ dom.adapters;uses:="org.jdom,org.jdom.input",org.jdom.filter;uses:="o
+ rg.jdom",org.jdom.input;uses:="org.jdom",org.jdom.output;uses:="org.j
+ dom,org.jdom.adapters",org.jdom.transform;uses:="org.jdom,org.jdom.in
+ put,org.jdom.output",org.jdom.xpath;uses:="org.jaxen,org.jaxen.jdom,o
+ rg.jdom"
+Import-Package: java.io,java.lang,java.lang.reflect,java.net,java.sql,
+ java.util,javax.xml.parsers,javax.xml.transform,javax.xml.transform.s
+ ax,javax.xml.transform.stream,org.jaxen;version="1.1.3.redhat-4",org.
+ jaxen.jdom;version="1.1.3.redhat-4",org.w3c.dom,org.xml.sax,org.xml.s
+ ax.ext,org.xml.sax.helpers

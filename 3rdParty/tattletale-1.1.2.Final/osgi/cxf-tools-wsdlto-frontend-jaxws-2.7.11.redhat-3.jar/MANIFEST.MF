@@ -1,0 +1,77 @@
+Manifest-Version: 1.0
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-SymbolicName: org.apache.cxf.cxf-tools-wsdlto-frontend-jaxws
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Bnd-LastModified: 1401765327055
+Implementation-Vendor-Id: org.apache.cxf
+Specification-Title: Apache CXF Command Line Tools WSDLTo JAXWS Fronte
+ nd
+Bundle-DocURL: http://cxf.apache.org
+Import-Package: javax.jws,javax.jws.soap,javax.wsdl,javax.wsdl.extensi
+ ons,javax.wsdl.extensions.http,javax.wsdl.extensions.mime,javax.wsdl.
+ extensions.soap,javax.wsdl.factory,javax.wsdl.xml,javax.xml.bind.anno
+ tation;version="[2.2,3)",javax.xml.bind.annotation.adapters;version="
+ [2.2,3)",javax.xml.namespace,javax.xml.stream,javax.xml.ws,javax.xml.
+ xpath,org.apache.commons.lang;version="[2.6,3)",org.apache.cxf;versio
+ n="[2.7,3)",org.apache.cxf.annotations;version="[2.7,3)",org.apache.c
+ xf.binding.soap;version="[2.7,3)",org.apache.cxf.binding.soap.wsdl.ex
+ tensions;version="[2.7,3)",org.apache.cxf.catalog;version="[2.7,3)",o
+ rg.apache.cxf.common.i18n;version="[2.7,3)",org.apache.cxf.common.jax
+ b;version="[2.7,3)",org.apache.cxf.common.logging;version="[2.7,3)",o
+ rg.apache.cxf.common.util;version="[2.7,3)",org.apache.cxf.common.xml
+ schema;version="[2.7,3)",org.apache.cxf.helpers;version="[2.7,3)",org
+ .apache.cxf.resource;version="[2.7,3)",org.apache.cxf.service.model;v
+ ersion="[2.7,3)",org.apache.cxf.staxutils;version="[2.7,3)",org.apach
+ e.cxf.tools.common;version="[2.7,3)",org.apache.cxf.tools.common.mode
+ l;version="[2.7,3)",org.apache.cxf.tools.common.toolspec;version="[2.
+ 7,3)",org.apache.cxf.tools.util;version="[2.7,3)",org.apache.cxf.tool
+ s.validator;version="[2.7,3)",org.apache.cxf.tools.validator.internal
+ ;version="[2.7,3)",org.apache.cxf.tools.wsdlto;version="[2.7,3)",org.
+ apache.cxf.tools.wsdlto.core;version="[2.7,3)",org.apache.cxf.wsdl;ve
+ rsion="[2.7,3)",org.apache.cxf.wsdl11;version="[2.7,3)",org.apache.ws
+ .commons.schema;version="[2.0,3)",org.apache.ws.commons.schema.consta
+ nts;version="[2.0,3)",org.apache.ws.commons.schema.utils;version="[2.
+ 0,3)",org.w3c.dom,org.xml.sax
+Scm-Url: http://github.com/jboss/jboss-parent-pom/cxf/cxf-parent/cxf-t
+ ools-wsdlto-frontend-jaxws
+Export-Package: org.apache.cxf.tools.wsdlto.frontend.jaxws.processor.i
+ nternal;version="2.7.11.redhat-3",org.apache.cxf.tools.wsdlto.fronten
+ d.jaxws.customization;version="2.7.11.redhat-3",org.apache.cxf.tools.
+ wsdlto.frontend.jaxws.processor.internal.annotator;version="2.7.11.re
+ dhat-3",org.apache.cxf.tools.wsdlto.frontend.jaxws.generators;version
+ ="2.7.11.redhat-3",org.apache.cxf.tools.wsdlto.frontend.jaxws.wsdl11;
+ version="2.7.11.redhat-3",org.apache.cxf.tools.wsdlto.frontend.jaxws.
+ processor;version="2.7.11.redhat-3",org.apache.cxf.tools.wsdlto.front
+ end.jaxws.template;version="2.7.11.redhat-3",org.apache.cxf.tools.wsd
+ lto.frontend.jaxws.validator;version="2.7.11.redhat-3",org.apache.cxf
+ .tools.wsdlto.frontend.jaxws.processor.internal.mapper;version="2.7.1
+ 1.redhat-3",org.apache.cxf.tools.wsdlto.frontend.jaxws;version="2.7.1
+ 1.redhat-3"
+Bundle-Name: Apache CXF Command Line Tools WSDLTo JAXWS Frontend
+Implementation-Title: Apache CXF Command Line Tools WSDLTo JAXWS Front
+ end
+Bundle-Description: Apache CXF Command Line Tools WSDLTo JAXWS Fronten
+ d
+Build-Timestamp: Mon, 2 Jun 2014 23:09:45 -0400
+Implementation-Version: 2.7.11.redhat-3
+Java-Version: 1.6.0_30
+Scm-Connection: scm:git:http://git-wip-us.apache.org/repos/asf/cxf.git
+ /cxf-parent/cxf-tools-wsdlto-frontend-jaxws
+Specification-Vendor: The Apache Software Foundation
+Os-Arch: i386
+Bundle-ManifestVersion: 2
+Java-Vendor: Sun Microsystems Inc.
+Bundle-Vendor: The Apache Software Foundation
+Os-Name: Linux
+Tool: Bnd-1.50.0
+Implementation-Vendor: The Apache Software Foundation
+Os-Version: 2.6.32-431.17.1.el6.x86_64
+Originally-Created-By: Apache Maven Bundle Plugin
+Scm-Revision: effe56628b68fe805899d1cd3afdcf586879c3da
+Bundle-Version: 2.7.11.redhat-3
+Created-By: Apache Maven Bundle Plugin
+Implementation-URL: http://cxf.apache.org
+Build-Jdk: 1.6.0_30
+Specification-Version: 2.7.11.redhat-3
+

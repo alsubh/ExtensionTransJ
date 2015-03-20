@@ -1,0 +1,68 @@
+Manifest-Version: 1.0
+Implementation-Title: JBoss Common Classes
+Implementation-Version: 2.2.17.GA-redhat-2
+Build-Timestamp: Mon, 20 Aug 2012 07:17:46 -0400
+Archiver-Version: Plexus Archiver
+Java-Version: 1.6.0_24
+Built-By: mockbuild
+Scm-Connection: scm:svn:http://anonsvn.jboss.org/repos/common/common-c
+ ore/tags/2.2.17.GA
+Specification-Vendor: JBoss by Red Hat
+Os-Arch: amd64
+Specification-Title: JBoss Common Classes
+Implementation-Vendor-Id: org.jboss
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: http://github.com/jboss/jboss-parent-pom/jboss-common-core
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-279.2.1.el6.x86_64
+Scm-Revision: 4907
+Created-By: Apache Maven
+Build-Jdk: 1.6.0_24
+Specification-Version: 2.2.17.GA-redhat-2
+Implementation-URL: http://www.jboss.org
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.util.collection
+Bundle-Description: jboss-common-core-2.2.17.GA-redhat-2
+Bundle-Name: jboss-common-core-2.2.17.GA-redhat-2
+Bundle-Version: 2.2.17.GA-redhat-2
+Export-Package: org.jboss.net.protocol;uses:="org.jboss.logging",org.j
+ boss.net.protocol.file;uses:="org.jboss.logging,org.jboss.net.protoco
+ l",org.jboss.net.protocol.http;uses:="org.apache.commons.httpclient,o
+ rg.apache.webdav.lib,org.jboss.net.protocol",org.jboss.net.protocol.n
+ jar;uses:="org.jboss.logging,org.jboss.util,org.jboss.util.stream",or
+ g.jboss.net.protocol.resource;uses:="org.jboss.logging,org.jboss.net.
+ protocol",org.jboss.net.sockets;uses:="javax.net",org.jboss.net.ssl;u
+ ses:="javax.net.ssl",org.jboss.util;uses:="org.jboss.logging,org.jbos
+ s.util.collection,org.jboss.util.loading,org.jboss.util.platform,org.
+ jboss.util.stream",org.jboss.util.builder,org.jboss.util.collection;u
+ ses:="org.jboss.util",org.jboss.util.deadlock,org.jboss.util.file;use
+ s:="org.jboss.logging,org.jboss.util.stream",org.jboss.util.graph,org
+ .jboss.util.id;uses:="org.jboss.util,org.jboss.util.platform",org.jbo
+ ss.util.loading,org.jboss.util.naming;uses:="org.jboss.logging",org.j
+ boss.util.platform,org.jboss.util.property;uses:="org.jboss.util,org.
+ jboss.util.propertyeditor",org.jboss.util.property.jmx;uses:="org.jbo
+ ss.logging",org.jboss.util.propertyeditor;uses:="org.jboss.logging,or
+ g.jboss.util,org.jboss.util.threadpool,org.jboss.util.xml",org.jboss.
+ util.state;uses:="org.jboss.logging",org.jboss.util.state.xml;uses:="
+ org.jboss.logging,org.jboss.util.state,org.jboss.util.xml",org.jboss.
+ util.stream;uses:="org.jboss.logging",org.jboss.util.threadpool;uses:
+ ="org.jboss.logging,org.jboss.util.collection,org.jboss.util.loading"
+ ,org.jboss.util.timeout;uses:="org.jboss.util,org.jboss.util.threadpo
+ ol",org.jboss.util.xml;uses:="org.jboss.logging,org.jboss.util,org.jb
+ oss.util.xml.catalog",org.jboss.util.xml.catalog;uses:="org.jboss.uti
+ l.xml.catalog.helpers,org.jboss.util.xml.catalog.readers",org.jboss.u
+ til.xml.catalog.helpers,org.jboss.util.xml.catalog.readers;uses:="org
+ .jboss.util.xml.catalog,org.jboss.util.xml.catalog.helpers"
+Import-Package: java.beans,java.io,java.lang,java.lang.ref,java.lang.r
+ eflect,java.math,java.net,java.nio.channels,java.rmi,java.rmi.server,
+ java.security,java.sql,java.text,java.util,java.util.concurrent,java.
+ util.concurrent.atomic,java.util.concurrent.locks,java.util.jar,java.
+ util.regex,java.util.zip,javax.naming,javax.naming.spi,javax.net,java
+ x.net.ssl,javax.xml.namespace,javax.xml.parsers,javax.xml.transform,j
+ avax.xml.transform.sax,org.apache.commons.httpclient,org.apache.webda
+ v.lib,org.jboss.logging;version="7.4.0.Final-redhat-19",org.w3c.dom,o
+ rg.xml.sax,org.xml.sax.helpers

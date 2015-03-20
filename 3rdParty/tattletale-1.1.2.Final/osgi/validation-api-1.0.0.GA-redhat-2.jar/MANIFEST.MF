@@ -1,0 +1,39 @@
+Manifest-Version: 1.0
+Implementation-Title: Bean Validation API
+Implementation-Version: 1.0.0.GA-redhat-2
+Build-Timestamp: Fri, 17 Aug 2012 09:29:19 -0400
+Archiver-Version: Plexus Archiver
+Java-Version: 1.6.0_24
+Built-By: mockbuild
+Scm-Connection: scm:svn:https://svn.jboss.org/repos/hibernate/beanvali
+ dation/api/tags/v1_0_0_GA
+Specification-Vendor: JBoss by Red Hat
+Os-Arch: amd64
+Specification-Title: Bean Validation API
+Implementation-Vendor-Id: javax.validation
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: http://fisheye.jboss.org/browse/Hibernate/beanvalidation/api/
+ tags/v1_0_0_GA
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-279.2.1.el6.x86_64
+Scm-Revision: cdd8e22dbcb128f4133a3809ace42ed5b88021da
+Created-By: Apache Maven
+Build-Jdk: 1.6.0_24
+Specification-Version: 1.0.0.GA-redhat-2
+Implementation-URL: http://www.jboss.org/validation-api
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: javax.validation
+Bundle-Description: validation-api-1.0.0.GA-redhat-2
+Bundle-Name: validation-api-1.0.0.GA-redhat-2
+Bundle-Version: 1.0.0.GA-redhat-2
+Export-Package: javax.validation;uses:="javax.validation.bootstrap,jav
+ ax.validation.metadata,javax.validation.spi",javax.validation.bootstr
+ ap;uses:="javax.validation",javax.validation.constraints;uses:="javax
+ .validation",javax.validation.groups,javax.validation.metadata,javax.
+ validation.spi;uses:="javax.validation"
+Import-Package: java.io,java.lang,java.lang.annotation,java.net,java.s
+ ecurity,java.util

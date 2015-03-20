@@ -1,0 +1,18 @@
+digraph jboss_as_osgi_jpa_7_4_0_Final_redhat_19_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_as_osgi_jpa -> javax_persistence;
+  org_jboss_as_osgi_jpa -> org_jboss_as_controller;
+  org_jboss_as_osgi_jpa -> org_jboss_as_jpa_processor;
+  org_jboss_as_osgi_jpa -> org_jboss_as_jpa_spi;
+  org_jboss_as_osgi_jpa -> org_jboss_as_osgi;
+  org_jboss_as_osgi_jpa -> org_jboss_as_server;
+  org_jboss_as_osgi_jpa -> org_jboss_as_server_deployment;
+  org_jboss_as_osgi_jpa -> org_jboss_dmr;
+  org_jboss_as_osgi_jpa -> org_jboss_msc_inject;
+  org_jboss_as_osgi_jpa -> org_jboss_msc_service;
+  org_jboss_as_osgi_jpa -> org_jboss_msc_value;
+  org_jboss_as_osgi_jpa -> org_jboss_osgi_framework_spi;
+  org_jboss_as_osgi_jpa -> org_jboss_osgi_resolver;
+  org_jboss_as_osgi_jpa -> org_osgi_framework;
+  org_osgi_service_jpa -> javax_persistence;
+}

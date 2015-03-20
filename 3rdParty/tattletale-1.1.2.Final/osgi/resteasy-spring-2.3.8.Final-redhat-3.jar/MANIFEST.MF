@@ -1,0 +1,59 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Created-By: Apache Maven
+Build-Jdk: 1.6.0_30
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.resteasy.plugins.spring
+Bundle-Description: resteasy-spring-2.3.8.Final-redhat-3
+Bundle-Name: resteasy-spring-2.3.8.Final-redhat-3
+Bundle-Version: 0.0.0
+Export-Package: javax.ws.rs.core,org.jboss.resteasy.client.spring;uses
+ :="org.apache.http.client,org.jboss.resteasy.client,org.jboss.resteas
+ y.client.core.executors,org.jboss.resteasy.plugins.providers,org.jbos
+ s.resteasy.spi,org.springframework.beans.factory",org.jboss.resteasy.
+ plugins.spring;uses:="javax.servlet,javax.ws.rs.ext,org.jboss.resteas
+ y.core,org.jboss.resteasy.logging,org.jboss.resteasy.plugins.provider
+ s,org.jboss.resteasy.spi,org.jboss.resteasy.util,org.springframework.
+ aop.support,org.springframework.beans,org.springframework.beans.facto
+ ry,org.springframework.beans.factory.annotation,org.springframework.b
+ eans.factory.config,org.springframework.beans.factory.support,org.spr
+ ingframework.context,org.springframework.context.event,org.springfram
+ ework.core.type,org.springframework.util,org.springframework.web.cont
+ ext",org.jboss.resteasy.springmvc;uses:="javax.servlet,javax.servlet.
+ http,javax.ws.rs,javax.ws.rs.core,javax.ws.rs.ext,org.jboss.resteasy.
+ core,org.jboss.resteasy.logging,org.jboss.resteasy.plugins.providers,
+ org.jboss.resteasy.plugins.server.servlet,org.jboss.resteasy.specimpl
+ ,org.jboss.resteasy.spi,org.jboss.resteasy.springmvc.annotation,org.j
+ boss.resteasy.util,org.springframework.beans.factory,org.springframew
+ ork.core,org.springframework.validation,org.springframework.web.bind.
+ support,org.springframework.web.context.request,org.springframework.w
+ eb.servlet",org.jboss.resteasy.springmvc.annotation,org.jboss.resteas
+ y.springmvc.tjws;uses:="javax.servlet.http,org.jboss.resteasy.plugins
+ .server.embedded,org.jboss.resteasy.plugins.server.tjws,org.springfra
+ mework.beans.factory,org.springframework.context,org.springframework.
+ web.context,org.springframework.web.servlet"
+Import-Package: java.beans,java.io,java.lang,java.lang.annotation,java
+ .lang.reflect,java.net,java.util,javax.servlet;version="2.5",javax.se
+ rvlet.http;version="2.5",javax.ws.rs;version="1.0.1.Final-redhat-2",j
+ avax.ws.rs.core;version="1.0.1.Final-redhat-2",javax.ws.rs.ext;versio
+ n="1.0.1.Final-redhat-2",org.apache.http.client;version="0.0.0",org.j
+ boss.resteasy.client;version="0.0.0",org.jboss.resteasy.client.core.e
+ xecutors;version="0.0.0",org.jboss.resteasy.core;version="0.0.0",org.
+ jboss.resteasy.logging;version="0.0.0",org.jboss.resteasy.plugins.pro
+ viders;version="0.0.0",org.jboss.resteasy.plugins.server.embedded;ver
+ sion="0.0.0",org.jboss.resteasy.plugins.server.servlet;version="0.0.0
+ ",org.jboss.resteasy.plugins.server.tjws;version="0.0.0",org.jboss.re
+ steasy.specimpl;version="0.0.0",org.jboss.resteasy.spi;version="0.0.0
+ ",org.jboss.resteasy.util;version="0.0.0",org.springframework.aop.sup
+ port,org.springframework.beans,org.springframework.beans.factory,org.
+ springframework.beans.factory.annotation,org.springframework.beans.fa
+ ctory.config,org.springframework.beans.factory.support,org.springfram
+ ework.context,org.springframework.context.event,org.springframework.c
+ ore,org.springframework.core.type,org.springframework.util,org.spring
+ framework.validation,org.springframework.web.bind.support,org.springf
+ ramework.web.context,org.springframework.web.context.request,org.spri
+ ngframework.web.servlet

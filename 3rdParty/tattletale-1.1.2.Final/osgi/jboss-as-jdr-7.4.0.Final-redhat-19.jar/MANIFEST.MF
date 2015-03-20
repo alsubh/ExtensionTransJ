@@ -1,0 +1,77 @@
+Manifest-Version: 1.0
+Implementation-Title: JBoss Application Server: JDR
+Build-Timestamp: Fri, 11 Jul 2014 12:34:05 -0400
+Implementation-Version: 7.4.0.Final-redhat-19
+Java-Version: 1.6.0_30
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Scm-Connection: scm:git:git@github.com:jbossas/jboss-as.git/jdr/jboss-
+ as-jdr
+Specification-Vendor: JBoss by Red Hat
+Os-Arch: i386
+JBossAS-Release-Version: 7.4.0.Final-redhat-19
+Implementation-Vendor-Id: org.jboss.as
+Specification-Title: JBoss Application Server: JDR
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: https://github.com/jbossas/jboss-as
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-431.17.1.el6.x86_64
+Scm-Revision: b0d14b662d07cb1fcc0d8ac40c811345853866fd
+JBossAS-Release-Codename: Janus
+Created-By: Apache Maven
+Implementation-URL: http://www.jboss.org/jboss-as-parent/jdr/jboss-as-
+ jdr
+Build-Jdk: 1.6.0_30
+Specification-Version: 7.4.0.Final-redhat-19
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.as.jdr
+Bundle-Description: jboss-as-jdr-7.4.0.Final-redhat-19
+Bundle-Name: jboss-as-jdr-7.4.0.Final-redhat-19
+Bundle-Version: 7.4.0.Final-redhat-19
+Export-Package: org.jboss.as.jdr;uses:="org.apache.commons.cli,org.jbo
+ ss.as.cli,org.jboss.as.controller,org.jboss.as.controller.access.cons
+ traint,org.jboss.as.controller.access.management,org.jboss.as.control
+ ler.client,org.jboss.as.controller.descriptions,org.jboss.as.controll
+ er.operations.common,org.jboss.as.controller.operations.validation,or
+ g.jboss.as.controller.parsing,org.jboss.as.controller.persistence,org
+ .jboss.as.controller.registry,org.jboss.as.jdr.commands,org.jboss.as.
+ jdr.plugins,org.jboss.as.jdr.util,org.jboss.as.server,org.jboss.dmr,o
+ rg.jboss.logging,org.jboss.logging.annotations,org.jboss.msc.inject,o
+ rg.jboss.msc.service,org.jboss.msc.value,org.jboss.staxmapper,org.jbo
+ ss.threads",org.jboss.as.jdr.commands;uses:="org.jboss.as.controller.
+ client,org.jboss.as.jdr,org.jboss.as.jdr.util,org.jboss.as.jdr.vfs,or
+ g.jboss.dmr,org.jboss.vfs,org.jboss.vfs.util.automount",org.jboss.as.
+ jdr.plugins;uses:="org.jboss.as.jdr.commands,org.jboss.as.jdr.util",o
+ rg.jboss.as.jdr.util;uses:="org.apache.commons.io,org.jboss.as.jdr,or
+ g.jboss.as.jdr.commands,org.jboss.as.jdr.vfs,org.jboss.vfs",org.jboss
+ .as.jdr.vfs;uses:="org.jboss.as.jdr.util,org.jboss.vfs,org.jboss.vfs.
+ util"
+Import-Package: java.io,java.lang,java.math,java.security,java.text,ja
+ va.util,java.util.concurrent,java.util.jar,java.util.regex,java.util.
+ zip,javax.xml.namespace,javax.xml.parsers,javax.xml.stream,javax.xml.
+ transform,javax.xml.transform.dom,javax.xml.transform.stream,javax.xm
+ l.xpath,org.apache.commons.cli;version="0.0.0",org.apache.commons.io;
+ version="0.0.0",org.jboss.as.cli;version="7.4.0.Final-redhat-19",org.
+ jboss.as.controller;version="7.4.0.Final-redhat-19",org.jboss.as.cont
+ roller.access.constraint;version="7.4.0.Final-redhat-19",org.jboss.as
+ .controller.access.management;version="7.4.0.Final-redhat-19",org.jbo
+ ss.as.controller.client;version="7.4.0.Final-redhat-19",org.jboss.as.
+ controller.descriptions;version="7.4.0.Final-redhat-19",org.jboss.as.
+ controller.operations.common;version="7.4.0.Final-redhat-19",org.jbos
+ s.as.controller.operations.validation;version="7.4.0.Final-redhat-19"
+ ,org.jboss.as.controller.parsing;version="7.4.0.Final-redhat-19",org.
+ jboss.as.controller.persistence;version="7.4.0.Final-redhat-19",org.j
+ boss.as.controller.registry;version="7.4.0.Final-redhat-19",org.jboss
+ .as.server;version="7.4.0.Final-redhat-19",org.jboss.dmr;version="7.4
+ .0.Final-redhat-19",org.jboss.logging;version="7.4.0.Final-redhat-19"
+ ,org.jboss.logging.annotations,org.jboss.msc.inject;version="1.1.5.Fi
+ nal-redhat-1",org.jboss.msc.service;version="1.1.5.Final-redhat-1",or
+ g.jboss.msc.value;version="1.1.5.Final-redhat-1",org.jboss.staxmapper
+ ;version="7.4.0.Final-redhat-19",org.jboss.threads;version="7.4.0.Fin
+ al-redhat-19",org.jboss.vfs;version="7.4.0.Final-redhat-19",org.jboss
+ .vfs.util;version="7.4.0.Final-redhat-19",org.jboss.vfs.util.automoun
+ t;version="7.4.0.Final-redhat-19",org.w3c.dom,org.xml.sax

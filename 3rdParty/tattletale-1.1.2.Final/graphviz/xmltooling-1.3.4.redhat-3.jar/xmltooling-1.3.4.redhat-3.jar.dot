@@ -1,0 +1,7 @@
+digraph xmltooling_1_3_4_redhat_3_dependencies {
+  node [shape = box, fontsize=10.0];
+  xmltooling_1_3_4_redhat_3 -> jcip_annotations_1_0_redhat_6;
+  xmltooling_1_3_4_redhat_3 -> joda_time_1_6_2_redhat_4;
+  xmltooling_1_3_4_redhat_3 -> slf4j_api_1_7_2_redhat_3;
+  xmltooling_1_3_4_redhat_3 -> xmlsec_1_5_6_redhat_1;
+}

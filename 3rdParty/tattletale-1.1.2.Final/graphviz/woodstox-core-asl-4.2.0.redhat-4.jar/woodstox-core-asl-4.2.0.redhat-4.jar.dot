@@ -1,0 +1,6 @@
+digraph woodstox_core_asl_4_2_0_redhat_4_dependencies {
+  node [shape = box, fontsize=10.0];
+  woodstox_core_asl_4_2_0_redhat_4 -> org_osgi_core_4_2_0_redhat_4;
+  woodstox_core_asl_4_2_0_redhat_4 -> relaxngDatatype_2011_1_redhat_6;
+  woodstox_core_asl_4_2_0_redhat_4 -> stax2_api_3_1_3_redhat_1;
+}

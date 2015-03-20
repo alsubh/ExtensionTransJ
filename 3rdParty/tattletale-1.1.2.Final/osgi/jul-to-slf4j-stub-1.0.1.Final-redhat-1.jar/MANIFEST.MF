@@ -1,0 +1,34 @@
+Manifest-Version: 1.0
+Implementation-Title: jul-to-slf4j-stub
+Implementation-Version: 1.0.1.Final-redhat-1
+Build-Timestamp: Wed, 20 Feb 2013 03:18:54 -0500
+Archiver-Version: Plexus Archiver
+Java-Version: 1.6.0_24
+Built-By: mockbuild
+Scm-Connection: scm:git:git@github.com:jboss/jboss-parent-pom.git/jul-
+ to-slf4j-stub
+Specification-Vendor: JBoss by Red Hat
+Os-Arch: i386
+Specification-Title: jul-to-slf4j-stub
+Implementation-Vendor-Id: org.jboss.logging
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: http://github.com/jboss/jboss-parent-pom/jul-to-slf4j-stub
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-279.22.1.el6.x86_64
+Scm-Revision: 006303244a60b7aecce5e38735bdcf9b0c706d1a
+Created-By: Apache Maven
+Build-Jdk: 1.6.0_24
+Specification-Version: 1.0.1.Final-redhat-1
+Implementation-URL: http://www.jboss.org/jul-to-slf4j-stub
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.slf4j.bridge
+Bundle-Description: jul-to-slf4j-stub-1.0.1.Final-redhat-1
+Bundle-Name: jul-to-slf4j-stub-1.0.1.Final-redhat-1
+Bundle-Version: 1.0.1.Final-redhat-1
+Export-Package: org.slf4j.bridge;uses:="org.slf4j,org.slf4j.spi"
+Import-Package: java.lang,java.util.logging,org.slf4j;version="1.7.2.r
+ edhat-3",org.slf4j.spi;version="1.7.2.redhat-3"

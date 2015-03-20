@@ -1,0 +1,4 @@
+digraph jboss_dmr_1_2_0_Final_redhat_1_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_dmr -> org_yuanheng_cookcc;
+}

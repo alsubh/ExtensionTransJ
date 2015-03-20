@@ -1,0 +1,80 @@
+Manifest-Version: 1.0
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-SymbolicName: org.apache.cxf.cxf-rt-transports-jms
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Bnd-LastModified: 1401765338645
+Implementation-Vendor-Id: org.apache.cxf
+Specification-Title: Apache CXF Runtime JMS Transport
+Bundle-DocURL: http://cxf.apache.org
+Import-Package: javax.annotation,javax.jms;version="[1.1,2)",javax.nam
+ ing,javax.resource.spi.endpoint;version="[1.6,2)";resolution:=optiona
+ l,javax.transaction.xa,javax.wsdl,javax.wsdl.extensions,javax.xml.bin
+ d;version="[2.2,3)",javax.xml.bind.annotation;version="[2.2,3)",javax
+ .xml.namespace,org.apache.cxf;version="[2.7,3)",org.apache.cxf.bindin
+ g;version="[2.7,3)",org.apache.cxf.binding.soap.model;version="[2.7,3
+ )",org.apache.cxf.buslifecycle;version="[2.7,3)",org.apache.cxf.commo
+ n.classloader;version="[2.7,3)",org.apache.cxf.common.i18n;version="[
+ 2.7,3)",org.apache.cxf.common.injection;version="[2.7,3)",org.apache.
+ cxf.common.logging;version="[2.7,3)",org.apache.cxf.common.util;versi
+ on="[2.7,3)",org.apache.cxf.configuration;version="[2.7,3)",org.apach
+ e.cxf.configuration.spring;version="[2.7,3)",org.apache.cxf.continuat
+ ions;version="[2.7,3)",org.apache.cxf.endpoint;version="[2.7,3)",org.
+ apache.cxf.feature;version="[2.7,3)",org.apache.cxf.helpers;version="
+ [2.7,3)",org.apache.cxf.interceptor;version="[2.7,3)",org.apache.cxf.
+ io;version="[2.7,3)",org.apache.cxf.message;version="[2.7,3)",org.apa
+ che.cxf.phase;version="[2.7,3)",org.apache.cxf.security;version="[2.7
+ ,3)",org.apache.cxf.service.model;version="[2.7,3)",org.apache.cxf.tr
+ ansport;version="[2.7,3)",org.apache.cxf.workqueue;version="[2.7,3)",
+ org.apache.cxf.ws.addressing;version="[2.7,3)",org.apache.cxf.wsdl;ve
+ rsion="[2.7,3)",org.springframework.beans.factory;resolution:=optiona
+ l;version="[2.5,4)",org.springframework.beans.factory.annotation;reso
+ lution:=optional;version="[2.5,4)",org.springframework.beans.factory.
+ support;resolution:=optional;version="[2.5,4)",org.springframework.be
+ ans.factory.xml;resolution:=optional;version="[2.5,4)",org.springfram
+ ework.core.task;resolution:=optional;version="[2.5,4)",org.springfram
+ ework.jms;resolution:=optional;version="[2.5,4)",org.springframework.
+ jms.connection;resolution:=optional;version="[2.5,4)",org.springframe
+ work.jms.core;resolution:=optional;version="[2.5,4)",org.springframew
+ ork.jms.listener;resolution:=optional;version="[2.5,4)",org.springfra
+ mework.jms.support;resolution:=optional;version="[2.5,4)",org.springf
+ ramework.jms.support.converter;resolution:=optional;version="[2.5,4)"
+ ,org.springframework.jms.support.destination;resolution:=optional;ver
+ sion="[2.5,4)",org.springframework.jndi;resolution:=optional;version=
+ "[2.5,4)",org.springframework.transaction;resolution:=optional;versio
+ n="[2.5,4)",org.springframework.transaction.support;resolution:=optio
+ nal;version="[2.5,4)",org.w3c.dom
+Scm-Url: http://github.com/jboss/jboss-parent-pom/cxf/cxf-parent/cxf-r
+ t-transports-jms
+Export-Package: org.apache.cxf.transport.jms;version="2.7.11.redhat-3"
+ ,org.apache.cxf.transport.jms.continuations;version="2.7.11.redhat-3"
+ ,org.apache.cxf.transport.jms.spec;version="2.7.11.redhat-3",org.apac
+ he.cxf.transport.jms.spring;version="2.7.11.redhat-3",org.apache.cxf.
+ transport.jms.wsdl11;version="2.7.11.redhat-3",org.apache.cxf.transpo
+ rt.jms.uri;version="2.7.11.redhat-3",org.apache.cxf.transport.jms.wsd
+ l;version="2.7.11.redhat-3"
+Bundle-Name: Apache CXF Runtime JMS Transport
+Implementation-Title: Apache CXF Runtime JMS Transport
+Bundle-Description: Apache CXF Runtime JMS Transport
+Build-Timestamp: Mon, 2 Jun 2014 23:09:45 -0400
+Implementation-Version: 2.7.11.redhat-3
+Java-Version: 1.6.0_30
+Scm-Connection: scm:git:http://git-wip-us.apache.org/repos/asf/cxf.git
+ /cxf-parent/cxf-rt-transports-jms
+Specification-Vendor: The Apache Software Foundation
+Os-Arch: i386
+Bundle-ManifestVersion: 2
+Java-Vendor: Sun Microsystems Inc.
+Bundle-Vendor: The Apache Software Foundation
+Os-Name: Linux
+Tool: Bnd-1.50.0
+Implementation-Vendor: The Apache Software Foundation
+Os-Version: 2.6.32-431.17.1.el6.x86_64
+Originally-Created-By: Apache Maven Bundle Plugin
+Scm-Revision: effe56628b68fe805899d1cd3afdcf586879c3da
+Bundle-Version: 2.7.11.redhat-3
+Created-By: Apache Maven Bundle Plugin
+Implementation-URL: http://cxf.apache.org
+Build-Jdk: 1.6.0_30
+Specification-Version: 2.7.11.redhat-3
+

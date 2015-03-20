@@ -1,0 +1,12 @@
+digraph jbossws_api_1_0_2_Final_redhat_1_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_ws_api -> org_jboss_logging;
+  org_jboss_ws_api_addressing -> org_jboss_ws_api;
+  org_jboss_ws_api_addressing -> org_jboss_ws_api_util;
+  org_jboss_ws_api_annotation -> org_jboss_ws_api;
+  org_jboss_ws_api_configuration -> org_jboss_ws_api_util;
+  org_jboss_ws_api_handler -> org_jboss_ws_api;
+  org_jboss_ws_api_monitoring -> org_jboss_ws_api;
+  org_jboss_ws_api_tools -> org_jboss_ws_api_util;
+  org_jboss_ws_api_util -> org_jboss_ws_api;
+}

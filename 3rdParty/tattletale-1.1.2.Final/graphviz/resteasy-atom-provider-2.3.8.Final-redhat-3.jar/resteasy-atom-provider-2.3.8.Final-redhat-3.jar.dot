@@ -1,0 +1,8 @@
+digraph resteasy_atom_provider_2_3_8_Final_redhat_3_dependencies {
+  node [shape = box, fontsize=10.0];
+  resteasy_atom_provider_2_3_8_Final_redhat_3 -> jaxb_impl_2_2_5_redhat_8;
+  resteasy_atom_provider_2_3_8_Final_redhat_3 -> jboss_jaxb_api_2_2_spec_1_0_4_Final_redhat_2;
+  resteasy_atom_provider_2_3_8_Final_redhat_3 -> jboss_jaxrs_api_1_1_spec_1_0_1_Final_redhat_2;
+  resteasy_atom_provider_2_3_8_Final_redhat_3 -> resteasy_jaxb_provider_2_3_8_Final_redhat_3;
+  resteasy_atom_provider_2_3_8_Final_redhat_3 -> resteasy_jaxrs_2_3_8_Final_redhat_3;
+}

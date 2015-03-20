@@ -1,0 +1,80 @@
+Manifest-Version: 1.0
+Implementation-Title: Weld SPIs for container integration
+Build-Timestamp: Tue, 8 Apr 2014 07:49:28 -0400
+Implementation-Version: 1.1.Final-redhat-5
+Java-Version: 1.6.0_30
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Scm-Connection: scm:git:git://github.com/weld/api.git/weld-api-parent/
+ weld-spi
+Specification-Vendor: Seam Framework
+Os-Arch: i386
+Implementation-Vendor-Id: org.jboss.weld
+Specification-Title: Weld SPIs for container integration
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: scm:git:git://github.com/weld/api.git/weld-api-parent/weld-sp
+ i
+Implementation-Vendor: Seam Framework
+Os-Version: 2.6.32-431.5.1.el6.x86_64
+Scm-Revision: e5c0453a033a48632adf9ddb79bd877fbf87e2a8
+Created-By: Apache Maven
+Implementation-URL: http://www.seamframework.org/Weld
+Build-Jdk: 1.6.0_30
+Specification-Version: 1.1.Final-redhat-5
+
+Name: Build-Information
+Os-Version: 2.6.32-431.5.1.el6.x86_64
+Java-Version: 1.6.0_30
+Os-Arch: i386
+Build-Time: 20140408-0749
+Maven-Version: 3.0.3
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+SCM: e5c0453a033a48632adf9ddb79bd877fbf87e2a8
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.weld.bootstrap.api.helpers
+Bundle-Description: weld-spi-1.1.Final-redhat-5
+Bundle-Name: weld-spi-1.1.Final-redhat-5
+Bundle-Version: 0.0.0
+Export-Package: org.jboss.weld.bootstrap.api;uses:="org.jboss.weld.boo
+ tstrap.api.helpers,org.jboss.weld.bootstrap.spi,org.jboss.weld.ejb.sp
+ i,org.jboss.weld.injection.spi,org.jboss.weld.manager.api,org.jboss.w
+ eld.resources.spi,org.jboss.weld.security.spi,org.jboss.weld.transact
+ ion.spi,org.jboss.weld.validation.spi",org.jboss.weld.bootstrap.api.h
+ elpers;uses:="org.jboss.weld.bootstrap.api,org.jboss.weld.bootstrap.s
+ pi,org.jboss.weld.manager.api",org.jboss.weld.bootstrap.spi;uses:="or
+ g.jboss.weld.bootstrap.api",org.jboss.weld.bootstrap.spi.helpers;uses
+ :="org.jboss.weld.bootstrap.spi",org.jboss.weld.context.api;uses:="ja
+ vax.enterprise.context.spi",org.jboss.weld.ejb.api,org.jboss.weld.ejb
+ .spi;uses:="javax.enterprise.inject.spi,org.jboss.weld.bootstrap.api,
+ org.jboss.weld.ejb.api",org.jboss.weld.ejb.spi.helpers;uses:="org.jbo
+ ss.weld.ejb.api,org.jboss.weld.ejb.spi",org.jboss.weld.injection.spi;
+ uses:="javax.enterprise.inject.spi,javax.persistence,org.jboss.weld.b
+ ootstrap.api",org.jboss.weld.injection.spi.helpers;uses:="javax.enter
+ prise.inject.spi,javax.persistence,org.jboss.weld.bootstrap.api,org.j
+ boss.weld.injection.spi",org.jboss.weld.manager.api;uses:="javax.ente
+ rprise.inject,javax.enterprise.inject.spi,org.jboss.weld.bootstrap.ap
+ i,org.jboss.weld.ejb.spi",org.jboss.weld.resources.spi;uses:="org.jbo
+ ss.weld.bootstrap.api",org.jboss.weld.resources.spi.helpers;uses:="or
+ g.jboss.weld.resources.spi",org.jboss.weld.security.spi;uses:="org.jb
+ oss.weld.bootstrap.api",org.jboss.weld.serialization.spi;uses:="javax
+ .enterprise.context.spi,org.jboss.weld.bootstrap.api,org.jboss.weld.s
+ erialization.spi.helpers",org.jboss.weld.serialization.spi.helpers;us
+ es:="javax.enterprise.context.spi,org.jboss.weld.context.api",org.jbo
+ ss.weld.servlet.api;uses:="javax.servlet,javax.servlet.http",org.jbos
+ s.weld.servlet.api.helpers;uses:="javax.servlet,javax.servlet.http,or
+ g.jboss.weld.servlet.api",org.jboss.weld.transaction.spi;uses:="javax
+ .transaction,org.jboss.weld.bootstrap.api",org.jboss.weld.validation.
+ spi;uses:="javax.validation,org.jboss.weld.bootstrap.api"
+Import-Package: java.beans,java.io,java.lang,java.lang.annotation,java
+ .lang.reflect,java.net,java.security,java.util,java.util.concurrent,j
+ avax.annotation;version="1.1",javax.enterprise.context.spi;version="0
+ .0.0",javax.enterprise.inject;version="0.0.0",javax.enterprise.inject
+ .spi;version="0.0.0",javax.naming,javax.persistence;version="1.0.1.Fi
+ nal-redhat-2",javax.servlet;version="2.5",javax.servlet.http;version=
+ "2.5",javax.transaction;version="7.4.0.Final-redhat-19",javax.validat
+ ion;version="1.0.0.GA-redhat-2"

@@ -1,0 +1,48 @@
+Manifest-Version: 1.0
+Implementation-Title: JBoss Web Services - Stack CXF UDP transport
+Build-Timestamp: Tue, 3 Jun 2014 08:58:43 -0400
+Implementation-Version: 4.3.0.Final-redhat-3
+Java-Version: 1.6.0_30
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Scm-Connection: scm:svn:http://anonsvn.jboss.org/repos/jbossws/stack/c
+ xf/trunk/modules/jbossws-cxf-addons/transports/jbossws-cxf-transports
+ -udp
+Specification-Vendor: JBoss, by Red Hat
+Os-Arch: amd64
+Implementation-Vendor-Id: org.jboss.ws.cxf
+Specification-Title: JBoss Web Services - Stack CXF UDP transport
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: http://fisheye.jboss.com/viewrep/JBossWS/stack/cxf/trunk/modu
+ les/jbossws-cxf-addons/transports/jbossws-cxf-transports-udp
+Implementation-Vendor: JBoss, by Red Hat
+Os-Version: 2.6.32-431.17.1.el6.x86_64
+Scm-Revision: 18531
+Created-By: Apache Maven
+Implementation-URL: http://www.jboss.org/jbossws/jbossws-cxf/modules/j
+ bossws-cxf-addons/transports/jbossws-cxf-transports-udp
+Build-Jdk: 1.6.0_30
+Specification-Version: 4.3.0.Final-redhat-3
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.wsf.stack.cxf.addons.transports.udp
+Bundle-Description: jbossws-cxf-transports-udp-4.3.0.Final-redhat-3
+Bundle-Name: jbossws-cxf-transports-udp-4.3.0.Final-redhat-3
+Bundle-Version: 4.3.0.Final-redhat-3
+Export-Package: org.jboss.wsf.stack.cxf.addons.transports.udp;uses:="o
+ rg.apache.cxf,org.apache.cxf.common.injection,org.apache.cxf.common.l
+ ogging,org.apache.cxf.common.util,org.apache.cxf.helpers,org.apache.c
+ xf.message,org.apache.cxf.service.model,org.apache.cxf.transport,org.
+ apache.cxf.workqueue,org.apache.cxf.ws.addressing"
+Import-Package: java.io,java.lang,java.net,java.util,java.util.logging
+ ,javax.annotation;version="1.1",org.apache.cxf;version="2.7.11.redhat
+ -3",org.apache.cxf.common.injection;version="2.7.11.redhat-3",org.apa
+ che.cxf.common.logging;version="2.7.11.redhat-3",org.apache.cxf.commo
+ n.util;version="2.7.11.redhat-3",org.apache.cxf.helpers;version="2.7.
+ 11.redhat-3",org.apache.cxf.message;version="2.7.11.redhat-3",org.apa
+ che.cxf.service.model;version="2.7.11.redhat-3",org.apache.cxf.transp
+ ort;version="2.7.11.redhat-3",org.apache.cxf.workqueue;version="2.7.1
+ 1.redhat-3",org.apache.cxf.ws.addressing;version="2.7.11.redhat-3"

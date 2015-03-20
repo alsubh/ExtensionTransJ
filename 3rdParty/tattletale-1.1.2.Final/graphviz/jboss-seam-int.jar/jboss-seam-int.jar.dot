@@ -1,0 +1,4 @@
+digraph jboss_seam_int_dependencies {
+  node [shape = box, fontsize=10.0];
+  jboss_seam_int -> jboss_cli_client;
+}

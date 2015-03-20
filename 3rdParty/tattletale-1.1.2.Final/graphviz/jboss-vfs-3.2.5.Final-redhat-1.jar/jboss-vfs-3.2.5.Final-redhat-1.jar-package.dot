@@ -1,0 +1,18 @@
+digraph jboss_vfs_3_2_5_Final_redhat_1_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_vfs -> org_jboss_logging;
+  org_jboss_vfs -> org_jboss_logging_annotations;
+  org_jboss_vfs -> org_jboss_vfs_protocol;
+  org_jboss_vfs -> org_jboss_vfs_spi;
+  org_jboss_vfs -> org_jboss_vfs_util;
+  org_jboss_vfs -> org_jboss_vfs_util_automount;
+  org_jboss_vfs_protocol -> org_jboss_vfs;
+  org_jboss_vfs_protocol -> org_jboss_vfs_spi;
+  org_jboss_vfs_protocol_file -> org_jboss_vfs_protocol;
+  org_jboss_vfs_protocol_vfs -> org_jboss_vfs_protocol;
+  org_jboss_vfs_spi -> org_jboss_vfs;
+  org_jboss_vfs_spi -> org_jboss_vfs_util;
+  org_jboss_vfs_util -> org_jboss_vfs;
+  org_jboss_vfs_util_automount -> org_jboss_vfs;
+  org_jboss_vfs_util_automount -> org_jboss_vfs_util;
+}

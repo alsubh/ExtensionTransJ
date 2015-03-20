@@ -1,0 +1,39 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Created-By: Apache Maven
+Build-Jdk: 1.6.0_30
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.resteasy.plugins.providers.multipart
+Bundle-Description: resteasy-multipart-provider-2.3.8.Final-redhat-3
+Bundle-Name: resteasy-multipart-provider-2.3.8.Final-redhat-3
+Bundle-Version: 0.0.0
+Export-Package: org.jboss.resteasy.annotations.providers.multipart,org
+ .jboss.resteasy.plugins.providers.multipart;uses:="javax.mail,javax.m
+ ail.internet,javax.mail.util,javax.ws.rs,javax.ws.rs.core,javax.ws.rs
+ .ext,org.apache.james.mime4j,org.apache.james.mime4j.codec,org.apache
+ .james.mime4j.descriptor,org.apache.james.mime4j.field,org.apache.jam
+ es.mime4j.message,org.apache.james.mime4j.parser,org.apache.james.mim
+ e4j.storage,org.jboss.resteasy.annotations.providers.multipart,org.jb
+ oss.resteasy.logging,org.jboss.resteasy.plugins.providers,org.jboss.r
+ esteasy.plugins.providers.jaxb,org.jboss.resteasy.specimpl,org.jboss.
+ resteasy.spi,org.jboss.resteasy.util"
+Import-Package: java.io,java.lang,java.lang.annotation,java.lang.refle
+ ct,java.net,java.security,java.util,javax.activation;version="0.0.0",
+ javax.mail;version="0.0.0",javax.mail.internet;version="0.0.0",javax.
+ mail.util;version="0.0.0",javax.ws.rs;version="1.0.1.Final-redhat-2",
+ javax.ws.rs.core;version="1.0.1.Final-redhat-2",javax.ws.rs.ext;versi
+ on="1.0.1.Final-redhat-2",javax.xml.bind;version="2.2",javax.xml.bind
+ .attachment;version="2.2",javax.xml.transform,javax.xml.transform.str
+ eam,org.apache.james.mime4j;version="0.0.0",org.apache.james.mime4j.c
+ odec;version="0.0.0",org.apache.james.mime4j.descriptor;version="0.0.
+ 0",org.apache.james.mime4j.field;version="0.0.0",org.apache.james.mim
+ e4j.message;version="0.0.0",org.apache.james.mime4j.parser;version="0
+ .0.0",org.apache.james.mime4j.storage;version="0.0.0",org.jboss.reste
+ asy.logging;version="0.0.0",org.jboss.resteasy.plugins.providers;vers
+ ion="0.0.0",org.jboss.resteasy.plugins.providers.jaxb;version="0.0.0"
+ ,org.jboss.resteasy.specimpl;version="0.0.0",org.jboss.resteasy.spi;v
+ ersion="0.0.0",org.jboss.resteasy.util;version="0.0.0"

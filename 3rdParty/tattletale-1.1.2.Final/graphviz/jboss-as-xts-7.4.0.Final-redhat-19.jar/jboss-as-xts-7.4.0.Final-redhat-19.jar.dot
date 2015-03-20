@@ -1,0 +1,11 @@
+digraph jboss_as_xts_7_4_0_Final_redhat_19_dependencies {
+  node [shape = box, fontsize=10.0];
+  jboss_as_xts_7_4_0_Final_redhat_19 -> jboss_as_controller_7_4_0_Final_redhat_19;
+  jboss_as_xts_7_4_0_Final_redhat_19 -> jboss_as_transactions_7_4_0_Final_redhat_19;
+  jboss_as_xts_7_4_0_Final_redhat_19 -> jboss_as_webservices_server_integration_7_4_0_Final_redhat_19;
+  jboss_as_xts_7_4_0_Final_redhat_19 -> jboss_cli_client;
+  jboss_as_xts_7_4_0_Final_redhat_19 -> jboss_msc_1_1_5_Final_redhat_1;
+  jboss_as_xts_7_4_0_Final_redhat_19 -> jbosstxbridge_4_17_21_Final_redhat_2;
+  jboss_as_xts_7_4_0_Final_redhat_19 -> jbossws_spi_2_3_0_Final_redhat_1;
+  jboss_as_xts_7_4_0_Final_redhat_19 -> jbossxts_4_17_21_Final_redhat_2;
+}

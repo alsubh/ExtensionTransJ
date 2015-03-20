@@ -1,0 +1,94 @@
+Manifest-Version: 1.0
+Bundle-License: http://repository.jboss.org/licenses/lgpl-2.1.txt
+Bundle-SymbolicName: org.infinispan.cachestore-remote
+Built-By: mockbuild
+Bnd-LastModified: 1400137946539
+Implementation-Vendor-Id: org.infinispan
+Specification-Title: Infinispan remote CacheStore
+Bundle-DocURL: http://www.infinispan.org/
+Import-Package: javax.management,javax.naming,javax.transaction;versio
+ n="[1.1,2)",javax.transaction.xa;version="[1.1,2)",javax.xml.stream,n
+ et.jcip.annotations;resolution:=optional,org.infinispan;version="[5.2
+ ,6)",org.infinispan.client.hotrod;version="[5.2,6)",org.infinispan.cl
+ ient.hotrod.impl.transport;version="[5.2,6)",org.infinispan.client.ho
+ trod.impl.transport.tcp;version="[5.2,6)",org.infinispan.commands;ver
+ sion="[5.2,6)",org.infinispan.commands.tx;version="[5.2,6)",org.infin
+ ispan.config;version="[5.2,6)",org.infinispan.configuration;version="
+ [5.2,6)",org.infinispan.configuration.as;version="[5.2,6)",org.infini
+ span.configuration.cache;version="[5.2,6)",org.infinispan.configurati
+ on.parsing;version="[5.2,6)",org.infinispan.container;version="[5.2,6
+ )",org.infinispan.container.entries;version="[5.2,6)",org.infinispan.
+ container.versioning;version="[5.2,6)",org.infinispan.executors;versi
+ on="[5.2,6)",org.infinispan.factories;version="[5.2,6)",org.infinispa
+ n.io;version="[5.2,6)",org.infinispan.loaders;version="[5.2,6)",org.i
+ nfinispan.loaders.bucket;version="[5.2,6)",org.infinispan.loaders.dec
+ orators;version="[5.2,6)",org.infinispan.marshall;version="[5.2,6)",o
+ rg.infinispan.marshall.jboss;version="[5.2,6)",org.infinispan.remotin
+ g;version="[5.2,6)",org.infinispan.remoting.transport;version="[5.2,6
+ )",org.infinispan.server.core;version="[5.2,6)";resolution:=optional,
+ org.infinispan.transaction;version="[5.2,6)",org.infinispan.transacti
+ on.xa;version="[5.2,6)",org.infinispan.transaction.xa.recovery;versio
+ n="[5.2,6)",org.infinispan.util;version="[5.2,6)",org.infinispan.util
+ .logging;version="[5.2,6)",org.jboss.logging;version="[3.1,4)",org.jb
+ oss.staxmapper,org.jgroups;version="[3.2,4)"
+Scm-Url: https://github.com/infinispan/infinispan/infinispan-cachestor
+ e-parent/infinispan-cachestore-remote
+Export-Package: org.infinispan.loaders.remote.configuration.as;uses:="
+ org.infinispan.configuration.as,org.infinispan.configuration.parsing,
+ org.jboss.staxmapper,org.infinispan.loaders.remote.configuration,java
+ x.xml.stream,org.infinispan.util,org.infinispan.configuration.cache";
+ version="5.2.10.Final-redhat-1",org.infinispan.loaders.remote.logging
+ ;uses:="org.infinispan.loaders,org.infinispan.util.logging,org.jboss.
+ logging,org.infinispan.config,org.jgroups,org.infinispan.remoting,org
+ .infinispan.loaders.decorators,javax.management,org.infinispan.loader
+ s.bucket,javax.transaction.xa,org.infinispan.transaction.xa.recovery,
+ javax.naming,org.infinispan,org.infinispan.util,org.infinispan.remoti
+ ng.transport,org.infinispan.commands.tx,org.infinispan.transaction.xa
+ ,org.infinispan.commands,javax.transaction,org.infinispan.transaction
+ ";version="5.2.10.Final-redhat-1",org.infinispan.loaders.remote.wrapp
+ er;uses:="org.infinispan.client.hotrod,org.infinispan.loaders,org.inf
+ inispan.marshall,org.infinispan.loaders.remote.logging,org.infinispan
+ .util.logging,org.infinispan.io,org.infinispan.util,org.infinispan.se
+ rver.core";version="5.2.10.Final-redhat-1",org.infinispan.loaders.rem
+ ote;uses:="org.infinispan.loaders,org.infinispan.loaders.remote.loggi
+ ng,org.infinispan.loaders.remote.wrapper,org.infinispan,org.infinispa
+ n.marshall,org.infinispan.executors,org.infinispan.container.versioni
+ ng,org.infinispan.util.logging,net.jcip.annotations,org.infinispan.cl
+ ient.hotrod,org.infinispan.factories,org.infinispan.container,org.inf
+ inispan.container.entries,org.infinispan.marshall.jboss,org.infinispa
+ n.util,org.infinispan.config";version="5.2.10.Final-redhat-1",org.inf
+ inispan.loaders.remote.configuration;uses:="org.infinispan.loaders.re
+ mote.wrapper,org.infinispan.marshall,org.infinispan.configuration.cac
+ he,org.infinispan.client.hotrod.impl.transport,org.infinispan.configu
+ ration,org.infinispan.executors,org.infinispan.util,org.infinispan.lo
+ aders,org.infinispan.loaders.remote,org.infinispan.loaders.remote.log
+ ging,org.infinispan.client.hotrod.impl.transport.tcp,org.infinispan.c
+ onfig,org.infinispan.util.logging,javax.xml.stream,org.infinispan.con
+ figuration.parsing,org.jboss.staxmapper";version="5.2.10.Final-redhat
+ -1"
+Bundle-Name: Infinispan remote CacheStore
+Bundle-Description: Infinispan remote CacheStore based on Hotrod proto
+ col
+Implementation-Title: Infinispan remote CacheStore
+Build-Timestamp: Thu, 15 May 2014 03:11:09 -0400
+Implementation-Version: 5.2.10.Final-redhat-1
+Java-Version: 1.6.0_30
+Scm-Connection: scm:git:git@github.com:infinispan/infinispan.git/infin
+ ispan-cachestore-parent/infinispan-cachestore-remote
+Bundle-ManifestVersion: 2
+Os-Arch: amd64
+Specification-Vendor: JBoss, a division of Red Hat
+Bundle-Vendor: JBoss, a division of Red Hat
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Tool: Bnd-1.50.0
+Implementation-Vendor: JBoss, a division of Red Hat
+Os-Version: 2.6.32-431.17.1.el6.x86_64
+Bundle-Version: 5.2.10.Final-redhat-1
+Scm-Revision: 4cc656108d418d7e39bcb3e1d42261eac2a68cb7
+Build-Jdk: 1.6.0_30
+Created-By: Apache Maven Bundle Plugin
+Implementation-URL: http://www.infinispan.org/infinispan-cachestore-pa
+ rent/infinispan-cachestore-remote
+Specification-Version: 5.2.10.Final-redhat-1
+

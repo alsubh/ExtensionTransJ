@@ -1,0 +1,57 @@
+Manifest-Version: 1.0
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-SymbolicName: org.apache.commons.codec
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Bnd-LastModified: 1386889433440
+Implementation-Vendor-Id: commons-codec
+Specification-Title: Commons Codec
+Bundle-DocURL: http://commons.apache.org/codec/
+Include-Resource: META-INF/LICENSE.txt=LICENSE.txt,META-INF/NOTICE.txt
+ =NOTICE.txt,META-INF/maven/commons-codec/commons-codec/dependency-ove
+ rrides.properties=/tmp/mvndepext5929226577590030354/commons-codec/com
+ mons-codec/dependency-overrides.properties,META-INF/maven/commons-cod
+ ec/commons-codec/plugin-overrides.properties=/tmp/mvndepext8117528529
+ 994931200/commons-codec/commons-codec/plugin-overrides.properties,MET
+ A-INF/maven/commons-codec/commons-codec/effective-pom.xml=/tmp/mvndep
+ ext802059745175631359/commons-codec/commons-codec/effective-pom.xml,M
+ ETA-INF/NOTICE=target/maven-shared-archive-resources/META-INF/NOTICE,
+ META-INF/DEPENDENCIES=target/maven-shared-archive-resources/META-INF/
+ DEPENDENCIES,META-INF/LICENSE=target/maven-shared-archive-resources/M
+ ETA-INF/LICENSE
+Scm-Url: http://svn.apache.org/viewvc/commons/proper/codec/trunk
+Export-Package: org.apache.commons.codec;version="1.4.0.redhat-3",org.
+ apache.commons.codec.net;version="1.4.0.redhat-3",org.apache.commons.
+ codec.language;version="1.4.0.redhat-3",org.apache.commons.codec.dige
+ st;version="1.4.0.redhat-3",org.apache.commons.codec.binary;version="
+ 1.4.0.redhat-3"
+Bundle-Name: Commons Codec
+Implementation-Title: Commons Codec
+Bundle-Description: The codec package contains simple encoder and deco
+ ders for     various formats such as Base64 and Hexadecimal.  In addi
+ tion to these     widely used encoders and decoders, the codec packag
+ e also maintains a     collection of phonetic encoding utilities.
+Build-Timestamp: Thu, 12 Dec 2013 18:03:49 -0500
+Implementation-Version: 1.4.redhat-3
+Java-Version: 1.6.0_28
+Scm-Connection: scm:svn:http://svn.apache.org/repos/asf/commons/proper
+ /codec/trunk
+Os-Arch: i386
+Specification-Vendor: JBoss by Red Hat
+Bundle-ManifestVersion: 2
+Java-Vendor: Sun Microsystems Inc.
+Bundle-Vendor: JBoss by Red Hat
+Os-Name: Linux
+Tool: Bnd-1.50.0
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-358.18.1.el6.x86_64
+Scm-Revision: ??????
+Bundle-Version: 1.4.0.redhat-3
+X-Compile-Target-JDK: 1.4
+Implementation-Build: UNKNOWN_BRANCH@r??????; 2013-12-12 18:03:48-0500
+X-Compile-Source-JDK: 1.4
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.6.0_28
+Implementation-URL: http://commons.apache.org/codec/
+Specification-Version: 1.4.redhat-3
+

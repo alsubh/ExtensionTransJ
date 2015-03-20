@@ -1,0 +1,10 @@
+digraph resteasy_yaml_provider_2_3_8_Final_redhat_3_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_resteasy_plugins_providers -> javax_ws_rs;
+  org_jboss_resteasy_plugins_providers -> javax_ws_rs_core;
+  org_jboss_resteasy_plugins_providers -> javax_ws_rs_ext;
+  org_jboss_resteasy_plugins_providers -> org_jboss_resteasy_logging;
+  org_jboss_resteasy_plugins_providers -> org_jboss_resteasy_spi;
+  org_jboss_resteasy_plugins_providers -> org_yaml_snakeyaml;
+  org_jboss_resteasy_plugins_providers -> org_yaml_snakeyaml_error;
+}

@@ -1,0 +1,51 @@
+Manifest-Version: 1.0
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-SymbolicName: org.apache.ws.xmlschema.core
+Built-By: mockbuild
+Bnd-LastModified: 1381908945565
+Implementation-Vendor-Id: org.apache.ws.xmlschema
+Specification-Title: XmlSchema Core
+Bundle-DocURL: http://www.apache.org/
+Import-Package: javax.xml.namespace,javax.xml.parsers,javax.xml.transf
+ orm,javax.xml.transform.dom,javax.xml.transform.sax,javax.xml.transfo
+ rm.stream,org.w3c.dom,org.xml.sax
+Scm-Url: http://svn.apache.org/viewvc/webservices/xmlschema/tags/xmlsc
+ hema-2.0.2/xmlschema-core
+Export-Package: org.apache.ws.commons.schema;uses:="org.w3c.dom,org.ap
+ ache.ws.commons.schema.utils,org.apache.ws.commons.schema.resolver,ja
+ vax.xml.parsers,org.apache.ws.commons.schema.extensions,org.xml.sax,j
+ avax.xml.namespace,javax.xml.transform,javax.xml.transform.stream,jav
+ ax.xml.transform.dom,org.apache.ws.commons.schema.constants,javax.xml
+ .transform.sax";version="2.0.2.redhat-3",org.apache.ws.commons.schema
+ .resolver;uses:="org.xml.sax";version="2.0.2.redhat-3",org.apache.ws.
+ commons.schema.utils;uses:="org.w3c.dom,javax.xml.namespace,org.apach
+ e.ws.commons.schema";version="2.0.2.redhat-3",org.apache.ws.commons.s
+ chema.extensions;uses:="org.apache.ws.commons.schema,org.w3c.dom,java
+ x.xml.namespace";version="2.0.2.redhat-3",org.apache.ws.commons.schem
+ a.constants;uses:="javax.xml.namespace";version="2.0.2.redhat-3"
+Bundle-Name: XmlSchema Core
+Bundle-Description: Commons XMLSchema is a light weight schema object 
+ model that can be used to manipulate or        generate XML schema.
+Implementation-Title: XmlSchema Core
+Build-Timestamp: Wed, 16 Oct 2013 03:35:34 -0400
+Implementation-Version: 2.0.2.redhat-3
+Java-Version: 1.6.0_24
+Scm-Connection: scm:svn:http://svn.apache.org/repos/asf/webservices/xm
+ lschema/tags/xmlschema-2.0.2/xmlschema-core
+Bundle-ManifestVersion: 2
+Os-Arch: amd64
+Specification-Vendor: The Apache Software Foundation
+Bundle-Vendor: The Apache Software Foundation
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Tool: Bnd-1.50.0
+Implementation-Vendor: The Apache Software Foundation
+Os-Version: 2.6.32-358.18.1.el6.x86_64
+Bundle-Version: 2.0.2.redhat-3
+Scm-Revision: UNKNOWN
+Build-Jdk: 1.6.0_24
+Created-By: Apache Maven Bundle Plugin
+Implementation-URL: http://ws.apache.org/commons/xmlschema20/xmlschema
+ -core/
+Specification-Version: 2.0.2.redhat-3
+

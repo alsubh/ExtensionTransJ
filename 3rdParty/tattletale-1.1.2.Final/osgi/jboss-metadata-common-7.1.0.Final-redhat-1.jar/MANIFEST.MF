@@ -1,0 +1,70 @@
+Manifest-Version: 1.0
+Implementation-Title: JBoss Metadata Common
+Build-Timestamp: Tue, 8 Apr 2014 10:14:08 -0400
+Implementation-Version: 7.1.0.Final-redhat-1
+Java-Version: 1.6.0_30
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Scm-Connection: scm:git:git@github.com:jboss/metadata.git/jboss-metada
+ ta-common
+Specification-Vendor: JBoss by Red Hat
+Os-Arch: amd64
+Implementation-Vendor-Id: org.jboss.metadata
+Specification-Title: JBoss Metadata Common
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: scm:git:git@github.com:jboss/metadata.git/jboss-metadata-comm
+ on
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-431.5.1.el6.x86_64
+Scm-Revision: 63d66113a45c9a4a8147ef22a49c2a4d3b53930e
+Created-By: Apache Maven
+Implementation-URL: http://www.jboss.org/jboss-as-parent-metadata/jbos
+ s-metadata-common
+Build-Jdk: 1.6.0_30
+Specification-Version: 7.1.0.Final-redhat-1
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.metadata.parser.ee
+Bundle-Description: jboss-metadata-common-7.1.0.Final-redhat-1
+Bundle-Name: jboss-metadata-common-7.1.0.Final-redhat-1
+Bundle-Version: 7.1.0.Final-redhat-1
+Export-Package: org.jboss.annotation.javaee,org.jboss.metadata.annotat
+ ion,org.jboss.metadata.annotation.finder,org.jboss.metadata.common.jb
+ oss;uses:="org.jboss.metadata.javaee.support",org.jboss.metadata.ejb.
+ jboss;uses:="org.jboss.metadata.javaee.jboss,org.jboss.metadata.javae
+ e.spec,org.jboss.metadata.javaee.support",org.jboss.metadata.javaee.j
+ boss;uses:="org.jboss.metadata.javaee.spec,org.jboss.metadata.javaee.
+ support",org.jboss.metadata.javaee.spec;uses:="javax.persistence,org.
+ jboss.annotation.javaee,org.jboss.metadata.javaee.support",org.jboss.
+ metadata.javaee.support;uses:="org.jboss.annotation.javaee,org.jboss.
+ metadata.annotation,org.jboss.metadata.javaee.jboss,org.jboss.metadat
+ a.javaee.spec",org.jboss.metadata.lang,org.jboss.metadata.merge;uses:
+ ="org.jboss.metadata.javaee.spec,org.jboss.metadata.merge.javaee.spec
+ ",org.jboss.metadata.merge.ejb.jboss;uses:="org.jboss.metadata.ejb.jb
+ oss,org.jboss.metadata.javaee.spec,org.jboss.metadata.javaee.support,
+ org.jboss.metadata.merge.javaee.spec",org.jboss.metadata.merge.javaee
+ .jboss;uses:="org.jboss.metadata.javaee.jboss,org.jboss.metadata.java
+ ee.spec,org.jboss.metadata.javaee.support,org.jboss.metadata.merge.ja
+ vaee.spec,org.jboss.metadata.merge.javaee.support",org.jboss.metadata
+ .merge.javaee.spec;uses:="javax.persistence,org.jboss.metadata.javaee
+ .jboss,org.jboss.metadata.javaee.spec,org.jboss.metadata.javaee.suppo
+ rt,org.jboss.metadata.merge,org.jboss.metadata.merge.javaee.jboss,org
+ .jboss.metadata.merge.javaee.support",org.jboss.metadata.merge.javaee
+ .support;uses:="org.jboss.annotation.javaee,org.jboss.metadata.javaee
+ .jboss,org.jboss.metadata.javaee.spec,org.jboss.metadata.javaee.suppo
+ rt,org.jboss.metadata.merge.javaee.spec",org.jboss.metadata.parser.ee
+ ;uses:="javax.persistence,org.jboss.annotation.javaee,org.jboss.metad
+ ata.javaee.jboss,org.jboss.metadata.javaee.spec,org.jboss.metadata.ja
+ vaee.support,org.jboss.metadata.parser.util,org.jboss.metadata.proper
+ ty",org.jboss.metadata.parser.jbossee,org.jboss.metadata.parser.util;
+ uses:="org.jboss.logging,org.jboss.metadata.property",org.jboss.metad
+ ata.property
+Import-Package: java.io,java.lang,java.lang.annotation,java.lang.refle
+ ct,java.net,java.security,java.util,java.util.concurrent,javax.persis
+ tence;version="1.0.1.Final-redhat-2",javax.xml.namespace,javax.xml.pa
+ rsers,javax.xml.stream,javax.xml.transform,javax.xml.transform.dom,ja
+ vax.xml.transform.stream,javax.xml.validation,org.jboss.logging;versi
+ on="7.4.0.Final-redhat-19",org.w3c.dom,org.w3c.dom.ls,org.xml.sax

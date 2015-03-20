@@ -1,0 +1,45 @@
+Manifest-Version: 1.0
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-SymbolicName: org.apache.felix.configadmin
+Built-By: mockbuild
+Bnd-LastModified: 1384288286812
+Implementation-Vendor-Id: org.apache.felix
+Specification-Title: Apache Felix Configuration Admin Service
+Bundle-DocURL: http://www.jboss.org
+Import-Package: org.apache.felix.cm;version="[1.0,1.1)",org.apache.fel
+ ix.cm.file;version="[1.0,1.1)",org.osgi.framework;version="[1.3,2)",o
+ rg.osgi.service.cm;version="[1.3,1.4)"
+DynamicImport-Package: org.osgi.service.log;version="1.3"
+Scm-Url: http://git.app.eng.bos.redhat.com/apache/org.apache.felix.con
+ figadmin.git
+Export-Package: org.apache.felix.cm;version="1.0",org.apache.felix.cm.
+ file;uses:="org.apache.felix.cm,org.osgi.framework";version="1.0",org
+ .osgi.service.cm;uses:="org.osgi.framework";version="1.3"
+Bundle-Name: Apache Felix Configuration Admin Service
+Bundle-Activator: org.apache.felix.cm.impl.ConfigurationManager
+Bundle-Description: Implementation of the OSGi Configuration Admin Ser
+ vice Specification 1.2
+Implementation-Title: Apache Felix Configuration Admin Service
+Build-Timestamp: Tue, 12 Nov 2013 15:31:24 -0500
+Implementation-Version: 1.2.8.redhat-4
+Bundle-Category: osgi
+Java-Version: 1.6.0_28
+Scm-Connection: scm:git:git://git.app.eng.bos.redhat.com/apache/org.ap
+ ache.felix.configadmin.git
+Bundle-ManifestVersion: 2
+Os-Arch: i386
+Specification-Vendor: JBoss by Red Hat
+Bundle-Vendor: The Apache Software Foundation
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Tool: Bnd-1.50.0
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-358.18.1.el6.x86_64
+Bundle-Version: 1.2.8.redhat-4
+Scm-Revision: a4a343f66a8b7b1e536408ae50729dfe71b2c215
+Build-Jdk: 1.6.0_28
+Created-By: Apache Maven Bundle Plugin
+Implementation-URL: http://www.jboss.org/apache/felix-parent/org.apach
+ e.felix.configadmin
+Specification-Version: 1.2.8.redhat-4
+

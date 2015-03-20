@@ -1,0 +1,178 @@
+Manifest-Version: 1.0
+Implementation-Title: OpenWS
+Implementation-Version: 1.4.4.redhat-2
+Build-Timestamp: Fri, 6 Sep 2013 20:28:21 -0400
+Archiver-Version: Plexus Archiver
+Java-Version: 1.6.0_24
+Built-By: mockbuild
+Scm-Connection: scm:svn:https://svn.shibboleth.net/java-openws/openws
+Specification-Vendor: JBoss by Red Hat
+Os-Arch: amd64
+Specification-Title: OpenWS
+Implementation-Vendor-Id: org.opensaml
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: http://svn.shibboleth.net/view/java-openws/openws
+Implementation-Vendor: JBoss by Red Hat
+Main-Class: org.opensaml.ws.Version
+Os-Version: 2.6.32-358.14.1.el6.x86_64
+Scm-Revision: UNKNOWN
+Created-By: Apache Maven
+Build-Jdk: 1.6.0_24
+Specification-Version: 1.4.4.redhat-2
+Implementation-URL: http://shibboleth.net/openws/
+
+Name: org/opensaml/ws/wssecurity/
+Specification-Title: WS-Security
+Specification-Version: 1.1
+Specification-Vendor: OASIS
+
+Name: org/opensaml/ws/wstrust/
+Specification-Title: WS-Trust
+Specification-Version: 1.3
+Specification-Vendor: OASIS
+
+Name: org/opensaml/ws/
+Implementation-Version: 1.4.4.redhat-2
+Implementation-Title: openws
+Implementation-Vendor: www.opensaml.org
+
+Name: org/opensaml/ws/wsfed/
+Specification-Title: WS-Federation
+Specification-Version: 1.1
+Specification-Vendor: xmlsoap.org
+
+Name: org/opensaml/ws/wsaddressing/
+Specification-Title: WS-Addressing
+Specification-Version: 1.0
+Specification-Vendor: World Wide Web Consortium (W3C)
+
+Name: org/opensaml/ws/wspolicy/
+Specification-Title: WS-Policy
+Specification-Version: 1.2
+Specification-Vendor: xmlsoap.org
+
+Name: org/opensaml/ws/soap/soap11/
+Specification-Title: Simple Object Access Protocol (SOAP) 1.1
+Specification-Version: 20000508
+Specification-Vendor: World Wide Web Consortium (W3C)
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.opensaml.ws.wstrust.impl
+Bundle-Description: openws-1.4.4.redhat-2
+Bundle-Name: openws-1.4.4.redhat-2
+Bundle-Version: 1.4.4.redhat-2
+Export-Package: org.opensaml.util;uses:="org.opensaml.ws.transport.htt
+ p,org.opensaml.xml.util",org.opensaml.util.resource;uses:="org.apache
+ .commons.httpclient,org.apache.commons.httpclient.methods,org.apache.
+ commons.httpclient.util,org.joda.time,org.joda.time.chrono,org.opensa
+ ml.xml.util,org.slf4j",org.opensaml.util.storage;uses:="org.joda.time
+ ,org.joda.time.chrono,org.opensaml.xml.util,org.slf4j",org.opensaml.w
+ s,org.opensaml.ws.message;uses:="org.opensaml.ws,org.opensaml.ws.mess
+ age.handler,org.opensaml.ws.security,org.opensaml.ws.transport,org.op
+ ensaml.xml,org.opensaml.xml.util",org.opensaml.ws.message.decoder;use
+ s:="org.opensaml.ws.message,org.opensaml.ws.security,org.opensaml.ws.
+ transport,org.opensaml.xml,org.opensaml.xml.io,org.opensaml.xml.parse
+ ,org.opensaml.xml.security,org.opensaml.xml.util,org.slf4j",org.opens
+ aml.ws.message.encoder;uses:="org.opensaml.ws.message,org.opensaml.ws
+ .transport,org.opensaml.xml,org.opensaml.xml.io,org.opensaml.xml.util
+ ,org.slf4j",org.opensaml.ws.message.handler;uses:="org.opensaml.ws.me
+ ssage,org.opensaml.ws.message.decoder,org.opensaml.ws.message.encoder
+ ,org.opensaml.ws.transport,org.opensaml.xml.parse,org.opensaml.xml.se
+ curity,org.opensaml.xml.util,org.slf4j",org.opensaml.ws.security;uses
+ :="javax.servlet,org.opensaml.ws.message,org.opensaml.xml.security,or
+ g.opensaml.xml.security.credential,org.opensaml.xml.security.x509",or
+ g.opensaml.ws.security.provider;uses:="org.opensaml.ws.message,org.op
+ ensaml.ws.security,org.opensaml.ws.transport,org.opensaml.ws.transpor
+ t.http,org.opensaml.xml.security,org.opensaml.xml.security.credential
+ ,org.opensaml.xml.security.criteria,org.opensaml.xml.security.trust,o
+ rg.opensaml.xml.security.x509,org.opensaml.xml.util,org.slf4j",org.op
+ ensaml.ws.soap.client;uses:="net.jcip.annotations,org.opensaml.ws.mes
+ sage,org.opensaml.ws.soap.common,org.opensaml.ws.soap.soap11,org.open
+ saml.xml.security",org.opensaml.ws.soap.client.http;uses:="javax.net,
+ javax.net.ssl,net.jcip.annotations,org.apache.commons.httpclient,org.
+ apache.commons.httpclient.auth,org.apache.commons.httpclient.methods,
+ org.apache.commons.httpclient.params,org.apache.commons.httpclient.pr
+ otocol,org.opensaml.ws.message,org.opensaml.ws.security,org.opensaml.
+ ws.soap.client,org.opensaml.ws.soap.common,org.opensaml.ws.soap.soap1
+ 1,org.opensaml.xml,org.opensaml.xml.io,org.opensaml.xml.parse,org.ope
+ nsaml.xml.security,org.opensaml.xml.util,org.slf4j",org.opensaml.ws.s
+ oap.common;uses:="org.opensaml.ws,org.opensaml.ws.message.handler,org
+ .opensaml.xml,org.opensaml.xml.util,org.opensaml.xml.validation",org.
+ opensaml.ws.soap.soap11;uses:="org.opensaml.ws.soap.common,org.opensa
+ ml.xml,org.opensaml.xml.schema",org.opensaml.ws.soap.soap11.decoder;u
+ ses:="org.opensaml.ws.message,org.opensaml.ws.message.decoder,org.ope
+ nsaml.ws.message.handler,org.opensaml.ws.soap.soap11,org.opensaml.ws.
+ transport,org.opensaml.xml,org.opensaml.xml.parse,org.opensaml.xml.se
+ curity,org.slf4j",org.opensaml.ws.soap.soap11.decoder.http;uses:="org
+ .opensaml.ws.message,org.opensaml.ws.message.decoder,org.opensaml.ws.
+ soap.soap11.decoder,org.opensaml.ws.transport,org.opensaml.ws.transpo
+ rt.http,org.opensaml.xml.parse,org.slf4j",org.opensaml.ws.soap.soap11
+ .encoder;uses:="org.opensaml.ws.message,org.opensaml.ws.message.encod
+ er,org.opensaml.ws.message.handler,org.opensaml.ws.soap.common,org.op
+ ensaml.ws.soap.soap11,org.opensaml.ws.transport,org.opensaml.xml,org.
+ opensaml.xml.util,org.slf4j",org.opensaml.ws.soap.soap11.encoder.http
+ ;uses:="org.opensaml.ws.message,org.opensaml.ws.message.encoder,org.o
+ pensaml.ws.soap.soap11,org.opensaml.ws.soap.soap11.encoder,org.opensa
+ ml.ws.transport,org.opensaml.ws.transport.http,org.opensaml.ws.wsaddr
+ essing,org.opensaml.xml,org.slf4j",org.opensaml.ws.soap.soap11.impl;u
+ ses:="org.opensaml.ws.soap.common,org.opensaml.ws.soap.soap11,org.ope
+ nsaml.xml,org.opensaml.xml.io,org.opensaml.xml.schema,org.opensaml.xm
+ l.schema.impl,org.opensaml.xml.util,org.opensaml.xml.validation",org.
+ opensaml.ws.soap.soap12;uses:="org.opensaml.xml.schema",org.opensaml.
+ ws.soap.util;uses:="org.opensaml.ws.message,org.opensaml.ws.soap.soap
+ 11,org.opensaml.ws.soap.soap12,org.opensaml.xml,org.opensaml.xml.sche
+ ma,org.opensaml.xml.util",org.opensaml.ws.transport;uses:="org.opensa
+ ml.ws,org.opensaml.xml.security.credential",org.opensaml.ws.transport
+ .http;uses:="javax.servlet,javax.servlet.http,org.opensaml.ws.securit
+ y,org.opensaml.ws.transport,org.opensaml.xml.security.credential,org.
+ slf4j",org.opensaml.ws.wsaddressing;uses:="org.opensaml.xml,org.opens
+ aml.xml.schema",org.opensaml.ws.wsaddressing.impl;uses:="org.opensaml
+ .ws.wsaddressing,org.opensaml.xml,org.opensaml.xml.io,org.opensaml.xm
+ l.schema.impl,org.opensaml.xml.util,org.opensaml.xml.validation,org.s
+ lf4j",org.opensaml.ws.wsaddressing.util;uses:="org.opensaml.ws.wsaddr
+ essing,org.opensaml.xml,org.opensaml.xml.schema,org.opensaml.xml.util
+ ",org.opensaml.ws.wsfed;uses:="org.opensaml.xml",org.opensaml.ws.wsfe
+ d.impl;uses:="org.opensaml.ws.wsfed,org.opensaml.xml,org.opensaml.xml
+ .io,org.opensaml.xml.util",org.opensaml.ws.wspolicy;uses:="org.opensa
+ ml.ws.wssecurity,org.opensaml.xml,org.opensaml.xml.schema",org.opensa
+ ml.ws.wspolicy.impl;uses:="org.opensaml.ws.wspolicy,org.opensaml.ws.w
+ ssecurity,org.opensaml.xml,org.opensaml.xml.io,org.opensaml.xml.util,
+ org.opensaml.xml.validation,org.slf4j",org.opensaml.ws.wssecurity;use
+ s:="org.joda.time,org.joda.time.format,org.opensaml.ws.soap.soap11,or
+ g.opensaml.ws.soap.soap12,org.opensaml.xml,org.opensaml.xml.encryptio
+ n,org.opensaml.xml.schema",org.opensaml.ws.wssecurity.impl;uses:="org
+ .joda.time,org.joda.time.chrono,org.joda.time.format,org.opensaml.ws.
+ soap.soap11,org.opensaml.ws.soap.soap12,org.opensaml.ws.wssecurity,or
+ g.opensaml.xml,org.opensaml.xml.encryption,org.opensaml.xml.io,org.op
+ ensaml.xml.schema,org.opensaml.xml.schema.impl,org.opensaml.xml.util,
+ org.opensaml.xml.validation,org.slf4j",org.opensaml.ws.wssecurity.uti
+ l;uses:="org.opensaml.ws.wssecurity,org.opensaml.xml,org.opensaml.xml
+ .util",org.opensaml.ws.wstrust;uses:="org.opensaml.ws.wsaddressing,or
+ g.opensaml.ws.wssecurity,org.opensaml.xml,org.opensaml.xml.schema",or
+ g.opensaml.ws.wstrust.impl;uses:="org.opensaml.ws.wsaddressing.impl,o
+ rg.opensaml.ws.wssecurity,org.opensaml.ws.wstrust,org.opensaml.xml,or
+ g.opensaml.xml.io,org.opensaml.xml.schema,org.opensaml.xml.schema.imp
+ l,org.opensaml.xml.util,org.opensaml.xml.validation,org.slf4j"
+Import-Package: java.io,java.lang,java.net,java.nio.charset,java.secur
+ ity,java.security.cert,java.util,java.util.concurrent,java.util.concu
+ rrent.locks,javax.net,javax.net.ssl,javax.security.auth.x500,javax.se
+ rvlet;version="2.5",javax.servlet.http;version="2.5",javax.xml.namesp
+ ace,net.jcip.annotations;version="0.0.0",org.apache.commons.httpclien
+ t,org.apache.commons.httpclient.auth,org.apache.commons.httpclient.me
+ thods,org.apache.commons.httpclient.params,org.apache.commons.httpcli
+ ent.protocol,org.apache.commons.httpclient.util,org.joda.time;version
+ ="1.6",org.joda.time.chrono;version="1.6",org.joda.time.format;versio
+ n="1.6",org.opensaml.xml;version="1.3.4.redhat-3",org.opensaml.xml.en
+ cryption;version="1.3.4.redhat-3",org.opensaml.xml.io;version="1.3.4.
+ redhat-3",org.opensaml.xml.parse;version="1.3.4.redhat-3",org.opensam
+ l.xml.schema;version="1.3.4.redhat-3",org.opensaml.xml.schema.impl;ve
+ rsion="1.3.4.redhat-3",org.opensaml.xml.security;version="1.3.4.redha
+ t-3",org.opensaml.xml.security.credential;version="1.3.4.redhat-3",or
+ g.opensaml.xml.security.criteria;version="1.3.4.redhat-3",org.opensam
+ l.xml.security.trust;version="1.3.4.redhat-3",org.opensaml.xml.securi
+ ty.x509;version="1.3.4.redhat-3",org.opensaml.xml.util;version="1.3.4
+ .redhat-3",org.opensaml.xml.validation;version="1.3.4.redhat-3",org.s
+ lf4j;version="1.7.2.redhat-3",org.w3c.dom

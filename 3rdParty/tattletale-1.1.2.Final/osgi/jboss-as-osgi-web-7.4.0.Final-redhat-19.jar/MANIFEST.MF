@@ -1,0 +1,60 @@
+Manifest-Version: 1.0
+Implementation-Title: JBoss Application Server: OSGi Integration WebAp
+ p
+Build-Timestamp: Fri, 11 Jul 2014 12:34:05 -0400
+Implementation-Version: 7.4.0.Final-redhat-19
+Java-Version: 1.6.0_30
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Scm-Connection: scm:git:git@github.com:jbossas/jboss-as.git/jboss-as-o
+ sgi/jboss-as-osgi-integration/jboss-as-osgi-web
+Specification-Vendor: JBoss by Red Hat
+Os-Arch: i386
+JBossAS-Release-Version: 7.4.0.Final-redhat-19
+Implementation-Vendor-Id: org.jboss.as
+Specification-Title: JBoss Application Server: OSGi Integration WebApp
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: https://github.com/jbossas/jboss-as
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-431.17.1.el6.x86_64
+Scm-Revision: b0d14b662d07cb1fcc0d8ac40c811345853866fd
+JBossAS-Release-Codename: Janus
+Created-By: Apache Maven
+Implementation-URL: http://www.jboss.org/jboss-as-parent/jboss-as-osgi
+ /jboss-as-osgi-integration/jboss-as-osgi-web
+Build-Jdk: 1.6.0_30
+Specification-Version: 7.4.0.Final-redhat-19
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.as.osgi.web
+Bundle-Description: jboss-as-osgi-web-7.4.0.Final-redhat-19
+Bundle-Name: jboss-as-osgi-web-7.4.0.Final-redhat-19
+Bundle-Version: 7.4.0.Final-redhat-19
+Export-Package: org.jboss.as.osgi.web;uses:="javax.servlet,org.apache.
+ catalina.core,org.jboss.as.controller,org.jboss.as.osgi,org.jboss.as.
+ server,org.jboss.as.server.deployment,org.jboss.as.server.deployment.
+ module,org.jboss.as.web,org.jboss.as.web.deployment,org.jboss.dmr,org
+ .jboss.msc.inject,org.jboss.msc.service,org.jboss.msc.value,org.jboss
+ .osgi.deployment.deployer,org.jboss.osgi.deployment.interceptor,org.j
+ boss.osgi.framework,org.jboss.osgi.framework.spi,org.jboss.osgi.resol
+ ver,org.jboss.vfs,org.osgi.framework"
+Import-Package: java.io,java.lang,java.util,java.util.concurrent,java.
+ util.jar,javax.servlet;version="2.5",org.apache.catalina.core;version
+ ="7.4.8.Final-redhat-4",org.jboss.as.controller;version="7.4.0.Final-
+ redhat-19",org.jboss.as.osgi;version="7.4.0.Final-redhat-19",org.jbos
+ s.as.server;version="7.4.0.Final-redhat-19",org.jboss.as.server.deplo
+ yment;version="7.4.0.Final-redhat-19",org.jboss.as.server.deployment.
+ module;version="7.4.0.Final-redhat-19",org.jboss.as.web;version="7.4.
+ 0.Final-redhat-19",org.jboss.as.web.deployment;version="7.4.0.Final-r
+ edhat-19",org.jboss.dmr;version="7.4.0.Final-redhat-19",org.jboss.msc
+ .inject;version="1.1.5.Final-redhat-1",org.jboss.msc.service;version=
+ "1.1.5.Final-redhat-1",org.jboss.msc.value;version="1.1.5.Final-redha
+ t-1",org.jboss.osgi.deployment.deployer;version="1.3.0.Final-redhat-1
+ ",org.jboss.osgi.deployment.interceptor;version="1.3.0.Final-redhat-1
+ ",org.jboss.osgi.framework;version="2.1.0.Final-redhat-1",org.jboss.o
+ sgi.framework.spi;version="2.1.0.Final-redhat-1",org.jboss.osgi.resol
+ ver;version="3.0.1.Final-redhat-1",org.jboss.vfs;version="7.4.0.Final
+ -redhat-19",org.osgi.framework;version="4.2.0.redhat-4"

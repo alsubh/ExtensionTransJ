@@ -1,0 +1,7 @@
+digraph jboss_as_clustering_api_7_4_0_Final_redhat_19_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_as_clustering -> org_jboss_logging;
+  org_jboss_as_clustering -> org_jboss_logging_annotations;
+  org_jboss_as_clustering -> org_jboss_marshalling;
+  org_jboss_as_clustering_lock -> org_jboss_as_clustering;
+}

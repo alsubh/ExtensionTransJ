@@ -1,0 +1,10 @@
+digraph jboss_as_jsf_injection_7_4_0_Final_redhat_19_dependencies {
+  node [shape = box, fontsize=10.0];
+  jboss_as_jsf_injection_7_4_0_Final_redhat_19 -> jandex_1_0_3_Final_redhat_2;
+  jboss_as_jsf_injection_7_4_0_Final_redhat_19 -> jboss_as_web_7_4_0_Final_redhat_19;
+  jboss_as_jsf_injection_7_4_0_Final_redhat_19 -> jboss_cli_client;
+  jboss_as_jsf_injection_7_4_0_Final_redhat_19 -> jboss_jsf_api_2_1_spec_2_1_28_Final_redhat_1;
+  jboss_as_jsf_injection_7_4_0_Final_redhat_19 -> jboss_servlet_api_2_5_spec_1_0_1_Final_redhat_2;
+  jboss_as_jsf_injection_7_4_0_Final_redhat_19 -> jsf_impl_1_2_15_b01_redhat_11;
+  jboss_as_jsf_injection_7_4_0_Final_redhat_19 -> jsf_impl_2_1_28_redhat_3;
+}

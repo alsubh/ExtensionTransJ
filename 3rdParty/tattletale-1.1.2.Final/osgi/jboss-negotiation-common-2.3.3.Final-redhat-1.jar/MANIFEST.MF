@@ -1,0 +1,56 @@
+Manifest-Version: 1.0
+Implementation-Title: JBoss Negotiation Common
+Build-Timestamp: Tue, 3 Jun 2014 14:14:26 -0400
+Implementation-Version: 2.3.3.Final-redhat-1
+Java-Version: 1.6.0_30
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Scm-Connection: scm:svn:http://anonsvn.jboss.org/repos/jbossas/project
+ s/security/security-negotiation/trunk/jboss-negotiation-common
+Specification-Vendor: JBoss by Red Hat
+Os-Arch: i386
+Implementation-Vendor-Id: org.jboss.security
+Specification-Title: JBoss Negotiation Common
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: http://github.com/jboss/jboss-parent-pom/jboss-negotiation-pr
+ oject/jboss-negotiation-common
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-431.17.1.el6.x86_64
+Scm-Revision: UNKNOWN
+Created-By: Apache Maven
+Implementation-URL: http://www.jboss.org
+Build-Jdk: 1.6.0_30
+Specification-Version: 2.3.3.Final-redhat-1
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.security.negotiation
+Bundle-Description: jboss-negotiation-common-2.3.3.Final-redhat-1
+Bundle-Name: jboss-negotiation-common-2.3.3.Final-redhat-1
+Bundle-Version: 2.3.3.Final-redhat-1
+Export-Package: org.jboss.security.negotiation;uses:="javax.servlet,ja
+ vax.servlet.http,org.apache.catalina,org.apache.catalina.authenticato
+ r,org.apache.catalina.connector,org.apache.catalina.deploy,org.apache
+ .catalina.util,org.apache.coyote,org.apache.tomcat.util.buf,org.apach
+ e.tomcat.util.http,org.jboss.logging,org.jboss.security.negotiation.c
+ ommon,org.jboss.servlet.http,org.picketbox.commons.cipher",org.jboss.
+ security.negotiation.cipher;uses:="javax.crypto,javax.crypto.spec,org
+ .jboss.logging,org.jboss.security.negotiation",org.jboss.security.neg
+ otiation.common;uses:="org.jboss.logging,org.jboss.security.auth.spi,
+ org.jboss.security.negotiation"
+Import-Package: java.io,java.lang,java.security,java.security.spec,jav
+ a.util,javax.crypto,javax.crypto.spec,javax.security.auth.callback,ja
+ vax.security.auth.login,javax.servlet;version="2.5",javax.servlet.htt
+ p;version="2.5",org.apache.catalina;version="7.4.8.Final-redhat-4",or
+ g.apache.catalina.authenticator;version="7.4.8.Final-redhat-4",org.ap
+ ache.catalina.connector;version="7.4.8.Final-redhat-4",org.apache.cat
+ alina.deploy;version="7.4.8.Final-redhat-4",org.apache.catalina.util;
+ version="7.4.8.Final-redhat-4",org.apache.coyote;version="7.4.8.Final
+ -redhat-4",org.apache.tomcat.util.buf;version="7.4.8.Final-redhat-4",
+ org.apache.tomcat.util.http;version="7.4.8.Final-redhat-4",org.ietf.j
+ gss,org.jboss.logging;version="7.4.0.Final-redhat-19",org.jboss.secur
+ ity.auth.spi;version="7.4.0.Final-redhat-19",org.jboss.servlet.http;v
+ ersion="7.4.8.Final-redhat-4",org.picketbox.commons.cipher;version="1
+ .0.0.final-redhat-2"

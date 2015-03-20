@@ -1,0 +1,55 @@
+Manifest-Version: 1.0
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-SymbolicName: org.apache.commons.io
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Bnd-LastModified: 1386882248557
+Implementation-Vendor-Id: commons-io
+Specification-Title: Commons IO
+Bundle-DocURL: http://commons.apache.org/io/
+Include-Resource: META-INF/LICENSE.txt=LICENSE.txt,META-INF/NOTICE.txt
+ =NOTICE.txt,META-INF/maven/commons-io/commons-io/dependency-overrides
+ .properties=/tmp/mvndepext638278789293434537/commons-io/commons-io/de
+ pendency-overrides.properties,META-INF/maven/commons-io/commons-io/pl
+ ugin-overrides.properties=/tmp/mvndepext2244607078083829792/commons-i
+ o/commons-io/plugin-overrides.properties,META-INF/maven/commons-io/co
+ mmons-io/effective-pom.xml=/tmp/mvndepext7571541657157081595/commons-
+ io/commons-io/effective-pom.xml,META-INF/NOTICE=target/maven-shared-a
+ rchive-resources/META-INF/NOTICE,META-INF/DEPENDENCIES=target/maven-s
+ hared-archive-resources/META-INF/DEPENDENCIES,META-INF/LICENSE=target
+ /maven-shared-archive-resources/META-INF/LICENSE
+Scm-Url: http://svn.apache.org/viewvc/commons/proper/io/trunk
+Export-Package: org.apache.commons.io.output;version="2.1.0.redhat-3",
+ org.apache.commons.io.monitor;version="2.1.0.redhat-3",org.apache.com
+ mons.io.filefilter;version="2.1.0.redhat-3",org.apache.commons.io.com
+ parator;version="2.1.0.redhat-3",org.apache.commons.io.input;version=
+ "2.1.0.redhat-3",org.apache.commons.io;version="2.1.0.redhat-3"
+Bundle-Name: Commons IO
+Implementation-Title: Commons IO
+Bundle-Description: The Commons IO library contains utility classes, s
+ tream implementations, file filters, file comparators and endian clas
+ ses.
+Build-Timestamp: Thu, 12 Dec 2013 16:04:03 -0500
+Implementation-Version: 2.1.redhat-3
+Java-Version: 1.6.0_28
+Scm-Connection: scm:svn:http://svn.apache.org/repos/asf/commons/proper
+ /io/trunk
+Os-Arch: amd64
+Specification-Vendor: JBoss by Red Hat
+Bundle-ManifestVersion: 2
+Java-Vendor: Sun Microsystems Inc.
+Bundle-Vendor: JBoss by Red Hat
+Os-Name: Linux
+Tool: Bnd-1.50.0
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-358.18.1.el6.x86_64
+Scm-Revision: ??????
+Bundle-Version: 2.1.0.redhat-3
+X-Compile-Target-JDK: 1.5
+Implementation-Build: UNKNOWN_BRANCH@r??????; 2013-12-12 16:04:01-0500
+X-Compile-Source-JDK: 1.5
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.6.0_28
+Implementation-URL: http://commons.apache.org/io/
+Specification-Version: 2.1.redhat-3
+

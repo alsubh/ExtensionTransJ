@@ -1,0 +1,34 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: cal10n.api
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Implementation-Vendor-Id: ch.qos.cal10n
+Specification-Title: Compiler assisted localization library (CAL10N) -
+     API
+Scm-Url: http://github.com/jboss/jboss-parent-pom/cal10n-parent/cal10n
+ -api
+Bundle-Name: cal10n-api
+Implementation-Title: cal10n-api
+Bundle-Description: Parent POM for JBoss projects. Provides default pr
+ oject build configuration.
+Build-Timestamp: Thu, 16 Jan 2014 20:51:18 -0500
+Implementation-Version: 0.7.3.redhat-4
+Java-Version: 1.6.0_28
+Scm-Connection: scm:git:git@github.com:jboss/jboss-parent-pom.git/cal1
+ 0n-parent/cal10n-api
+Specification-Vendor: QOS.ch
+Os-Arch: amd64
+Bundle-ManifestVersion: 2
+Java-Vendor: Sun Microsystems Inc.
+Bundle-Vendor: qos.ch
+Os-Name: Linux
+Implementation-Vendor: QOS.ch
+Os-Version: 2.6.32-358.18.1.el6.x86_64
+Scm-Revision: 6478ef3ce63a829a512e44cd25a09a5ab3fe2f34
+Bundle-Version: 0.7.3.redhat-4
+Created-By: Apache Maven
+Implementation-URL: http://cal10n.qos.ch/cal10n-api
+Build-Jdk: 1.6.0_28
+Specification-Version: 0.7.3.redhat-4
+

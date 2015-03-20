@@ -1,0 +1,4 @@
+digraph shrinkwrap_spi_1_1_2_redhat_1_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_shrinkwrap_spi -> org_jboss_shrinkwrap_api;
+}

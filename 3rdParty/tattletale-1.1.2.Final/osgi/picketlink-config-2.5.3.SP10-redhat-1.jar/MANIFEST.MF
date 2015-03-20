@@ -1,0 +1,63 @@
+Manifest-Version: 1.0
+Implementation-Title: PicketLink Config
+Build-Timestamp: Thu, 10 Jul 2014 14:24:57 -0400
+Implementation-Version: 2.5.3.SP10-redhat-1
+Java-Version: 1.6.0_30
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Scm-Connection: scm:git:git://github.com/picketlink/picketlink.git/mod
+ ules/picketlink-config
+Specification-Vendor: JBoss by Red Hat
+Os-Arch: i386
+Implementation-Vendor-Id: org.picketlink
+Specification-Title: PicketLink Config
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: http://github.com/picketlink/picketlink/modules/picketlink-co
+ nfig
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-431.17.1.el6.x86_64
+Scm-Revision: 3fc8b5f5cd343b70c56d4b8ee1595ceebfe85cd4
+Created-By: Apache Maven
+Implementation-URL: http://www.jboss.org/picketlink/modules/picketlink
+ -config
+Build-Jdk: 1.6.0_30
+Specification-Version: 2.5.3.SP10-redhat-1
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.picketlink.config.federation
+Bundle-Description: picketlink-config-2.5.3.SP10-redhat-1
+Bundle-Name: picketlink-config-2.5.3.SP10-redhat-1
+Bundle-Version: 2.5.3.SP10-redhat-1
+Export-Package: org.picketlink.config;uses:="org.picketlink.common,org
+ .picketlink.common.exceptions,org.picketlink.common.parsers,org.picke
+ tlink.common.util,org.picketlink.config.federation,org.picketlink.con
+ fig.federation.handler,org.picketlink.config.federation.parsers,org.p
+ icketlink.config.idm,org.picketlink.config.idm.parsers",org.picketlin
+ k.config.federation;uses:="org.picketlink.common.util,org.picketlink.
+ config.federation.handler,org.picketlink.config.idm",org.picketlink.c
+ onfig.federation.handler;uses:="org.picketlink.config.federation",org
+ .picketlink.config.federation.parsers;uses:="org.picketlink.common,or
+ g.picketlink.common.exceptions,org.picketlink.common.parsers,org.pick
+ etlink.common.util,org.picketlink.config.federation,org.picketlink.co
+ nfig.federation.handler",org.picketlink.config.idm;uses:="org.picketl
+ ink.common.exceptions,org.picketlink.common.reflection,org.picketlink
+ .config,org.picketlink.config.federation,org.picketlink.config.idm.re
+ solver,org.picketlink.idm,org.picketlink.idm.config,org.picketlink.id
+ m.config.annotation",org.picketlink.config.idm.parsers;uses:="org.pic
+ ketlink.common.exceptions,org.picketlink.common.parsers,org.picketlin
+ k.common.util,org.picketlink.config.idm",org.picketlink.config.idm.re
+ solver;uses:="org.picketlink.common.reflection,org.picketlink.config.
+ idm,org.picketlink.idm.config"
+Import-Package: java.beans,java.io,java.lang,java.lang.annotation,java
+ .lang.reflect,java.util,java.util.concurrent,javax.xml.namespace,java
+ x.xml.stream,javax.xml.stream.events,org.picketlink.common;version="2
+ .5.3.SP10-redhat-1",org.picketlink.common.exceptions;version="2.5.3.S
+ P10-redhat-1",org.picketlink.common.parsers;version="2.5.3.SP10-redha
+ t-1",org.picketlink.common.reflection;version="2.5.3.SP10-redhat-1",o
+ rg.picketlink.common.util;version="2.5.3.SP10-redhat-1",org.picketlin
+ k.idm;version="2.5.3.SP10-redhat-1",org.picketlink.idm.config;version
+ ="2.5.3.SP10-redhat-1",org.picketlink.idm.config.annotation;version="
+ 2.5.3.SP10-redhat-1"

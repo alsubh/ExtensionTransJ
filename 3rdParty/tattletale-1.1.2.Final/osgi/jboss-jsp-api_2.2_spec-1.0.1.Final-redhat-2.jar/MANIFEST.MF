@@ -1,0 +1,43 @@
+Manifest-Version: 1.0
+Bundle-License: http://repository.jboss.org/licenses/lgpl-2.1.txt
+Bundle-SymbolicName: org.jboss.spec.javax.servlet.jsp.jboss-jsp-api_2.
+ 2_spec
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Bnd-LastModified: 1345452557685
+Specification-Title: JSR-000245: JavaServer(TM) Pages 2.2
+Implementation-Vendor-Id: org.jboss.spec.javax.servlet.jsp
+Bundle-DocURL: http://www.jboss.org
+Import-Package: javax.el;version="[2.2,3)",javax.servlet;version="[3.0
+ ,4)",javax.servlet.http;version="[3.0,4)"
+Scm-Url: http://github.com/jboss/jboss-parent-pom/jboss-jsp-api_2.2_sp
+ ec
+Export-Package: javax.servlet.jsp.el;uses:="javax.servlet.jsp,javax.se
+ rvlet.http,javax.servlet,javax.el";version="2.2",javax.servlet.jsp.ta
+ gext;uses:="javax.servlet.jsp";version="2.2",javax.servlet.jsp;uses:=
+ "javax.servlet,javax.servlet.http,javax.el,javax.servlet.jsp.el,javax
+ .servlet.jsp.tagext";version="2.2"
+Bundle-Name: JavaServer(TM) Pages 2.2 API
+Implementation-Title: JavaServer(TM) Pages 2.2 API
+Bundle-Description: JSR-000245: JavaServer(TM) Pages 2.2
+Implementation-Version: 1.0.1.Final-redhat-2
+Build-Timestamp: Mon, 20 Aug 2012 04:49:16 -0400
+Java-Version: 1.6.0_24
+Scm-Connection: scm:git:git@github.com:jboss/jboss-parent-pom.git/jbos
+ s-jsp-api_2.2_spec
+Specification-Vendor: Oracle
+Os-Arch: i386
+Bundle-ManifestVersion: 2
+Java-Vendor: Sun Microsystems Inc.
+Bundle-Vendor: JBoss by Red Hat
+Os-Name: Linux
+Tool: Bnd-1.50.0
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-279.2.1.el6.x86_64
+Scm-Revision: 45e3193ce7561cdb28ac5de6e9d6b8401efc89d9
+Bundle-Version: 1.0.1.Final-redhat-2
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.6.0_24
+Specification-Version: 2.2
+Implementation-URL: http://www.jboss.org/jboss-jsp-api_2.2_spec
+

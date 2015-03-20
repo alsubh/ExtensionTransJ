@@ -1,0 +1,38 @@
+Manifest-Version: 1.0
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-SymbolicName: org.fusesource.jansi
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Bnd-LastModified: 1384998729097
+Implementation-Vendor-Id: org.fusesource.jansi
+Specification-Title: jansi
+Bundle-DocURL: http://fusesource.com/
+Import-Package: sun.reflect;resolution:=optional
+Scm-Url: http://github.com/fusesource/{forge-project-id}.git/jansi
+Export-Package: org.fusesource.jansi;version="1.9.0.redhat-4"
+Bundle-Name: jansi
+Ignore-Package: org.fusesource.jansi.internal
+Implementation-Title: jansi
+Bundle-Description: Jansi is a java library for generating and interpr
+ eting ANSI escape sequences.
+Build-Timestamp: Wed, 20 Nov 2013 20:51:57 -0500
+Implementation-Version: 1.9.redhat-4
+Java-Version: 1.6.0_28
+Scm-Connection: scm:git:git://github.com/fusesource/jansi.git/jansi
+Specification-Vendor: FuseSource, Corp.
+Os-Arch: amd64
+Bundle-ManifestVersion: 2
+Java-Vendor: Sun Microsystems Inc.
+Bundle-Vendor: FuseSource, Corp.
+Os-Name: Linux
+Tool: Bnd-1.50.0
+Implementation-Vendor: FuseSource, Corp.
+Os-Version: 2.6.32-358.18.1.el6.x86_64
+Originally-Created-By: Apache Maven Bundle Plugin
+Scm-Revision: ee16c9e6ce263c1e57d317918845f580ee3327e6
+Bundle-Version: 1.9.0.redhat-4
+Created-By: Apache Maven Bundle Plugin
+Implementation-URL: http://jansi.fusesource.org/jansi
+Build-Jdk: 1.6.0_28
+Specification-Version: 1.9.redhat-4
+

@@ -1,0 +1,10 @@
+digraph jboss_as_domain_http_interface_7_4_0_Final_redhat_19_dependencies {
+  node [shape = box, fontsize=10.0];
+  jboss_as_domain_http_interface_7_4_0_Final_redhat_19 -> httpserver_1_0_1_Final_redhat_3;
+  jboss_as_domain_http_interface_7_4_0_Final_redhat_19 -> jboss_as_controller_7_4_0_Final_redhat_19;
+  jboss_as_domain_http_interface_7_4_0_Final_redhat_19 -> jboss_as_controller_client_7_4_0_Final_redhat_19;
+  jboss_as_domain_http_interface_7_4_0_Final_redhat_19 -> jboss_as_domain_management_7_4_0_Final_redhat_19;
+  jboss_as_domain_http_interface_7_4_0_Final_redhat_19 -> jboss_cli_client;
+  jboss_as_domain_http_interface_7_4_0_Final_redhat_19 -> jboss_common_core_2_2_17_GA_redhat_2;
+  jboss_as_domain_http_interface_7_4_0_Final_redhat_19 -> wildfly_core_security_7_4_0_Final_redhat_19;
+}

@@ -1,0 +1,124 @@
+Manifest-Version: 1.0
+Implementation-Title: JBoss Application Server: OSGi Subsystem
+Build-Timestamp: Fri, 11 Jul 2014 12:34:05 -0400
+Implementation-Version: 7.4.0.Final-redhat-19
+Java-Version: 1.6.0_30
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Scm-Connection: scm:git:git@github.com:jbossas/jboss-as.git/jboss-as-o
+ sgi/jboss-as-osgi-service
+Specification-Vendor: JBoss by Red Hat
+Os-Arch: i386
+JBossAS-Release-Version: 7.4.0.Final-redhat-19
+Implementation-Vendor-Id: org.jboss.as
+Specification-Title: JBoss Application Server: OSGi Subsystem
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: https://github.com/jbossas/jboss-as
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-431.17.1.el6.x86_64
+Scm-Revision: b0d14b662d07cb1fcc0d8ac40c811345853866fd
+JBossAS-Release-Codename: Janus
+Created-By: Apache Maven
+Implementation-URL: http://www.jboss.org/jboss-as-parent/jboss-as-osgi
+ /jboss-as-osgi-service
+Build-Jdk: 1.6.0_30
+Specification-Version: 7.4.0.Final-redhat-19
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.as.osgi.parser
+Bundle-Description: jboss-as-osgi-service-7.4.0.Final-redhat-19
+Bundle-Name: jboss-as-osgi-service-7.4.0.Final-redhat-19
+Bundle-Version: 7.4.0.Final-redhat-19
+Export-Package: org.jboss.as.osgi;uses:="org.jboss.as.controller,org.j
+ boss.as.server.deployment,org.jboss.dmr,org.jboss.logging,org.jboss.l
+ ogging.annotations,org.jboss.modules,org.jboss.msc.service,org.jboss.
+ osgi.deployment.deployer,org.jboss.osgi.framework.spi,org.jboss.osgi.
+ metadata,org.jboss.osgi.resolver,org.jboss.osgi.spi,org.jboss.vfs,org
+ .osgi.framework",org.jboss.as.osgi.deployment;uses:="javax.annotation
+ ,org.jboss.as.controller,org.jboss.as.ee.component,org.jboss.as.ee.st
+ ructure,org.jboss.as.osgi,org.jboss.as.osgi.management,org.jboss.as.o
+ sgi.service,org.jboss.as.server.deployment,org.jboss.as.server.deploy
+ ment.annotation,org.jboss.as.server.deployment.module,org.jboss.as.se
+ rver.moduleservice,org.jboss.dmr,org.jboss.jandex,org.jboss.modules,o
+ rg.jboss.msc.inject,org.jboss.msc.service,org.jboss.msc.value,org.jbo
+ ss.osgi.deployment.deployer,org.jboss.osgi.framework,org.jboss.osgi.f
+ ramework.spi,org.jboss.osgi.metadata,org.jboss.osgi.resolver,org.jbos
+ s.osgi.spi,org.jboss.osgi.vfs,org.jboss.vfs,org.osgi.framework,org.os
+ gi.framework.wiring,org.osgi.service.resolver",org.jboss.as.osgi.mana
+ gement;uses:="org.jboss.as.controller,org.jboss.as.controller.operati
+ ons.validation,org.jboss.as.controller.registry,org.jboss.as.osgi,org
+ .jboss.as.osgi.parser,org.jboss.as.osgi.service,org.jboss.dmr,org.jbo
+ ss.msc.service,org.jboss.msc.value,org.jboss.osgi.framework,org.jboss
+ .osgi.framework.spi,org.jboss.osgi.resolver,org.osgi.framework,org.os
+ gi.service.startlevel",org.jboss.as.osgi.parser;uses:="org.jboss.as.c
+ ontroller,org.jboss.as.controller.descriptions,org.jboss.as.controlle
+ r.operations.common,org.jboss.as.controller.operations.validation,org
+ .jboss.as.controller.parsing,org.jboss.as.controller.persistence,org.
+ jboss.as.controller.registry,org.jboss.as.controller.transform,org.jb
+ oss.as.controller.transform.description,org.jboss.as.osgi,org.jboss.a
+ s.osgi.deployment,org.jboss.as.osgi.management,org.jboss.as.osgi.serv
+ ice,org.jboss.as.server,org.jboss.as.server.deployment,org.jboss.dmr,
+ org.jboss.msc.service,org.jboss.staxmapper",org.jboss.as.osgi.service
+ ;uses:="org.jboss.as.controller,org.jboss.as.controller.client,org.jb
+ oss.as.controller.client.helpers.standalone,org.jboss.as.controller.r
+ egistry,org.jboss.as.network,org.jboss.as.osgi,org.jboss.as.osgi.mana
+ gement,org.jboss.as.osgi.parser,org.jboss.as.server,org.jboss.as.serv
+ er.deployment,org.jboss.as.server.deployment.client,org.jboss.as.serv
+ er.deployment.module,org.jboss.as.server.moduleservice,org.jboss.dmr,
+ org.jboss.modules,org.jboss.modules.filter,org.jboss.modules.log,org.
+ jboss.msc.inject,org.jboss.msc.service,org.jboss.msc.value,org.jboss.
+ osgi.deployment.deployer,org.jboss.osgi.framework,org.jboss.osgi.fram
+ ework.spi,org.jboss.osgi.metadata,org.jboss.osgi.repository,org.jboss
+ .osgi.repository.core,org.jboss.osgi.repository.spi,org.jboss.osgi.re
+ solver,org.jboss.osgi.resolver.felix,org.jboss.osgi.spi,org.jboss.osg
+ i.vfs,org.jboss.vfs,org.osgi.framework,org.osgi.framework.wiring,org.
+ osgi.resource,org.osgi.service.packageadmin,org.osgi.service.resolver
+ ,org.osgi.service.startlevel,org.osgi.util.xml"
+Import-Package: java.io,java.lang,java.net,java.security,java.util,jav
+ a.util.concurrent,java.util.concurrent.atomic,java.util.jar,javax.ann
+ otation;version="1.1",javax.xml.stream,org.jboss.as.controller;versio
+ n="7.4.0.Final-redhat-19",org.jboss.as.controller.client;version="7.4
+ .0.Final-redhat-19",org.jboss.as.controller.client.helpers.standalone
+ ;version="7.4.0.Final-redhat-19",org.jboss.as.controller.descriptions
+ ;version="7.4.0.Final-redhat-19",org.jboss.as.controller.operations.c
+ ommon;version="7.4.0.Final-redhat-19",org.jboss.as.controller.operati
+ ons.validation;version="7.4.0.Final-redhat-19",org.jboss.as.controlle
+ r.parsing;version="7.4.0.Final-redhat-19",org.jboss.as.controller.per
+ sistence;version="7.4.0.Final-redhat-19",org.jboss.as.controller.regi
+ stry;version="7.4.0.Final-redhat-19",org.jboss.as.controller.transfor
+ m;version="7.4.0.Final-redhat-19",org.jboss.as.controller.transform.d
+ escription;version="7.4.0.Final-redhat-19",org.jboss.as.ee.component;
+ version="7.4.0.Final-redhat-19",org.jboss.as.ee.structure;version="7.
+ 4.0.Final-redhat-19",org.jboss.as.network;version="7.4.0.Final-redhat
+ -19",org.jboss.as.server;version="7.4.0.Final-redhat-19",org.jboss.as
+ .server.deployment;version="7.4.0.Final-redhat-19",org.jboss.as.serve
+ r.deployment.annotation;version="7.4.0.Final-redhat-19",org.jboss.as.
+ server.deployment.client;version="7.4.0.Final-redhat-19",org.jboss.as
+ .server.deployment.module;version="7.4.0.Final-redhat-19",org.jboss.a
+ s.server.moduleservice;version="7.4.0.Final-redhat-19",org.jboss.dmr;
+ version="7.4.0.Final-redhat-19",org.jboss.jandex;version="1.0.3.Final
+ -redhat-2",org.jboss.logging;version="7.4.0.Final-redhat-19",org.jbos
+ s.logging.annotations,org.jboss.modules;version="7.4.0.Final-redhat-1
+ 9",org.jboss.modules.filter;version="7.4.0.Final-redhat-19",org.jboss
+ .modules.log;version="7.4.0.Final-redhat-19",org.jboss.msc.inject;ver
+ sion="1.1.5.Final-redhat-1",org.jboss.msc.service;version="1.1.5.Fina
+ l-redhat-1",org.jboss.msc.value;version="1.1.5.Final-redhat-1",org.jb
+ oss.osgi.deployment.deployer;version="1.3.0.Final-redhat-1",org.jboss
+ .osgi.framework;version="2.1.0.Final-redhat-1",org.jboss.osgi.framewo
+ rk.spi;version="2.1.0.Final-redhat-1",org.jboss.osgi.metadata;version
+ ="2.2.0.Final-redhat-1",org.jboss.osgi.repository;version="2.1.0.Fina
+ l-redhat-1",org.jboss.osgi.repository.core;version="2.1.0.Final-redha
+ t-1",org.jboss.osgi.repository.spi;version="2.1.0.Final-redhat-1",org
+ .jboss.osgi.resolver;version="3.0.1.Final-redhat-1",org.jboss.osgi.re
+ solver.felix;version="3.0.1.Final-redhat-1",org.jboss.osgi.spi;versio
+ n="3.2.0.Final-redhat-1",org.jboss.osgi.vfs;version="1.2.1.Final-redh
+ at-1",org.jboss.staxmapper;version="7.4.0.Final-redhat-19",org.jboss.
+ vfs;version="7.4.0.Final-redhat-19",org.osgi.framework;version="4.2.0
+ .redhat-4",org.osgi.framework.wiring;version="3.0.1.Final-redhat-1",o
+ rg.osgi.resource;version="3.0.1.Final-redhat-1",org.osgi.service.pack
+ ageadmin;version="4.2.0.redhat-4",org.osgi.service.resolver;version="
+ 3.0.1.Final-redhat-1",org.osgi.service.startlevel;version="4.2.0.redh
+ at-4",org.osgi.util.xml;version="3.0.1.Final-redhat-1"

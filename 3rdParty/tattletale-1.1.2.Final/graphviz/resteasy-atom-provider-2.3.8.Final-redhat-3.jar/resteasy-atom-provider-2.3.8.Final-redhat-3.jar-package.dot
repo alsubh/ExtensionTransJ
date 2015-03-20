@@ -1,0 +1,10 @@
+digraph resteasy_atom_provider_2_3_8_Final_redhat_3_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_resteasy_plugins_providers_atom -> com_sun_xml_bind_marshaller;
+  org_jboss_resteasy_plugins_providers_atom -> javax_ws_rs;
+  org_jboss_resteasy_plugins_providers_atom -> javax_ws_rs_core;
+  org_jboss_resteasy_plugins_providers_atom -> javax_ws_rs_ext;
+  org_jboss_resteasy_plugins_providers_atom -> org_jboss_resteasy_plugins_providers_jaxb;
+  org_jboss_resteasy_plugins_providers_atom -> org_jboss_resteasy_spi;
+  org_jboss_resteasy_plugins_providers_atom_app -> org_jboss_resteasy_plugins_providers_atom;
+}

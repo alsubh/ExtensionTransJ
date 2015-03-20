@@ -1,0 +1,46 @@
+Manifest-Version: 1.0
+Implementation-Title: ShrinkWrap API
+Implementation-Version: 1.1.2.redhat-1
+Build-Timestamp: Tue, 24 Sep 2013 00:06:12 -0400
+Archiver-Version: Plexus Archiver
+Java-Version: 1.6.0_24
+Built-By: mockbuild
+Scm-Connection: scm:git:git://github.com/shrinkwrap/shrinkwrap.git/shr
+ inkwrap-api
+Specification-Vendor: JBoss by Red Hat
+Os-Arch: amd64
+Specification-Title: ShrinkWrap API
+Implementation-Vendor-Id: org.jboss.shrinkwrap
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: https://github.com/shrinkwrap/shrinkwrap/shrinkwrap-api
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-358.18.1.el6.x86_64
+Scm-Revision: f3b6be0a61839d1ffde8d8a6de927c96fbcceb66
+Created-By: Apache Maven
+Build-Jdk: 1.6.0_24
+Specification-Version: 1.1.2.redhat-1
+Implementation-URL: http://www.jboss.org/shrinkwrap-api
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.shrinkwrap.api
+Bundle-Description: shrinkwrap-api-1.1.2.redhat-1
+Bundle-Name: shrinkwrap-api-1.1.2.redhat-1
+Bundle-Version: 1.1.2.redhat-1
+Export-Package: org.jboss.shrinkwrap.api;uses:="org.jboss.shrinkwrap.a
+ pi.asset,org.jboss.shrinkwrap.api.formatter,org.jboss.shrinkwrap.api.
+ importer",org.jboss.shrinkwrap.api.asset;uses:="org.jboss.shrinkwrap.
+ api,org.jboss.shrinkwrap.api.exporter",org.jboss.shrinkwrap.api.class
+ loader;uses:="org.jboss.shrinkwrap.api,org.jboss.shrinkwrap.api.asset
+ ",org.jboss.shrinkwrap.api.container;uses:="org.jboss.shrinkwrap.api,
+ org.jboss.shrinkwrap.api.asset",org.jboss.shrinkwrap.api.exporter;use
+ s:="org.jboss.shrinkwrap.api",org.jboss.shrinkwrap.api.formatter;uses
+ :="org.jboss.shrinkwrap.api,org.jboss.shrinkwrap.api.asset",org.jboss
+ .shrinkwrap.api.importer;uses:="org.jboss.shrinkwrap.api",org.jboss.s
+ hrinkwrap.api.serialization;uses:="org.jboss.shrinkwrap.api",org.jbos
+ s.shrinkwrap.api.spec;uses:="org.jboss.shrinkwrap.api,org.jboss.shrin
+ kwrap.api.container"
+Import-Package: java.io,java.lang,java.lang.reflect,java.net,java.secu
+ rity,java.util,java.util.concurrent,java.util.logging,java.util.zip

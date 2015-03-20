@@ -1,0 +1,4 @@
+digraph jul_to_slf4j_stub_1_0_1_Final_redhat_1_dependencies {
+  node [shape = box, fontsize=10.0];
+  jul_to_slf4j_stub_1_0_1_Final_redhat_1 -> slf4j_api_1_7_2_redhat_3;
+}

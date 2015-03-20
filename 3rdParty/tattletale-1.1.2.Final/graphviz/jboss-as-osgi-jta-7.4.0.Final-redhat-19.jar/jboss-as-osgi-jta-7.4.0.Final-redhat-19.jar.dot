@@ -1,0 +1,9 @@
+digraph jboss_as_osgi_jta_7_4_0_Final_redhat_19_dependencies {
+  node [shape = box, fontsize=10.0];
+  jboss_as_osgi_jta_7_4_0_Final_redhat_19 -> jbosgi_framework_core_2_1_0_Final_redhat_1;
+  jboss_as_osgi_jta_7_4_0_Final_redhat_19 -> jboss_as_osgi_service_7_4_0_Final_redhat_19;
+  jboss_as_osgi_jta_7_4_0_Final_redhat_19 -> jboss_as_transactions_7_4_0_Final_redhat_19;
+  jboss_as_osgi_jta_7_4_0_Final_redhat_19 -> jboss_client;
+  jboss_as_osgi_jta_7_4_0_Final_redhat_19 -> jboss_msc_1_1_5_Final_redhat_1;
+  jboss_as_osgi_jta_7_4_0_Final_redhat_19 -> org_osgi_core_4_2_0_redhat_4;
+}

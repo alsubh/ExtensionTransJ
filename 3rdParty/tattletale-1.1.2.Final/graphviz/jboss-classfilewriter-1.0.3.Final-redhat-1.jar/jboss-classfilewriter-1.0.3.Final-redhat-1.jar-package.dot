@@ -1,0 +1,23 @@
+digraph jboss_classfilewriter_1_0_3_Final_redhat_1_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_classfilewriter -> org_jboss_classfilewriter_annotations;
+  org_jboss_classfilewriter -> org_jboss_classfilewriter_attributes;
+  org_jboss_classfilewriter -> org_jboss_classfilewriter_code;
+  org_jboss_classfilewriter -> org_jboss_classfilewriter_constpool;
+  org_jboss_classfilewriter -> org_jboss_classfilewriter_util;
+  org_jboss_classfilewriter_annotations -> org_jboss_classfilewriter;
+  org_jboss_classfilewriter_annotations -> org_jboss_classfilewriter_attributes;
+  org_jboss_classfilewriter_annotations -> org_jboss_classfilewriter_constpool;
+  org_jboss_classfilewriter_annotations -> org_jboss_classfilewriter_util;
+  org_jboss_classfilewriter_attributes -> org_jboss_classfilewriter;
+  org_jboss_classfilewriter_attributes -> org_jboss_classfilewriter_code;
+  org_jboss_classfilewriter_attributes -> org_jboss_classfilewriter_constpool;
+  org_jboss_classfilewriter_attributes -> org_jboss_classfilewriter_util;
+  org_jboss_classfilewriter_code -> org_jboss_classfilewriter;
+  org_jboss_classfilewriter_code -> org_jboss_classfilewriter_attributes;
+  org_jboss_classfilewriter_code -> org_jboss_classfilewriter_constpool;
+  org_jboss_classfilewriter_code -> org_jboss_classfilewriter_util;
+  org_jboss_classfilewriter_constpool -> org_jboss_classfilewriter;
+  org_jboss_classfilewriter_constpool -> org_jboss_classfilewriter_util;
+  org_jboss_classfilewriter_util -> org_jboss_classfilewriter_code;
+}

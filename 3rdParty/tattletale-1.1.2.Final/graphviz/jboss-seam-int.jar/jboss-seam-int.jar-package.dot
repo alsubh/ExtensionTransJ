@@ -1,0 +1,10 @@
+digraph jboss_seam_int_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_seam_integration_jbossas_jms -> org_jboss_seam;
+  org_jboss_seam_integration_jbossas_jms -> org_jboss_seam_annotations;
+  org_jboss_seam_integration_jbossas_jms -> org_jboss_seam_annotations_intercept;
+  org_jboss_seam_integration_jbossas_jms -> org_jboss_seam_jms;
+  org_jboss_seam_integration_jbossas_vfs -> org_jboss_seam_deployment;
+  org_jboss_seam_integration_jbossas_vfs -> org_jboss_seam_log;
+  org_jboss_seam_integration_jbossas_vfs -> org_jboss_vfs;
+}

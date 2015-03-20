@@ -1,0 +1,36 @@
+Manifest-Version: 1.0
+Implementation-Title: JBoss IIOP Client
+Implementation-Version: 1.0.0.Final-redhat-2
+Build-Timestamp: Mon, 20 Aug 2012 05:59:29 -0400
+Archiver-Version: Plexus Archiver
+Java-Version: 1.6.0_24
+Built-By: mockbuild
+Scm-Connection: scm:git:git@github.com:jbossas/jboss-iiop-client.git
+Specification-Vendor: JBoss by Red Hat
+Os-Arch: i386
+Specification-Title: JBoss IIOP Client
+Implementation-Vendor-Id: org.jboss
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: https://github.com/jbossas/jboss-iiop-client
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-279.2.1.el6.x86_64
+Scm-Revision: 94d30a8d3f0701eda93320e25a8156ee17d047c6
+Created-By: Apache Maven
+Build-Jdk: 1.6.0_24
+Specification-Version: 1.0.0.Final-redhat-2
+Implementation-URL: http://www.jboss.org/jboss-iiop-client
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.ejb.iiop
+Bundle-Description: jboss-iiop-client-1.0.0.Final-redhat-2
+Bundle-Name: jboss-iiop-client-1.0.0.Final-redhat-2
+Bundle-Version: 1.0.0.Final-redhat-2
+Export-Package: org.jboss.ejb.iiop;uses:="javax.ejb,javax.ejb.spi"
+Import-Package: java.io,java.lang,java.rmi,javax.ejb;version="7.4.0.Fi
+ nal-redhat-19",javax.ejb.spi;version="7.4.0.Final-redhat-19",javax.na
+ ming,javax.rmi;version="1.0.4.Final-redhat-2",javax.rmi.CORBA;version
+ ="1.0.4.Final-redhat-2",org.omg.CORBA;version="2.3.2.redhat-6",org.om
+ g.CORBA.portable;version="2.3.2.redhat-6"

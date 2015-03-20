@@ -1,0 +1,38 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: slf4j.ext
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Specification-Title: SLF4J Extensions Module
+Implementation-Vendor-Id: org.slf4j
+Import-Package: org.slf4j;version=1.7.2.redhat-3, org.slf4j.spi;versio
+ n=1.7.2.redhat-3, org.slf4j.helpers;version=1.7.2.redhat-3, ch.qos.ca
+ l10n;version=0.7.4
+Scm-Url: https://github.com/jamezp/slf4j/slf4j-ext
+Boot-Class-Path: ../../../../javassist/javassist/3.4.GA/javassist-3.4.
+ GA.jar javassist-3.4.GA.jar javassist.jar
+Premain-Class: org.slf4j.agent.AgentPremain
+Export-Package: org.slf4j.profiler;version=1.7.2.redhat-3, org.slf4j.c
+ al10n;version=1.7.2.redhat-3, org.slf4j.ext;version=1.7.2.redhat-3
+Bundle-Name: slf4j-log4j12
+Implementation-Title: slf4j-ext
+Bundle-Description: Extensions to the SLF4J API
+Build-Timestamp: Thu, 14 Nov 2013 23:24:42 -0500
+Implementation-Version: 1.7.2.redhat-3
+Java-Version: 1.6.0_28
+Scm-Connection: git@github.com:jamezp/slf4j.git/slf4j-ext
+Specification-Vendor: QOS.ch
+Os-Arch: i386
+Bundle-ManifestVersion: 2
+Java-Vendor: Sun Microsystems Inc.
+Bundle-Vendor: SLF4J.ORG
+Os-Name: Linux
+Implementation-Vendor: QOS.ch
+Os-Version: 2.6.32-358.18.1.el6.x86_64
+Bundle-Version: 1.7.2.redhat-3
+Scm-Revision: 4d6a67a9e3584f2838c5a79208d0d7f7910589e2
+Created-By: Apache Maven
+Build-Jdk: 1.6.0_28
+Specification-Version: 1.7.2.redhat-3
+Implementation-URL: http://www.slf4j.org
+

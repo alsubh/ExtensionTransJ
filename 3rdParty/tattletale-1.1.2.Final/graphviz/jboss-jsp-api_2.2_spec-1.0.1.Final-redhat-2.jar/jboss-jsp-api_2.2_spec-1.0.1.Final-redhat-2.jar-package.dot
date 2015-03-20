@@ -1,0 +1,13 @@
+digraph jboss_jsp_api_2_2_spec_1_0_1_Final_redhat_2_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  javax_servlet_jsp -> javax_el;
+  javax_servlet_jsp -> javax_servlet;
+  javax_servlet_jsp -> javax_servlet_http;
+  javax_servlet_jsp -> javax_servlet_jsp_el;
+  javax_servlet_jsp -> javax_servlet_jsp_tagext;
+  javax_servlet_jsp_el -> javax_el;
+  javax_servlet_jsp_el -> javax_servlet;
+  javax_servlet_jsp_el -> javax_servlet_http;
+  javax_servlet_jsp_el -> javax_servlet_jsp;
+  javax_servlet_jsp_tagext -> javax_servlet_jsp;
+}

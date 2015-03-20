@@ -1,0 +1,87 @@
+Manifest-Version: 1.0
+Implementation-Title: JBoss Application Server: Distributed Web Sessio
+ n Infinispan provider
+Build-Timestamp: Fri, 11 Jul 2014 12:34:05 -0400
+Implementation-Version: 7.4.0.Final-redhat-19
+Java-Version: 1.6.0_30
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Scm-Connection: scm:git:git@github.com:jbossas/jboss-as.git/jboss-as-c
+ lustering/jboss-as-clustering-web-infinispan
+Specification-Vendor: JBoss by Red Hat
+Os-Arch: i386
+JBossAS-Release-Version: 7.4.0.Final-redhat-19
+Implementation-Vendor-Id: org.jboss.as
+Specification-Title: JBoss Application Server: Distributed Web Session
+  Infinispan provider
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: https://github.com/jbossas/jboss-as
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-431.17.1.el6.x86_64
+Scm-Revision: b0d14b662d07cb1fcc0d8ac40c811345853866fd
+JBossAS-Release-Codename: Janus
+Created-By: Apache Maven
+Implementation-URL: http://www.jboss.org/jboss-as-parent/jboss-as-clus
+ tering/jboss-as-clustering-web-infinispan
+Build-Jdk: 1.6.0_30
+Specification-Version: 7.4.0.Final-redhat-19
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.as.clustering.web.infinispan
+Bundle-Description: jboss-as-clustering-web-infinispan-7.4.0.Final-red
+ hat-19
+Bundle-Name: jboss-as-clustering-web-infinispan-7.4.0.Final-redhat-19
+Bundle-Version: 7.4.0.Final-redhat-19
+Export-Package: org.jboss.as.clustering.web.infinispan;uses:="javax.tr
+ ansaction,org.infinispan,org.infinispan.affinity,org.infinispan.confi
+ guration.cache,org.infinispan.context,org.infinispan.distribution,org
+ .infinispan.manager,org.infinispan.notifications,org.infinispan.notif
+ ications.cachelistener.annotation,org.infinispan.notifications.cachel
+ istener.event,org.infinispan.remoting.transport,org.infinispan.transa
+ ction,org.jboss.as.clustering.infinispan.affinity,org.jboss.as.cluste
+ ring.infinispan.atomic,org.jboss.as.clustering.infinispan.invoker,org
+ .jboss.as.clustering.infinispan.io,org.jboss.as.clustering.infinispan
+ .subsystem,org.jboss.as.clustering.lock,org.jboss.as.clustering.lock.
+ impl,org.jboss.as.clustering.msc,org.jboss.as.clustering.registry,org
+ .jboss.as.clustering.web,org.jboss.as.clustering.web.impl,org.jboss.l
+ ogging,org.jboss.logging.annotations,org.jboss.metadata.web.jboss,org
+ .jboss.msc.inject,org.jboss.msc.service,org.jboss.msc.value,org.jboss
+ .tm",org.jboss.as.clustering.web.sso.infinispan;uses:="org.infinispan
+ ,org.infinispan.context,org.infinispan.notifications,org.infinispan.n
+ otifications.cachelistener.annotation,org.infinispan.notifications.ca
+ chelistener.event,org.jboss.as.clustering.infinispan.atomic,org.jboss
+ .as.clustering.infinispan.invoker,org.jboss.as.clustering.infinispan.
+ subsystem,org.jboss.as.clustering.web.sso,org.jboss.logging,org.jboss
+ .msc.inject,org.jboss.msc.service,org.jboss.msc.value"
+Import-Package: java.io,java.lang,java.util,java.util.concurrent,javax
+ .transaction;version="7.4.0.Final-redhat-19",org.infinispan;version="
+ 5.2.10.Final-redhat-1",org.infinispan.affinity;version="5.2.10.Final-
+ redhat-1",org.infinispan.configuration.cache;version="5.2.10.Final-re
+ dhat-1",org.infinispan.context;version="5.2.10.Final-redhat-1",org.in
+ finispan.distribution;version="5.2.10.Final-redhat-1",org.infinispan.
+ manager;version="5.2.10.Final-redhat-1",org.infinispan.notifications;
+ version="5.2.10.Final-redhat-1",org.infinispan.notifications.cachelis
+ tener.annotation;version="5.2.10.Final-redhat-1",org.infinispan.notif
+ ications.cachelistener.event;version="5.2.10.Final-redhat-1",org.infi
+ nispan.remoting.transport;version="5.2.10.Final-redhat-1",org.infinis
+ pan.transaction;version="5.2.10.Final-redhat-1",org.jboss.as.clusteri
+ ng.infinispan.affinity;version="7.4.0.Final-redhat-19",org.jboss.as.c
+ lustering.infinispan.atomic;version="7.4.0.Final-redhat-19",org.jboss
+ .as.clustering.infinispan.invoker;version="7.4.0.Final-redhat-19",org
+ .jboss.as.clustering.infinispan.io;version="7.4.0.Final-redhat-19",or
+ g.jboss.as.clustering.infinispan.subsystem;version="7.4.0.Final-redha
+ t-19",org.jboss.as.clustering.lock;version="7.4.0.Final-redhat-19",or
+ g.jboss.as.clustering.lock.impl;version="7.4.0.Final-redhat-19",org.j
+ boss.as.clustering.msc;version="7.4.0.Final-redhat-19",org.jboss.as.c
+ lustering.registry;version="7.4.0.Final-redhat-19",org.jboss.as.clust
+ ering.web;version="7.4.0.Final-redhat-19",org.jboss.as.clustering.web
+ .impl;version="7.4.0.Final-redhat-19",org.jboss.as.clustering.web.sso
+ ;version="7.4.0.Final-redhat-19",org.jboss.logging;version="7.4.0.Fin
+ al-redhat-19",org.jboss.logging.annotations,org.jboss.metadata.web.jb
+ oss;version="7.1.0.Final-redhat-1",org.jboss.msc.inject;version="1.1.
+ 5.Final-redhat-1",org.jboss.msc.service;version="1.1.5.Final-redhat-1
+ ",org.jboss.msc.value;version="1.1.5.Final-redhat-1",org.jboss.tm;ver
+ sion="7.1.0.Final-redhat-1"

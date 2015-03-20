@@ -1,0 +1,13 @@
+digraph picketbox_4_0_19_SP8_redhat_1_dependencies {
+  node [shape = box, fontsize=10.0];
+  picketbox_4_0_19_SP8_redhat_1 -> hibernate_core_4_2_14_SP1_redhat_1;
+  picketbox_4_0_19_SP8_redhat_1 -> hibernate_jpa_2_0_api_1_0_1_Final_redhat_2;
+  picketbox_4_0_19_SP8_redhat_1 -> jboss_cli_client;
+  picketbox_4_0_19_SP8_redhat_1 -> jboss_client;
+  picketbox_4_0_19_SP8_redhat_1 -> jboss_connector_api_1_6_spec_1_0_1_Final_redhat_2;
+  picketbox_4_0_19_SP8_redhat_1 -> jboss_jacc_api_1_4_spec_1_0_3_Final_redhat_1;
+  picketbox_4_0_19_SP8_redhat_1 -> jboss_jaspi_api_1_0_spec_1_0_1_Final_redhat_2;
+  picketbox_4_0_19_SP8_redhat_1 -> jboss_jaxb_api_2_2_spec_1_0_4_Final_redhat_2;
+  picketbox_4_0_19_SP8_redhat_1 -> jboss_servlet_api_2_5_spec_1_0_1_Final_redhat_2;
+  picketbox_4_0_19_SP8_redhat_1 -> jbossxacml_2_0_8_Final_redhat_5;
+}

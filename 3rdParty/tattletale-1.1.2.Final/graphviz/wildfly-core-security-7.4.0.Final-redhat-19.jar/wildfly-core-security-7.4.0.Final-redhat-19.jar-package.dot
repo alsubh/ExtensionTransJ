@@ -1,0 +1,6 @@
+digraph wildfly_core_security_7_4_0_Final_redhat_19_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_as_core_security -> org_jboss_as_core_security_api;
+  org_jboss_as_core_security -> org_jboss_logging;
+  org_jboss_as_core_security -> org_jboss_logging_annotations;
+}

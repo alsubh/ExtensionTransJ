@@ -1,0 +1,76 @@
+Manifest-Version: 1.0
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-SymbolicName: org.apache.commons.configuration
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Bnd-LastModified: 1381922918491
+Implementation-Vendor-Id: commons-configuration
+Specification-Title: Commons Configuration
+Bundle-DocURL: http://commons.apache.org/configuration/
+Include-Resource: META-INF/LICENSE.txt=LICENSE.txt,META-INF/NOTICE.txt
+ =NOTICE.txt,digesterRules.xml=conf/digesterRules.xml,properties.dtd=c
+ onf/properties.dtd,PropertyList-1.0.dtd=conf/PropertyList-1.0.dtd,MET
+ A-INF/maven/commons-configuration/commons-configuration/dependency-ov
+ errides.properties=/tmp/mvndepext8229227883743100464/commons-configur
+ ation/commons-configuration/dependency-overrides.properties,META-INF/
+ maven/commons-configuration/commons-configuration/plugin-overrides.pr
+ operties=/tmp/mvndepext9168638406411530678/commons-configuration/comm
+ ons-configuration/plugin-overrides.properties,META-INF/maven/commons-
+ configuration/commons-configuration/effective-pom.xml=/tmp/mvndepext2
+ 45257864255222145/commons-configuration/commons-configuration/effecti
+ ve-pom.xml,META-INF/NOTICE=target/maven-shared-archive-resources/META
+ -INF/NOTICE,META-INF/DEPENDENCIES=target/maven-shared-archive-resourc
+ es/META-INF/DEPENDENCIES,META-INF/LICENSE=target/maven-shared-archive
+ -resources/META-INF/LICENSE
+Import-Package: javax.naming,javax.servlet,javax.sql,javax.xml.parsers
+ ,javax.xml.transform,javax.xml.transform.dom,javax.xml.transform.stre
+ am,org.apache.commons.beanutils,org.apache.commons.codec.binary,org.a
+ pache.commons.collections,org.apache.commons.collections.iterators,or
+ g.apache.commons.collections.map,org.apache.commons.collections.set,o
+ rg.apache.commons.digester,org.apache.commons.digester.substitution,o
+ rg.apache.commons.digester.xmlrules,org.apache.commons.jxpath,org.apa
+ che.commons.jxpath.ri,org.apache.commons.jxpath.ri.compiler,org.apach
+ e.commons.jxpath.ri.model,org.apache.commons.lang,org.apache.commons.
+ lang.exception,org.apache.commons.lang.text,org.apache.commons.loggin
+ g,org.apache.commons.logging.impl,org.apache.tools.ant.taskdefs,org.w
+ 3c.dom,org.xml.sax,org.xml.sax.helpers
+Scm-Url: http://svn.apache.org/viewvc/commons/proper/configuration/tru
+ nk
+Export-Package: org.apache.commons.configuration.web;version="1.6.0.re
+ dhat-3",org.apache.commons.configuration.reloading;version="1.6.0.red
+ hat-3",org.apache.commons.configuration.tree;version="1.6.0.redhat-3"
+ ,org.apache.commons.configuration.event;version="1.6.0.redhat-3",org.
+ apache.commons.configuration.plist;version="1.6.0.redhat-3",org.apach
+ e.commons.configuration.tree.xpath;version="1.6.0.redhat-3",org.apach
+ e.commons.configuration.beanutils;version="1.6.0.redhat-3",org.apache
+ .commons.configuration.interpol;version="1.6.0.redhat-3",org.apache.c
+ ommons.configuration;version="1.6.0.redhat-3"
+Bundle-Name: Commons Configuration
+Implementation-Title: Commons Configuration
+Bundle-Description: Tools to assist in the reading of configuration/pr
+ eferences files in        various formats
+Build-Timestamp: Wed, 16 Oct 2013 07:28:34 -0400
+Implementation-Version: 1.6.redhat-3
+Java-Version: 1.6.0_24
+Scm-Connection: scm:svn:http://svn.apache.org/repos/asf/commons/proper
+ /configuration/trunk
+Os-Arch: amd64
+Specification-Vendor: JBoss by Red Hat
+Bundle-ManifestVersion: 2
+Java-Vendor: Sun Microsystems Inc.
+Bundle-Vendor: JBoss by Red Hat
+Os-Name: Linux
+Tool: Bnd-1.50.0
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-358.18.1.el6.x86_64
+Scm-Revision: ??????
+Bundle-Version: 1.6.0.redhat-3
+X-Compile-Target-JDK: 1.3
+Implementation-Build: UNKNOWN_BRANCH@r??????; 2013-10-16 07:28:18-0400
+Private-Package: .
+X-Compile-Source-JDK: 1.3
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.6.0_24
+Implementation-URL: http://commons.apache.org/configuration/
+Specification-Version: 1.6.redhat-3
+

@@ -1,0 +1,38 @@
+Manifest-Version: 1.0
+Implementation-Title: SLF4J: JBoss Log Manager
+Build-Timestamp: Fri, 28 Mar 2014 05:58:48 -0400
+Implementation-Version: 1.0.3.GA-redhat-1
+Java-Version: 1.6.0_30
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Scm-Connection: scm:git:git@github.com:jboss/jboss-parent-pom.git/slf4
+ j-jboss-logmanager
+Specification-Vendor: JBoss by Red Hat
+Os-Arch: i386
+Implementation-Vendor-Id: org.jboss.slf4j
+Specification-Title: SLF4J: JBoss Log Manager
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: http://github.com/jboss/jboss-parent-pom/slf4j-jboss-logmanag
+ er
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-431.5.1.el6.x86_64
+Scm-Revision: 4878c4a50d60326db5699a08c34f99ece8b21d93
+Created-By: Apache Maven
+Implementation-URL: http://www.jboss.org/slf4j-jboss-logmanager
+Build-Jdk: 1.6.0_30
+Specification-Version: 1.0.3.GA-redhat-1
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.slf4j.impl
+Bundle-Description: slf4j-jboss-logmanager-1.0.3.GA-redhat-1
+Bundle-Name: slf4j-jboss-logmanager-1.0.3.GA-redhat-1
+Bundle-Version: 1.0.3.GA-redhat-1
+Export-Package: org.slf4j.impl;uses:="org.jboss.logmanager,org.slf4j,o
+ rg.slf4j.helpers,org.slf4j.spi"
+Import-Package: java.io,java.lang,java.security,java.util,java.util.lo
+ gging,org.jboss.logmanager;version="7.4.0.Final-redhat-19",org.slf4j;
+ version="1.7.2.redhat-3",org.slf4j.helpers;version="1.7.2.redhat-3",o
+ rg.slf4j.spi;version="1.7.2.redhat-3"

@@ -1,0 +1,8 @@
+digraph resteasy_hibernatevalidator_provider_2_3_8_Final_redhat_3_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_resteasy_plugins_validation_hibernate -> javax_validation;
+  org_jboss_resteasy_plugins_validation_hibernate -> javax_ws_rs_ext;
+  org_jboss_resteasy_plugins_validation_hibernate -> org_hibernate_validator_method;
+  org_jboss_resteasy_plugins_validation_hibernate -> org_jboss_resteasy_spi_validation;
+  org_jboss_resteasy_plugins_validation_hibernate -> org_jboss_resteasy_util;
+}

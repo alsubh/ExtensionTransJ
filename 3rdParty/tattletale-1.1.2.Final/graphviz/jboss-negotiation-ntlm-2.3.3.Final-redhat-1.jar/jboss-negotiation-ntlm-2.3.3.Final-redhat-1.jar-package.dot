@@ -1,0 +1,7 @@
+digraph jboss_negotiation_ntlm_2_3_3_Final_redhat_1_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_security_negotiation_ntlm -> org_jboss_security_negotiation;
+  org_jboss_security_negotiation_ntlm -> org_jboss_security_negotiation_ntlm_encoding;
+  org_jboss_security_negotiation_ntlm_encoding -> org_jboss_security_negotiation;
+  org_jboss_security_negotiation_ntlm_encoding -> org_jboss_security_negotiation_ntlm;
+}

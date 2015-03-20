@@ -1,0 +1,131 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: javax.faces.jsf-impl
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Bnd-LastModified: 1399389272476
+Implementation-Vendor-Id: com.sun
+Specification-Title: JavaServer Faces
+Include-Resource: META-INF=build/classes/META-INF
+Import-Package: groovy.lang;resolution:=optional,groovy.util;resolutio
+ n:=optional,javax.annotation,javax.crypto,javax.crypto.spec,javax.el;
+ version="2.1",javax.faces;version="1.2",javax.faces.application;versi
+ on="1.2",javax.faces.component;version="1.2",javax.faces.context;vers
+ ion="1.2",javax.faces.convert;version="1.2",javax.faces.el;version="1
+ .2",javax.faces.event;version="1.2",javax.faces.lifecycle;version="1.
+ 2",javax.faces.model;version="1.2",javax.faces.render;version="1.2",j
+ avax.faces.validator;version="1.2",javax.faces.webapp;version="1.2",j
+ avax.servlet;version="2.4",javax.servlet.http;version="2.4",javax.ser
+ vlet.jsp;version="2.1",javax.servlet.jsp.jstl.core;version="1.2",java
+ x.servlet.jsp.tagext;version="2.1",javax.xml.parsers,javax.xml.transf
+ orm,javax.xml.transform.dom,javax.xml.transform.stream,javax.xml.vali
+ dation,javax.xml.xpath,org.apache;resolution:=optional,org.mortbay.je
+ tty.annotations;resolution:=optional;version="6.1.4",org.mortbay.jett
+ y.plus.annotation;resolution:=optional;version="6.1.4",org.w3c.dom,or
+ g.w3c.dom.ls
+Scm-Url: http://git.app.eng.bos.redhat.com/javaserverfaces-sources.git
+ /jsf-impl
+Export-Package: com.sun.faces.mgbean;uses:="javax.el,javax.faces.conte
+ xt,com.sun.faces.application,com.sun.faces.util,com.sun.faces,javax.f
+ aces,javax.faces.component,javax.faces.application,com.sun.faces.el,c
+ om.sun.faces.spi",com.sun.faces.io,com.sun.faces.context;uses:="javax
+ .el,javax.faces.render,javax.faces.context,com.sun.faces.config,com.s
+ un.faces.util,javax.servlet,javax.faces,javax.faces.component,javax.f
+ aces.application,com.sun.faces.el,javax.faces.lifecycle,javax.servlet
+ .http",com.sun.faces.renderkit;uses:="com.sun.faces.io,javax.faces.co
+ ntext,javax.faces,javax.faces.component,javax.faces.application,com.s
+ un.faces.spi,javax.faces.render,javax.faces.model,com.sun.faces.confi
+ g,com.sun.faces.util,javax.crypto,javax.faces.event,javax.crypto.spec
+ ,com.sun.faces.renderkit.html_basic,javax.servlet.http",com.sun.faces
+ .config.configprovider;uses:="javax.faces,javax.servlet,com.sun.faces
+ .config,com.sun.faces.util",com.sun.faces.lifecycle;uses:="javax.el,j
+ avax.faces.render,com.sun.faces.renderkit,javax.faces.context,com.sun
+ .faces.application,com.sun.faces.config,com.sun.faces.util,javax.face
+ s.event,javax.faces,javax.faces.component,javax.faces.application,com
+ .sun.faces.el,javax.faces.lifecycle",com.sun.faces.application;uses:=
+ "com.sun.faces.mgbean,com.sun.faces.io,javax.faces.context,javax.face
+ s.validator,com.sun.faces,javax.faces,javax.servlet,javax.faces.compo
+ nent,javax.faces.application,com.sun.faces.scripting,javax.faces.el,j
+ avax.faces.convert,com.sun.faces.el,com.sun.faces.spi,javax.el,javax.
+ faces.render,com.sun.faces.renderkit,com.sun.faces.lifecycle,javax.se
+ rvlet.jsp.jstl.core,com.sun.faces.config,com.sun.faces.util,javax.fac
+ es.event,javax.servlet.http",com.sun.faces.config;uses:="com.sun.face
+ s.mgbean,javax.faces.context,javax.xml.transform.dom,com.sun.faces,ja
+ vax.servlet,javax.faces,javax.faces.component,org.w3c.dom.ls,javax.fa
+ ces.application,com.sun.faces.scripting,com.sun.faces.el,javax.el,jav
+ ax.faces.render,com.sun.faces.renderkit,com.sun.faces.config.configpr
+ ovider,com.sun.faces.application,javax.xml.parsers,com.sun.faces.util
+ ,javax.servlet.jsp,org.w3c.dom,javax.xml.transform,javax.xml.transfor
+ m.stream,javax.xml.validation,com.sun.faces.config.processor,javax.se
+ rvlet.http",com.sun.faces.util;uses:="com.sun.faces.io,javax.faces.co
+ ntext,com.sun.faces,javax.faces,javax.servlet,javax.faces.component,j
+ avax.faces.application,javax.faces.el,javax.faces.convert,javax.el,co
+ m.sun.faces.renderkit,javax.faces.model,javax.xml.parsers,com.sun.fac
+ es.config,javax.faces.event,javax.xml.transform,javax.xml.validation"
+ ,com.sun.faces,com.sun.faces.vendor;uses:="javax.servlet,javax.annota
+ tion,org.apache,com.sun.faces.util,com.sun.faces.spi",com.sun.faces.t
+ aglib.jsf_core;uses:="javax.faces.context,com.sun.faces,javax.faces.v
+ alidator,javax.servlet,javax.faces,javax.faces.component,javax.faces.
+ application,javax.faces.webapp,javax.faces.convert,javax.servlet.jsp.
+ tagext,com.sun.faces.el,javax.el,javax.servlet.jsp.jstl.core,com.sun.
+ faces.config,com.sun.faces.util,javax.servlet.jsp,javax.faces.event,c
+ om.sun.faces.taglib,javax.servlet.http",com.sun.faces.ext.render;uses
+ :="javax.faces.render,javax.faces.component,javax.faces.context",com.
+ sun.faces.taglib.html_basic;uses:="javax.el,javax.faces.context,com.s
+ un.faces.util,javax.faces.validator,javax.servlet.jsp,javax.faces.eve
+ nt,javax.faces.component,javax.faces.application,javax.faces.webapp,j
+ avax.faces.convert,com.sun.faces.taglib",com.sun.faces.renderkit.html
+ _basic;uses:="javax.el,com.sun.faces.io,javax.faces.render,com.sun.fa
+ ces.renderkit,javax.faces.context,javax.faces.model,com.sun.faces.con
+ fig,com.sun.faces.util,com.sun.faces,javax.faces.event,javax.faces,ja
+ vax.faces.component,javax.faces.application,javax.faces.convert",com.
+ sun.faces.ext.validator;uses:="javax.el,javax.faces.context,javax.fac
+ es.validator,javax.faces,javax.faces.component,javax.faces.applicatio
+ n,javax.faces.el",com.sun.faces.scripting;uses:="javax.el,javax.faces
+ .render,javax.faces.context,com.sun.faces.util,javax.faces.event,java
+ x.faces,javax.servlet,groovy.lang,groovy.util,javax.faces.component,j
+ avax.faces.application,javax.faces.convert",com.sun.faces.resources,c
+ om.sun.faces.config.processor;uses:="com.sun.faces.mgbean,javax.faces
+ .context,javax.faces.validator,javax.faces,javax.servlet,javax.faces.
+ component,javax.faces.application,com.sun.faces.scripting,javax.faces
+ .el,javax.faces.convert,com.sun.faces.el,javax.el,javax.faces.render,
+ com.sun.faces.application,com.sun.faces.config,com.sun.faces.util,jav
+ ax.faces.event,org.w3c.dom,javax.xml.xpath,javax.faces.lifecycle",com
+ .sun.faces.el;uses:="javax.el,com.sun.faces.mgbean,javax.faces.contex
+ t,com.sun.faces.application,com.sun.faces.util,javax.faces.component,
+ javax.faces.application,javax.faces.el",com.sun.faces.taglib;uses:="j
+ avax.xml.parsers,javax.servlet.jsp.tagext",com.sun.faces.spi;uses:="c
+ om.sun.faces.renderkit,javax.faces.context,com.sun.faces.config,com.s
+ un.faces.util,javax.servlet,com.sun.faces.vendor",com.sun.faces.ext.t
+ aglib;uses:="javax.el,javax.faces.component,javax.faces.application,c
+ om.sun.faces.ext.validator,javax.faces.context,javax.faces.webapp,jav
+ ax.faces.validator",com.sun.faces.ext.component;uses:="javax.faces.co
+ mponent"
+Bundle-Name: Mojarra JSF Implementation 1.2_15-b01-redhat-11
+TODAY: May 6 2014
+Extension-Name: com.sun.faces
+Implementation-Title: Mojarra
+Bundle-Description: Mojarra JSF Implementation (javax.faces/1.2MR2) 1.
+ 2_15-b01-redhat-11
+Build-Timestamp: Tue, 6 May 2014 11:14:15 -0400
+Implementation-Version: 1.2_15-b01-redhat-11
+Java-Version: 1.6.0_30
+Scm-Connection: scm:git:git://git.app.eng.bos.redhat.com/javaserverfac
+ es-sources.git/jsf-impl
+Specification-Vendor: Oracle Corporation
+Os-Arch: i386
+Bundle-ManifestVersion: 2
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Tool: Bnd-0.0.249
+Implementation-Vendor: Sun Microsystems, Inc.
+DSTAMP: 20140506
+Os-Version: 2.6.32-431.5.1.el6.x86_64
+TSTAMP: 1114
+Scm-Revision: 936707361c97ae54e95b042f3c781367f3575fa7
+Bundle-Version: 1.2.15
+DocName: JavaServer Faces Implementation
+Created-By: 1.6.0_30 (Sun Microsystems Inc.)
+Implementation-URL: http://jsf.java.net/jsf-impl/
+Build-Jdk: 1.6.0_30
+Specification-Version: 1.2MR2
+

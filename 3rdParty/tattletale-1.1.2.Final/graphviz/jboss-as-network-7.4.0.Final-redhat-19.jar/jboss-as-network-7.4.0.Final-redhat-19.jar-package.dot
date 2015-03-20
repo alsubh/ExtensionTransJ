@@ -1,0 +1,7 @@
+digraph jboss_as_network_7_4_0_Final_redhat_19_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_as_network -> javax_net;
+  org_jboss_as_network -> org_jboss_logging;
+  org_jboss_as_network -> org_jboss_logging_annotations;
+  org_jboss_as_network -> org_jboss_msc_service;
+}

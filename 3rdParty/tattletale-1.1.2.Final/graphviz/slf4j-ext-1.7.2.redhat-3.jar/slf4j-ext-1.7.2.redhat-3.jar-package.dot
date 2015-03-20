@@ -1,0 +1,16 @@
+digraph slf4j_ext_1_7_2_redhat_3_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_slf4j_agent -> org_slf4j_instrumentation;
+  org_slf4j_cal10n -> ch_qos_cal10n;
+  org_slf4j_cal10n -> org_slf4j;
+  org_slf4j_cal10n -> org_slf4j_ext;
+  org_slf4j_cal10n -> org_slf4j_spi;
+  org_slf4j_ext -> org_apache_commons_lang_text;
+  org_slf4j_ext -> org_slf4j;
+  org_slf4j_ext -> org_slf4j_helpers;
+  org_slf4j_ext -> org_slf4j_spi;
+  org_slf4j_instrumentation -> javassist;
+  org_slf4j_instrumentation -> javassist_bytecode;
+  org_slf4j_instrumentation -> org_slf4j_helpers;
+  org_slf4j_profiler -> org_slf4j;
+}

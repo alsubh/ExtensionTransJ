@@ -1,0 +1,45 @@
+Manifest-Version: 1.0
+Bundle-License: http://repository.jboss.org/licenses/lgpl-2.1.txt
+Bundle-SymbolicName: jboss-as-osgi-jpa
+Built-By: mockbuild
+Bnd-LastModified: 1405096635629
+Implementation-Vendor-Id: org.jboss.as
+Specification-Title: JBoss Application Server: OSGi Integration JPA
+Bundle-DocURL: http://www.jboss.org
+Import-Package: javax.persistence;version="1.0",org.jboss.dmr,org.jbos
+ s.msc,org.jboss.msc.inject,org.jboss.msc.service,org.jboss.msc.servic
+ e.management,org.jboss.msc.value,org.jboss.osgi.framework,org.jboss.o
+ sgi.framework.spi,org.jboss.osgi.resolver,org.osgi.framework;version=
+ "[1.5,2)"
+Scm-Url: https://github.com/jbossas/jboss-as/jboss-as-osgi/jboss-as-os
+ gi-integration/jboss-as-osgi-jpa
+Export-Package: org.osgi.service.jpa;uses:="javax.persistence";version
+ ="1.0"
+Bundle-Name: JBoss Application Server: OSGi Integration JPA
+Ignore-Package: org.jboss.as.osgi,org.jboss.as.jpa.processor,org.jboss
+ .as.controller,org.jboss.as.server,org.jboss.as.jpa.spi,org.jboss.as.
+ server.deployment
+Bundle-Description: JBoss Application Server: Parent Aggregator
+Implementation-Title: JBoss Application Server: OSGi Integration JPA
+Build-Timestamp: Fri, 11 Jul 2014 12:34:05 -0400
+Implementation-Version: 7.4.0.Final-redhat-19
+Java-Version: 1.6.0_30
+Scm-Connection: scm:git:git@github.com:jbossas/jboss-as.git/jboss-as-o
+ sgi/jboss-as-osgi-integration/jboss-as-osgi-jpa
+Bundle-ManifestVersion: 2
+Os-Arch: i386
+Specification-Vendor: JBoss by Red Hat
+Bundle-Vendor: JBoss by Red Hat
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Tool: Bnd-1.50.0
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-431.17.1.el6.x86_64
+Bundle-Version: 7.4.0.Final-redhat-19
+Scm-Revision: b0d14b662d07cb1fcc0d8ac40c811345853866fd
+Build-Jdk: 1.6.0_30
+Created-By: Apache Maven Bundle Plugin
+Implementation-URL: http://www.jboss.org/jboss-as-parent/jboss-as-osgi
+ /jboss-as-osgi-integration/jboss-as-osgi-jpa
+Specification-Version: 7.4.0.Final-redhat-19
+

@@ -1,0 +1,28 @@
+digraph picketlink_api_2_5_3_SP10_redhat_1_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_picketlink -> javax_inject;
+  org_picketlink -> org_picketlink_authentication;
+  org_picketlink -> org_picketlink_idm;
+  org_picketlink -> org_picketlink_idm_config;
+  org_picketlink -> org_picketlink_idm_model;
+  org_picketlink_annotations -> javax_inject;
+  org_picketlink_authentication -> org_picketlink_common_exceptions;
+  org_picketlink_authentication -> org_picketlink_idm_model;
+  org_picketlink_authentication_event -> org_picketlink_idm_model;
+  org_picketlink_authentication_web -> javax_enterprise_context;
+  org_picketlink_authentication_web -> javax_enterprise_inject;
+  org_picketlink_authentication_web -> javax_inject;
+  org_picketlink_authentication_web -> javax_servlet;
+  org_picketlink_authentication_web -> javax_servlet_http;
+  org_picketlink_authentication_web -> org_picketlink;
+  org_picketlink_authentication_web -> org_picketlink_authentication_web_support;
+  org_picketlink_authentication_web -> org_picketlink_common_util;
+  org_picketlink_authentication_web -> org_picketlink_credential;
+  org_picketlink_authentication_web -> org_picketlink_idm_credential;
+  org_picketlink_authentication_web_support -> javax_servlet_http;
+  org_picketlink_authentication_web_support -> org_picketlink_common_util;
+  org_picketlink_authentication_web_support -> org_picketlink_idm_credential;
+  org_picketlink_credential -> javax_enterprise_context;
+  org_picketlink_credential -> javax_inject;
+  org_picketlink_credential -> org_picketlink_idm_credential;
+}

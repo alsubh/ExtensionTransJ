@@ -1,0 +1,8 @@
+digraph jboss_jaxrs_api_1_1_spec_1_0_1_Final_redhat_2_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  javax_ws_rs -> javax_ws_rs_core;
+  javax_ws_rs_core -> javax_ws_rs;
+  javax_ws_rs_core -> javax_ws_rs_ext;
+  javax_ws_rs_ext -> javax_ws_rs;
+  javax_ws_rs_ext -> javax_ws_rs_core;
+}

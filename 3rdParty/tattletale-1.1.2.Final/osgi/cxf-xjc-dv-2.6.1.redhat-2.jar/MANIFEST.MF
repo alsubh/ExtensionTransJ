@@ -1,0 +1,32 @@
+Manifest-Version: 1.0
+Implementation-Title: Apache CXF XJC Default Value Plugin
+Implementation-Version: 2.6.1.redhat-2
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Specification-Vendor: The Apache Software Foundation
+Implementation-Vendor-Id: org.apache
+Specification-Title: Apache CXF XJC Default Value Plugin
+Created-By: Apache Maven
+Build-Jdk: 1.6.0_24
+Specification-Version: 2.6.1.redhat-2
+Implementation-Vendor: The Apache Software Foundation
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: com.sun.tools.xjc.addon.apache_cxf.dv
+Bundle-Description: cxf-xjc-dv-2.6.1.redhat-2
+Bundle-Name: cxf-xjc-dv-2.6.1.redhat-2
+Bundle-Version: 2.6.1.redhat-2
+Export-Package: com.sun.tools.xjc.addon.apache_cxf.dv;uses:="com.sun.t
+ ools.xjc,com.sun.tools.xjc.outline,org.apache.cxf.xjc.dv",org.apache.
+ cxf.xjc.dv;uses:="com.sun.codemodel,com.sun.tools.xjc,com.sun.tools.x
+ jc.model,com.sun.tools.xjc.outline,com.sun.tools.xjc.util,com.sun.xml
+ .xsom"
+Import-Package: com.sun.codemodel;version="0.0.0",com.sun.tools.xjc;ve
+ rsion="2.2.5.redhat-8",com.sun.tools.xjc.model;version="2.2.5.redhat-
+ 8",com.sun.tools.xjc.outline;version="2.2.5.redhat-8",com.sun.tools.x
+ jc.util;version="2.2.5.redhat-8",com.sun.xml.xsom;version="0.0.0",jav
+ a.lang,java.util,java.util.logging,javax.xml.bind;version="2.2",javax
+ .xml.bind.annotation.adapters;version="2.2",javax.xml.datatype,javax.
+ xml.namespace,org.xml.sax

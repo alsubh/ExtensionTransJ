@@ -1,0 +1,63 @@
+Manifest-Version: 1.0
+Implementation-Title: JBoss Application Server: Domain HTTP Interface
+Build-Timestamp: Fri, 11 Jul 2014 12:34:05 -0400
+Implementation-Version: 7.4.0.Final-redhat-19
+Java-Version: 1.6.0_30
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Scm-Connection: scm:git:git@github.com:jbossas/jboss-as.git/jboss-as-d
+ omain-http/jboss-as-domain-http-interface
+Specification-Vendor: JBoss by Red Hat
+Os-Arch: i386
+JBossAS-Release-Version: 7.4.0.Final-redhat-19
+Implementation-Vendor-Id: org.jboss.as
+Specification-Title: JBoss Application Server: Domain HTTP Interface
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: https://github.com/jbossas/jboss-as
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-431.17.1.el6.x86_64
+Scm-Revision: b0d14b662d07cb1fcc0d8ac40c811345853866fd
+JBossAS-Release-Codename: Janus
+Created-By: Apache Maven
+Implementation-URL: http://www.jboss.org/jboss-as-parent/jboss-as-doma
+ in-http/jboss-as-domain-http-interface
+Build-Jdk: 1.6.0_30
+Specification-Version: 7.4.0.Final-redhat-19
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.as.domain.http.server
+Bundle-Description: jboss-as-domain-http-interface-7.4.0.Final-redhat-
+ 19
+Bundle-Name: jboss-as-domain-http-interface-7.4.0.Final-redhat-19
+Bundle-Version: 7.4.0.Final-redhat-19
+Export-Package: org.jboss.as.domain.http.server;uses:="javax.net.ssl,o
+ rg.jboss.as.controller,org.jboss.as.controller.client,org.jboss.as.co
+ re.security,org.jboss.as.domain.http.server.multipart,org.jboss.as.do
+ main.http.server.security,org.jboss.as.domain.management,org.jboss.co
+ m.sun.net.httpserver,org.jboss.dmr,org.jboss.logging,org.jboss.loggin
+ g.annotations,org.jboss.modules,org.jboss.util",org.jboss.as.domain.h
+ ttp.server.multipart;uses:="org.jboss.as.domain.http.server,org.jboss
+ .com.sun.net.httpserver",org.jboss.as.domain.http.server.security;use
+ s:="javax.net.ssl,org.jboss.as.controller,org.jboss.as.controller.sec
+ urity,org.jboss.as.core.security,org.jboss.as.domain.http.server,org.
+ jboss.as.domain.management,org.jboss.as.domain.management.security,or
+ g.jboss.com.sun.net.httpserver,org.jboss.sasl.callback,org.jboss.sasl
+ .util"
+Import-Package: java.io,java.lang,java.net,java.nio,java.nio.channels,
+ java.nio.charset,java.security,java.text,java.util,java.util.concurre
+ nt,java.util.regex,javax.net.ssl,javax.security.auth,javax.security.a
+ uth.callback,javax.security.sasl,org.jboss.as.controller;version="7.4
+ .0.Final-redhat-19",org.jboss.as.controller.client;version="7.4.0.Fin
+ al-redhat-19",org.jboss.as.controller.security;version="7.4.0.Final-r
+ edhat-19",org.jboss.as.core.security;version="7.4.0.Final-redhat-19",
+ org.jboss.as.domain.management;version="7.4.0.Final-redhat-19",org.jb
+ oss.as.domain.management.security;version="7.4.0.Final-redhat-19",org
+ .jboss.com.sun.net.httpserver;version="1.0.1.Final-redhat-3",org.jbos
+ s.dmr;version="7.4.0.Final-redhat-19",org.jboss.logging;version="7.4.
+ 0.Final-redhat-19",org.jboss.logging.annotations,org.jboss.modules;ve
+ rsion="7.4.0.Final-redhat-19",org.jboss.sasl.callback;version="7.4.0.
+ Final-redhat-19",org.jboss.sasl.util;version="7.4.0.Final-redhat-19",
+ org.jboss.util;version="2.2.17.GA-redhat-2"

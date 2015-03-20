@@ -1,0 +1,5 @@
+digraph scannotation_1_0_3_redhat_4_dependencies {
+  node [shape = box, fontsize=10.0];
+  scannotation_1_0_3_redhat_4 -> javassist_3_18_1_GA_redhat_1;
+  scannotation_1_0_3_redhat_4 -> jboss_servlet_api_2_5_spec_1_0_1_Final_redhat_2;
+}

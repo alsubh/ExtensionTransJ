@@ -1,0 +1,66 @@
+Manifest-Version: 1.0
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-SymbolicName: com.google.guava
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Bnd-LastModified: 1362063037355
+Specification-Title: Guava: Google Core Libraries for Java
+Implementation-Vendor-Id: com.google.guava
+Bundle-DocURL: http://www.jboss.org
+Import-Package: javax.annotation;resolution:=optional,sun.misc;resolut
+ ion:=optional
+Scm-Url: http://svn.sonatype.org/spice/tags/oss-parent-7/guava-parent/
+ guava
+Export-Package: com.google.common.net;uses:="com.google.common.base,ja
+ vax.annotation,com.google.common.hash,com.google.common.io,com.google
+ .common.primitives,com.google.common.collect";version="13.0.1.redhat-
+ 1",com.google.common.collect;uses:="com.google.common.base,javax.anno
+ tation,com.google.common.primitives,com.google.common.math";version="
+ 13.0.1.redhat-1",com.google.common.primitives;uses:="javax.annotation
+ ,com.google.common.base,sun.misc";version="13.0.1.redhat-1",com.googl
+ e.common.base;uses:="javax.annotation";version="13.0.1.redhat-1",com.
+ google.common.cache;uses:="com.google.common.collect,com.google.commo
+ n.util.concurrent,javax.annotation,com.google.common.base,com.google.
+ common.primitives,sun.misc";version="13.0.1.redhat-1",com.google.comm
+ on.eventbus;uses:="com.google.common.collect,com.google.common.reflec
+ t,com.google.common.base,com.google.common.cache";version="13.0.1.red
+ hat-1",com.google.common.util.concurrent;uses:="com.google.common.bas
+ e,javax.annotation,com.google.common.collect,com.google.common.math";
+ version="13.0.1.redhat-1",com.google.common.hash;uses:="com.google.co
+ mmon.base,com.google.common.math,com.google.common.primitives,javax.a
+ nnotation";version="13.0.1.redhat-1",com.google.common.io;uses:="com.
+ google.common.hash,com.google.common.base,javax.annotation,com.google
+ .common.primitives";version="13.0.1.redhat-1",com.google.common.refle
+ ct;uses:="javax.annotation,com.google.common.collect,com.google.commo
+ n.base";version="13.0.1.redhat-1",com.google.common.math;uses:="com.g
+ oogle.common.base,com.google.common.primitives,javax.annotation";vers
+ ion="13.0.1.redhat-1",com.google.common.annotations;version="13.0.1.r
+ edhat-1"
+Bundle-Name: Guava: Google Core Libraries for Java
+Implementation-Title: Guava: Google Core Libraries for Java
+Bundle-Description: Guava is a suite of core and expanded libraries th
+ at include    utility classes, google's collections, io classes, and 
+ much    much more.    Guava has only one code dependency - javax.anno
+ tation,    per the JSR-305 spec.
+Implementation-Version: 13.0.1-redhat-1
+Build-Timestamp: Thu, 28 Feb 2013 09:50:24 -0500
+Java-Version: 1.6.0_24
+Scm-Connection: scm:svn:http://svn.sonatype.org/spice/tags/oss-parent-
+ 7/guava-parent/guava
+Specification-Vendor: JBoss by Red Hat
+Os-Arch: amd64
+Bundle-ManifestVersion: 2
+Java-Vendor: Sun Microsystems Inc.
+Bundle-Vendor: JBoss by Red Hat
+Os-Name: Linux
+Tool: Bnd-1.50.0
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-279.22.1.el6.x86_64
+Scm-Revision: UNKNOWN
+Bundle-Version: 13.0.1.redhat-1
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.6.0_24
+Specification-Version: 13.0.1-redhat-1
+Implementation-URL: http://nexus.sonatype.org/oss-repository-hosting.h
+ tml/guava-parent/guava
+

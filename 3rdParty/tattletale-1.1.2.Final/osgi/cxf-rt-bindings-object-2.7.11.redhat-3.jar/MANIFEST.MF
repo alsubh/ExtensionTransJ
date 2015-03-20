@@ -1,0 +1,57 @@
+Manifest-Version: 1.0
+Export-Service: org.apache.aries.blueprint.NamespaceHandler;osgi.servi
+ ce.blueprint.namespace="http://cxf.apache.org/blueprint/binding/objec
+ t"
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-SymbolicName: org.apache.cxf.cxf-rt-bindings-object
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Bnd-LastModified: 1401765373936
+Implementation-Vendor-Id: org.apache.cxf
+Specification-Title: Apache CXF Runtime Object Binding
+Bundle-DocURL: http://cxf.apache.org
+Import-Package: javax.annotation,javax.xml.namespace,org.apache.aries.
+ blueprint;version="[0.3,2)";resolution:=optional,org.apache.cxf;versi
+ on="[2.7,3)",org.apache.cxf.binding;version="[2.7,3)",org.apache.cxf.
+ common.i18n;version="[2.7,3)",org.apache.cxf.common.injection;version
+ ="[2.7,3)",org.apache.cxf.common.logging;version="[2.7,3)",org.apache
+ .cxf.configuration.blueprint;version="[2.7,3)",org.apache.cxf.configu
+ ration.spring;version="[2.7,3)",org.apache.cxf.endpoint;version="[2.7
+ ,3)",org.apache.cxf.interceptor;version="[2.7,3)",org.apache.cxf.mess
+ age;version="[2.7,3)",org.apache.cxf.phase;version="[2.7,3)",org.apac
+ he.cxf.service;version="[2.7,3)",org.apache.cxf.service.model;version
+ ="[2.7,3)",org.apache.cxf.transport;version="[2.7,3)",org.apache.cxf.
+ transport.local;version="[2.7,3)",org.osgi.service.blueprint;version=
+ "[1.0.0,2.0.0)",org.osgi.service.blueprint.reflect;version="[1.0,2)",
+ org.springframework.beans.factory.xml;resolution:=optional;version="[
+ 2.5,4)",org.w3c.dom
+Scm-Url: http://github.com/jboss/jboss-parent-pom/cxf/cxf-parent/cxf-r
+ t-bindings-object
+Export-Package: org.apache.cxf.binding.object;version="2.7.11.redhat-3
+ ",org.apache.cxf.binding.object.blueprint;version="2.7.11.redhat-3",o
+ rg.apache.cxf.binding.object.spring;version="2.7.11.redhat-3"
+Bundle-Name: Apache CXF Runtime Object Binding
+Implementation-Title: Apache CXF Runtime Object Binding
+Bundle-Description: Apache CXF Runtime Object Binding
+Build-Timestamp: Mon, 2 Jun 2014 23:09:45 -0400
+Implementation-Version: 2.7.11.redhat-3
+Java-Version: 1.6.0_30
+Scm-Connection: scm:git:http://git-wip-us.apache.org/repos/asf/cxf.git
+ /cxf-parent/cxf-rt-bindings-object
+Specification-Vendor: The Apache Software Foundation
+Os-Arch: i386
+Bundle-ManifestVersion: 2
+Java-Vendor: Sun Microsystems Inc.
+Bundle-Vendor: The Apache Software Foundation
+Os-Name: Linux
+Tool: Bnd-1.50.0
+Implementation-Vendor: The Apache Software Foundation
+Os-Version: 2.6.32-431.17.1.el6.x86_64
+Originally-Created-By: Apache Maven Bundle Plugin
+Scm-Revision: effe56628b68fe805899d1cd3afdcf586879c3da
+Bundle-Version: 2.7.11.redhat-3
+Created-By: Apache Maven Bundle Plugin
+Implementation-URL: http://cxf.apache.org
+Build-Jdk: 1.6.0_30
+Specification-Version: 2.7.11.redhat-3
+

@@ -1,0 +1,10 @@
+digraph opensaml_2_5_3_redhat_2_dependencies {
+  node [shape = box, fontsize=10.0];
+  opensaml_2_5_3_redhat_2 -> jboss_servlet_api_2_5_spec_1_0_1_Final_redhat_2;
+  opensaml_2_5_3_redhat_2 -> joda_time_1_6_2_redhat_4;
+  opensaml_2_5_3_redhat_2 -> openws_1_4_4_redhat_2;
+  opensaml_2_5_3_redhat_2 -> slf4j_api_1_7_2_redhat_3;
+  opensaml_2_5_3_redhat_2 -> velocity_1_7_redhat_3;
+  opensaml_2_5_3_redhat_2 -> xmlsec_1_5_6_redhat_1;
+  opensaml_2_5_3_redhat_2 -> xmltooling_1_3_4_redhat_3;
+}

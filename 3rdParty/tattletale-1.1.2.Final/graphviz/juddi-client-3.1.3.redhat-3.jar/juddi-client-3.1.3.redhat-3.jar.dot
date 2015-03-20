@@ -1,0 +1,11 @@
+digraph juddi_client_3_1_3_redhat_3_dependencies {
+  node [shape = box, fontsize=10.0];
+  juddi_client_3_1_3_redhat_3 -> commons_configuration_1_6_redhat_3;
+  juddi_client_3_1_3_redhat_3 -> jboss_jaxb_api_2_2_spec_1_0_4_Final_redhat_2;
+  juddi_client_3_1_3_redhat_3 -> jboss_jaxws_api_2_2_spec_2_0_2_Final_redhat_1;
+  juddi_client_3_1_3_redhat_3 -> jboss_servlet_api_2_5_spec_1_0_1_Final_redhat_2;
+  juddi_client_3_1_3_redhat_3 -> jcl_over_slf4j_1_7_2_redhat_3;
+  juddi_client_3_1_3_redhat_3 -> jsr181_api_1_0_MR1_redhat_6;
+  juddi_client_3_1_3_redhat_3 -> uddi_ws_3_1_3_redhat_3;
+  juddi_client_3_1_3_redhat_3 -> wsdl4j_1_6_3_redhat_1;
+}

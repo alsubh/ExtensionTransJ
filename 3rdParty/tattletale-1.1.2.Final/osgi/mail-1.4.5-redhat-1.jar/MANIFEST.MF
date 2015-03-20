@@ -1,0 +1,67 @@
+Manifest-Version: 1.0
+Bundle-License: http://www.sun.com/cddl, https://glassfish.dev.java.ne
+ t/public/CDDL+GPL.html
+Bundle-SymbolicName: javax.mail
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Bnd-LastModified: 1361520087553
+Implementation-Vendor-Id: javax.mail
+Specification-Title: JavaMail API (compat)
+Bundle-DocURL: http://www.oracle.com
+Import-Package: com.sun.mail.util;version="[1.4,2)",javax.activation,j
+ avax.crypto,javax.crypto.spec,javax.net,javax.net.ssl,javax.security.
+ auth.callback,javax.security.auth.x500,javax.security.sasl;resolution
+ :=optional,javax.xml.transform,javax.xml.transform.stream,sun.securit
+ y.util;resolution:=optional
+Scm-Url: http://kenai.com/hg/javamail~mercurial/mail
+DynamicImport-Package: *
+Export-Package: javax.mail.internet;uses:="com.sun.mail.util,javax.mai
+ l,javax.activation,javax.mail.util";version="1.4",javax.mail.util;use
+ s:="javax.activation,javax.mail.internet";version="1.4",javax.mail.se
+ arch;uses:="javax.mail.internet,javax.mail";version="1.4",javax.mail;
+ uses:="javax.mail.event,javax.mail.search,javax.activation,com.sun.ma
+ il.util";version="1.4",javax.mail.event;uses:="javax.mail";version="1
+ .4",com.sun.mail.imap;uses:="com.sun.mail.iap,javax.mail,com.sun.mail
+ .imap.protocol,javax.activation,com.sun.mail.util,javax.mail.internet
+ ,javax.mail.search,javax.mail.event";version="1.4.5.redhat-1",com.sun
+ .mail.imap.protocol;uses:="com.sun.mail.iap,com.sun.mail.util,javax.m
+ ail.internet,javax.mail,javax.mail.search,com.sun.mail.imap,javax.sec
+ urity.sasl,javax.security.auth.callback";version="1.4.5.redhat-1",com
+ .sun.mail.iap;uses:="com.sun.mail.util";version="1.4.5.redhat-1",com.
+ sun.mail.pop3;uses:="javax.mail,com.sun.mail.util,javax.mail.internet
+ ,javax.net.ssl,javax.mail.util";version="1.4.5.redhat-1",com.sun.mail
+ .smtp;uses:="com.sun.mail.util,javax.mail.internet,javax.mail,javax.s
+ ecurity.sasl,javax.security.auth.callback";version="1.4.5.redhat-1",c
+ om.sun.mail.util;uses:="javax.mail,javax.net.ssl,javax.mail.internet,
+ javax.mail.util,javax.net,javax.security.auth.x500";version="1.4.5.re
+ dhat-1",com.sun.mail.util.logging;uses:="javax.mail,javax.mail.intern
+ et,javax.mail.util,javax.activation,com.sun.mail.smtp";version="1.4.5
+ .redhat-1",com.sun.mail.handlers;uses:="javax.activation,javax.mail.i
+ nternet,javax.mail,javax.xml.transform,javax.xml.transform.stream";ve
+ rsion="1.4.5.redhat-1"
+Bundle-Name: JavaMail API (compat)
+Extension-Name: javax.mail
+Implementation-Title: JavaMail API (compat)
+Bundle-Description: JavaMail API (compat)
+Build-Timestamp: Fri, 22 Feb 2013 03:01:21 -0500
+Implementation-Version: 1.4.5-redhat-1
+Java-Version: 1.6.0_24
+Scm-Connection: scm:hg:http://kenai.com/hg/javamail~mercurial/mail
+Os-Arch: amd64
+Specification-Vendor: Oracle
+Bundle-ManifestVersion: 2
+Java-Vendor: Sun Microsystems Inc.
+Bundle-Vendor: Oracle
+Os-Name: Linux
+Tool: Bnd-1.50.0
+Implementation-Vendor: Oracle
+Os-Version: 2.6.32-279.22.1.el6.x86_64
+Originally-Created-By: Apache Maven Bundle Plugin
+Probe-Provider-XML-File-Names: META-INF/gfprobe-provider.xml
+Scm-Revision: UNKNOWN
+Bundle-Version: 1.4.5.redhat-1
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.6.0_24
+Implementation-URL: http://kenai.com/projects/javamail/mail
+Specification-Version: 1.4.5-redhat-1
+

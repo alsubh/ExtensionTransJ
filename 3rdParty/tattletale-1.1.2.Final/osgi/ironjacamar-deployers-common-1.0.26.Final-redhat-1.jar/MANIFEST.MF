@@ -1,0 +1,71 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.8.2
+Implementation-Title: IronJacamar Deployers - Common
+Implementation-Version: 1.0.26.Final-redhat-1
+Implementation-Vendor-Id: org.jboss
+Created-By: 1.6.0_30-b30 (Sun Microsystems Inc.)
+Implementation-Vendor: The IronJacamar project (http://www.jboss.org/i
+ ronjacamar)
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.jca.deployers.common
+Bundle-Description: ironjacamar-deployers-common-1.0.26.Final-redhat-1
+Bundle-Name: ironjacamar-deployers-common-1.0.26.Final-redhat-1
+Bundle-Version: 1.0.26.Final-redhat-1
+Export-Package: org.jboss.jca.deployers;uses:="org.jboss.logging,org.j
+ boss.logging.annotations",org.jboss.jca.deployers.common;uses:="javax
+ .resource,javax.resource.spi,javax.resource.spi.security,javax.transa
+ ction,javax.validation,javax.validation.bootstrap,javax.validation.gr
+ oups,org.jboss.jca.common.api.metadata,org.jboss.jca.common.api.metad
+ ata.common,org.jboss.jca.common.api.metadata.ds,org.jboss.jca.common.
+ api.metadata.ds.v11,org.jboss.jca.common.api.metadata.ironjacamar,org
+ .jboss.jca.common.api.metadata.ra,org.jboss.jca.common.api.metadata.r
+ a.ra10,org.jboss.jca.common.api.metadata.ra.ra15,org.jboss.jca.common
+ .api.metadata.ra.ra16,org.jboss.jca.common.api.metadata.resourceadapt
+ er,org.jboss.jca.common.metadata.ds.v10,org.jboss.jca.common.metadata
+ .ra.common,org.jboss.jca.core.api.bootstrap,org.jboss.jca.core.api.co
+ nnectionmanager.ccm,org.jboss.jca.core.api.connectionmanager.pool,org
+ .jboss.jca.core.api.management,org.jboss.jca.core.connectionmanager,o
+ rg.jboss.jca.core.connectionmanager.pool.api,org.jboss.jca.core.recov
+ ery,org.jboss.jca.core.spi.mdr,org.jboss.jca.core.spi.recovery,org.jb
+ oss.jca.core.spi.statistics,org.jboss.jca.core.spi.transaction,org.jb
+ oss.jca.core.spi.transaction.recovery,org.jboss.jca.core.util,org.jbo
+ ss.jca.deployers,org.jboss.jca.validator,org.jboss.logging,org.jboss.
+ security"
+Import-Package: java.io,java.lang,java.lang.annotation,java.lang.refle
+ ct,java.net,java.security,java.util,java.util.jar,javax.naming,javax.
+ resource;version="1.6",javax.resource.spi;version="1.6",javax.resourc
+ e.spi.security;version="1.6",javax.security.auth,javax.transaction;ve
+ rsion="7.4.0.Final-redhat-19",javax.validation;version="1.0.0.GA-redh
+ at-2",javax.validation.bootstrap;version="1.0.0.GA-redhat-2",javax.va
+ lidation.groups;version="1.0.0.GA-redhat-2",org.jboss.jca.common.api.
+ metadata;version="1.0.26.Final-redhat-1",org.jboss.jca.common.api.met
+ adata.common;version="1.0.26.Final-redhat-1",org.jboss.jca.common.api
+ .metadata.ds;version="1.0.26.Final-redhat-1",org.jboss.jca.common.api
+ .metadata.ds.v11;version="1.0.26.Final-redhat-1",org.jboss.jca.common
+ .api.metadata.ironjacamar;version="1.0.26.Final-redhat-1",org.jboss.j
+ ca.common.api.metadata.ra;version="1.0.26.Final-redhat-1",org.jboss.j
+ ca.common.api.metadata.ra.ra10;version="1.0.26.Final-redhat-1",org.jb
+ oss.jca.common.api.metadata.ra.ra15;version="1.0.26.Final-redhat-1",o
+ rg.jboss.jca.common.api.metadata.ra.ra16;version="1.0.26.Final-redhat
+ -1",org.jboss.jca.common.api.metadata.resourceadapter;version="1.0.26
+ .Final-redhat-1",org.jboss.jca.common.metadata.ds.v10;version="1.0.26
+ .Final-redhat-1",org.jboss.jca.common.metadata.ra.common;version="1.0
+ .26.Final-redhat-1",org.jboss.jca.core.api.bootstrap;version="1.0.26.
+ Final-redhat-1",org.jboss.jca.core.api.connectionmanager.ccm;version=
+ "1.0.26.Final-redhat-1",org.jboss.jca.core.api.connectionmanager.pool
+ ;version="1.0.26.Final-redhat-1",org.jboss.jca.core.api.management;ve
+ rsion="1.0.26.Final-redhat-1",org.jboss.jca.core.connectionmanager;ve
+ rsion="1.0.26.Final-redhat-1",org.jboss.jca.core.connectionmanager.po
+ ol.api;version="1.0.26.Final-redhat-1",org.jboss.jca.core.recovery;ve
+ rsion="1.0.26.Final-redhat-1",org.jboss.jca.core.spi.mdr;version="1.0
+ .26.Final-redhat-1",org.jboss.jca.core.spi.recovery;version="1.0.26.F
+ inal-redhat-1",org.jboss.jca.core.spi.statistics;version="1.0.26.Fina
+ l-redhat-1",org.jboss.jca.core.spi.transaction;version="1.0.26.Final-
+ redhat-1",org.jboss.jca.core.spi.transaction.recovery;version="1.0.26
+ .Final-redhat-1",org.jboss.jca.core.util;version="1.0.26.Final-redhat
+ -1",org.jboss.jca.validator;version="1.0.26.Final-redhat-1",org.jboss
+ .logging;version="7.4.0.Final-redhat-19",org.jboss.logging.annotation
+ s,org.jboss.security;version="7.4.0.Final-redhat-19"

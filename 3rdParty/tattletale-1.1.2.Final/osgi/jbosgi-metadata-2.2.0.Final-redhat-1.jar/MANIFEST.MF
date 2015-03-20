@@ -1,0 +1,41 @@
+Manifest-Version: 1.0
+Implementation-Title: JBossOSGi Resolver Metadata
+Implementation-Version: 2.2.0.Final-redhat-1
+Build-Timestamp: Sun, 17 Feb 2013 04:09:11 -0500
+Archiver-Version: Plexus Archiver
+Java-Version: 1.6.0_24
+Built-By: mockbuild
+Scm-Connection: scm:git:git://github.com/jbosgi/jbosgi-parent.git/jbos
+ gi-metadata
+Specification-Vendor: JBoss by Red Hat
+Os-Arch: i386
+Specification-Title: JBossOSGi Resolver Metadata
+Implementation-Vendor-Id: org.jboss.osgi.metadata
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: http://github.com/jbosgi/jbosgi-parent/jbosgi-metadata
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-279.22.1.el6.x86_64
+Scm-Revision: 0928af3de08cde51d5cbf9c8832cb6502c537017
+Created-By: Apache Maven
+Build-Jdk: 1.6.0_24
+Specification-Version: 2.2.0.Final-redhat-1
+Implementation-URL: http://www.jboss.org/jbossas/osgi/jbosgi-metadata
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.osgi.metadata.internal
+Bundle-Description: jbosgi-metadata-2.2.0.Final-redhat-1
+Bundle-Name: jbosgi-metadata-2.2.0.Final-redhat-1
+Bundle-Version: 2.2.0.Final-redhat-1
+Export-Package: org.jboss.osgi.metadata;uses:="org.jboss.logging,org.j
+ boss.logging.annotations,org.jboss.osgi.metadata.internal,org.jboss.o
+ sgi.metadata.spi,org.jboss.shrinkwrap.api.asset,org.osgi.framework",o
+ rg.jboss.osgi.metadata.internal;uses:="org.jboss.osgi.metadata,org.os
+ gi.framework",org.jboss.osgi.metadata.spi;uses:="org.jboss.osgi.metad
+ ata,org.jboss.osgi.metadata.internal,org.osgi.framework"
+Import-Package: java.io,java.lang,java.net,java.util,java.util.concurr
+ ent,java.util.jar,org.jboss.logging;version="7.4.0.Final-redhat-19",o
+ rg.jboss.logging.annotations,org.jboss.shrinkwrap.api.asset;version="
+ 1.1.2.redhat-1",org.osgi.framework;version="4.2.0.redhat-4"

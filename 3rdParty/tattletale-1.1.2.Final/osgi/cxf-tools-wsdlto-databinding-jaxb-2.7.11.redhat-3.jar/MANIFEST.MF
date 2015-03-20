@@ -1,0 +1,59 @@
+Manifest-Version: 1.0
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-SymbolicName: org.apache.cxf.cxf-tools-wsdlto-databinding-jaxb
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Bnd-LastModified: 1401765334088
+Implementation-Vendor-Id: org.apache.cxf
+Specification-Title: Apache CXF Command Line Tools WSDLTo JAXB Databin
+ ding
+Bundle-DocURL: http://cxf.apache.org
+Import-Package: com.sun.codemodel,com.sun.tools.xjc,com.sun.tools.xjc.
+ api,com.sun.tools.xjc.reader.internalizer,com.sun.tools.xjc.reader.xm
+ lschema.parser,javax.xml.namespace,javax.xml.parsers,javax.xml.stream
+ ,javax.xml.stream.util,javax.xml.transform,javax.xml.transform.dom,ja
+ vax.xml.validation,javax.xml.xpath,org.apache.cxf;version="[2.7,3)",o
+ rg.apache.cxf.catalog;version="[2.7,3)",org.apache.cxf.common;version
+ ="[2.7,3)",org.apache.cxf.common.i18n;version="[2.7,3)",org.apache.cx
+ f.common.jaxb;version="[2.7,3)",org.apache.cxf.common.logging;version
+ ="[2.7,3)",org.apache.cxf.common.util;version="[2.7,3)",org.apache.cx
+ f.common.xmlschema;version="[2.7,3)",org.apache.cxf.helpers;version="
+ [2.7,3)",org.apache.cxf.resource;version="[2.7,3)",org.apache.cxf.ser
+ vice.model;version="[2.7,3)",org.apache.cxf.staxutils;version="[2.7,3
+ )",org.apache.cxf.tools.common;version="[2.7,3)",org.apache.cxf.tools
+ .common.model;version="[2.7,3)",org.apache.cxf.tools.util;version="[2
+ .7,3)",org.apache.cxf.tools.wsdlto.core;version="[2.7,3)",org.apache.
+ ws.commons.schema;version="[2.0,3)",org.apache.ws.commons.schema.exte
+ nsions;version="[2.0,3)",org.w3c.dom,org.w3c.dom.ls,org.xml.sax,org.x
+ ml.sax.helpers
+Scm-Url: http://github.com/jboss/jboss-parent-pom/cxf/cxf-parent/cxf-t
+ ools-wsdlto-databinding-jaxb
+Export-Package: org.apache.cxf.tools.wsdlto.databinding.jaxb;version="
+ 2.7.11.redhat-3"
+Bundle-Name: Apache CXF Command Line Tools WSDLTo JAXB Databinding
+Implementation-Title: Apache CXF Command Line Tools WSDLTo JAXB Databi
+ nding
+Bundle-Description: Apache CXF Command Line Tools WSDLTo JAXB Databind
+ ing
+Build-Timestamp: Mon, 2 Jun 2014 23:09:45 -0400
+Implementation-Version: 2.7.11.redhat-3
+Java-Version: 1.6.0_30
+Scm-Connection: scm:git:http://git-wip-us.apache.org/repos/asf/cxf.git
+ /cxf-parent/cxf-tools-wsdlto-databinding-jaxb
+Specification-Vendor: The Apache Software Foundation
+Os-Arch: i386
+Bundle-ManifestVersion: 2
+Java-Vendor: Sun Microsystems Inc.
+Bundle-Vendor: The Apache Software Foundation
+Os-Name: Linux
+Tool: Bnd-1.50.0
+Implementation-Vendor: The Apache Software Foundation
+Os-Version: 2.6.32-431.17.1.el6.x86_64
+Originally-Created-By: Apache Maven Bundle Plugin
+Scm-Revision: effe56628b68fe805899d1cd3afdcf586879c3da
+Bundle-Version: 2.7.11.redhat-3
+Created-By: Apache Maven Bundle Plugin
+Implementation-URL: http://cxf.apache.org
+Build-Jdk: 1.6.0_30
+Specification-Version: 2.7.11.redhat-3
+

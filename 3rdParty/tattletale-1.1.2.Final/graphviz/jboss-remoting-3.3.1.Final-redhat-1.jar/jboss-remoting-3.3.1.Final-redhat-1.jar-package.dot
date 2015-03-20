@@ -1,0 +1,28 @@
+digraph jboss_remoting_3_3_1_Final_redhat_1_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_remoting3 -> javax_net_ssl;
+  org_jboss_remoting3 -> org_jboss_logging;
+  org_jboss_remoting3 -> org_jboss_remoting3_security;
+  org_jboss_remoting3 -> org_jboss_remoting3_spi;
+  org_jboss_remoting3 -> org_xnio;
+  org_jboss_remoting3 -> org_xnio_channels;
+  org_jboss_remoting3 -> org_xnio_ssl;
+  org_jboss_remoting3 -> org_xnio_streams;
+  org_jboss_remoting3_remote -> javax_net_ssl;
+  org_jboss_remoting3_remote -> org_jboss_logging;
+  org_jboss_remoting3_remote -> org_jboss_remoting3;
+  org_jboss_remoting3_remote -> org_jboss_remoting3_security;
+  org_jboss_remoting3_remote -> org_jboss_remoting3_spi;
+  org_jboss_remoting3_remote -> org_xnio;
+  org_jboss_remoting3_remote -> org_xnio_channels;
+  org_jboss_remoting3_remote -> org_xnio_sasl;
+  org_jboss_remoting3_remote -> org_xnio_ssl;
+  org_jboss_remoting3_remote -> org_xnio_streams;
+  org_jboss_remoting3_security -> org_jboss_logging;
+  org_jboss_remoting3_spi -> org_jboss_logging;
+  org_jboss_remoting3_spi -> org_jboss_remoting3;
+  org_jboss_remoting3_spi -> org_jboss_remoting3_security;
+  org_jboss_remoting3_spi -> org_xnio;
+  org_jboss_remoting3_spi -> org_xnio_channels;
+  org_jboss_remoting3_spi -> org_xnio_ssl;
+}

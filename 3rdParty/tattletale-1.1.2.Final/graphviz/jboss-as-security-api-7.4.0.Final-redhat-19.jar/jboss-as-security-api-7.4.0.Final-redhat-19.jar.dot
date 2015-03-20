@@ -1,0 +1,6 @@
+digraph jboss_as_security_api_7_4_0_Final_redhat_19_dependencies {
+  node [shape = box, fontsize=10.0];
+  jboss_as_security_api_7_4_0_Final_redhat_19 -> jboss_as_security_7_4_0_Final_redhat_19;
+  jboss_as_security_api_7_4_0_Final_redhat_19 -> jboss_cli_client;
+  jboss_as_security_api_7_4_0_Final_redhat_19 -> wildfly_core_security_7_4_0_Final_redhat_19;
+}

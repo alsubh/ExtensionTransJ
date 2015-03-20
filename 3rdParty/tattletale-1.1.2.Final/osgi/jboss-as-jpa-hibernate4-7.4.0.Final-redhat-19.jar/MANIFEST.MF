@@ -1,0 +1,78 @@
+Manifest-Version: 1.0
+Implementation-Title: JBoss Application Server: Hibernate 4.0.x JPA in
+ tegration
+Build-Timestamp: Fri, 11 Jul 2014 12:34:05 -0400
+Implementation-Version: 7.4.0.Final-redhat-19
+Java-Version: 1.6.0_30
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Scm-Connection: scm:git:git@github.com:jbossas/jboss-as.git/jboss-as-j
+ pa-parent/jboss-as-jpa-hibernate4
+Specification-Vendor: JBoss by Red Hat
+Os-Arch: i386
+JBossAS-Release-Version: 7.4.0.Final-redhat-19
+Implementation-Vendor-Id: org.jboss.as
+Specification-Title: JBoss Application Server: Hibernate 4.0.x JPA int
+ egration
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: https://github.com/jbossas/jboss-as
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-431.17.1.el6.x86_64
+Scm-Revision: b0d14b662d07cb1fcc0d8ac40c811345853866fd
+JBossAS-Release-Codename: Janus
+Created-By: Apache Maven
+Implementation-URL: http://www.jboss.org/jboss-as-parent/jboss-as-jpa-
+ parent/jboss-as-jpa-hibernate4
+Build-Jdk: 1.6.0_30
+Specification-Version: 7.4.0.Final-redhat-19
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.as.jpa.hibernate4.management
+Bundle-Description: jboss-as-jpa-hibernate4-7.4.0.Final-redhat-19
+Bundle-Name: jboss-as-jpa-hibernate4-7.4.0.Final-redhat-19
+Bundle-Version: 7.4.0.Final-redhat-19
+Export-Package: org.jboss.as.jpa.hibernate4;uses:="javax.transaction,o
+ rg.hibernate.ejb.packaging,org.hibernate.service.jta.platform.interna
+ l,org.jboss.as.clustering.infinispan.subsystem,org.jboss.as.clusterin
+ g.jgroups.subsystem,org.jboss.as.jpa,org.jboss.as.jpa.hibernate4.infi
+ nispan,org.jboss.as.jpa.hibernate4.management,org.jboss.as.jpa.spi,or
+ g.jboss.jandex,org.jboss.msc.service,org.jboss.vfs",org.jboss.as.jpa.
+ hibernate4.infinispan;uses:="javax.persistence,javax.persistence.spi,
+ org.hibernate.cache,org.hibernate.cache.infinispan,org.infinispan,org
+ .infinispan.manager,org.jboss.as.clustering.infinispan.subsystem,org.
+ jboss.as.clustering.msc,org.jboss.as.jpa.hibernate4,org.jboss.as.jpa.
+ spi,org.jboss.as.server,org.jboss.msc.inject,org.jboss.msc.service,or
+ g.jboss.msc.value",org.jboss.as.jpa.hibernate4.management;uses:="java
+ x.persistence,org.hibernate,org.hibernate.ejb,org.hibernate.stat,org.
+ jboss.as.controller,org.jboss.as.controller.descriptions,org.jboss.as
+ .controller.descriptions.common,org.jboss.as.controller.operations.va
+ lidation,org.jboss.as.controller.registry,org.jboss.as.jpa.spi,org.jb
+ oss.dmr"
+Import-Package: java.io,java.lang,java.net,java.security,java.util,jav
+ ax.persistence;version="1.0.1.Final-redhat-2",javax.persistence.spi;v
+ ersion="1.0.1.Final-redhat-2",javax.sql,javax.transaction;version="7.
+ 4.0.Final-redhat-19",org.hibernate;version="4.2.14.SP1-redhat-1",org.
+ hibernate.cache;version="4.2.14.SP1-redhat-1",org.hibernate.cache.inf
+ inispan;version="4.2.14.SP1-redhat-1",org.hibernate.ejb;version="4.2.
+ 14.SP1-redhat-1",org.hibernate.ejb.packaging;version="4.2.14.SP1-redh
+ at-1",org.hibernate.service.jta.platform.internal;version="4.2.14.SP1
+ -redhat-1",org.hibernate.stat;version="4.2.14.SP1-redhat-1",org.infin
+ ispan;version="5.2.10.Final-redhat-1",org.infinispan.manager;version=
+ "5.2.10.Final-redhat-1",org.jboss.as.clustering.infinispan.subsystem;
+ version="7.4.0.Final-redhat-19",org.jboss.as.clustering.jgroups.subsy
+ stem;version="7.4.0.Final-redhat-19",org.jboss.as.clustering.msc;vers
+ ion="7.4.0.Final-redhat-19",org.jboss.as.controller;version="7.4.0.Fi
+ nal-redhat-19",org.jboss.as.controller.descriptions;version="7.4.0.Fi
+ nal-redhat-19",org.jboss.as.controller.descriptions.common;version="7
+ .4.0.Final-redhat-19",org.jboss.as.controller.operations.validation;v
+ ersion="7.4.0.Final-redhat-19",org.jboss.as.controller.registry;versi
+ on="7.4.0.Final-redhat-19",org.jboss.as.jpa;version="7.4.0.Final-redh
+ at-19",org.jboss.as.jpa.spi;version="7.4.0.Final-redhat-19",org.jboss
+ .as.server;version="7.4.0.Final-redhat-19",org.jboss.dmr;version="7.4
+ .0.Final-redhat-19",org.jboss.jandex;version="1.0.3.Final-redhat-2",o
+ rg.jboss.msc.inject;version="1.1.5.Final-redhat-1",org.jboss.msc.serv
+ ice;version="1.1.5.Final-redhat-1",org.jboss.msc.value;version="1.1.5
+ .Final-redhat-1",org.jboss.vfs;version="7.4.0.Final-redhat-19"

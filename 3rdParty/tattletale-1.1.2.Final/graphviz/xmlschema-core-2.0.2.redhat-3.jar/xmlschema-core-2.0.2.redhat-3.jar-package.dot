@@ -1,0 +1,9 @@
+digraph xmlschema_core_2_0_2_redhat_3_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_apache_ws_commons_schema -> org_apache_ws_commons_schema_constants;
+  org_apache_ws_commons_schema -> org_apache_ws_commons_schema_extensions;
+  org_apache_ws_commons_schema -> org_apache_ws_commons_schema_resolver;
+  org_apache_ws_commons_schema -> org_apache_ws_commons_schema_utils;
+  org_apache_ws_commons_schema_extensions -> org_apache_ws_commons_schema;
+  org_apache_ws_commons_schema_utils -> org_apache_ws_commons_schema;
+}

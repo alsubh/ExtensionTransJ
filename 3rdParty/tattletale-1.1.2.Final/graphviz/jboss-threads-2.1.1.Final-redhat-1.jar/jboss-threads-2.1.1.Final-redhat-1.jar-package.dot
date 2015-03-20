@@ -1,0 +1,5 @@
+digraph jboss_threads_2_1_1_Final_redhat_1_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_threads -> org_jboss_logging;
+  org_jboss_threads -> org_jboss_threads_management;
+}

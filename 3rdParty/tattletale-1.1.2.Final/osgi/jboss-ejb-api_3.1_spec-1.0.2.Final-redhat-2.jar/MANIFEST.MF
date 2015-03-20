@@ -1,0 +1,40 @@
+Manifest-Version: 1.0
+Bundle-License: http://repository.jboss.org/licenses/cddl.txt, http://
+ repository.jboss.org/licenses/gpl-2.0-ce.txt
+Bundle-SymbolicName: org.jboss.spec.javax.ejb.jboss-ejb-api_3.1_spec
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Bnd-LastModified: 1345205010863
+Specification-Title: Enterprise JavaBeans(TM) 3.1 API
+Implementation-Vendor-Id: org.jboss.spec.javax.ejb
+Bundle-DocURL: http://www.jboss.org
+Import-Package: javax.naming,javax.transaction;version="[1.1,2)",javax
+ .xml.rpc.handler;version="[1.1,2)"
+Scm-Url: https://github.com/jboss/jboss-ejb-api_spec
+Export-Package: javax.ejb;uses:="javax.transaction,javax.xml.rpc.handl
+ er";version="3.1",javax.ejb.spi;uses:="javax.ejb,javax.ejb.embeddable
+ ";version="3.1",javax.ejb.embeddable;uses:="javax.naming,javax.ejb,ja
+ vax.ejb.spi";version="3.1"
+Bundle-Name: Enterprise JavaBeans(TM) 3.1 API
+Implementation-Title: Enterprise JavaBeans(TM) 3.1 API
+Bundle-Description: JSR 318: Enterprise JavaBeans(TM) 3.1 API
+Implementation-Version: 1.0.2.Final-redhat-2
+Build-Timestamp: Fri, 17 Aug 2012 08:03:29 -0400
+Java-Version: 1.6.0_24
+Scm-Connection: scm:git:git@github.com:jboss/jboss-ejb-api_spec.git
+Specification-Vendor: Oracle
+Os-Arch: i386
+Bundle-ManifestVersion: 2
+Java-Vendor: Sun Microsystems Inc.
+Bundle-Vendor: JBoss by Red Hat
+Os-Name: Linux
+Tool: Bnd-1.50.0
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-279.2.1.el6.x86_64
+Scm-Revision: 7279facfe0c483ef99a15562d51c8aa85c8db889
+Bundle-Version: 1.0.2.Final-redhat-2
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.6.0_24
+Specification-Version: 3.1
+Implementation-URL: http://www.jboss.org/jboss-ejb-api_3.1_spec
+

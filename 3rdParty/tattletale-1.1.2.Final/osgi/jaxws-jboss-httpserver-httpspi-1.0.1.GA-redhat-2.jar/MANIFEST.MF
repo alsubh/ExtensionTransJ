@@ -1,0 +1,39 @@
+Manifest-Version: 1.0
+Implementation-Title: JBoss httpserver to JAXWS 2.2 HTTP SPI bridge
+Implementation-Version: 1.0.1.GA-redhat-2
+Build-Timestamp: Tue, 14 Aug 2012 23:48:24 -0400
+Archiver-Version: Plexus Archiver
+Java-Version: 1.6.0_24
+Built-By: mockbuild
+Scm-Connection: scm:svn:http://anonsvn.jboss.org/repos/jbossws/project
+ s/jaxws-jboss-httpserver-httpspi/tags/jaxws-jboss-httpserver-httpspi-
+ 1.0.1.GA
+Specification-Vendor: JBoss, by Red Hat
+Os-Arch: amd64
+Specification-Title: JBoss httpserver to JAXWS 2.2 HTTP SPI bridge
+Implementation-Vendor-Id: org.jboss.ws.projects
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: http://fisheye.jboss.com/viewrep/JBossWS/projects/jaxws-jboss
+ -httpserver-httpspi/tags/jaxws-jboss-httpserver-httpspi-1.0.1.GA
+Implementation-Vendor: JBoss, by Red Hat
+Os-Version: 2.6.32-279.2.1.el6.x86_64
+Scm-Revision: 16022
+Created-By: Apache Maven
+Build-Jdk: 1.6.0_24
+Specification-Version: 1.0.1.GA-redhat-2
+Implementation-URL: http://www.jboss.org/jbossws/jaxws-jboss-httpserve
+ r-httpspi
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.ws.httpserver_httpspi
+Bundle-Description: jaxws-jboss-httpserver-httpspi-1.0.1.GA-redhat-2
+Bundle-Name: jaxws-jboss-httpserver-httpspi-1.0.1.GA-redhat-2
+Bundle-Version: 1.0.1.GA-redhat-2
+Export-Package: org.jboss.ws.httpserver_httpspi;uses:="javax.xml.ws.sp
+ i.http,org.jboss.com.sun.net.httpserver"
+Import-Package: java.io,java.lang,java.net,java.security,java.util,jav
+ ax.xml.ws.spi.http;version="2.2",org.jboss.com.sun.net.httpserver;ver
+ sion="1.0.1.Final-redhat-3"

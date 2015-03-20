@@ -1,0 +1,22 @@
+digraph jbossws_cxf_client_4_3_0_Final_redhat_3_dependencies {
+  node [shape = box, fontsize=10.0];
+  jbossws_cxf_client_4_3_0_Final_redhat_3 -> cxf_api_2_7_11_redhat_3;
+  jbossws_cxf_client_4_3_0_Final_redhat_3 -> cxf_rt_core_2_7_11_redhat_3;
+  jbossws_cxf_client_4_3_0_Final_redhat_3 -> cxf_rt_databinding_jaxb_2_7_11_redhat_3;
+  jbossws_cxf_client_4_3_0_Final_redhat_3 -> cxf_rt_frontend_jaxws_2_7_11_redhat_3;
+  jbossws_cxf_client_4_3_0_Final_redhat_3 -> cxf_rt_frontend_simple_2_7_11_redhat_3;
+  jbossws_cxf_client_4_3_0_Final_redhat_3 -> cxf_rt_transports_http_2_7_11_redhat_3;
+  jbossws_cxf_client_4_3_0_Final_redhat_3 -> cxf_tools_common_2_7_11_redhat_3;
+  jbossws_cxf_client_4_3_0_Final_redhat_3 -> cxf_tools_java2ws_2_7_11_redhat_3;
+  jbossws_cxf_client_4_3_0_Final_redhat_3 -> cxf_tools_wsdlto_core_2_7_11_redhat_3;
+  jbossws_cxf_client_4_3_0_Final_redhat_3 -> jboss_cli_client;
+  jbossws_cxf_client_4_3_0_Final_redhat_3 -> jboss_jaxb_api_2_2_spec_1_0_4_Final_redhat_2;
+  jbossws_cxf_client_4_3_0_Final_redhat_3 -> jboss_jaxws_api_2_2_spec_2_0_2_Final_redhat_1;
+  jbossws_cxf_client_4_3_0_Final_redhat_3 -> jboss_saaj_api_1_3_spec_1_0_3_Final_redhat_1;
+  jbossws_cxf_client_4_3_0_Final_redhat_3 -> jboss_servlet_api_2_5_spec_1_0_1_Final_redhat_2;
+  jbossws_cxf_client_4_3_0_Final_redhat_3 -> jbossws_api_1_0_2_Final_redhat_1;
+  jbossws_cxf_client_4_3_0_Final_redhat_3 -> jbossws_common_2_3_0_Final_redhat_1;
+  jbossws_cxf_client_4_3_0_Final_redhat_3 -> jbossws_spi_2_3_0_Final_redhat_1;
+  jbossws_cxf_client_4_3_0_Final_redhat_3 -> wsdl4j_1_6_3_redhat_1;
+  jbossws_cxf_client_4_3_0_Final_redhat_3 -> wss4j_1_6_15_redhat_1;
+}

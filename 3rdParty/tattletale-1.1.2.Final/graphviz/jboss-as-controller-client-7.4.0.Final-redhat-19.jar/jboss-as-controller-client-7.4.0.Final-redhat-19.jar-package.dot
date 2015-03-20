@@ -1,0 +1,37 @@
+digraph jboss_as_controller_client_7_4_0_Final_redhat_19_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_as_controller_client -> javax_net_ssl;
+  org_jboss_as_controller_client -> org_jboss_as_controller_client_helpers_domain;
+  org_jboss_as_controller_client -> org_jboss_as_controller_client_impl;
+  org_jboss_as_controller_client -> org_jboss_as_protocol;
+  org_jboss_as_controller_client -> org_jboss_dmr;
+  org_jboss_as_controller_client -> org_jboss_logging;
+  org_jboss_as_controller_client -> org_jboss_logging_annotations;
+  org_jboss_as_controller_client -> org_jboss_threads;
+  org_jboss_as_controller_client_helpers -> org_jboss_as_controller_client;
+  org_jboss_as_controller_client_helpers -> org_jboss_dmr;
+  org_jboss_as_controller_client_helpers_domain -> org_jboss_as_controller_client;
+  org_jboss_as_controller_client_helpers_domain -> org_jboss_as_controller_client_helpers_domain_impl;
+  org_jboss_as_controller_client_helpers_domain -> org_jboss_dmr;
+  org_jboss_as_controller_client_helpers_domain_impl -> org_jboss_as_controller_client;
+  org_jboss_as_controller_client_helpers_domain_impl -> org_jboss_as_controller_client_helpers_domain;
+  org_jboss_as_controller_client_helpers_domain_impl -> org_jboss_dmr;
+  org_jboss_as_controller_client_helpers_domain_impl -> org_jboss_threads;
+  org_jboss_as_controller_client_helpers_standalone -> org_jboss_as_controller_client;
+  org_jboss_as_controller_client_helpers_standalone -> org_jboss_as_controller_client_helpers_standalone_impl;
+  org_jboss_as_controller_client_helpers_standalone_impl -> org_jboss_as_controller_client;
+  org_jboss_as_controller_client_helpers_standalone_impl -> org_jboss_as_controller_client_helpers_standalone;
+  org_jboss_as_controller_client_helpers_standalone_impl -> org_jboss_as_protocol;
+  org_jboss_as_controller_client_helpers_standalone_impl -> org_jboss_dmr;
+  org_jboss_as_controller_client_helpers_standalone_impl -> org_jboss_threads;
+  org_jboss_as_controller_client_impl -> javax_net_ssl;
+  org_jboss_as_controller_client_impl -> org_jboss_as_controller_client;
+  org_jboss_as_controller_client_impl -> org_jboss_as_protocol;
+  org_jboss_as_controller_client_impl -> org_jboss_as_protocol_mgmt;
+  org_jboss_as_controller_client_impl -> org_jboss_dmr;
+  org_jboss_as_controller_client_impl -> org_jboss_remoting3;
+  org_jboss_as_controller_client_impl -> org_jboss_remoting3_remote;
+  org_jboss_as_controller_client_impl -> org_jboss_remoting3_spi;
+  org_jboss_as_controller_client_impl -> org_jboss_threads;
+  org_jboss_as_controller_client_impl -> org_xnio;
+}

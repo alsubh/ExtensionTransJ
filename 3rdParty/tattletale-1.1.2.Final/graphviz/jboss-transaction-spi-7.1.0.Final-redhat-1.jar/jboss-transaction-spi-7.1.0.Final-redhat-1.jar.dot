@@ -1,0 +1,6 @@
+digraph jboss_transaction_spi_7_1_0_Final_redhat_1_dependencies {
+  node [shape = box, fontsize=10.0];
+  jboss_transaction_spi_7_1_0_Final_redhat_1 -> jboss_cli_client;
+  jboss_transaction_spi_7_1_0_Final_redhat_1 -> jboss_client;
+  jboss_transaction_spi_7_1_0_Final_redhat_1 -> jboss_connector_api_1_6_spec_1_0_1_Final_redhat_2;
+}

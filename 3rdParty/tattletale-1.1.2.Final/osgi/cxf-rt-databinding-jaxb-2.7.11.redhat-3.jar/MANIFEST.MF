@@ -1,0 +1,69 @@
+Manifest-Version: 1.0
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-SymbolicName: org.apache.cxf.cxf-rt-databinding-jaxb
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Bnd-LastModified: 1401765316411
+Implementation-Vendor-Id: org.apache.cxf
+Specification-Title: Apache CXF Runtime JAXB DataBinding
+Bundle-DocURL: http://cxf.apache.org
+Import-Package: com.sun.tools.xjc.reader.internalizer;resolution:=opti
+ onal,javax.activation;version="[0.0,2)",javax.xml.bind;version="[0.0,
+ 3)",javax.xml.bind.annotation;version="[0.0,3)",javax.xml.bind.annota
+ tion.adapters;version="[0.0,3)",javax.xml.bind.attachment;version="[0
+ .0,3)",javax.xml.datatype,javax.xml.namespace,javax.xml.stream;versio
+ n="[0.0,2)",javax.xml.stream.util;version="[0.0,2)",javax.xml.transfo
+ rm.dom,javax.xml.transform.stream,javax.xml.validation,org.apache.com
+ mons.lang;version="[2.6,3)";resolution:=optional,org.apache.commons.l
+ ang.builder;version="[2.6,3)";resolution:=optional,org.apache.cxf;ver
+ sion="[2.7,3)",org.apache.cxf.annotations;version="[2.7,3)",org.apach
+ e.cxf.attachment;version="[2.7,3)",org.apache.cxf.bus;version="[2.7,3
+ )",org.apache.cxf.catalog;version="[2.7,3)",org.apache.cxf.common;ver
+ sion="[2.7,3)",org.apache.cxf.common.classloader;version="[2.7,3)",or
+ g.apache.cxf.common.i18n;version="[2.7,3)",org.apache.cxf.common.inje
+ ction;version="[2.7,3)",org.apache.cxf.common.jaxb;version="[2.7,3)",
+ org.apache.cxf.common.logging;version="[2.7,3)",org.apache.cxf.common
+ .util;version="[2.7,3)",org.apache.cxf.common.xmlschema;version="[2.7
+ ,3)",org.apache.cxf.databinding;version="[2.7,3)",org.apache.cxf.endp
+ oint;version="[2.7,3)",org.apache.cxf.helpers;version="[2.7,3)",org.a
+ pache.cxf.interceptor;version="[2.7,3)",org.apache.cxf.message;versio
+ n="[2.7,3)",org.apache.cxf.phase;version="[2.7,3)",org.apache.cxf.res
+ ource;version="[2.7,3)",org.apache.cxf.service;version="[2.7,3)",org.
+ apache.cxf.service.factory;version="[2.7,3)",org.apache.cxf.service.m
+ odel;version="[2.7,3)",org.apache.cxf.staxutils;version="[2.7,3)",org
+ .apache.cxf.ws.addressing;version="[2.7,3)",org.apache.cxf.wsdl11;ver
+ sion="[2.7,3)",org.apache.ws.commons.schema;version="[2.0,3)",org.apa
+ che.ws.commons.schema.extensions;version="[2.0,3)",org.apache.ws.comm
+ ons.schema.utils;version="[2.0,3)",org.w3c.dom,org.xml.sax,org.xml.sa
+ x.helpers
+Scm-Url: http://github.com/jboss/jboss-parent-pom/cxf/cxf-parent/cxf-r
+ t-databinding-jaxb
+Export-Package: org.apache.cxf.jaxb.io;version="2.7.11.redhat-3",org.a
+ pache.cxf.jaxb.attachment;version="2.7.11.redhat-3",org.apache.cxf.en
+ dpoint.dynamic;version="2.7.11.redhat-3",org.apache.cxf.jaxb;version=
+ "2.7.11.redhat-3"
+Bundle-Name: Apache CXF Runtime JAXB DataBinding
+Implementation-Title: Apache CXF Runtime JAXB DataBinding
+Bundle-Description: Apache CXF Runtime JAXB DataBinding
+Build-Timestamp: Mon, 2 Jun 2014 23:09:45 -0400
+Implementation-Version: 2.7.11.redhat-3
+Java-Version: 1.6.0_30
+Scm-Connection: scm:git:http://git-wip-us.apache.org/repos/asf/cxf.git
+ /cxf-parent/cxf-rt-databinding-jaxb
+Specification-Vendor: The Apache Software Foundation
+Os-Arch: i386
+Bundle-ManifestVersion: 2
+Java-Vendor: Sun Microsystems Inc.
+Bundle-Vendor: The Apache Software Foundation
+Os-Name: Linux
+Tool: Bnd-1.50.0
+Implementation-Vendor: The Apache Software Foundation
+Os-Version: 2.6.32-431.17.1.el6.x86_64
+Originally-Created-By: Apache Maven Bundle Plugin
+Scm-Revision: effe56628b68fe805899d1cd3afdcf586879c3da
+Bundle-Version: 2.7.11.redhat-3
+Created-By: Apache Maven Bundle Plugin
+Implementation-URL: http://cxf.apache.org
+Build-Jdk: 1.6.0_30
+Specification-Version: 2.7.11.redhat-3
+

@@ -1,0 +1,75 @@
+Manifest-Version: 1.0
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-SymbolicName: org.hibernate.validator
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Bnd-LastModified: 1357656364806
+Implementation-Vendor-Id: org.hibernate
+Specification-Title: Hibernate Validator Engine
+Bundle-DocURL: http://www.jboss.org
+Import-Package: javax.persistence;resolution:=optional;version="[2.0.0
+ ,3.0.0)",javax.validation;version="[1.0.0,2.0.0)",javax.validation.bo
+ otstrap;version="[1.0.0,2.0.0)",javax.validation.constraints;version=
+ "[1.0.0,2.0.0)",javax.validation.groups;version="[1.0.0,2.0.0)",javax
+ .validation.metadata;version="[1.0.0,2.0.0)",javax.validation.spi;ver
+ sion="[1.0.0,2.0.0)",javax.xml.bind;version=0,javax.xml.bind.annotati
+ on;version=0,javax.xml.bind.annotation.adapters;version=0,javax.xml.n
+ amespace;version=0,javax.xml.transform;version=0,javax.xml.transform.
+ stream;version=0,javax.xml.validation;version=0,org.jboss.logging;ver
+ sion="[3.1.0,4.0.0)",org.joda.time;resolution:=optional;version="[1.6
+ .0,2.0.0)",org.jsoup;resolution:=optional;version="[1.5.2,2.0.0)",org
+ .jsoup.safety;resolution:=optional;version="[1.5.2,2.0.0)",org.xml.sa
+ x;version=0
+Scm-Url: http://github.com/jboss/jboss-parent-pom/hibernate-validator-
+ parent/hibernate-validator
+Export-Package: org.hibernate.validator;uses:="javax.validation,javax.
+ validation.spi,org.hibernate.validator.cfg,org.hibernate.validator.re
+ sourceloading";version="4.3.1.Final-redhat-1",org.hibernate.validator
+ .cfg;uses:="javax.validation,org.hibernate.validator.cfg.context";ver
+ sion="4.3.1.Final-redhat-1",org.hibernate.validator.cfg.context;uses:
+ ="org.hibernate.validator.cfg,org.hibernate.validator.spi.group";vers
+ ion="4.3.1.Final-redhat-1",org.hibernate.validator.cfg.defs;uses:="or
+ g.hibernate.validator.cfg,javax.validation.constraints,org.hibernate.
+ validator.constraints";version="4.3.1.Final-redhat-1",org.hibernate.v
+ alidator.constraints.br;uses:="org.hibernate.validator.constraints,ja
+ vax.validation,javax.validation.constraints";version="4.3.1.Final-red
+ hat-1",org.hibernate.validator.constraints;uses:="javax.validation,ja
+ vax.validation.constraints";version="4.3.1.Final-redhat-1",org.hibern
+ ate.validator.group;uses:="org.hibernate.validator.spi.group";version
+ ="4.3.1.Final-redhat-1",org.hibernate.validator.messageinterpolation;
+ uses:="org.hibernate.validator.spi.resourceloading,org.hibernate.vali
+ dator.resourceloading,javax.validation.metadata,javax.validation";ver
+ sion="4.3.1.Final-redhat-1",org.hibernate.validator.method.metadata;u
+ ses:="javax.validation.metadata";version="4.3.1.Final-redhat-1",org.h
+ ibernate.validator.method;uses:="javax.validation,org.hibernate.valid
+ ator.method.metadata";version="4.3.1.Final-redhat-1",org.hibernate.va
+ lidator.resourceloading;uses:="org.hibernate.validator.spi.resourcelo
+ ading,org.jboss.logging";version="4.3.1.Final-redhat-1",org.hibernate
+ .validator.spi.resourceloading;version="4.3.1.Final-redhat-1",org.hib
+ ernate.validator.spi.group;version="4.3.1.Final-redhat-1"
+Bundle-Name: Hibernate Validator Engine
+Implementation-Title: Hibernate Validator Engine
+Bundle-Description: Hibernate's Bean Validation (JSR-303) reference im
+ plementation.
+Build-Timestamp: Tue, 8 Jan 2013 09:45:55 -0500
+Implementation-Version: 4.3.1.Final-redhat-1
+Java-Version: 1.6.0_24
+Scm-Connection: scm:git:git@github.com:jboss/jboss-parent-pom.git/hibe
+ rnate-validator-parent/hibernate-validator
+Specification-Vendor: JBoss by Red Hat
+Os-Arch: i386
+Bundle-ManifestVersion: 2
+Java-Vendor: Sun Microsystems Inc.
+Bundle-Vendor: JBoss by Red Hat
+Os-Name: Linux
+Tool: Bnd-1.50.0
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-279.5.2.el6.x86_64
+Scm-Revision: 3f5f607d73845b7c0f701399ce6018d09e8f90d2
+Bundle-Version: 4.3.1.Final-redhat-1
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.6.0_24
+Implementation-URL: http://www.jboss.org/hibernate-validator-parent/hi
+ bernate-validator
+Specification-Version: 4.3.1.Final-redhat-1
+

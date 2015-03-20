@@ -1,0 +1,49 @@
+Manifest-Version: 1.0
+Implementation-Title: JBossOSGi Repository: API
+Implementation-Version: 2.1.0.Final-redhat-1
+Build-Timestamp: Sun, 17 Feb 2013 22:16:05 -0500
+Archiver-Version: Plexus Archiver
+Java-Version: 1.6.0_24
+Built-By: mockbuild
+Scm-Connection: scm:git:git://github.com/jbosgi/jbosgi-parent.git/jbos
+ gi-repository-parent/jbosgi-repository-api
+Specification-Vendor: JBoss by Red Hat
+Os-Arch: i386
+Specification-Title: JBossOSGi Repository: API
+Implementation-Vendor-Id: org.jboss.osgi.repository
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: http://github.com/jbosgi/jbosgi-parent/jbosgi-repository-pare
+ nt/jbosgi-repository-api
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-279.19.1.el6.x86_64
+Scm-Revision: b43661d2297eb4d04b0c5003a1fefad467b4be94
+Created-By: Apache Maven
+Build-Jdk: 1.6.0_24
+Specification-Version: 2.1.0.Final-redhat-1
+Implementation-URL: http://www.jboss.org/jbossas/osgi/jbosgi-repositor
+ y-parent/jbosgi-repository-api
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.osgi.repository
+Bundle-Description: jbosgi-repository-api-2.1.0.Final-redhat-1
+Bundle-Name: jbosgi-repository-api-2.1.0.Final-redhat-1
+Bundle-Version: 2.1.0.Final-redhat-1
+Export-Package: org.jboss.osgi.repository;uses:="org.jboss.logging,org
+ .jboss.logging.annotations,org.jboss.modules,org.jboss.osgi.metadata,
+ org.jboss.osgi.repository.spi,org.jboss.osgi.resolver,org.jboss.osgi.
+ resolver.spi,org.osgi.framework,org.osgi.resource,org.osgi.service.re
+ pository",org.jboss.osgi.repository.spi;uses:="org.jboss.osgi.reposit
+ ory,org.jboss.osgi.resolver,org.jboss.osgi.resolver.spi,org.osgi.fram
+ ework,org.osgi.resource",org.osgi.service.repository;uses:="org.osgi.
+ resource"
+Import-Package: java.io,java.lang,java.net,java.security,java.util,jav
+ a.util.concurrent.atomic,java.util.jar,javax.xml.stream,org.jboss.log
+ ging;version="7.4.0.Final-redhat-19",org.jboss.logging.annotations,or
+ g.jboss.modules;version="7.4.0.Final-redhat-19",org.jboss.osgi.metada
+ ta;version="2.2.0.Final-redhat-1",org.jboss.osgi.resolver;version="3.
+ 0.1.Final-redhat-1",org.jboss.osgi.resolver.spi;version="3.0.1.Final-
+ redhat-1",org.osgi.framework;version="4.2.0.redhat-4",org.osgi.resour
+ ce;version="3.0.1.Final-redhat-1"

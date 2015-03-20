@@ -1,0 +1,4 @@
+digraph jboss_connector_api_1_6_spec_1_0_1_Final_redhat_2_dependencies {
+  node [shape = box, fontsize=10.0];
+  jboss_connector_api_1_6_spec_1_0_1_Final_redhat_2 -> jboss_client;
+}

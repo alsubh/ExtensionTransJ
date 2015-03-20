@@ -1,0 +1,27 @@
+digraph jboss_as_messaging_7_4_0_Final_redhat_19_dependencies {
+  node [shape = box, fontsize=10.0];
+  jboss_as_messaging_7_4_0_Final_redhat_19 -> hornetq_commons_2_3_20_Final_redhat_1;
+  jboss_as_messaging_7_4_0_Final_redhat_19 -> hornetq_core_client_2_3_20_Final_redhat_1;
+  jboss_as_messaging_7_4_0_Final_redhat_19 -> hornetq_jms_client_2_3_20_Final_redhat_1;
+  jboss_as_messaging_7_4_0_Final_redhat_19 -> hornetq_jms_server_2_3_20_Final_redhat_1;
+  jboss_as_messaging_7_4_0_Final_redhat_19 -> hornetq_journal_2_3_20_Final_redhat_1;
+  jboss_as_messaging_7_4_0_Final_redhat_19 -> hornetq_server_2_3_20_Final_redhat_1;
+  jboss_as_messaging_7_4_0_Final_redhat_19 -> ironjacamar_common_api_1_0_26_Final_redhat_1;
+  jboss_as_messaging_7_4_0_Final_redhat_19 -> ironjacamar_common_impl_1_0_26_Final_redhat_1;
+  jboss_as_messaging_7_4_0_Final_redhat_19 -> ironjacamar_core_api_1_0_26_Final_redhat_1;
+  jboss_as_messaging_7_4_0_Final_redhat_19 -> jboss_as_clustering_jgroups_7_4_0_Final_redhat_19;
+  jboss_as_messaging_7_4_0_Final_redhat_19 -> jboss_as_connector_7_4_0_Final_redhat_19;
+  jboss_as_messaging_7_4_0_Final_redhat_19 -> jboss_as_controller_7_4_0_Final_redhat_19;
+  jboss_as_messaging_7_4_0_Final_redhat_19 -> jboss_as_controller_client_7_4_0_Final_redhat_19;
+  jboss_as_messaging_7_4_0_Final_redhat_19 -> jboss_as_ee_7_4_0_Final_redhat_19;
+  jboss_as_messaging_7_4_0_Final_redhat_19 -> jboss_as_naming_7_4_0_Final_redhat_19;
+  jboss_as_messaging_7_4_0_Final_redhat_19 -> jboss_as_network_7_4_0_Final_redhat_19;
+  jboss_as_messaging_7_4_0_Final_redhat_19 -> jboss_as_security_7_4_0_Final_redhat_19;
+  jboss_as_messaging_7_4_0_Final_redhat_19 -> jboss_as_server_7_4_0_Final_redhat_19;
+  jboss_as_messaging_7_4_0_Final_redhat_19 -> jboss_as_transactions_7_4_0_Final_redhat_19;
+  jboss_as_messaging_7_4_0_Final_redhat_19 -> jboss_cli_client;
+  jboss_as_messaging_7_4_0_Final_redhat_19 -> jboss_client;
+  jboss_as_messaging_7_4_0_Final_redhat_19 -> jboss_metadata_common_7_1_0_Final_redhat_1;
+  jboss_as_messaging_7_4_0_Final_redhat_19 -> jboss_msc_1_1_5_Final_redhat_1;
+  jboss_as_messaging_7_4_0_Final_redhat_19 -> jboss_transaction_spi_7_1_0_Final_redhat_1;
+}

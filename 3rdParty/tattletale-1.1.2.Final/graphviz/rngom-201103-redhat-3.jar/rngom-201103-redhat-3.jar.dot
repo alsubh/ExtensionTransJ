@@ -1,0 +1,4 @@
+digraph rngom_201103_redhat_3_dependencies {
+  node [shape = box, fontsize=10.0];
+  rngom_201103_redhat_3 -> relaxngDatatype_2011_1_redhat_6;
+}

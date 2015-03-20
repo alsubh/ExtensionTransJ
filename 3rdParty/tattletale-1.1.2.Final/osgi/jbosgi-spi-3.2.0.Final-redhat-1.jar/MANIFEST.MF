@@ -1,0 +1,43 @@
+Manifest-Version: 1.0
+Implementation-Title: JBossOSGi SPI
+Implementation-Version: 3.2.0.Final-redhat-1
+Build-Timestamp: Sun, 17 Feb 2013 04:45:49 -0500
+Archiver-Version: Plexus Archiver
+Java-Version: 1.6.0_24
+Built-By: mockbuild
+Scm-Connection: scm:git:git://github.com/jbosgi/jbosgi-parent.git/jbos
+ gi-spi
+Specification-Vendor: JBoss by Red Hat
+Os-Arch: amd64
+Specification-Title: JBossOSGi SPI
+Implementation-Vendor-Id: org.jboss.osgi.spi
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: http://github.com/jbosgi/jbosgi-parent/jbosgi-spi
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-279.22.1.el6.x86_64
+Scm-Revision: 5e7f6d7dab8215949e8558782e584e84f84e552f
+Created-By: Apache Maven
+Build-Jdk: 1.6.0_24
+Specification-Version: 3.2.0.Final-redhat-1
+Implementation-URL: http://www.jboss.org/jbossas/osgi/jbosgi-spi
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.osgi.spi
+Bundle-Description: jbosgi-spi-3.2.0.Final-redhat-1
+Bundle-Name: jbosgi-spi-3.2.0.Final-redhat-1
+Bundle-Version: 3.2.0.Final-redhat-1
+Export-Package: org.jboss.osgi.spi;uses:="org.jboss.logging,org.jboss.
+ osgi.metadata,org.jboss.osgi.vfs,org.jboss.shrinkwrap.api.asset,org.o
+ sgi.framework",org.jboss.osgi.spi.framework;uses:="org.jboss.osgi.spi
+ ,org.jboss.osgi.spi.util,org.osgi.framework,org.osgi.framework.launch
+ ",org.jboss.osgi.spi.util;uses:="org.jboss.osgi.spi,org.osgi.framewor
+ k"
+Import-Package: java.io,java.lang,java.net,java.security,java.util,jav
+ a.util.jar,org.jboss.logging;version="7.4.0.Final-redhat-19",org.jbos
+ s.osgi.metadata;version="2.2.0.Final-redhat-1",org.jboss.osgi.vfs;ver
+ sion="1.2.1.Final-redhat-1",org.jboss.shrinkwrap.api.asset;version="1
+ .1.2.redhat-1",org.osgi.framework;version="4.2.0.redhat-4",org.osgi.f
+ ramework.launch;version="4.2.0.redhat-4"

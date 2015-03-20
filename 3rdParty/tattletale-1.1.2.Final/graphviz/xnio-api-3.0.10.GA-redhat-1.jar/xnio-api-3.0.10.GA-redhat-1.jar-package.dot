@@ -1,0 +1,19 @@
+digraph xnio_api_3_0_10_GA_redhat_1_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_xnio -> java_nio_channels;
+  org_xnio -> javax_net_ssl;
+  org_xnio -> org_jboss_logging;
+  org_xnio -> org_xnio_channels;
+  org_xnio -> org_xnio_sasl;
+  org_xnio -> org_xnio_ssl;
+  org_xnio_channels -> javax_net_ssl;
+  org_xnio_channels -> org_jboss_logging;
+  org_xnio_channels -> org_xnio;
+  org_xnio_sasl -> org_xnio;
+  org_xnio_ssl -> javax_net_ssl;
+  org_xnio_ssl -> org_jboss_logging;
+  org_xnio_ssl -> org_xnio;
+  org_xnio_ssl -> org_xnio_channels;
+  org_xnio_streams -> org_xnio;
+  org_xnio_streams -> org_xnio_channels;
+}

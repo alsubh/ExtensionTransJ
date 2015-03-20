@@ -1,0 +1,38 @@
+Manifest-Version: 1.0
+Implementation-Title: XML Commons Resolver Component
+Implementation-Version: 1.2.redhat-9
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Specification-Vendor: The Apache Software Foundation
+Specification-Title: XML Commons Resolver Component
+Implementation-Vendor-Id: xml-resolver
+Implementation-Vendor: The Apache Software Foundation
+Main-Class: org.apache.xml.resolver.apps.resolver
+Created-By: Apache Maven
+Build-Jdk: 1.6.0_24
+Specification-Version: 1.2.redhat-9
+
+Name: org/apache/xml/resolver
+Implementation-Title: org.apache.xml.resolver.Catalog
+Comment: xml-commons Resolver code
+Implementation-Version: 1.2.redhat-9
+Implementation-URL: http://xml.apache.org/commons/
+Implementation-Vendor: Apache Software Foundation
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.apache.xml.resolver.readers
+Bundle-Description: xml-resolver-1.2.redhat-9
+Bundle-Name: xml-resolver-1.2.redhat-9
+Bundle-Version: 0.0.0
+Export-Package: org.apache.xml.resolver;uses:="org.apache.xml.resolver
+ .helpers,org.apache.xml.resolver.readers",org.apache.xml.resolver.app
+ s;uses:="org.apache.xml.resolver,org.apache.xml.resolver.helpers,org.
+ apache.xml.resolver.tools",org.apache.xml.resolver.helpers,org.apache
+ .xml.resolver.readers;uses:="org.apache.xml.resolver,org.apache.xml.r
+ esolver.helpers",org.apache.xml.resolver.tools;uses:="org.apache.xml.
+ resolver,org.apache.xml.resolver.helpers"
+Import-Package: java.io,java.lang,java.net,java.util,javax.xml.parsers
+ ,javax.xml.transform,javax.xml.transform.sax,org.w3c.dom,org.xml.sax,
+ org.xml.sax.helpers

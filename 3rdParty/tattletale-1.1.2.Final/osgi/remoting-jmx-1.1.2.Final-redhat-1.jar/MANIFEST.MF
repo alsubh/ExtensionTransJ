@@ -1,0 +1,48 @@
+Manifest-Version: 1.0
+Implementation-Title: remoting-jmx
+Implementation-Version: 1.1.2.Final-redhat-1
+Build-Timestamp: Thu, 24 Oct 2013 04:47:59 -0400
+Archiver-Version: Plexus Archiver
+Java-Version: 1.6.0_24
+Built-By: mockbuild
+Scm-Connection: scm:git:git://github.com/jbossas/remoting-jmx.git
+Specification-Vendor: JBoss, a division of Red Hat, Inc.
+Os-Arch: amd64
+Specification-Title: remoting-jmx
+Implementation-Vendor-Id: org.jboss.remotingjmx
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: https://github.com/jbossas/remoting-jmx
+Implementation-Vendor: JBoss, a division of Red Hat, Inc.
+Os-Version: 2.6.32-358.18.1.el6.x86_64
+Scm-Revision: 0cfac26b2fdc40aed5fd12f750862ff1b63c30db
+Created-By: Apache Maven
+Build-Jdk: 1.6.0_24
+Specification-Version: 1.1.2.Final-redhat-1
+Implementation-URL: http://www.jboss.org/remoting-jmx
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.remotingjmx.protocol.v2
+Bundle-Description: remoting-jmx-1.1.2.Final-redhat-1
+Bundle-Name: remoting-jmx-1.1.2.Final-redhat-1
+Bundle-Version: 1.1.2.Final-redhat-1
+Export-Package: org.jboss.remotingjmx;uses:="org.jboss.logging,org.jbo
+ ss.remoting3,org.jboss.remoting3.remote,org.jboss.remoting3.spi,org.j
+ boss.remotingjmx.protocol,org.xnio",org.jboss.remotingjmx.protocol;us
+ es:="org.jboss.logging,org.jboss.remoting3,org.jboss.remotingjmx,org.
+ jboss.remotingjmx.protocol.v1,org.jboss.remotingjmx.protocol.v2,org.x
+ nio",org.jboss.remotingjmx.protocol.v1;uses:="org.jboss.logging,org.j
+ boss.marshalling,org.jboss.remoting3,org.jboss.remotingjmx,org.jboss.
+ remotingjmx.protocol,org.xnio",org.jboss.remotingjmx.protocol.v2;uses
+ :="org.jboss.logging,org.jboss.marshalling,org.jboss.remoting3,org.jb
+ oss.remotingjmx,org.jboss.remotingjmx.protocol,org.xnio"
+Import-Package: java.io,java.lang,java.net,java.security,java.util,jav
+ a.util.concurrent,java.util.concurrent.atomic,javax.management,javax.
+ management.remote,javax.security.auth,javax.security.auth.callback,ja
+ vax.security.sasl,org.jboss.logging;version="7.4.0.Final-redhat-19",o
+ rg.jboss.marshalling;version="7.4.0.Final-redhat-19",org.jboss.remoti
+ ng3;version="7.4.0.Final-redhat-19",org.jboss.remoting3.remote;versio
+ n="7.4.0.Final-redhat-19",org.jboss.remoting3.spi;version="7.4.0.Fina
+ l-redhat-19",org.xnio;version="7.4.0.Final-redhat-19"

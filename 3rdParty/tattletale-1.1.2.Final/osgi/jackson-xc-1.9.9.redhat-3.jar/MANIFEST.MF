@@ -1,0 +1,44 @@
+Manifest-Version: 1.0
+Implementation-Title: XML Compatibility extensions for Jackson data bi
+ nding
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-SymbolicName: jackson-xc
+Implementation-Version: 1.9.9.redhat-3
+Built-By: mockbuild
+Bundle-RequiredExecutionEnvironment: J2SE-1.5, JavaSE-1.6
+Bnd-LastModified: 1404426343708
+Bundle-ManifestVersion: 2
+Bundle-Vendor: http://fasterxml.com
+Import-Package: javax.activation,javax.xml.bind,javax.xml.bind.annotat
+ ion,javax.xml.bind.annotation.adapters,org.codehaus.jackson;version="
+ 1.9.9.redhat-3",org.codehaus.jackson.annotate;version="1.9.9.redhat-3
+ ",org.codehaus.jackson.map;version="1.9.9.redhat-3",org.codehaus.jack
+ son.map.annotate;version="1.9.9.redhat-3",org.codehaus.jackson.map.de
+ ser;version="1.9.9.redhat-3",org.codehaus.jackson.map.deser.std;versi
+ on="1.9.9.redhat-3",org.codehaus.jackson.map.introspect;version="1.9.
+ 9.redhat-3",org.codehaus.jackson.map.jsontype;version="1.9.9.redhat-3
+ ",org.codehaus.jackson.map.jsontype.impl;version="1.9.9.redhat-3",org
+ .codehaus.jackson.map.ser;version="1.9.9.redhat-3",org.codehaus.jacks
+ on.map.ser.std;version="1.9.9.redhat-3",org.codehaus.jackson.map.type
+ ;version="1.9.9.redhat-3",org.codehaus.jackson.map.util;version="1.9.
+ 9.redhat-3",org.codehaus.jackson.node;version="1.9.9.redhat-3",org.co
+ dehaus.jackson.schema;version="1.9.9.redhat-3",org.codehaus.jackson.t
+ ype;version="1.9.9.redhat-3",org.codehaus.jackson.util;version="1.9.9
+ .redhat-3"
+DynamicImport-Package: org.w3c.dom ,javax.xml.namespace, javax.xml.par
+ sers, javax.xml.transform 
+Tool: Bnd-<unknown version>
+Implementation-Vendor: http://fasterxml.com
+Export-Package: org.codehaus.jackson.xc;uses:="javax.activation,org.co
+ dehaus.jackson.map,org.codehaus.jackson,org.codehaus.jackson.map.dese
+ r.std,org.codehaus.jackson.node,org.codehaus.jackson.map.ser.std,java
+ x.xml.bind.annotation,org.codehaus.jackson.map.annotate,org.codehaus.
+ jackson.annotate,javax.xml.bind.annotation.adapters,org.codehaus.jack
+ son.type,org.codehaus.jackson.util,org.codehaus.jackson.map.introspec
+ t,org.codehaus.jackson.map.jsontype,org.codehaus.jackson.map.util,org
+ .codehaus.jackson.map.jsontype.impl,javax.xml.bind,org.codehaus.jacks
+ on.map.type,org.codehaus.jackson.schema";version="1.9.9.redhat-3"
+Bundle-Name: XML Compatibility extensions for Jackson data binding
+Bundle-Version: 1.9.9.redhat-3
+Created-By: 1.7.0 (IBM Corporation)
+

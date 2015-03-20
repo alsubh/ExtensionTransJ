@@ -1,0 +1,37 @@
+digraph xsom_20110809_redhat_3_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  com_sun_xml_xsom -> com_sun_xml_xsom_impl_scd;
+  com_sun_xml_xsom -> com_sun_xml_xsom_parser;
+  com_sun_xml_xsom -> com_sun_xml_xsom_util;
+  com_sun_xml_xsom -> com_sun_xml_xsom_visitor;
+  com_sun_xml_xsom -> org_relaxng_datatype;
+  com_sun_xml_xsom_impl -> com_sun_xml_xsom;
+  com_sun_xml_xsom_impl -> com_sun_xml_xsom_impl_parser;
+  com_sun_xml_xsom_impl -> com_sun_xml_xsom_impl_scd;
+  com_sun_xml_xsom_impl -> com_sun_xml_xsom_parser;
+  com_sun_xml_xsom_impl -> com_sun_xml_xsom_util;
+  com_sun_xml_xsom_impl -> com_sun_xml_xsom_visitor;
+  com_sun_xml_xsom_impl -> org_relaxng_datatype;
+  com_sun_xml_xsom_impl_parser -> com_sun_xml_xsom;
+  com_sun_xml_xsom_impl_parser -> com_sun_xml_xsom_impl;
+  com_sun_xml_xsom_impl_parser -> com_sun_xml_xsom_impl_parser_state;
+  com_sun_xml_xsom_impl_parser -> com_sun_xml_xsom_impl_util;
+  com_sun_xml_xsom_impl_parser -> com_sun_xml_xsom_parser;
+  com_sun_xml_xsom_impl_parser -> org_relaxng_datatype;
+  com_sun_xml_xsom_impl_parser_state -> com_sun_xml_xsom;
+  com_sun_xml_xsom_impl_parser_state -> com_sun_xml_xsom_impl;
+  com_sun_xml_xsom_impl_parser_state -> com_sun_xml_xsom_impl_parser;
+  com_sun_xml_xsom_impl_parser_state -> com_sun_xml_xsom_parser;
+  com_sun_xml_xsom_impl_scd -> com_sun_xml_xsom;
+  com_sun_xml_xsom_impl_scd -> com_sun_xml_xsom_impl;
+  com_sun_xml_xsom_impl_scd -> com_sun_xml_xsom_visitor;
+  com_sun_xml_xsom_impl_util -> com_sun_xml_xsom;
+  com_sun_xml_xsom_impl_util -> com_sun_xml_xsom_visitor;
+  com_sun_xml_xsom_parser -> com_sun_xml_xsom;
+  com_sun_xml_xsom_parser -> com_sun_xml_xsom_impl_parser;
+  com_sun_xml_xsom_parser -> com_sun_xml_xsom_impl_parser_state;
+  com_sun_xml_xsom_util -> com_sun_xml_xsom;
+  com_sun_xml_xsom_util -> com_sun_xml_xsom_parser;
+  com_sun_xml_xsom_util -> com_sun_xml_xsom_visitor;
+  com_sun_xml_xsom_visitor -> com_sun_xml_xsom;
+}

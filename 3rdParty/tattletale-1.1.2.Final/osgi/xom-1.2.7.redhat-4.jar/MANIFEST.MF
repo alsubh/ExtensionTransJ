@@ -1,0 +1,80 @@
+Manifest-Version: 1.0
+Bundle-License: http://www.gnu.org/licenses/lgpl-2.1.html
+Bundle-SymbolicName: xom
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Bnd-LastModified: 1382636811242
+Implementation-Vendor-Id: xom
+Specification-Title: XOM
+Bundle-DocURL: http://www.jboss.org
+Import-Package: com.sun.org.apache.xerces.internal.parsers,com.sun.org
+ .apache.xerces.internal.util,com.sun.org.apache.xerces.internal.xni.p
+ arser,javax.xml.transform,javax.xml.transform.sax,junit.framework;res
+ olution:=optional,org.apache.xerces.impl,org.apache.xerces.parsers,or
+ g.apache.xerces.xni.parser,org.jaxen,org.jaxen.util,org.w3c.dom,org.x
+ ml.sax,org.xml.sax.ext,org.xml.sax.helpers
+Scm-Url: https://xom.dev.java.net/source/browse/xom/
+Main-Class: nu.xom.Info
+Export-Package: nu.xom;uses:="org.xml.sax,org.apache.xerces.impl,org.x
+ ml.sax.helpers,com.sun.org.apache.xerces.internal.parsers,com.sun.org
+ .apache.xerces.internal.util,com.sun.org.apache.xerces.internal.xni.p
+ arser,org.jaxen,org.jaxen.util,org.apache.xerces.parsers,org.apache.x
+ erces.xni.parser,org.xml.sax.ext";version="1.2.7.redhat-4",nu.xom.can
+ onical;uses:="nu.xom,org.xml.sax.helpers";version="1.2.7.redhat-4",nu
+ .xom.converters;uses:="nu.xom,org.w3c.dom,org.xml.sax.ext,org.xml.sax
+ .helpers,org.xml.sax";version="1.2.7.redhat-4",nu.xom.tests;uses:="ju
+ nit.framework,nu.xom";version="1.2.7.redhat-4",nu.xom.xinclude;uses:=
+ "nu.xom";version="1.2.7.redhat-4",nu.xom.xslt;uses:="nu.xom,org.xml.s
+ ax,org.xml.sax.ext,nu.xom.converters,javax.xml.transform.sax,org.xml.
+ sax.helpers,javax.xml.transform";version="1.2.7.redhat-4"
+Bundle-Name: XOM
+Implementation-Title: XOM
+Bundle-Description: The XOM Dual Streaming/Tree API for Processing XML
+Build-Timestamp: Thu, 24 Oct 2013 13:46:44 -0400
+Implementation-Version: 1.2.7.redhat-4
+Java-Version: 1.6.0_24
+Scm-Connection: scm:git:git@github.com:jboss/jboss-parent-pom.git/xom
+Sealed: true
+Os-Arch: amd64
+Specification-Vendor: JBoss by Red Hat
+Bundle-ManifestVersion: 2
+Java-Vendor: Sun Microsystems Inc.
+Bundle-Vendor: JBoss by Red Hat
+Os-Name: Linux
+Tool: Bnd-1.50.0
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-358.18.1.el6.x86_64
+Scm-Revision: f95269552e35eb00401bf1c286c75caa6b3d72e8
+Bundle-Version: 1.2.7.redhat-4
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.6.0_24
+Implementation-URL: http://xom.nu
+Specification-Version: 1.2.7.redhat-4
+
+Name: nu/xom/xinclude/
+Specification-Title: XOM XInclude classes
+Implementation-Title: nu.xom.xinclude
+Sealed: true
+
+Name: nu/xom/
+Specification-Title: XOM core classes
+Implementation-Title: nu.xom
+Implementation-Version: 1.2.7.redhat-4
+Sealed: true
+Implementation-Vendor: Elliotte Rusty Harold
+
+Name: nu/xom/xslt/
+Specification-Title: XOM XSLT classes
+Implementation-Title: nu.xom.xslt
+Sealed: true
+
+Name: nu/xom/canonical/
+Specification-Title: XOM Canonical XML support
+Implementation-Title: nu.xom.canonical
+Sealed: true
+
+Name: nu/xom/converters/
+Specification-Title: XOM converters to other object models
+Implementation-Title: nu.xom.converters
+Sealed: true
+

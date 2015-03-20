@@ -1,0 +1,7 @@
+digraph scannotation_1_0_3_redhat_4_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_scannotation -> javassist_bytecode;
+  org_scannotation -> javassist_bytecode_annotation;
+  org_scannotation -> javax_servlet;
+  org_scannotation -> org_scannotation_archiveiterator;
+}

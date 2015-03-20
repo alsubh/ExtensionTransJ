@@ -1,0 +1,38 @@
+Manifest-Version: 1.0
+Implementation-Title: JBoss Negotiation NTLM
+Build-Timestamp: Tue, 3 Jun 2014 14:14:26 -0400
+Implementation-Version: 2.3.3.Final-redhat-1
+Java-Version: 1.6.0_30
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Scm-Connection: scm:svn:http://anonsvn.jboss.org/repos/jbossas/project
+ s/security/security-negotiation/trunk/jboss-negotiation-ntlm
+Specification-Vendor: JBoss by Red Hat
+Os-Arch: i386
+Implementation-Vendor-Id: org.jboss.security
+Specification-Title: JBoss Negotiation NTLM
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: http://github.com/jboss/jboss-parent-pom/jboss-negotiation-pr
+ oject/jboss-negotiation-ntlm
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-431.17.1.el6.x86_64
+Scm-Revision: UNKNOWN
+Created-By: Apache Maven
+Implementation-URL: http://www.jboss.org
+Build-Jdk: 1.6.0_30
+Specification-Version: 2.3.3.Final-redhat-1
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.security.negotiation.ntlm.encoding
+Bundle-Description: jboss-negotiation-ntlm-2.3.3.Final-redhat-1
+Bundle-Name: jboss-negotiation-ntlm-2.3.3.Final-redhat-1
+Bundle-Version: 2.3.3.Final-redhat-1
+Export-Package: org.jboss.security.negotiation.ntlm;uses:="org.jboss.s
+ ecurity.negotiation,org.jboss.security.negotiation.ntlm.encoding",org
+ .jboss.security.negotiation.ntlm.encoding;uses:="org.jboss.security.n
+ egotiation,org.jboss.security.negotiation.ntlm"
+Import-Package: java.io,java.lang,java.lang.reflect,java.util,org.jbos
+ s.security.negotiation;version="2.3.3.Final-redhat-1"

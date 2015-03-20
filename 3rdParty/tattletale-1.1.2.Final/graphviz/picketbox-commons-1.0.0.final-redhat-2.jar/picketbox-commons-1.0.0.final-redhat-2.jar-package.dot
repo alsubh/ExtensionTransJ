@@ -1,0 +1,7 @@
+digraph picketbox_commons_1_0_0_final_redhat_2_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_picketbox_commons_cipher -> javax_crypto;
+  org_picketbox_commons_cipher -> javax_crypto_spec;
+  org_picketbox_commons_ssl -> javax_net_ssl;
+  org_picketbox_commons_ssl -> org_picketbox_commons_cipher;
+}

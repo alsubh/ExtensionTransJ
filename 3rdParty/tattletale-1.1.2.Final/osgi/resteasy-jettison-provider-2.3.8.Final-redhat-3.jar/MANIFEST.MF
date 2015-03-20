@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Created-By: Apache Maven
+Build-Jdk: 1.6.0_30
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.resteasy.plugins.providers.jaxb.json
+Bundle-Description: resteasy-jettison-provider-2.3.8.Final-redhat-3
+Bundle-Name: resteasy-jettison-provider-2.3.8.Final-redhat-3
+Bundle-Version: 0.0.0
+Export-Package: org.jboss.resteasy.annotations.providers.jaxb.json,org
+ .jboss.resteasy.plugins.providers.jaxb.json;uses:="javax.ws.rs,javax.
+ ws.rs.core,javax.ws.rs.ext,org.codehaus.jettison.badgerfish,org.codeh
+ aus.jettison.json,org.codehaus.jettison.mapped,org.jboss.resteasy.ann
+ otations.providers.jaxb.json,org.jboss.resteasy.plugins.providers.jax
+ b,org.jboss.resteasy.util"
+Import-Package: java.io,java.lang,java.lang.annotation,java.lang.refle
+ ct,java.net,java.util,java.util.concurrent,javax.ws.rs;version="1.0.1
+ .Final-redhat-2",javax.ws.rs.core;version="1.0.1.Final-redhat-2",java
+ x.ws.rs.ext;version="1.0.1.Final-redhat-2",javax.xml.bind;version="2.
+ 2",javax.xml.bind.annotation.adapters;version="2.2",javax.xml.bind.at
+ tachment;version="2.2",javax.xml.namespace,javax.xml.stream,javax.xml
+ .transform,javax.xml.transform.stream,javax.xml.validation,org.codeha
+ us.jettison.badgerfish;version="1.3.1.redhat-4",org.codehaus.jettison
+ .json;version="1.3.1.redhat-4",org.codehaus.jettison.mapped;version="
+ 1.3.1.redhat-4",org.jboss.resteasy.plugins.providers.jaxb;version="0.
+ 0.0",org.jboss.resteasy.util;version="0.0.0",org.w3c.dom,org.xml.sax

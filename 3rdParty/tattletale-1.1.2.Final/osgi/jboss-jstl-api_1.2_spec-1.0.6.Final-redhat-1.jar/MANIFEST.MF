@@ -1,0 +1,112 @@
+Manifest-Version: 1.0
+Bundle-License: https://glassfish.dev.java.net/public/CDDL+GPL_1_1.htm
+ l
+Bundle-SymbolicName: org.jboss.spec.javax.servlet.jstl.jboss-jstl-api_
+ 1.2_spec
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Bnd-LastModified: 1400069987585
+Implementation-Vendor-Id: org.jboss.spec.javax.servlet.jstl
+Specification-Title: JSR 52: JavaServer Pages(TM) Standard Tag Library
+  1.2 API
+Bundle-DocURL: http://www.jboss.org
+Import-Package: javax.el;version="[2.2,3)",javax.naming,javax.servlet;
+ version="[3.0,4)",javax.servlet.http;version="[3.0,4)",javax.servlet.
+ jsp;version="[2.2,3)",javax.servlet.jsp.tagext;version="[2.2,3)",java
+ x.sql,javax.xml.namespace,javax.xml.parsers,javax.xml.transform,javax
+ .xml.transform.dom,javax.xml.transform.sax,javax.xml.transform.stream
+ ,javax.xml.xpath,org.apache.xalan.res,org.apache.xml.utils,org.apache
+ .xpath,org.apache.xpath.jaxp,org.apache.xpath.objects,org.w3c.dom,org
+ .w3c.dom.traversal,org.xml.sax,org.xml.sax.helpers
+Scm-Url: https://github.com/jboss/jboss-jstl-api_spec
+Export-Package: javax.servlet.jsp.jstl.fmt;uses:="javax.servlet,javax.
+ servlet.jsp.jstl.core,javax.servlet.jsp,javax.servlet.http";version="
+ 1.2",javax.servlet.jsp.jstl.tlv;uses:="org.xml.sax.helpers,org.xml.sa
+ x,javax.xml.parsers,javax.servlet.jsp.tagext";version="1.2",javax.ser
+ vlet.jsp.jstl.core;uses:="javax.servlet.jsp.tagext,javax.servlet.jsp,
+ javax.servlet,javax.servlet.http,javax.el";version="1.2",javax.servle
+ t.jsp.jstl.sql;version="1.2",org.apache.taglibs.standard.tlv;uses:="o
+ rg.apache.taglibs.standard.lang.support,org.apache.taglibs.standard.r
+ esources,javax.xml.parsers,javax.servlet.jsp.tagext,org.xml.sax.helpe
+ rs,javax.servlet.jsp,org.xml.sax";version="1.2",org.apache.taglibs.st
+ andard;version="1.2",org.apache.taglibs.standard.functions;uses:="org
+ .apache.taglibs.standard.tag.common.core,org.apache.taglibs.standard.
+ resources,javax.servlet.jsp";version="1.2",org.apache.taglibs.standar
+ d.tag.el.fmt;uses:="org.apache.taglibs.standard.lang.support,javax.se
+ rvlet.jsp.tagext,org.apache.taglibs.standard.tag.common.fmt,javax.ser
+ vlet.jsp,javax.servlet.jsp.jstl.fmt";version="1.2",org.apache.taglibs
+ .standard.tag.rt.fmt;uses:="org.apache.taglibs.standard.tag.common.fm
+ t,javax.servlet.jsp,javax.servlet.jsp.jstl.fmt";version="1.2",org.apa
+ che.taglibs.standard.lang.jstl;uses:="org.apache.taglibs.standard.lan
+ g.jstl.parser,javax.servlet,javax.servlet.jsp,org.apache.taglibs.stan
+ dard.lang.support,javax.servlet.jsp.tagext,javax.servlet.http";versio
+ n="1.2",org.apache.taglibs.standard.tag.rt.core;uses:="org.apache.tag
+ libs.standard.tag.common.core,javax.servlet.jsp.jstl.core,javax.servl
+ et.jsp.tagext,javax.servlet.jsp";version="1.2",org.apache.taglibs.sta
+ ndard.lang.jstl.parser;uses:="org.apache.taglibs.standard.lang.jstl";
+ version="1.2",org.apache.taglibs.standard.tag.common.core;uses:="java
+ x.servlet.jsp.tagext,javax.servlet.jsp,org.apache.taglibs.standard.re
+ sources,javax.el,javax.servlet.jsp.jstl.core,javax.servlet,javax.serv
+ let.http";version="1.2",org.apache.taglibs.standard.tag.common.xml;us
+ es:="org.apache.taglibs.standard.tag.common.core,javax.servlet.jsp.ta
+ gext,org.w3c.dom,javax.servlet.jsp,javax.servlet.jsp.jstl.core,org.ap
+ ache.taglibs.standard.resources,javax.xml.namespace,javax.xml.xpath,o
+ rg.apache.xpath.jaxp,org.apache.xml.utils,org.apache.xalan.res,javax.
+ xml.parsers,org.apache.xpath.objects,org.w3c.dom.traversal,org.xml.sa
+ x,org.apache.xpath,javax.xml.transform,javax.servlet,javax.servlet.ht
+ tp,javax.xml.transform.dom,javax.xml.transform.sax,org.xml.sax.helper
+ s,javax.xml.transform.stream";version="1.2",org.apache.taglibs.standa
+ rd.tei;uses:="javax.servlet.jsp.tagext";version="1.2",org.apache.tagl
+ ibs.standard.tag.common.sql;uses:="javax.naming,javax.sql,javax.servl
+ et.jsp.jstl.core,org.apache.taglibs.standard.resources,javax.servlet.
+ jsp,javax.servlet.jsp.tagext,javax.servlet.jsp.jstl.sql,javax.servlet
+ ,org.apache.taglibs.standard.tag.common.core";version="1.2",org.apach
+ e.taglibs.standard.resources;version="1.2",org.apache.taglibs.standar
+ d.tag.rt.xml;uses:="org.apache.taglibs.standard.tag.common.xml,javax.
+ servlet.jsp,org.xml.sax,javax.xml.transform";version="1.2",org.apache
+ .taglibs.standard.tag.el.sql;uses:="org.apache.taglibs.standard.lang.
+ support,org.apache.taglibs.standard.tag.common.sql,javax.servlet.jsp.
+ tagext,javax.servlet.jsp";version="1.2",org.apache.taglibs.standard.t
+ ag.el.xml;uses:="org.apache.taglibs.standard.tag.common.xml,javax.ser
+ vlet.jsp.tagext,javax.servlet.jsp,org.apache.taglibs.standard.tag.el.
+ core,org.apache.taglibs.standard.tag.common.core,org.xml.sax,javax.xm
+ l.transform";version="1.2",org.apache.taglibs.standard.tag.common.fmt
+ ;uses:="org.apache.taglibs.standard.tag.common.core,javax.servlet,jav
+ ax.servlet.jsp.jstl.fmt,javax.servlet.jsp.jstl.core,javax.servlet.jsp
+ .tagext,javax.servlet.jsp,javax.servlet.http,org.apache.taglibs.stand
+ ard.resources";version="1.2",org.apache.taglibs.standard.lang.support
+ ;uses:="javax.servlet.jsp.tagext,javax.servlet.jsp,org.apache.taglibs
+ .standard.lang.jstl";version="1.2",org.apache.taglibs.standard.tag.rt
+ .sql;uses:="org.apache.taglibs.standard.tag.common.sql,javax.servlet.
+ jsp";version="1.2",org.apache.taglibs.standard.extra.spath;uses:="org
+ .xml.sax,org.xml.sax.helpers,javax.servlet.jsp.tagext,javax.servlet.j
+ sp";version="1.2",org.apache.taglibs.standard.tag.el.core;uses:="org.
+ apache.taglibs.standard.lang.support,org.apache.taglibs.standard.tag.
+ common.core,javax.servlet.jsp.tagext,javax.servlet.jsp,javax.servlet.
+ jsp.jstl.core";version="1.2"
+Bundle-Name: JavaServer Pages(TM) Standard Tag Library 1.2 API
+Implementation-Title: JavaServer Pages(TM) Standard Tag Library 1.2 AP
+ I
+Bundle-Description: JSR 52: JavaServer Pages(TM) Standard Tag Library 
+ 1.2 API
+Build-Timestamp: Wed, 14 May 2014 08:19:44 -0400
+Implementation-Version: 1.0.6.Final-redhat-1
+Java-Version: 1.6.0_30
+Scm-Connection: scm:git:https://github.com/jboss/jboss-jstl-api_spec.g
+ it
+Specification-Vendor: Oracle
+Os-Arch: amd64
+Bundle-ManifestVersion: 2
+Java-Vendor: Sun Microsystems Inc.
+Bundle-Vendor: JBoss by Red Hat
+Os-Name: Linux
+Tool: Bnd-1.50.0
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-431.17.1.el6.x86_64
+Scm-Revision: 76fa7dc5cd6610e1268721d20e2ca1bc529297da
+Bundle-Version: 1.0.6.Final-redhat-1
+Created-By: Apache Maven Bundle Plugin
+Implementation-URL: http://www.jboss.org/jboss-jstl-api_1.2_spec
+Build-Jdk: 1.6.0_30
+Specification-Version: 1.2
+

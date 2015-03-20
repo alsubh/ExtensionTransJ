@@ -1,0 +1,17 @@
+digraph jboss_as_jpa_hibernate3_7_4_0_Final_redhat_19_dependencies {
+  node [shape = box, fontsize=10.0];
+  jboss_as_jpa_hibernate3_7_4_0_Final_redhat_19 -> hibernate_core_4_2_14_SP1_redhat_1;
+  jboss_as_jpa_hibernate3_7_4_0_Final_redhat_19 -> hibernate_entitymanager_4_2_14_SP1_redhat_1;
+  jboss_as_jpa_hibernate3_7_4_0_Final_redhat_19 -> hibernate_infinispan_4_2_14_SP1_redhat_1;
+  jboss_as_jpa_hibernate3_7_4_0_Final_redhat_19 -> hibernate_jpa_2_0_api_1_0_1_Final_redhat_2;
+  jboss_as_jpa_hibernate3_7_4_0_Final_redhat_19 -> infinispan_core_5_2_10_Final_redhat_1;
+  jboss_as_jpa_hibernate3_7_4_0_Final_redhat_19 -> jandex_1_0_3_Final_redhat_2;
+  jboss_as_jpa_hibernate3_7_4_0_Final_redhat_19 -> jboss_as_clustering_common_7_4_0_Final_redhat_19;
+  jboss_as_jpa_hibernate3_7_4_0_Final_redhat_19 -> jboss_as_clustering_infinispan_7_4_0_Final_redhat_19;
+  jboss_as_jpa_hibernate3_7_4_0_Final_redhat_19 -> jboss_as_clustering_jgroups_7_4_0_Final_redhat_19;
+  jboss_as_jpa_hibernate3_7_4_0_Final_redhat_19 -> jboss_as_jpa_spi_7_4_0_Final_redhat_19;
+  jboss_as_jpa_hibernate3_7_4_0_Final_redhat_19 -> jboss_as_server_7_4_0_Final_redhat_19;
+  jboss_as_jpa_hibernate3_7_4_0_Final_redhat_19 -> jboss_cli_client;
+  jboss_as_jpa_hibernate3_7_4_0_Final_redhat_19 -> jboss_client;
+  jboss_as_jpa_hibernate3_7_4_0_Final_redhat_19 -> jboss_msc_1_1_5_Final_redhat_1;
+}

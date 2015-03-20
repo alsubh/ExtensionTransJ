@@ -1,0 +1,11 @@
+digraph jboss_osgi_logging_1_0_0_redhat_2_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_osgi_logging -> org_osgi_framework;
+  org_jboss_osgi_logging -> org_osgi_service_log;
+  org_jboss_osgi_logging -> org_osgi_util_tracker;
+  org_jboss_osgi_logging_internal -> org_jboss_logging;
+  org_jboss_osgi_logging_internal -> org_jboss_osgi_logging;
+  org_jboss_osgi_logging_internal -> org_osgi_framework;
+  org_jboss_osgi_logging_internal -> org_osgi_service_log;
+  org_jboss_osgi_logging_internal -> org_osgi_util_tracker;
+}

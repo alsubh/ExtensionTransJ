@@ -1,0 +1,5 @@
+digraph picketbox_infinispan_4_0_19_SP8_redhat_1_dependencies {
+  node [shape = box, fontsize=10.0];
+  picketbox_infinispan_4_0_19_SP8_redhat_1 -> jboss_cli_client;
+  picketbox_infinispan_4_0_19_SP8_redhat_1 -> jboss_jacc_api_1_4_spec_1_0_3_Final_redhat_1;
+}

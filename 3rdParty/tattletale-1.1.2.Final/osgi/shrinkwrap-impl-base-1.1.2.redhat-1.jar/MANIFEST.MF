@@ -1,0 +1,85 @@
+Manifest-Version: 1.0
+Implementation-Title: ShrinkWrap Implementation Base
+Implementation-Version: 1.1.2.redhat-1
+Build-Timestamp: Tue, 24 Sep 2013 00:06:12 -0400
+Archiver-Version: Plexus Archiver
+Java-Version: 1.6.0_24
+Built-By: mockbuild
+Scm-Connection: scm:git:git://github.com/shrinkwrap/shrinkwrap.git/shr
+ inkwrap-impl-base
+Specification-Vendor: JBoss by Red Hat
+Os-Arch: amd64
+Specification-Title: ShrinkWrap Implementation Base
+Implementation-Vendor-Id: org.jboss.shrinkwrap
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: https://github.com/shrinkwrap/shrinkwrap/shrinkwrap-impl-base
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-358.18.1.el6.x86_64
+Scm-Revision: f3b6be0a61839d1ffde8d8a6de927c96fbcceb66
+Created-By: Apache Maven
+Build-Jdk: 1.6.0_24
+Specification-Version: 1.1.2.redhat-1
+Implementation-URL: http://www.jboss.org/shrinkwrap-impl-base
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.shrinkwrap.impl.base
+Bundle-Description: shrinkwrap-impl-base-1.1.2.redhat-1
+Bundle-Name: shrinkwrap-impl-base-1.1.2.redhat-1
+Bundle-Version: 1.1.2.redhat-1
+Export-Package: org.jboss.shrinkwrap.api,org.jboss.shrinkwrap.api.asse
+ t,org.jboss.shrinkwrap.impl.base;uses:="org.jboss.shrinkwrap.api,org.
+ jboss.shrinkwrap.api.asset,org.jboss.shrinkwrap.api.exporter,org.jbos
+ s.shrinkwrap.api.formatter,org.jboss.shrinkwrap.api.importer,org.jbos
+ s.shrinkwrap.impl.base.container,org.jboss.shrinkwrap.impl.base.io,or
+ g.jboss.shrinkwrap.impl.base.path,org.jboss.shrinkwrap.spi",org.jboss
+ .shrinkwrap.impl.base.asset;uses:="org.jboss.shrinkwrap.api,org.jboss
+ .shrinkwrap.api.asset,org.jboss.shrinkwrap.impl.base,org.jboss.shrink
+ wrap.impl.base.path",org.jboss.shrinkwrap.impl.base.container;uses:="
+ org.jboss.shrinkwrap.api,org.jboss.shrinkwrap.api.asset,org.jboss.shr
+ inkwrap.api.container,org.jboss.shrinkwrap.api.exporter,org.jboss.shr
+ inkwrap.api.formatter,org.jboss.shrinkwrap.impl.base,org.jboss.shrink
+ wrap.impl.base.asset,org.jboss.shrinkwrap.impl.base.path,org.jboss.sh
+ rinkwrap.spi",org.jboss.shrinkwrap.impl.base.exporter;uses:="org.jbos
+ s.shrinkwrap.api,org.jboss.shrinkwrap.api.asset,org.jboss.shrinkwrap.
+ api.exporter,org.jboss.shrinkwrap.impl.base,org.jboss.shrinkwrap.impl
+ .base.io,org.jboss.shrinkwrap.impl.base.path",org.jboss.shrinkwrap.im
+ pl.base.exporter.tar;uses:="org.jboss.shrinkwrap.api,org.jboss.shrink
+ wrap.api.exporter,org.jboss.shrinkwrap.impl.base.exporter,org.jboss.s
+ hrinkwrap.impl.base.io.tar",org.jboss.shrinkwrap.impl.base.exporter.z
+ ip;uses:="org.jboss.shrinkwrap.api,org.jboss.shrinkwrap.api.exporter,
+ org.jboss.shrinkwrap.impl.base.exporter",org.jboss.shrinkwrap.impl.ba
+ se.filter;uses:="org.jboss.shrinkwrap.api,org.jboss.shrinkwrap.impl.b
+ ase",org.jboss.shrinkwrap.impl.base.importer;uses:="org.jboss.shrinkw
+ rap.api,org.jboss.shrinkwrap.api.asset,org.jboss.shrinkwrap.api.impor
+ ter,org.jboss.shrinkwrap.impl.base,org.jboss.shrinkwrap.impl.base.pat
+ h",org.jboss.shrinkwrap.impl.base.importer.tar;uses:="org.jboss.shrin
+ kwrap.api,org.jboss.shrinkwrap.api.asset,org.jboss.shrinkwrap.api.imp
+ orter,org.jboss.shrinkwrap.impl.base,org.jboss.shrinkwrap.impl.base.i
+ o.tar",org.jboss.shrinkwrap.impl.base.importer.zip;uses:="org.jboss.s
+ hrinkwrap.api,org.jboss.shrinkwrap.api.asset,org.jboss.shrinkwrap.api
+ .importer,org.jboss.shrinkwrap.impl.base,org.jboss.shrinkwrap.impl.ba
+ se.asset,org.jboss.shrinkwrap.impl.base.io,org.jboss.shrinkwrap.impl.
+ base.path",org.jboss.shrinkwrap.impl.base.io;uses:="org.jboss.shrinkw
+ rap.api.asset,org.jboss.shrinkwrap.impl.base",org.jboss.shrinkwrap.im
+ pl.base.io.tar,org.jboss.shrinkwrap.impl.base.path;uses:="org.jboss.s
+ hrinkwrap.api",org.jboss.shrinkwrap.impl.base.serialization;uses:="or
+ g.jboss.shrinkwrap.api,org.jboss.shrinkwrap.api.exporter,org.jboss.sh
+ rinkwrap.api.importer,org.jboss.shrinkwrap.api.serialization,org.jbos
+ s.shrinkwrap.api.spec,org.jboss.shrinkwrap.impl.base,org.jboss.shrink
+ wrap.impl.base.io,org.jboss.shrinkwrap.spi",org.jboss.shrinkwrap.impl
+ .base.spec;uses:="org.jboss.shrinkwrap.api,org.jboss.shrinkwrap.api.s
+ pec,org.jboss.shrinkwrap.impl.base.container,org.jboss.shrinkwrap.imp
+ l.base.path"
+Import-Package: java.io,java.lang,java.lang.reflect,java.net,java.secu
+ rity,java.util,java.util.concurrent,java.util.logging,java.util.zip,j
+ avax.activation;version="0.0.0",org.jboss.shrinkwrap.api;version="1.1
+ .2.redhat-1",org.jboss.shrinkwrap.api.asset;version="1.1.2.redhat-1",
+ org.jboss.shrinkwrap.api.container;version="1.1.2.redhat-1",org.jboss
+ .shrinkwrap.api.exporter;version="1.1.2.redhat-1",org.jboss.shrinkwra
+ p.api.formatter;version="1.1.2.redhat-1",org.jboss.shrinkwrap.api.imp
+ orter;version="1.1.2.redhat-1",org.jboss.shrinkwrap.api.serialization
+ ;version="1.1.2.redhat-1",org.jboss.shrinkwrap.api.spec;version="1.1.
+ 2.redhat-1",org.jboss.shrinkwrap.spi;version="1.1.2.redhat-1"

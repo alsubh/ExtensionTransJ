@@ -1,0 +1,47 @@
+Manifest-Version: 1.0
+Bundle-License: http://repository.jboss.org/licenses/lgpl-2.1.txt
+Bundle-SymbolicName: jboss-as-osgi-configadmin
+Built-By: mockbuild
+Bnd-LastModified: 1405096633592
+Implementation-Vendor-Id: org.jboss.as
+Specification-Title: JBoss Application Server: OSGi Integration Config
+ Admin
+Bundle-DocURL: http://www.jboss.org
+Import-Package: org.apache.felix.cm;version="[1.0,2.0)",org.jboss.as.c
+ onfigadmin,org.jboss.msc.service,org.osgi.framework;version="[1.5,2.0
+ )",org.osgi.service.cm;version="[1.3,2.0)",org.osgi.util.tracker;vers
+ ion="[1.4,2.0)"
+Scm-Url: https://github.com/jbossas/jboss-as/jboss-as-osgi/jboss-as-os
+ gi-integration/jboss-as-osgi-configadmin
+Export-Package: org.jboss.as.osgi.configadmin;uses:="org.jboss.as.conf
+ igadmin,org.osgi.util.tracker,org.osgi.framework,org.osgi.service.cm,
+ org.jboss.msc.service,org.apache.felix.cm";version="7.4.0.Final-redha
+ t-19"
+Bundle-Name: JBoss Application Server: OSGi Integration ConfigAdmin
+Bundle-Activator: org.jboss.as.osgi.configadmin.DomainModelPersistence
+ Manager
+Bundle-Description: JBoss Application Server: Parent Aggregator
+Implementation-Title: JBoss Application Server: OSGi Integration Confi
+ gAdmin
+Build-Timestamp: Fri, 11 Jul 2014 12:34:05 -0400
+Implementation-Version: 7.4.0.Final-redhat-19
+Java-Version: 1.6.0_30
+Scm-Connection: scm:git:git@github.com:jbossas/jboss-as.git/jboss-as-o
+ sgi/jboss-as-osgi-integration/jboss-as-osgi-configadmin
+Bundle-ManifestVersion: 2
+Os-Arch: i386
+Specification-Vendor: JBoss by Red Hat
+Bundle-Vendor: JBoss by Red Hat
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Tool: Bnd-1.50.0
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-431.17.1.el6.x86_64
+Bundle-Version: 7.4.0.Final-redhat-19
+Scm-Revision: b0d14b662d07cb1fcc0d8ac40c811345853866fd
+Build-Jdk: 1.6.0_30
+Created-By: Apache Maven Bundle Plugin
+Implementation-URL: http://www.jboss.org/jboss-as-parent/jboss-as-osgi
+ /jboss-as-osgi-integration/jboss-as-osgi-configadmin
+Specification-Version: 7.4.0.Final-redhat-19
+

@@ -1,0 +1,46 @@
+Manifest-Version: 1.0
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-SymbolicName: org.apache.neethi
+Built-By: mockbuild
+Bnd-LastModified: 1381753468954
+Implementation-Vendor-Id: org.apache.neethi
+Specification-Title: Apache Neethi
+Bundle-DocURL: http://www.apache.org/
+Import-Package: javax.xml.namespace,javax.xml.parsers,javax.xml.stream
+ ;version="[0.0,2)",javax.xml.stream.events;version="[0.0,2)",javax.xm
+ l.transform,javax.xml.transform.dom,org.apache.axiom.om;resolution:=o
+ ptional,org.w3c.dom
+Scm-Url: http://svn.apache.org/viewcvs.cgi/webservices/commons/tags/ne
+ ethi/neethi-3.0.2
+Export-Package: org.apache.neethi.util;version="3.0.2.redhat-3",org.ap
+ ache.neethi;version="3.0.2.redhat-3",org.apache.neethi.builders.conve
+ rters;version="3.0.2.redhat-3",org.apache.neethi.builders;version="3.
+ 0.2.redhat-3",org.apache.neethi.builders.xml;version="3.0.2.redhat-3"
+Bundle-Name: Apache Neethi
+Bundle-Description: Apache Neethi provides general framework for the p
+ rogrammers to use WS Policy. It is compliant with latest WS Policy sp
+ ecification which was published in March 2006. This framework is spec
+ ifically written to enable the Apache Web services stack to use WS Po
+ licy as a way of expressing it's requirements and capabilities.
+Implementation-Title: Apache Neethi
+Build-Timestamp: Mon, 14 Oct 2013 08:24:20 -0400
+Implementation-Version: 3.0.2.redhat-3
+Java-Version: 1.6.0_24
+Scm-Connection: scm:svn:http://svn.apache.org/repos/asf/webservices/co
+ mmons/tags/neethi/neethi-3.0.2
+Bundle-ManifestVersion: 2
+Os-Arch: i386
+Specification-Vendor: The Apache Software Foundation
+Bundle-Vendor: The Apache Software Foundation
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Tool: Bnd-1.50.0
+Implementation-Vendor: The Apache Software Foundation
+Os-Version: 2.6.32-358.18.1.el6.x86_64
+Bundle-Version: 3.0.2.redhat-3
+Scm-Revision: UNKNOWN
+Build-Jdk: 1.6.0_24
+Created-By: Apache Maven Bundle Plugin
+Implementation-URL: http://ws.apache.org/neethi/
+Specification-Version: 3.0.2.redhat-3
+

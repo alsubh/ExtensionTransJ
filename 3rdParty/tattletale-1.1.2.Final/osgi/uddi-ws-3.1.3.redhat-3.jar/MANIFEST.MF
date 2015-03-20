@@ -1,0 +1,79 @@
+Manifest-Version: 1.0
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-SymbolicName: org.apache.juddi.uddi-ws
+Built-By: mockbuild
+Bnd-LastModified: 1381630669947
+Implementation-Vendor-Id: org.apache.juddi
+Specification-Title: UDDI_v3 WS Stubs and Schema Bindings Generated fr
+ om WSDL
+Bundle-DocURL: http://www.jboss.org
+Import-Package: javax.jws,javax.jws.soap,javax.xml.bind,javax.xml.bind
+ .annotation,javax.xml.bind.annotation.adapters,javax.xml.datatype,jav
+ ax.xml.namespace,javax.xml.soap,javax.xml.ws;version="[2.2,3)",javax.
+ xml.ws.soap;version="[2.2,3)",org.apache.commons.logging,org.w3c.dom
+Scm-Url: http://svn.apache.org/viewcvs.cgi/juddi/tags/juddi-3.1.3/uddi
+ -ws
+Export-Package: org.apache.juddi;uses:="javax.xml.bind.annotation,java
+ x.xml.bind,javax.xml.namespace";version="3.1.3.redhat-3",org.apache.j
+ uddi.api_v3;uses:="javax.xml.bind.annotation,javax.xml.bind,javax.xml
+ .namespace,org.w3._2000._09.xmldsig_,org.uddi.sub_v3";version="3.1.3.
+ redhat-3",org.apache.juddi.jaxb;uses:="org.apache.commons.logging,jav
+ ax.xml.bind,javax.xml.namespace,org.w3c.dom";version="3.1.3.redhat-3"
+ ,org.apache.juddi.v3_service;uses:="org.uddi.api_v3,javax.jws.soap,or
+ g.w3._2000._09.xmldsig_,javax.jws,org.apache.juddi.api_v3,javax.xml.b
+ ind.annotation,org.uddi.v3_service";version="3.1.3.redhat-3",org.uddi
+ ;uses:="org.apache.commons.logging,javax.xml.bind";version="3.1.3.red
+ hat-3",org.uddi.api_v3;uses:="javax.xml.bind.annotation,org.w3._2000.
+ _09.xmldsig_,javax.xml.bind,org.w3c.dom,org.uddi,javax.xml.namespace,
+ javax.xml.datatype";version="3.1.3.redhat-3",org.uddi.custody_v3;uses
+ :="javax.xml.bind.annotation,javax.xml.bind,javax.xml.namespace,javax
+ .xml.datatype";version="3.1.3.redhat-3",org.uddi.policy_v3;uses:="jav
+ ax.xml.bind.annotation,javax.xml.bind,javax.xml.namespace,org.w3._200
+ 0._09.xmldsig_";version="3.1.3.redhat-3",org.uddi.policy_v3_instancep
+ arms;uses:="javax.xml.bind.annotation,javax.xml.bind,javax.xml.namesp
+ ace";version="3.1.3.redhat-3",org.uddi.repl_v3;uses:="javax.xml.bind.
+ annotation,javax.xml.datatype,org.uddi.api_v3,org.w3._2000._09.xmldsi
+ g_,javax.xml.bind,javax.xml.namespace,org.uddi.custody_v3";version="3
+ .1.3.redhat-3",org.uddi.sub_v3;uses:="javax.xml.bind.annotation,javax
+ .xml.datatype,javax.xml.bind,javax.xml.namespace,org.uddi.api_v3";ver
+ sion="3.1.3.redhat-3",org.uddi.subr_v3;uses:="org.uddi.sub_v3,javax.x
+ ml.bind.annotation,javax.xml.bind,javax.xml.namespace";version="3.1.3
+ .redhat-3",org.uddi.v3_service;uses:="org.uddi.api_v3,org.apache.comm
+ ons.logging,javax.xml.soap,javax.xml.bind,org.w3c.dom,javax.xml.ws,ja
+ vax.xml.ws.soap,org.uddi.custody_v3,org.uddi.repl_v3,org.w3._2000._09
+ .xmldsig_,javax.jws,org.uddi.sub_v3,org.uddi.vs_v3,org.uddi.subr_v3,j
+ avax.xml.datatype,javax.jws.soap,javax.xml.bind.annotation,org.uddi.p
+ olicy_v3,org.uddi.vscache_v3,org.uddi.policy_v3_instanceparms";versio
+ n="3.1.3.redhat-3",org.uddi.vs_v3;uses:="javax.xml.bind.annotation,ja
+ vax.xml.bind,javax.xml.namespace,org.uddi.api_v3";version="3.1.3.redh
+ at-3",org.uddi.vscache_v3;uses:="javax.xml.bind.annotation,javax.xml.
+ bind,javax.xml.namespace";version="3.1.3.redhat-3",org.w3._2000._09.x
+ mldsig_;uses:="javax.xml.bind.annotation,javax.xml.bind.annotation.ad
+ apters,javax.xml.bind,javax.xml.namespace";version="3.1.3.redhat-3"
+Bundle-Name: UDDI_v3 WS Stubs and Schema Bindings Generated from WSDL
+Bundle-Description: jUDDI (pronounced "Judy") is an open source Java		
+ implementation of the Universal Description, Discovery, and		Integrat
+ ion (UDDI) specification for Web Services.
+Implementation-Title: UDDI_v3 WS Stubs and Schema Bindings Generated f
+ rom WSDL
+Build-Timestamp: Sat, 12 Oct 2013 22:17:37 -0400
+Implementation-Version: 3.1.3.redhat-3
+Java-Version: 1.6.0_24
+Scm-Connection: scm:svn:http://svn.apache.org/repos/asf/juddi/tags/jud
+ di-3.1.3/uddi-ws
+Bundle-ManifestVersion: 2
+Os-Arch: amd64
+Specification-Vendor: JBoss by Red Hat
+Bundle-Vendor: JBoss by Red Hat
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Tool: Bnd-1.50.0
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-358.18.1.el6.x86_64
+Bundle-Version: 3.1.3.redhat-3
+Scm-Revision: UNKNOWN
+Build-Jdk: 1.6.0_24
+Created-By: Apache Maven Bundle Plugin
+Implementation-URL: http://juddi.apache.org/uddi-ws/
+Specification-Version: 3.1.3.redhat-3
+

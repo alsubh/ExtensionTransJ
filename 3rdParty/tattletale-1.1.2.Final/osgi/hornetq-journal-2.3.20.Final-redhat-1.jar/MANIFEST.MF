@@ -1,0 +1,48 @@
+Manifest-Version: 1.0
+Implementation-Title: HornetQ Journal
+Build-Timestamp: Tue, 1 Jul 2014 14:19:58 -0400
+Implementation-Version: 2.3.20.Final-redhat-1
+Java-Version: 1.6.0_30
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Scm-Connection: scm:git:git://github.com/hornetq/hornetq.git/hornetq-j
+ ournal
+Specification-Vendor: JBoss, a division of Red Hat
+Os-Arch: amd64
+Implementation-Vendor-Id: org.hornetq
+Specification-Title: HornetQ Journal
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: https://github.com/hornetq/hornetq/hornetq-journal
+Implementation-Vendor: JBoss, a division of Red Hat
+Os-Version: 2.6.32-431.17.1.el6.x86_64
+Scm-Revision: e56dffaaeb25bf0ab66e3ecec45428ae1ec7b019
+Created-By: Apache Maven
+Implementation-URL: http://hornetq.org/hornetq-journal
+Build-Jdk: 1.6.0_30
+Specification-Version: 2.3.20.Final-redhat-1
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.hornetq.core.journal.impl
+Bundle-Description: hornetq-journal-2.3.20.Final-redhat-1
+Bundle-Name: hornetq-journal-2.3.20.Final-redhat-1
+Bundle-Version: 2.3.20.Final-redhat-1
+Export-Package: org.hornetq.core.asyncio;uses:="org.hornetq.api.core",
+ org.hornetq.core.asyncio.impl;uses:="org.hornetq.api.core,org.hornetq
+ .core.asyncio,org.hornetq.journal,org.hornetq.utils",org.hornetq.core
+ .journal;uses:="org.hornetq.api.core,org.hornetq.core.asyncio,org.hor
+ netq.core.journal.impl,org.hornetq.core.server",org.hornetq.core.jour
+ nal.impl;uses:="org.hornetq.api.core,org.hornetq.core.asyncio,org.hor
+ netq.core.asyncio.impl,org.hornetq.core.journal,org.hornetq.core.jour
+ nal.impl.dataformat,org.hornetq.journal,org.hornetq.utils",org.hornet
+ q.core.journal.impl.dataformat;uses:="org.hornetq.api.core,org.hornet
+ q.core.journal",org.hornetq.journal;uses:="org.hornetq.api.core,org.h
+ ornetq.core.journal.impl,org.jboss.logging"
+Import-Package: java.io,java.lang,java.lang.ref,java.nio,java.nio.chan
+ nels,java.security,java.text,java.util,java.util.concurrent,java.util
+ .concurrent.atomic,java.util.concurrent.locks,org.hornetq.api.core;ve
+ rsion="2.3.20.Final-redhat-1",org.hornetq.core.server;version="2.3.20
+ .Final-redhat-1",org.hornetq.utils;version="2.3.20.Final-redhat-1",or
+ g.jboss.logging;version="7.4.0.Final-redhat-19"

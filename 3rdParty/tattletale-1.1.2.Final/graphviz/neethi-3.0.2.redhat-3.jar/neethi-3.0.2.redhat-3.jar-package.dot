@@ -1,0 +1,13 @@
+digraph neethi_3_0_2_redhat_3_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_apache_neethi -> org_apache_axiom_om;
+  org_apache_neethi -> org_apache_neethi_builders;
+  org_apache_neethi -> org_apache_neethi_builders_converters;
+  org_apache_neethi -> org_apache_neethi_builders_xml;
+  org_apache_neethi -> org_apache_neethi_util;
+  org_apache_neethi_builders -> org_apache_neethi;
+  org_apache_neethi_builders_converters -> org_apache_axiom_om;
+  org_apache_neethi_builders_xml -> org_apache_neethi;
+  org_apache_neethi_builders_xml -> org_apache_neethi_builders;
+  org_apache_neethi_util -> org_apache_neethi;
+}

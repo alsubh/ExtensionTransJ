@@ -1,0 +1,88 @@
+Manifest-Version: 1.0
+Export-Service: org.apache.aries.blueprint.NamespaceHandler;osgi.servi
+ ce.blueprint.namespace=""
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-SymbolicName: org.apache.cxf.cxf-rt-ws-rm
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Bnd-LastModified: 1401765391731
+Implementation-Vendor-Id: org.apache.cxf
+Specification-Title: Apache CXF Runtime WS Reliable Messaging
+Bundle-DocURL: http://cxf.apache.org
+Import-Package: javax.annotation,javax.management,javax.management.ope
+ nmbean,javax.sql,javax.wsdl.extensions,javax.xml.bind;version="[2.2,3
+ )",javax.xml.bind.annotation;version="[2.2,3)",javax.xml.bind.annotat
+ ion.adapters;version="[2.2,3)",javax.xml.datatype,javax.xml.namespace
+ ,javax.xml.transform,javax.xml.transform.stream,javax.xml.validation,
+ org.apache.aries.blueprint;version="[0.3,2)";resolution:=optional,org
+ .apache.aries.blueprint.mutable;version="[0.3,2)";resolution:=optiona
+ l,org.apache.cxf;version="[2.7,3)",org.apache.cxf.binding;version="[2
+ .7,3)",org.apache.cxf.binding.soap;version="[2.7,3)",org.apache.cxf.b
+ inding.soap.interceptor;version="[2.7,3)",org.apache.cxf.binding.soap
+ .model;version="[2.7,3)",org.apache.cxf.common.i18n;version="[2.7,3)"
+ ,org.apache.cxf.common.injection;version="[2.7,3)",org.apache.cxf.com
+ mon.logging;version="[2.7,3)",org.apache.cxf.common.util;version="[2.
+ 7,3)",org.apache.cxf.configuration.blueprint;version="[2.7,3)",org.ap
+ ache.cxf.configuration.spring;version="[2.7,3)",org.apache.cxf.contin
+ uations;version="[2.7,3)",org.apache.cxf.databinding;version="[2.7,3)
+ ",org.apache.cxf.endpoint;version="[2.7,3)",org.apache.cxf.feature;ve
+ rsion="[2.7,3)",org.apache.cxf.headers;version="[2.7,3)",org.apache.c
+ xf.helpers;version="[2.7,3)",org.apache.cxf.interceptor;version="[2.7
+ ,3)",org.apache.cxf.io;version="[2.7,3)",org.apache.cxf.jaxb;version=
+ "[2.7,3)",org.apache.cxf.management;version="[2.7,3)",org.apache.cxf.
+ management.annotation;version="[2.7,3)",org.apache.cxf.message;versio
+ n="[2.7,3)",org.apache.cxf.phase;version="[2.7,3)",org.apache.cxf.ser
+ vice;version="[2.7,3)",org.apache.cxf.service.factory;version="[2.7,3
+ )",org.apache.cxf.service.invoker;version="[2.7,3)",org.apache.cxf.se
+ rvice.model;version="[2.7,3)",org.apache.cxf.transport;version="[2.7,
+ 3)",org.apache.cxf.transport.common.gzip;version="[2.7,3)",org.apache
+ .cxf.workqueue;version="[2.7,3)",org.apache.cxf.ws.addressing;version
+ ="[2.7,3)",org.apache.cxf.ws.addressing.impl;version="[2.7,3)",org.ap
+ ache.cxf.ws.addressing.soap;version="[2.7,3)",org.apache.cxf.ws.addre
+ ssing.v200408;version="[2.7,3)",org.apache.cxf.ws.policy;version="[2.
+ 7,3)",org.apache.cxf.ws.policy.builder.jaxb;version="[2.7,3)",org.apa
+ che.neethi;version="[3.0,4)",org.osgi.service.blueprint;version="[1.0
+ .0,2.0.0)",org.osgi.service.blueprint.reflect;version="[1.0,2)",org.s
+ pringframework.beans.factory.config;resolution:=optional;version="[2.
+ 5,4)",org.springframework.beans.factory.support;resolution:=optional;
+ version="[2.5,4)",org.springframework.beans.factory.xml;resolution:=o
+ ptional;version="[2.5,4)",org.w3c.dom
+Scm-Url: http://github.com/jboss/jboss-parent-pom/cxf/cxf-parent/cxf-r
+ t-ws-rm
+Export-Package: org.apache.cxf.ws.rm.v200502;version="2.7.11.redhat-3"
+ ,org.apache.cxf.ws.rm.v200702;version="2.7.11.redhat-3",org.apache.cx
+ f.ws.rm.policy;version="2.7.11.redhat-3",org.apache.cxf.ws.rm.bluepri
+ nt;version="2.7.11.redhat-3",org.apache.cxf.ws.rm.soap;version="2.7.1
+ 1.redhat-3",org.apache.cxf.ws.rm.persistence.jdbc;version="2.7.11.red
+ hat-3",org.apache.cxf.ws.rmp.v200502;version="2.7.11.redhat-3",org.ap
+ ache.cxf.ws.rm.v200502wsa15;version="2.7.11.redhat-3",org.apache.cxf.
+ ws.rm.spring;version="2.7.11.redhat-3",org.apache.cxf.ws.rm;version="
+ 2.7.11.redhat-3",org.apache.cxf.ws.rmp.v200702;version="2.7.11.redhat
+ -3",org.apache.cxf.ws.rm.feature;version="2.7.11.redhat-3",org.apache
+ .cxf.ws.rm.manager;version="2.7.11.redhat-3",org.apache.cxf.ws.rm.per
+ sistence;version="2.7.11.redhat-3"
+Bundle-Name: Apache CXF Runtime WS Reliable Messaging
+Implementation-Title: Apache CXF Runtime WS Reliable Messaging
+Bundle-Description: Apache CXF Runtime WS Reliable Messaging
+Build-Timestamp: Mon, 2 Jun 2014 23:09:45 -0400
+Implementation-Version: 2.7.11.redhat-3
+Java-Version: 1.6.0_30
+Scm-Connection: scm:git:http://git-wip-us.apache.org/repos/asf/cxf.git
+ /cxf-parent/cxf-rt-ws-rm
+Specification-Vendor: The Apache Software Foundation
+Os-Arch: i386
+Bundle-ManifestVersion: 2
+Java-Vendor: Sun Microsystems Inc.
+Bundle-Vendor: The Apache Software Foundation
+Os-Name: Linux
+Tool: Bnd-1.50.0
+Implementation-Vendor: The Apache Software Foundation
+Os-Version: 2.6.32-431.17.1.el6.x86_64
+Originally-Created-By: Apache Maven Bundle Plugin
+Scm-Revision: effe56628b68fe805899d1cd3afdcf586879c3da
+Bundle-Version: 2.7.11.redhat-3
+Created-By: Apache Maven Bundle Plugin
+Implementation-URL: http://cxf.apache.org
+Build-Jdk: 1.6.0_30
+Specification-Version: 2.7.11.redhat-3
+

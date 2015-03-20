@@ -1,0 +1,43 @@
+Manifest-Version: 1.0
+Export-Service: org.osgi.service.log.LogService,org.osgi.service.log.L
+ ogReaderService
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-SymbolicName: org.apache.felix.log
+Built-By: mockbuild
+Bnd-LastModified: 1382343299575
+Implementation-Vendor-Id: org.apache.felix
+Specification-Title: Apache Felix Log Service
+Bundle-DocURL: http://www.jboss.org
+Import-Package: org.osgi.framework;version="[1.4,2)",org.osgi.service.
+ log;version="[1.3,2)"
+Scm-Url: scm:svn:https://svn.apache.org/repos/asf/felix/releases/org.a
+ pache.felix.log-1.0.0
+Export-Package: org.osgi.service.log;uses:="org.osgi.framework";versio
+ n="1.3"
+Bundle-Name: Apache Felix Log Service
+Bundle-Activator: org.apache.felix.log.Activator
+Bundle-Description: A simple implementation of the OSGi R4 Log service
+ .
+Implementation-Title: Apache Felix Log Service
+Build-Timestamp: Mon, 21 Oct 2013 04:14:54 -0400
+Implementation-Version: 1.0.0.redhat-3
+Java-Version: 1.6.0_24
+Scm-Connection: scm:svn:https://svn.apache.org/repos/asf/felix/release
+ s/org.apache.felix.log-1.0.0
+Bundle-ManifestVersion: 2
+Os-Arch: amd64
+Specification-Vendor: JBoss by Red Hat
+Bundle-Vendor: The Apache Software Foundation
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Tool: Bnd-1.50.0
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-358.18.1.el6.x86_64
+Bundle-Version: 1.0.0.redhat-3
+Scm-Revision: UNKNOWN
+Build-Jdk: 1.6.0_24
+Created-By: Apache Maven Bundle Plugin
+Implementation-URL: http://www.jboss.org/apache/felix-parent/org.apach
+ e.felix.log
+Specification-Version: 1.0.0.redhat-3
+

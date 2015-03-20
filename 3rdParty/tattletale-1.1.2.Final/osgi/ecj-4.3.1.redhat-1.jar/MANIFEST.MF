@@ -1,0 +1,48 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.jdt.core.compiler.batch
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Implementation-Vendor-Id: org.eclipse.jdt.core.compiler
+Specification-Title: Eclipse ECJ
+Scm-Url: http://git.eclipse.org/gitroot/jdt/eclipse.jdt.core.git
+Main-Class: org.eclipse.jdt.internal.compiler.batch.Main
+Export-Package: org.eclipse.jdt.core,org.eclipse.jdt.core.compiler,org
+ .eclipse.jdt.internal.antadapter;x-internal:=true,org.eclipse.jdt.int
+ ernal.compiler;x-internal:=true,org.eclipse.jdt.internal.compiler.apt
+ .dispatch;x-internal:=true,org.eclipse.jdt.internal.compiler.apt.mode
+ l;x-internal:=true,org.eclipse.jdt.internal.compiler.apt.util;x-inter
+ nal:=true,org.eclipse.jdt.internal.compiler.ast;x-internal:=true,org.
+ eclipse.jdt.internal.compiler.batch;x-internal:=true,org.eclipse.jdt.
+ internal.compiler.classfmt;x-internal:=true,org.eclipse.jdt.internal.
+ compiler.codegen;x-internal:=true,org.eclipse.jdt.internal.compiler.e
+ nv;x-internal:=true,org.eclipse.jdt.internal.compiler.flow;x-internal
+ :=true,org.eclipse.jdt.internal.compiler.impl;x-internal:=true,org.ec
+ lipse.jdt.internal.compiler.lookup;x-internal:=true,org.eclipse.jdt.i
+ nternal.compiler.parser;x-internal:=true,org.eclipse.jdt.internal.com
+ piler.parser.diagnose;x-internal:=true,org.eclipse.jdt.internal.compi
+ ler.problem;x-internal:=true,org.eclipse.jdt.internal.compiler.util;x
+ -internal:=true,org.eclipse.jdt.internal.compiler.tool;x-internal:=tr
+ ue
+Bundle-Name: Eclipse Compiler for Java(TM)
+Implementation-Title: Eclipse ECJ
+Build-Timestamp: Thu, 20 Mar 2014 19:50:55 -0400
+Implementation-Version: 4.3.1.redhat-1
+Java-Version: 1.6.0_30
+Scm-Connection: scm:git:git://git.eclipse.org/gitroot/jdt/eclipse.jdt.
+ core.git
+Specification-Vendor: JBoss by Red Hat
+Os-Arch: amd64
+Bundle-ManifestVersion: 2
+Java-Vendor: Sun Microsystems Inc.
+Bundle-Vendor: Eclipse.org
+Os-Name: Linux
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-431.4.1.el6.x86_64
+Scm-Revision: 7f50aff302ce6bcd1c4291791994cb94d861bcf0
+Bundle-Version: 3.9.1.v20130905-0837
+Bundle-ClassPath: .
+Created-By: Apache Maven
+Implementation-URL: http://www.eclipse.org/jdt/
+Build-Jdk: 1.6.0_30
+Specification-Version: 4.3.1.redhat-1
+

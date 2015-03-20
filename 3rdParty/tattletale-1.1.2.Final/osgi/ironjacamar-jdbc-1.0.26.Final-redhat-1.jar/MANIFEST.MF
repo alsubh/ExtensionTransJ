@@ -1,0 +1,57 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.8.2
+Implementation-Title: IronJacamar JDBC Resource Adapter
+Implementation-Version: 1.0.26.Final-redhat-1
+Implementation-Vendor-Id: org.jboss
+Created-By: 1.6.0_30-b30 (Sun Microsystems Inc.)
+Implementation-Vendor: The IronJacamar project (http://www.jboss.org/i
+ ronjacamar)
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.jca.adapters.jdbc
+Bundle-Description: ironjacamar-jdbc-1.0.26.Final-redhat-1
+Bundle-Name: ironjacamar-jdbc-1.0.26.Final-redhat-1
+Bundle-Version: 1.0.26.Final-redhat-1
+Export-Package: org.jboss.jca.adapters.jdbc;uses:="javax.resource,java
+ x.resource.spi,javax.resource.spi.security,javax.transaction,org.jbos
+ s.jca.adapters.jdbc.classloading,org.jboss.jca.adapters.jdbc.extensio
+ ns.novendor,org.jboss.jca.adapters.jdbc.spi,org.jboss.jca.adapters.jd
+ bc.spi.reauth,org.jboss.jca.adapters.jdbc.statistics,org.jboss.jca.ad
+ apters.jdbc.util,org.jboss.jca.core.spi.statistics,org.jboss.jca.core
+ .spi.transaction,org.jboss.logging",org.jboss.jca.adapters.jdbc.class
+ loading;uses:="org.jboss.jca.adapters.jdbc.spi",org.jboss.jca.adapter
+ s.jdbc.extensions.db2;uses:="org.jboss.jca.adapters.jdbc.spi,org.jbos
+ s.logging",org.jboss.jca.adapters.jdbc.extensions.informix;uses:="org
+ .jboss.jca.adapters.jdbc.spi",org.jboss.jca.adapters.jdbc.extensions.
+ mssql;uses:="org.jboss.jca.adapters.jdbc.spi,org.jboss.logging",org.j
+ boss.jca.adapters.jdbc.extensions.mysql;uses:="org.jboss.jca.adapters
+ .jdbc.spi,org.jboss.jca.adapters.jdbc.spi.reauth,org.jboss.logging",o
+ rg.jboss.jca.adapters.jdbc.extensions.novendor;uses:="org.jboss.jca.a
+ dapters.jdbc.spi",org.jboss.jca.adapters.jdbc.extensions.oracle;uses:
+ ="org.jboss.jca.adapters.jdbc.spi,org.jboss.logging",org.jboss.jca.ad
+ apters.jdbc.extensions.postgres;uses:="org.jboss.jca.adapters.jdbc.sp
+ i",org.jboss.jca.adapters.jdbc.extensions.sybase;uses:="org.jboss.jca
+ .adapters.jdbc.spi,org.jboss.logging",org.jboss.jca.adapters.jdbc.jdk
+ 6;uses:="org.jboss.jca.adapters.jdbc",org.jboss.jca.adapters.jdbc.loc
+ al;uses:="javax.resource,javax.resource.spi,org.jboss.jca.adapters.jd
+ bc,org.jboss.jca.adapters.jdbc.classloading,org.jboss.jca.adapters.jd
+ bc.spi,org.jboss.jca.adapters.jdbc.util,org.jboss.logging",org.jboss.
+ jca.adapters.jdbc.spi,org.jboss.jca.adapters.jdbc.spi.reauth,org.jbos
+ s.jca.adapters.jdbc.statistics;uses:="org.jboss.jca.adapters.jdbc,org
+ .jboss.jca.core.spi.statistics",org.jboss.jca.adapters.jdbc.util,org.
+ jboss.jca.adapters.jdbc.xa;uses:="javax.resource,javax.resource.spi,o
+ rg.jboss.jca.adapters.jdbc,org.jboss.jca.adapters.jdbc.classloading,o
+ rg.jboss.jca.adapters.jdbc.spi,org.jboss.jca.adapters.jdbc.util,org.j
+ boss.logging"
+Import-Package: java.io,java.lang,java.lang.reflect,java.math,java.net
+ ,java.security,java.sql,java.util,java.util.concurrent,java.util.conc
+ urrent.atomic,java.util.concurrent.locks,java.util.logging,javax.nami
+ ng,javax.resource;version="1.6",javax.resource.spi;version="1.6",java
+ x.resource.spi.security;version="1.6",javax.security.auth,javax.sql,j
+ avax.transaction;version="7.4.0.Final-redhat-19",javax.transaction.xa
+ ;version="7.4.0.Final-redhat-19",org.ietf.jgss,org.jboss.jca.core.spi
+ .statistics;version="1.0.26.Final-redhat-1",org.jboss.jca.core.spi.tr
+ ansaction;version="1.0.26.Final-redhat-1",org.jboss.logging;version="
+ 7.4.0.Final-redhat-19"

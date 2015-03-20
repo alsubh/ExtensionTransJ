@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Created-By: Apache Maven
+Build-Jdk: 1.6.0_30
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.resteasy.jsapi
+Bundle-Description: resteasy-jsapi-2.3.8.Final-redhat-3
+Bundle-Name: resteasy-jsapi-2.3.8.Final-redhat-3
+Bundle-Version: 0.0.0
+Export-Package: org.jboss.resteasy.jsapi;uses:="javax.servlet,javax.se
+ rvlet.http,javax.ws.rs,javax.ws.rs.core,org.jboss.resteasy.annotation
+ s,org.jboss.resteasy.core,org.jboss.resteasy.core.registry,org.jboss.
+ resteasy.logging,org.jboss.resteasy.spi,org.jboss.resteasy.util"
+Import-Package: java.io,java.lang,java.lang.annotation,java.lang.refle
+ ct,java.util,java.util.regex,java.util.zip,javax.servlet;version="2.5
+ ",javax.servlet.http;version="2.5",javax.ws.rs;version="1.0.1.Final-r
+ edhat-2",javax.ws.rs.core;version="1.0.1.Final-redhat-2",org.jboss.re
+ steasy.annotations;version="0.0.0",org.jboss.resteasy.core;version="0
+ .0.0",org.jboss.resteasy.core.registry;version="0.0.0",org.jboss.rest
+ easy.logging;version="0.0.0",org.jboss.resteasy.spi;version="0.0.0",o
+ rg.jboss.resteasy.util;version="0.0.0"

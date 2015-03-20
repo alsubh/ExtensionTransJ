@@ -1,0 +1,44 @@
+Manifest-Version: 1.0
+Implementation-Title: osgi.core
+Bundle-Description: OSGi Service Platform Release 4 Version 4.2, Core 
+ Interfaces and Classes for use in compiling bundles.
+Bundle-License: http://opensource.org/licenses/apache2.0.php; link="ht
+ tp://www.apache.org/licenses/LICENSE-2.0"; description="Apache Licens
+ e, Version 2.0"
+Bundle-SymbolicName: osgi.core
+Implementation-Version: 4.2.0.redhat-4
+Built-By: mockbuild
+Specification-Vendor: OSGi Alliance
+Bnd-LastModified: 1379454234190
+Bundle-ManifestVersion: 2
+Bundle-Copyright: Copyright (c) OSGi Alliance (2000, 2013). All Rights
+  Reserved.
+Implementation-Vendor-Id: org.osgi
+Specification-Title: osgi.core
+Bundle-Vendor: OSGi Alliance
+Import-Package: javax.security.auth.x500;resolution:=optional,org.osgi
+ .framework;resolution:=optional;version="[1.5,2)",org.osgi.framework.
+ hooks.service;resolution:=optional;version="[1.0,2)",org.osgi.framewo
+ rk.launch;resolution:=optional;version="[1.0,2)",org.osgi.service.con
+ dpermadmin;resolution:=optional;version="[1.1,2)",org.osgi.service.pa
+ ckageadmin;resolution:=optional;version="[1.2,2)",org.osgi.service.pe
+ rmissionadmin;resolution:=optional;version="[1.2,2)",org.osgi.service
+ .startlevel;resolution:=optional;version="[1.1,2)",org.osgi.service.u
+ rl;resolution:=optional;version="[1.0,2)"
+DynamicImport-Package: *
+Tool: Bnd-0.0.356
+Implementation-Vendor: OSGi Alliance
+Export-Package: org.osgi.framework.launch;uses:="org.osgi.framework";v
+ ersion="1.0",org.osgi.framework;uses:="javax.security.auth.x500";vers
+ ion="1.5",org.osgi.framework.hooks.service;uses:="org.osgi.framework"
+ ;version="1.0",org.osgi.service.condpermadmin;uses:="org.osgi.framewo
+ rk,org.osgi.service.permissionadmin";version="1.1",org.osgi.service.p
+ ackageadmin;uses:="org.osgi.framework";version="1.2",org.osgi.service
+ .permissionadmin;version="1.2",org.osgi.service.startlevel;uses:="org
+ .osgi.framework";version="1.1",org.osgi.service.url;version="1.0"
+Bundle-Name: osgi.core
+Bundle-Version: 4.2.0.201309170543
+Created-By: 1.6.0_24 (Sun Microsystems Inc.)
+Build-Jdk: 1.6.0_24
+Specification-Version: 4.2.0.redhat-4
+

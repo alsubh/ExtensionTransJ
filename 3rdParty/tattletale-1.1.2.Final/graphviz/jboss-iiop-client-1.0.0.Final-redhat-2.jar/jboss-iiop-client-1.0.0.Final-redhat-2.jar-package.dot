@@ -1,0 +1,5 @@
+digraph jboss_iiop_client_1_0_0_Final_redhat_2_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_ejb_iiop -> javax_ejb;
+  org_jboss_ejb_iiop -> javax_ejb_spi;
+}

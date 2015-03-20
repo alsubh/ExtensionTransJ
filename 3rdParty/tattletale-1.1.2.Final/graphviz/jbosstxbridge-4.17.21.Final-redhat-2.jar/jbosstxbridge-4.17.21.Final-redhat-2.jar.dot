@@ -1,0 +1,9 @@
+digraph jbosstxbridge_4_17_21_Final_redhat_2_dependencies {
+  node [shape = box, fontsize=10.0];
+  jbosstxbridge_4_17_21_Final_redhat_2 -> jboss_cli_client;
+  jbosstxbridge_4_17_21_Final_redhat_2 -> jboss_client;
+  jbosstxbridge_4_17_21_Final_redhat_2 -> jboss_connector_api_1_6_spec_1_0_1_Final_redhat_2;
+  jbosstxbridge_4_17_21_Final_redhat_2 -> jboss_jaxws_api_2_2_spec_2_0_2_Final_redhat_1;
+  jbosstxbridge_4_17_21_Final_redhat_2 -> jbossjts_jacorb_4_17_21_Final_redhat_2;
+  jbosstxbridge_4_17_21_Final_redhat_2 -> jbossxts_4_17_21_Final_redhat_2;
+}

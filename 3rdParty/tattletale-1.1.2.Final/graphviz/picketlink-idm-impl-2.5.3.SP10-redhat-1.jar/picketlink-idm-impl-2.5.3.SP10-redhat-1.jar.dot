@@ -1,0 +1,7 @@
+digraph picketlink_idm_impl_2_5_3_SP10_redhat_1_dependencies {
+  node [shape = box, fontsize=10.0];
+  picketlink_idm_impl_2_5_3_SP10_redhat_1 -> hibernate_jpa_2_0_api_1_0_1_Final_redhat_2;
+  picketlink_idm_impl_2_5_3_SP10_redhat_1 -> jboss_cli_client;
+  picketlink_idm_impl_2_5_3_SP10_redhat_1 -> picketlink_common_2_5_3_SP10_redhat_1;
+  picketlink_idm_impl_2_5_3_SP10_redhat_1 -> picketlink_idm_api_2_5_3_SP10_redhat_1;
+}

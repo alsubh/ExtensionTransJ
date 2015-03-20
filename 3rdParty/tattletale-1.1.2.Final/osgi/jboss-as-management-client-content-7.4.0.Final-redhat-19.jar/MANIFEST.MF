@@ -1,0 +1,50 @@
+Manifest-Version: 1.0
+Implementation-Title: JBoss Application Server: Management Client Cont
+ ent
+Build-Timestamp: Fri, 11 Jul 2014 12:34:05 -0400
+Implementation-Version: 7.4.0.Final-redhat-19
+Java-Version: 1.6.0_30
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Scm-Connection: scm:git:git@github.com:jbossas/jboss-as.git/jboss-as-m
+ anagement-client-content
+Specification-Vendor: JBoss by Red Hat
+Os-Arch: i386
+JBossAS-Release-Version: 7.4.0.Final-redhat-19
+Implementation-Vendor-Id: org.jboss.as
+Specification-Title: JBoss Application Server: Management Client Conte
+ nt
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: https://github.com/jbossas/jboss-as
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-431.17.1.el6.x86_64
+Scm-Revision: b0d14b662d07cb1fcc0d8ac40c811345853866fd
+JBossAS-Release-Codename: Janus
+Created-By: Apache Maven
+Implementation-URL: http://www.jboss.org/jboss-as-parent/jboss-as-mana
+ gement-client-content
+Build-Jdk: 1.6.0_30
+Specification-Version: 7.4.0.Final-redhat-19
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.as.management.client.content
+Bundle-Description: jboss-as-management-client-content-7.4.0.Final-red
+ hat-19
+Bundle-Name: jboss-as-management-client-content-7.4.0.Final-redhat-19
+Bundle-Version: 7.4.0.Final-redhat-19
+Export-Package: org.jboss.as.management.client.content;uses:="org.jbos
+ s.as.controller,org.jboss.as.controller.descriptions,org.jboss.as.con
+ troller.operations.validation,org.jboss.as.controller.registry,org.jb
+ oss.as.repository,org.jboss.dmr,org.jboss.logging,org.jboss.logging.a
+ nnotations,org.jboss.vfs"
+Import-Package: java.io,java.lang,java.security,java.util,org.jboss.as
+ .controller;version="7.4.0.Final-redhat-19",org.jboss.as.controller.d
+ escriptions;version="7.4.0.Final-redhat-19",org.jboss.as.controller.o
+ perations.validation;version="7.4.0.Final-redhat-19",org.jboss.as.con
+ troller.registry;version="7.4.0.Final-redhat-19",org.jboss.as.reposit
+ ory;version="7.4.0.Final-redhat-19",org.jboss.dmr;version="7.4.0.Fina
+ l-redhat-19",org.jboss.logging;version="7.4.0.Final-redhat-19",org.jb
+ oss.logging.annotations,org.jboss.vfs;version="7.4.0.Final-redhat-19"

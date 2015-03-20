@@ -1,0 +1,63 @@
+Manifest-Version: 1.0
+Implementation-Title: JBoss Application Server: Controller Client
+Build-Timestamp: Fri, 11 Jul 2014 12:34:05 -0400
+Implementation-Version: 7.4.0.Final-redhat-19
+Java-Version: 1.6.0_30
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Scm-Connection: scm:git:git@github.com:jbossas/jboss-as.git/jboss-as-c
+ ontroller-client
+Specification-Vendor: JBoss by Red Hat
+Os-Arch: i386
+JBossAS-Release-Version: 7.4.0.Final-redhat-19
+Implementation-Vendor-Id: org.jboss.as
+Specification-Title: JBoss Application Server: Controller Client
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: https://github.com/jbossas/jboss-as
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-431.17.1.el6.x86_64
+Scm-Revision: b0d14b662d07cb1fcc0d8ac40c811345853866fd
+JBossAS-Release-Codename: Janus
+Created-By: Apache Maven
+Implementation-URL: http://www.jboss.org/jboss-as-parent/jboss-as-cont
+ roller-client
+Build-Jdk: 1.6.0_30
+Specification-Version: 7.4.0.Final-redhat-19
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.as.controller.client
+Bundle-Description: jboss-as-controller-client-7.4.0.Final-redhat-19
+Bundle-Name: jboss-as-controller-client-7.4.0.Final-redhat-19
+Bundle-Version: 7.4.0.Final-redhat-19
+Export-Package: org.jboss.as.controller.client;uses:="javax.net.ssl,or
+ g.jboss.as.controller.client.helpers.domain,org.jboss.as.controller.c
+ lient.impl,org.jboss.as.protocol,org.jboss.dmr,org.jboss.logging,org.
+ jboss.logging.annotations,org.jboss.threads",org.jboss.as.controller.
+ client.helpers;uses:="org.jboss.as.controller.client,org.jboss.dmr",o
+ rg.jboss.as.controller.client.helpers.domain;uses:="org.jboss.as.cont
+ roller.client,org.jboss.as.controller.client.helpers.domain.impl,org.
+ jboss.dmr",org.jboss.as.controller.client.helpers.domain.impl;uses:="
+ org.jboss.as.controller.client,org.jboss.as.controller.client.helpers
+ .domain,org.jboss.dmr,org.jboss.threads",org.jboss.as.controller.clie
+ nt.helpers.standalone;uses:="org.jboss.as.controller.client,org.jboss
+ .as.controller.client.helpers.standalone.impl",org.jboss.as.controlle
+ r.client.helpers.standalone.impl;uses:="org.jboss.as.controller.clien
+ t,org.jboss.as.controller.client.helpers.standalone,org.jboss.as.prot
+ ocol,org.jboss.dmr,org.jboss.threads",org.jboss.as.controller.client.
+ impl;uses:="javax.net.ssl,org.jboss.as.controller.client,org.jboss.as
+ .protocol,org.jboss.as.protocol.mgmt,org.jboss.dmr,org.jboss.remoting
+ 3,org.jboss.remoting3.remote,org.jboss.remoting3.spi,org.jboss.thread
+ s,org.xnio"
+Import-Package: java.io,java.lang,java.net,java.security,java.util,jav
+ a.util.concurrent,java.util.concurrent.atomic,javax.net.ssl,javax.sec
+ urity.auth.callback,org.jboss.as.protocol;version="7.4.0.Final-redhat
+ -19",org.jboss.as.protocol.mgmt;version="7.4.0.Final-redhat-19",org.j
+ boss.dmr;version="7.4.0.Final-redhat-19",org.jboss.logging;version="7
+ .4.0.Final-redhat-19",org.jboss.logging.annotations,org.jboss.remotin
+ g3;version="7.4.0.Final-redhat-19",org.jboss.remoting3.remote;version
+ ="7.4.0.Final-redhat-19",org.jboss.remoting3.spi;version="7.4.0.Final
+ -redhat-19",org.jboss.threads;version="7.4.0.Final-redhat-19",org.xni
+ o;version="7.4.0.Final-redhat-19"

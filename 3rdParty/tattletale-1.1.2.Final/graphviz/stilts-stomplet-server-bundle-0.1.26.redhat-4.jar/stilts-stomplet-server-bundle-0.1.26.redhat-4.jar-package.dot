@@ -1,0 +1,13 @@
+digraph stilts_stomplet_server_bundle_0_1_26_redhat_4_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_projectodd_stilts_stomplet_bundle -> javax_transaction;
+  org_projectodd_stilts_stomplet_bundle -> org_jboss_logging;
+  org_projectodd_stilts_stomplet_bundle -> org_osgi_framework;
+  org_projectodd_stilts_stomplet_bundle -> org_osgi_util_tracker;
+  org_projectodd_stilts_stomplet_bundle -> org_projectodd_stilts_conduit_spi;
+  org_projectodd_stilts_stomplet_bundle -> org_projectodd_stilts_conduit_stomp;
+  org_projectodd_stilts_stomplet_bundle -> org_projectodd_stilts_stomp;
+  org_projectodd_stilts_stomplet_bundle -> org_projectodd_stilts_stomplet;
+  org_projectodd_stilts_stomplet_bundle -> org_projectodd_stilts_stomplet_container;
+  org_projectodd_stilts_stomplet_bundle -> org_projectodd_stilts_stomplet_server;
+}

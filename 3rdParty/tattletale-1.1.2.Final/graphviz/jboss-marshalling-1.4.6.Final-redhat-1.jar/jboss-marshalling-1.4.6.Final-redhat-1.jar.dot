@@ -1,0 +1,4 @@
+digraph jboss_marshalling_1_4_6_Final_redhat_1_dependencies {
+  node [shape = box, fontsize=10.0];
+  jboss_marshalling_1_4_6_Final_redhat_1 -> jboss_cli_client;
+}

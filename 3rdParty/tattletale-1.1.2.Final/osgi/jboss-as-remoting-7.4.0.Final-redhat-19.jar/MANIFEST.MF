@@ -1,0 +1,85 @@
+Manifest-Version: 1.0
+Implementation-Title: JBoss Application Server: Remoting Subsystem
+Build-Timestamp: Fri, 11 Jul 2014 12:34:05 -0400
+Implementation-Version: 7.4.0.Final-redhat-19
+Java-Version: 1.6.0_30
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Scm-Connection: scm:git:git@github.com:jbossas/jboss-as.git/jboss-as-r
+ emoting
+Specification-Vendor: JBoss by Red Hat
+Os-Arch: i386
+JBossAS-Release-Version: 7.4.0.Final-redhat-19
+Implementation-Vendor-Id: org.jboss.as
+Specification-Title: JBoss Application Server: Remoting Subsystem
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: https://github.com/jbossas/jboss-as
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-431.17.1.el6.x86_64
+Scm-Revision: b0d14b662d07cb1fcc0d8ac40c811345853866fd
+JBossAS-Release-Codename: Janus
+Created-By: Apache Maven
+Implementation-URL: http://www.jboss.org/jboss-as-parent/jboss-as-remo
+ ting
+Build-Jdk: 1.6.0_30
+Specification-Version: 7.4.0.Final-redhat-19
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.as.remoting
+Bundle-Description: jboss-as-remoting-7.4.0.Final-redhat-19
+Bundle-Name: jboss-as-remoting-7.4.0.Final-redhat-19
+Bundle-Version: 7.4.0.Final-redhat-19
+Export-Package: org.jboss.as.remoting;uses:="javax.net.ssl,org.jboss.a
+ s.controller,org.jboss.as.controller.access.constraint,org.jboss.as.c
+ ontroller.access.management,org.jboss.as.controller.descriptions,org.
+ jboss.as.controller.operations.common,org.jboss.as.controller.operati
+ ons.validation,org.jboss.as.controller.parsing,org.jboss.as.controlle
+ r.persistence,org.jboss.as.controller.registry,org.jboss.as.controlle
+ r.security,org.jboss.as.controller.transform,org.jboss.as.core.securi
+ ty,org.jboss.as.domain.management,org.jboss.as.domain.management.secu
+ rity,org.jboss.as.network,org.jboss.as.protocol.mgmt.support,org.jbos
+ s.as.remoting.management,org.jboss.dmr,org.jboss.logging,org.jboss.lo
+ gging.annotations,org.jboss.modules,org.jboss.msc.inject,org.jboss.ms
+ c.service,org.jboss.msc.value,org.jboss.remoting3,org.jboss.remoting3
+ .remote,org.jboss.remoting3.security,org.jboss.remoting3.spi,org.jbos
+ s.sasl.callback,org.jboss.staxmapper,org.xnio,org.xnio.channels,org.x
+ nio.sasl,org.xnio.ssl",org.jboss.as.remoting.management;uses:="org.jb
+ oss.as.controller,org.jboss.as.controller.remote,org.jboss.as.protoco
+ l.mgmt.support,org.jboss.as.remoting,org.jboss.logging,org.jboss.msc.
+ inject,org.jboss.msc.service,org.jboss.msc.value,org.jboss.remoting3,
+ org.xnio"
+Import-Package: java.io,java.lang,java.net,java.security,java.util,jav
+ a.util.concurrent,javax.net.ssl,javax.security.auth,javax.security.au
+ th.callback,javax.xml.stream,org.jboss.as.controller;version="7.4.0.F
+ inal-redhat-19",org.jboss.as.controller.access.constraint;version="7.
+ 4.0.Final-redhat-19",org.jboss.as.controller.access.management;versio
+ n="7.4.0.Final-redhat-19",org.jboss.as.controller.descriptions;versio
+ n="7.4.0.Final-redhat-19",org.jboss.as.controller.operations.common;v
+ ersion="7.4.0.Final-redhat-19",org.jboss.as.controller.operations.val
+ idation;version="7.4.0.Final-redhat-19",org.jboss.as.controller.parsi
+ ng;version="7.4.0.Final-redhat-19",org.jboss.as.controller.persistenc
+ e;version="7.4.0.Final-redhat-19",org.jboss.as.controller.registry;ve
+ rsion="7.4.0.Final-redhat-19",org.jboss.as.controller.remote;version=
+ "7.4.0.Final-redhat-19",org.jboss.as.controller.security;version="7.4
+ .0.Final-redhat-19",org.jboss.as.controller.transform;version="7.4.0.
+ Final-redhat-19",org.jboss.as.core.security;version="7.4.0.Final-redh
+ at-19",org.jboss.as.domain.management;version="7.4.0.Final-redhat-19"
+ ,org.jboss.as.domain.management.security;version="7.4.0.Final-redhat-
+ 19",org.jboss.as.network;version="7.4.0.Final-redhat-19",org.jboss.as
+ .protocol.mgmt.support;version="7.4.0.Final-redhat-19",org.jboss.dmr;
+ version="7.4.0.Final-redhat-19",org.jboss.logging;version="7.4.0.Fina
+ l-redhat-19",org.jboss.logging.annotations,org.jboss.modules;version=
+ "7.4.0.Final-redhat-19",org.jboss.msc.inject;version="1.1.5.Final-red
+ hat-1",org.jboss.msc.service;version="1.1.5.Final-redhat-1",org.jboss
+ .msc.value;version="1.1.5.Final-redhat-1",org.jboss.remoting3;version
+ ="7.4.0.Final-redhat-19",org.jboss.remoting3.remote;version="7.4.0.Fi
+ nal-redhat-19",org.jboss.remoting3.security;version="7.4.0.Final-redh
+ at-19",org.jboss.remoting3.spi;version="7.4.0.Final-redhat-19",org.jb
+ oss.sasl.callback;version="7.4.0.Final-redhat-19",org.jboss.staxmappe
+ r;version="7.4.0.Final-redhat-19",org.xnio;version="7.4.0.Final-redha
+ t-19",org.xnio.channels;version="7.4.0.Final-redhat-19",org.xnio.sasl
+ ;version="7.4.0.Final-redhat-19",org.xnio.ssl;version="7.4.0.Final-re
+ dhat-19"

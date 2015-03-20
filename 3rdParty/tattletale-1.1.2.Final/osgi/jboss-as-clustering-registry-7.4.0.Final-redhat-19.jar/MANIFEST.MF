@@ -1,0 +1,57 @@
+Manifest-Version: 1.0
+Implementation-Title: JBoss Application Server: Clustered registry ser
+ vice
+Build-Timestamp: Fri, 11 Jul 2014 12:34:05 -0400
+Implementation-Version: 7.4.0.Final-redhat-19
+Java-Version: 1.6.0_30
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Scm-Connection: scm:git:git@github.com:jbossas/jboss-as.git/jboss-as-c
+ lustering/jboss-as-clustering-registry
+Specification-Vendor: JBoss by Red Hat
+Os-Arch: i386
+JBossAS-Release-Version: 7.4.0.Final-redhat-19
+Implementation-Vendor-Id: org.jboss.as
+Specification-Title: JBoss Application Server: Clustered registry serv
+ ice
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: https://github.com/jbossas/jboss-as
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-431.17.1.el6.x86_64
+Scm-Revision: b0d14b662d07cb1fcc0d8ac40c811345853866fd
+JBossAS-Release-Codename: Janus
+Created-By: Apache Maven
+Implementation-URL: http://www.jboss.org/jboss-as-parent/jboss-as-clus
+ tering/jboss-as-clustering-registry
+Build-Jdk: 1.6.0_30
+Specification-Version: 7.4.0.Final-redhat-19
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.as.clustering.registry
+Bundle-Description: jboss-as-clustering-registry-7.4.0.Final-redhat-19
+Bundle-Name: jboss-as-clustering-registry-7.4.0.Final-redhat-19
+Bundle-Version: 7.4.0.Final-redhat-19
+Export-Package: org.jboss.as.clustering.registry;uses:="org.infinispan
+ ,org.infinispan.context,org.infinispan.manager,org.infinispan.notific
+ ations,org.infinispan.notifications.cachelistener.annotation,org.infi
+ nispan.notifications.cachelistener.event,org.infinispan.notifications
+ .cachemanagerlistener.annotation,org.infinispan.notifications.cachema
+ nagerlistener.event,org.infinispan.remoting.transport,org.jboss.as.cl
+ ustering.infinispan.invoker,org.jboss.msc.service,org.jboss.msc.value
+ "
+Import-Package: java.io,java.lang,java.util,java.util.concurrent,org.i
+ nfinispan;version="5.2.10.Final-redhat-1",org.infinispan.context;vers
+ ion="5.2.10.Final-redhat-1",org.infinispan.manager;version="5.2.10.Fi
+ nal-redhat-1",org.infinispan.notifications;version="5.2.10.Final-redh
+ at-1",org.infinispan.notifications.cachelistener.annotation;version="
+ 5.2.10.Final-redhat-1",org.infinispan.notifications.cachelistener.eve
+ nt;version="5.2.10.Final-redhat-1",org.infinispan.notifications.cache
+ managerlistener.annotation;version="5.2.10.Final-redhat-1",org.infini
+ span.notifications.cachemanagerlistener.event;version="5.2.10.Final-r
+ edhat-1",org.infinispan.remoting.transport;version="5.2.10.Final-redh
+ at-1",org.jboss.as.clustering.infinispan.invoker;version="7.4.0.Final
+ -redhat-19",org.jboss.msc.service;version="1.1.5.Final-redhat-1",org.
+ jboss.msc.value;version="1.1.5.Final-redhat-1"

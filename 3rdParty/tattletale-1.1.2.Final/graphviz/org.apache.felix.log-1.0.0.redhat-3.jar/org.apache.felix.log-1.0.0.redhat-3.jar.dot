@@ -1,0 +1,4 @@
+digraph org_apache_felix_log_1_0_0_redhat_3_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_apache_felix_log_1_0_0_redhat_3 -> org_osgi_core_4_2_0_redhat_4;
+}

@@ -1,0 +1,4 @@
+digraph jboss_jacc_api_1_4_spec_1_0_3_Final_redhat_1_dependencies {
+  node [shape = box, fontsize=10.0];
+  jboss_jacc_api_1_4_spec_1_0_3_Final_redhat_1 -> jboss_servlet_api_2_5_spec_1_0_1_Final_redhat_2;
+}

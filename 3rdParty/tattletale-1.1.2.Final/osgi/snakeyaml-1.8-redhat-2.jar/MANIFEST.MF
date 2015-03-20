@@ -1,0 +1,68 @@
+Manifest-Version: 1.0
+Implementation-Title: SnakeYAML
+Implementation-Version: 1.8-redhat-2
+Build-Timestamp: Mon, 20 Aug 2012 09:28:30 -0400
+Archiver-Version: Plexus Archiver
+Java-Version: 1.6.0_24
+Built-By: mockbuild
+Scm-Connection: scm:hg:http://snakeyaml.googlecode.com/hg
+Specification-Vendor: JBoss by Red Hat
+Os-Arch: amd64
+Specification-Title: SnakeYAML
+Implementation-Vendor-Id: org.yaml
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: http://code.google.com/p/snakeyaml/source/browse/
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-279.2.1.el6.x86_64
+Scm-Revision: UNKNOWN
+Created-By: Apache Maven
+Build-Jdk: 1.6.0_24
+Specification-Version: 1.8-redhat-2
+Implementation-URL: http://www.snakeyaml.org
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.yaml.snakeyaml.constructor
+Bundle-Description: snakeyaml-1.8-redhat-2
+Bundle-Name: snakeyaml-1.8-redhat-2
+Bundle-Version: 0.0.0
+Export-Package: biz.source_code.base64Coder,com.google.gdata.util.comm
+ on.base,org.yaml.snakeyaml;uses:="org.yaml.snakeyaml.composer,org.yam
+ l.snakeyaml.constructor,org.yaml.snakeyaml.emitter,org.yaml.snakeyaml
+ .error,org.yaml.snakeyaml.events,org.yaml.snakeyaml.introspector,org.
+ yaml.snakeyaml.nodes,org.yaml.snakeyaml.parser,org.yaml.snakeyaml.rea
+ der,org.yaml.snakeyaml.representer,org.yaml.snakeyaml.resolver,org.ya
+ ml.snakeyaml.serializer",org.yaml.snakeyaml.composer;uses:="org.yaml.
+ snakeyaml.error,org.yaml.snakeyaml.events,org.yaml.snakeyaml.nodes,or
+ g.yaml.snakeyaml.parser,org.yaml.snakeyaml.resolver",org.yaml.snakeya
+ ml.constructor;uses:="biz.source_code.base64Coder,org.yaml.snakeyaml,
+ org.yaml.snakeyaml.composer,org.yaml.snakeyaml.error,org.yaml.snakeya
+ ml.introspector,org.yaml.snakeyaml.nodes",org.yaml.snakeyaml.emitter;
+ uses:="org.yaml.snakeyaml,org.yaml.snakeyaml.error,org.yaml.snakeyaml
+ .events,org.yaml.snakeyaml.scanner,org.yaml.snakeyaml.util",org.yaml.
+ snakeyaml.error;uses:="org.yaml.snakeyaml.scanner",org.yaml.snakeyaml
+ .events;uses:="org.yaml.snakeyaml.error",org.yaml.snakeyaml.extension
+ s.compactnotation;uses:="org.yaml.snakeyaml.constructor,org.yaml.snak
+ eyaml.error,org.yaml.snakeyaml.introspector,org.yaml.snakeyaml.nodes"
+ ,org.yaml.snakeyaml.introspector;uses:="org.yaml.snakeyaml.error",org
+ .yaml.snakeyaml.nodes;uses:="org.yaml.snakeyaml.error,org.yaml.snakey
+ aml.util",org.yaml.snakeyaml.parser;uses:="org.yaml.snakeyaml.error,o
+ rg.yaml.snakeyaml.events,org.yaml.snakeyaml.reader,org.yaml.snakeyaml
+ .scanner,org.yaml.snakeyaml.tokens,org.yaml.snakeyaml.util",org.yaml.
+ snakeyaml.reader;uses:="org.yaml.snakeyaml.error,org.yaml.snakeyaml.s
+ canner",org.yaml.snakeyaml.representer;uses:="biz.source_code.base64C
+ oder,org.yaml.snakeyaml,org.yaml.snakeyaml.error,org.yaml.snakeyaml.i
+ ntrospector,org.yaml.snakeyaml.nodes,org.yaml.snakeyaml.serializer",o
+ rg.yaml.snakeyaml.resolver;uses:="org.yaml.snakeyaml.nodes",org.yaml.
+ snakeyaml.scanner;uses:="org.yaml.snakeyaml.error,org.yaml.snakeyaml.
+ reader,org.yaml.snakeyaml.tokens,org.yaml.snakeyaml.util",org.yaml.sn
+ akeyaml.serializer;uses:="org.yaml.snakeyaml,org.yaml.snakeyaml.emitt
+ er,org.yaml.snakeyaml.error,org.yaml.snakeyaml.events,org.yaml.snakey
+ aml.nodes,org.yaml.snakeyaml.resolver",org.yaml.snakeyaml.tokens;uses
+ :="org.yaml.snakeyaml.error",org.yaml.snakeyaml.util;uses:="com.googl
+ e.gdata.util.common.base,org.yaml.snakeyaml.error"
+Import-Package: java.beans,java.io,java.lang,java.lang.reflect,java.ma
+ th,java.net,java.nio,java.nio.charset,java.sql,java.text,java.util,ja
+ va.util.concurrent,java.util.regex

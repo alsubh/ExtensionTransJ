@@ -1,0 +1,49 @@
+Manifest-Version: 1.0
+Implementation-Title: JBoss Negotiation Extras
+Build-Timestamp: Tue, 3 Jun 2014 14:14:26 -0400
+Implementation-Version: 2.3.3.Final-redhat-1
+Java-Version: 1.6.0_30
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Scm-Connection: scm:svn:http://anonsvn.jboss.org/repos/jbossas/project
+ s/security/security-negotiation/trunk/jboss-negotiation-extras
+Specification-Vendor: JBoss by Red Hat
+Os-Arch: i386
+Implementation-Vendor-Id: org.jboss.security
+Specification-Title: JBoss Negotiation Extras
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: http://github.com/jboss/jboss-parent-pom/jboss-negotiation-pr
+ oject/jboss-negotiation-extras
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-431.17.1.el6.x86_64
+Scm-Revision: UNKNOWN
+Created-By: Apache Maven
+Implementation-URL: http://www.jboss.org
+Build-Jdk: 1.6.0_30
+Specification-Version: 2.3.3.Final-redhat-1
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.security.negotiation
+Bundle-Description: jboss-negotiation-extras-2.3.3.Final-redhat-1
+Bundle-Name: jboss-negotiation-extras-2.3.3.Final-redhat-1
+Bundle-Version: 2.3.3.Final-redhat-1
+Export-Package: org.jboss.security.negotiation;uses:="org.jboss.loggin
+ g,org.jboss.security,org.jboss.security.negotiation.common,org.jboss.
+ security.negotiation.prototype,org.picketbox.commons.cipher",org.jbos
+ s.security.negotiation.prototype;uses:="org.jboss.security.util",org.
+ jboss.security.negotiation.spnego;uses:="org.jboss.logging,org.jboss.
+ security.auth.spi,org.jboss.security.negotiation"
+Import-Package: java.lang,java.lang.reflect,java.net,java.nio,java.sec
+ urity,java.security.acl,java.util,javax.management,javax.naming,javax
+ .naming.directory,javax.naming.ldap,javax.security.auth,javax.securit
+ y.auth.callback,javax.security.auth.kerberos,javax.security.auth.logi
+ n,javax.security.auth.spi,org.ietf.jgss,org.jboss.logging;version="7.
+ 4.0.Final-redhat-19",org.jboss.security;version="7.4.0.Final-redhat-1
+ 9",org.jboss.security.auth.spi;version="7.4.0.Final-redhat-19",org.jb
+ oss.security.negotiation;version="2.3.3.Final-redhat-1",org.jboss.sec
+ urity.negotiation.common;version="2.3.3.Final-redhat-1",org.jboss.sec
+ urity.util;version="7.4.0.Final-redhat-19",org.picketbox.commons.ciph
+ er;version="1.0.0.final-redhat-2"

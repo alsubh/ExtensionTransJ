@@ -1,0 +1,13 @@
+digraph resteasy_jsapi_2_3_8_Final_redhat_3_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_resteasy_jsapi -> javax_servlet;
+  org_jboss_resteasy_jsapi -> javax_servlet_http;
+  org_jboss_resteasy_jsapi -> javax_ws_rs;
+  org_jboss_resteasy_jsapi -> javax_ws_rs_core;
+  org_jboss_resteasy_jsapi -> org_jboss_resteasy_annotations;
+  org_jboss_resteasy_jsapi -> org_jboss_resteasy_core;
+  org_jboss_resteasy_jsapi -> org_jboss_resteasy_core_registry;
+  org_jboss_resteasy_jsapi -> org_jboss_resteasy_logging;
+  org_jboss_resteasy_jsapi -> org_jboss_resteasy_spi;
+  org_jboss_resteasy_jsapi -> org_jboss_resteasy_util;
+}

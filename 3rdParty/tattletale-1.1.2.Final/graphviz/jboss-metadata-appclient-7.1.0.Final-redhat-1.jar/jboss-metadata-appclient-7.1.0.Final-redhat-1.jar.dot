@@ -1,0 +1,4 @@
+digraph jboss_metadata_appclient_7_1_0_Final_redhat_1_dependencies {
+  node [shape = box, fontsize=10.0];
+  jboss_metadata_appclient_7_1_0_Final_redhat_1 -> jboss_metadata_common_7_1_0_Final_redhat_1;
+}

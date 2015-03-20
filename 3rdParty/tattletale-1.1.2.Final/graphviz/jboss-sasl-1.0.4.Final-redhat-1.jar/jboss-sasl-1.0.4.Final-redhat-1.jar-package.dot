@@ -1,0 +1,19 @@
+digraph jboss_sasl_1_0_4_Final_redhat_1_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_sasl -> org_jboss_sasl_anonymous;
+  org_jboss_sasl -> org_jboss_sasl_digest;
+  org_jboss_sasl -> org_jboss_sasl_localuser;
+  org_jboss_sasl -> org_jboss_sasl_plain;
+  org_jboss_sasl_anonymous -> org_jboss_sasl_util;
+  org_jboss_sasl_callback -> org_jboss_sasl_util;
+  org_jboss_sasl_clienttoken -> org_jboss_sasl_callback;
+  org_jboss_sasl_clienttoken -> org_jboss_sasl_util;
+  org_jboss_sasl_digest -> javax_crypto;
+  org_jboss_sasl_digest -> javax_crypto_spec;
+  org_jboss_sasl_digest -> org_jboss_logging;
+  org_jboss_sasl_digest -> org_jboss_sasl_callback;
+  org_jboss_sasl_digest -> org_jboss_sasl_util;
+  org_jboss_sasl_localuser -> org_jboss_sasl_util;
+  org_jboss_sasl_plain -> org_jboss_sasl_callback;
+  org_jboss_sasl_plain -> org_jboss_sasl_util;
+}

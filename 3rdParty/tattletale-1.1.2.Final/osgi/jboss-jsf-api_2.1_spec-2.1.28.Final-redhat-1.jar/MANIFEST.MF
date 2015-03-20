@@ -1,0 +1,80 @@
+Manifest-Version: 1.0
+Bundle-License: https://glassfish.dev.java.net/public/CDDL+GPL_1_1.htm
+ l
+Bundle-SymbolicName: org.jboss.spec.javax.faces.jboss-jsf-api_2.1_spec
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Bnd-LastModified: 1397592787585
+Implementation-Vendor-Id: org.jboss.spec.javax.faces
+Specification-Title: JSR-000314: JavaServer(TM) Faces 2.1 API
+Bundle-DocURL: http://www.jboss.org
+Import-Package: javax.el;version="[2.2,3)",javax.servlet;version="[3.0
+ ,4)",javax.servlet.http;version="[3.0,4)",javax.servlet.jsp;version="
+ [2.2,3)",javax.servlet.jsp.jstl.sql;version="[1.2,2)",javax.servlet.j
+ sp.tagext;version="[2.2,3)",javax.validation,javax.validation.groups
+Scm-Url: https://github.com/jboss/jboss-jsf-api_spec
+Export-Package: javax.faces.render;uses:="javax.faces.component,javax.
+ faces.context,javax.faces.component.behavior,javax.faces,javax.faces.
+ convert,javax.faces.application";version="2.1",javax.faces.context;us
+ es:="javax.faces,javax.faces.event,javax.el,javax.faces.render,javax.
+ faces.component,javax.faces.application,javax.faces.lifecycle";versio
+ n="2.1",javax.faces.model;uses:="javax.servlet.jsp.jstl.sql,javax.fac
+ es";version="2.1",javax.faces.view.facelets;uses:="javax.faces.view,j
+ avax.faces.component,javax.faces,javax.el,javax.faces.context";versio
+ n="2.1",javax.faces.event;uses:="javax.faces,javax.faces.component,ja
+ vax.faces.component.behavior,javax.faces.context,javax.el,javax.faces
+ .application,javax.faces.lifecycle";version="2.1",javax.faces.validat
+ or;uses:="javax.faces.component,javax.faces.context,javax.validation,
+ javax.validation.groups,javax.faces,javax.el,javax.faces.application,
+ javax.faces.convert,javax.faces.el";version="2.1",javax.faces;uses:="
+ javax.faces.context,javax.faces.render,javax.faces.view.facelets,java
+ x.faces.application,javax.faces.component.visit,javax.faces.view,java
+ x.faces.lifecycle";version="2.1",javax.faces.component;uses:="javax.f
+ aces.el,javax.faces.event,javax.el,javax.faces.context,javax.faces.va
+ lidator,javax.faces.application,javax.faces,javax.faces.model,javax.f
+ aces.convert,javax.faces.render,javax.faces.component.visit,javax.fac
+ es.component.behavior,javax.servlet.jsp.jstl.sql,javax.faces.view,jav
+ ax.faces.lifecycle";version="2.1",javax.faces.application;uses:="java
+ x.faces,javax.el,javax.faces.component,javax.faces.context,javax.face
+ s.el,javax.faces.convert,javax.faces.component.behavior,javax.faces.v
+ alidator,javax.faces.event,javax.faces.render,javax.faces.view";versi
+ on="2.1",javax.faces.bean;version="2.1",javax.faces.webapp;uses:="jav
+ ax.el,javax.faces.component,javax.faces.application,javax.faces.conte
+ xt,javax.servlet.jsp.tagext,javax.servlet.jsp,javax.faces.convert,jav
+ ax.faces,javax.servlet,javax.faces.lifecycle,javax.servlet.http,javax
+ .faces.el,javax.faces.event,javax.faces.validator";version="2.1",java
+ x.faces.el;uses:="javax.el,javax.faces,javax.faces.context";version="
+ 2.1",javax.faces.component.visit;uses:="javax.faces.component,javax.f
+ aces,javax.faces.context";version="2.1",javax.faces.component.html;us
+ es:="javax.el,javax.faces.component,javax.faces.component.behavior";v
+ ersion="2.1",javax.faces.convert;uses:="javax.faces.component,javax.f
+ aces.application,javax.faces.context,javax.faces,javax.el,javax.faces
+ .el";version="2.1",javax.faces.component.behavior;uses:="javax.faces,
+ javax.el,javax.faces.component,javax.faces.context,javax.faces.event,
+ javax.faces.render";version="2.1",javax.faces.view;uses:="javax.faces
+ .component,javax.faces.context,javax.faces.application,javax.faces";v
+ ersion="2.1",javax.faces.lifecycle;uses:="javax.faces,javax.faces.con
+ text,javax.faces.event";version="2.1"
+Bundle-Name: JavaServer(TM) Faces 2.1 API
+Implementation-Title: JavaServer(TM) Faces 2.1 API
+Bundle-Description: JSR-000314: JavaServer(TM) Faces 2.1 API
+Build-Timestamp: Tue, 15 Apr 2014 16:13:00 -0400
+Implementation-Version: 2.1.28.Final-redhat-1
+Java-Version: 1.6.0_30
+Scm-Connection: scm:git:git@github.com:jboss/jboss-jsf-api_spec.git
+Specification-Vendor: Oracle
+Os-Arch: amd64
+Bundle-ManifestVersion: 2
+Java-Vendor: Sun Microsystems Inc.
+Bundle-Vendor: JBoss by Red Hat
+Os-Name: Linux
+Tool: Bnd-1.50.0
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-431.4.1.el6.x86_64
+Scm-Revision: 81a5b8e68e013effe22333223ba677c103a25c4a
+Bundle-Version: 2.1.28.Final-redhat-1
+Created-By: Apache Maven Bundle Plugin
+Implementation-URL: http://www.jboss.org/jboss-jsf-api_2.1_spec
+Build-Jdk: 1.6.0_30
+Specification-Version: 2.1
+

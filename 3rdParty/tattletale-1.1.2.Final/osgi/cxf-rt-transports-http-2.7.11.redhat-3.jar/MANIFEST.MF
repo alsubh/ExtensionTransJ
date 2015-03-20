@@ -1,0 +1,114 @@
+Manifest-Version: 1.0
+Export-Service: javax.servlet.Servlet;alias="${org.apache.cxf.servlet.
+ context}";servlet-name="${org.apache.cxf.servlet.name}";hide-service-
+ list-page="${org.apache.cxf.servlet.hide-service-list-page}";disable-
+ address-updates="${org.apache.cxf.servlet.disable-address-updates}";b
+ ase-address="${org.apache.cxf.servlet.base-address}";service-list-pat
+ h="${org.apache.cxf.servlet.service-list-path}";static-resources-list
+ ="${org.apache.cxf.servlet.static-resources-list}";redirects-list="${
+ org.apache.cxf.servlet.redirects-list}";redirect-servlet-name="${org.
+ apache.cxf.servlet.redirect-servlet-name}";redirect-servlet-path="${o
+ rg.apache.cxf.servlet.redirect-servlet-path}";service-list-all-contex
+ ts="${org.apache.cxf.servlet.service-list-all-contexts}";service-list
+ -page-authenticate="${org.apache.cxf.servlet.service-list-page-authen
+ ticate}";service-list-page-authenticate-realm="${org.apache.cxf.servl
+ et.service-list-page-authenticate-realm}",org.apache.aries.blueprint.
+ NamespaceHandler;osgi.service.blueprint.namespace="http://cxf.apache.
+ org/transports/http/configuration",org.apache.cxf.transport.http.Dest
+ inationRegistry
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-SymbolicName: org.apache.cxf.cxf-rt-transports-http
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Bnd-LastModified: 1401765357895
+Implementation-Vendor-Id: org.apache.cxf
+Specification-Title: Apache CXF Runtime HTTP Transport
+Bundle-DocURL: http://cxf.apache.org
+Import-Package: javax.activation,javax.annotation,javax.naming,javax.n
+ et.ssl,javax.security.auth,javax.security.auth.callback,javax.securit
+ y.auth.login,javax.security.auth.x500,javax.servlet;version="[0.0,4)"
+ ;resolution:=optional,javax.servlet.http;version="[0.0,4)";resolution
+ :=optional,javax.wsdl,javax.wsdl.extensions,javax.wsdl.extensions.htt
+ p,javax.wsdl.extensions.soap,javax.xml.bind;version="[2.2,3)",javax.x
+ ml.bind.annotation;version="[2.2,3)",javax.xml.namespace,org.apache.a
+ ries.blueprint;version="[0.3,2)";resolution:=optional,org.apache.arie
+ s.blueprint.mutable;version="[0.3,2)";resolution:=optional,org.apache
+ .cxf;version="[2.7,3)",org.apache.cxf.attachment;version="[2.7,3)",or
+ g.apache.cxf.common.classloader;version="[2.7,3)",org.apache.cxf.comm
+ on.i18n;version="[2.7,3)",org.apache.cxf.common.injection;version="[2
+ .7,3)",org.apache.cxf.common.logging;version="[2.7,3)",org.apache.cxf
+ .common.util;version="[2.7,3)",org.apache.cxf.configuration;version="
+ [2.7,3)",org.apache.cxf.configuration.blueprint;version="[2.7,3)",org
+ .apache.cxf.configuration.jsse;version="[2.7,3)",org.apache.cxf.confi
+ guration.security;version="[2.7,3)",org.apache.cxf.configuration.spri
+ ng;version="[2.7,3)",org.apache.cxf.continuations;version="[2.7,3)",o
+ rg.apache.cxf.endpoint;version="[2.7,3)",org.apache.cxf.feature;versi
+ on="[2.7,3)",org.apache.cxf.helpers;version="[2.7,3)",org.apache.cxf.
+ interceptor;version="[2.7,3)",org.apache.cxf.interceptor.security;ver
+ sion="[2.7,3)",org.apache.cxf.io;version="[2.7,3)",org.apache.cxf.mes
+ sage;version="[2.7,3)",org.apache.cxf.phase;version="[2.7,3)",org.apa
+ che.cxf.policy;version="[2.7,3)",org.apache.cxf.resource;version="[2.
+ 7,3)",org.apache.cxf.security;version="[2.7,3)",org.apache.cxf.securi
+ ty.transport;version="[2.7,3)",org.apache.cxf.service;version="[2.7,3
+ )",org.apache.cxf.service.model;version="[2.7,3)",org.apache.cxf.tran
+ sport;version="[2.7,3)",org.apache.cxf.transports.http;version="[2.7,
+ 3)",org.apache.cxf.version;version="[2.7,3)",org.apache.cxf.workqueue
+ ;version="[2.7,3)",org.apache.cxf.ws.addressing;version="[2.7,3)",org
+ .apache.cxf.ws.policy;version="[2.7,3)";resolution:=optional,org.apac
+ he.cxf.ws.policy.builder.jaxb;version="[2.7,3)";resolution:=optional,
+ org.apache.cxf.wsdl;version="[2.7,3)",org.apache.cxf.wsdl.http;versio
+ n="[2.7,3)",org.apache.cxf.wsdl11;version="[2.7,3)",org.apache.neethi
+ ;version="[3.0,4)";resolution:=optional,org.ietf.jgss,org.osgi.framew
+ ork;version="[1.5,2)",org.osgi.service.blueprint;version="[1.0.0,2.0.
+ 0)",org.osgi.service.blueprint.container;version="[1.0,2)",org.osgi.s
+ ervice.blueprint.reflect;version="[1.0,2)",org.osgi.service.cm;versio
+ n="[1.3,2)",org.osgi.util.tracker;version="[1.4,2)",org.springframewo
+ rk.beans.factory.support;resolution:=optional;version="[2.5,4)",org.s
+ pringframework.beans.factory.xml;resolution:=optional;version="[2.5,4
+ )",org.springframework.context;resolution:=optional;version="[2.5,4)"
+ ,org.springframework.context.support;resolution:=optional;version="[2
+ .5,4)",org.springframework.core.io;resolution:=optional;version="[2.5
+ ,4)",org.springframework.web.context;resolution:=optional;version="[2
+ .5,4)",org.springframework.web.context.support;resolution:=optional;v
+ ersion="[2.5,4)",org.w3c.dom
+Scm-Url: http://github.com/jboss/jboss-parent-pom/cxf/cxf-parent/cxf-r
+ t-transports-http
+Export-Package: META-INF.cxf.osgi;version="2.7.11.redhat-3",org.apache
+ .cxf.transport.servlet;version="2.7.11.redhat-3",org.apache.cxf.trans
+ port.http.policy.impl;version="2.7.11.redhat-3",org.apache.cxf.transp
+ ort.http.policy;version="2.7.11.redhat-3",org.apache.cxf.transport.ht
+ tp;version="2.7.11.redhat-3",org.apache.cxf.transport.http.osgi;versi
+ on="2.7.11.redhat-3",org.apache.cxf.transport.http.spring;version="2.
+ 7.11.redhat-3",org.apache.cxf.transport.https;version="2.7.11.redhat-
+ 3",org.apache.cxf.transport.http.blueprint;version="2.7.11.redhat-3",
+ org.apache.cxf.transport.servlet.blueprint;version="2.7.11.redhat-3",
+ org.apache.cxf.transport.http.auth;version="2.7.11.redhat-3",org.apac
+ he.cxf.transports.http.configuration;version="2.7.11.redhat-3",org.ap
+ ache.cxf.transport.servlet.servicelist;version="2.7.11.redhat-3"
+Bundle-Name: Apache CXF Runtime HTTP Transport
+Bundle-Activator: org.apache.cxf.transport.http.osgi.HTTPTransportActi
+ vator
+Implementation-Title: Apache CXF Runtime HTTP Transport
+Bundle-Description: Apache CXF Runtime HTTP Transport
+Build-Timestamp: Mon, 2 Jun 2014 23:09:45 -0400
+Implementation-Version: 2.7.11.redhat-3
+Java-Version: 1.6.0_30
+Scm-Connection: scm:git:http://git-wip-us.apache.org/repos/asf/cxf.git
+ /cxf-parent/cxf-rt-transports-http
+Specification-Vendor: The Apache Software Foundation
+Os-Arch: i386
+Bundle-ManifestVersion: 2
+Java-Vendor: Sun Microsystems Inc.
+Bundle-Vendor: The Apache Software Foundation
+Os-Name: Linux
+Tool: Bnd-1.50.0
+Implementation-Vendor: The Apache Software Foundation
+Os-Version: 2.6.32-431.17.1.el6.x86_64
+Originally-Created-By: Apache Maven Bundle Plugin
+Scm-Revision: effe56628b68fe805899d1cd3afdcf586879c3da
+Bundle-Version: 2.7.11.redhat-3
+Created-By: Apache Maven Bundle Plugin
+Implementation-URL: http://cxf.apache.org
+Build-Jdk: 1.6.0_30
+Specification-Version: 2.7.11.redhat-3
+

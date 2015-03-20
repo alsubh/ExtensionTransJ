@@ -1,0 +1,4 @@
+digraph jboss_threads_2_1_1_Final_redhat_1_dependencies {
+  node [shape = box, fontsize=10.0];
+  jboss_threads_2_1_1_Final_redhat_1 -> jboss_cli_client;
+}

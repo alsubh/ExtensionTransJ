@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Created-By: Apache Maven
+Build-Jdk: 1.6.0_30
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.resteasy.plugins.providers.atom
+Bundle-Description: resteasy-atom-provider-2.3.8.Final-redhat-3
+Bundle-Name: resteasy-atom-provider-2.3.8.Final-redhat-3
+Bundle-Version: 0.0.0
+Export-Package: org.jboss.resteasy.plugins.providers.atom;uses:="com.s
+ un.xml.bind.marshaller,javax.ws.rs,javax.ws.rs.core,javax.ws.rs.ext,o
+ rg.jboss.resteasy.plugins.providers.jaxb,org.jboss.resteasy.spi",org.
+ jboss.resteasy.plugins.providers.atom.app;uses:="org.jboss.resteasy.p
+ lugins.providers.atom"
+Import-Package: com.sun.xml.bind.marshaller;version="2.2.5.redhat-8",j
+ ava.io,java.lang,java.lang.annotation,java.lang.reflect,java.net,java
+ .util,javax.ws.rs;version="1.0.1.Final-redhat-2",javax.ws.rs.core;ver
+ sion="1.0.1.Final-redhat-2",javax.ws.rs.ext;version="1.0.1.Final-redh
+ at-2",javax.xml.bind;version="2.2",javax.xml.bind.annotation;version=
+ "2.2",javax.xml.bind.annotation.adapters;version="2.2",org.jboss.rest
+ easy.plugins.providers.jaxb;version="0.0.0",org.jboss.resteasy.spi;ve
+ rsion="0.0.0",org.w3c.dom

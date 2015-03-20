@@ -1,0 +1,37 @@
+Manifest-Version: 1.0
+Implementation-Title: Picketbox Commons
+Implementation-Version: 1.0.0.final-redhat-2
+Build-Timestamp: Mon, 20 Aug 2012 08:09:54 -0400
+Archiver-Version: Plexus Archiver
+Java-Version: 1.6.0_24
+Built-By: mockbuild
+Scm-Connection: scm:git:git@github.com:jboss/jboss-parent-pom.git/pick
+ etbox-commons
+Specification-Vendor: JBoss Inc.
+Os-Arch: amd64
+Specification-Title: Picketbox Commons
+Implementation-Vendor-Id: org.picketbox
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: http://github.com/jboss/jboss-parent-pom/picketbox-commons
+Implementation-Vendor: JBoss Inc.
+Os-Version: 2.6.32-279.2.1.el6.x86_64
+Scm-Revision: UNKNOWN
+Created-By: Apache Maven
+Build-Jdk: 1.6.0_24
+Specification-Version: 1.0.0.final-redhat-2
+Implementation-URL: http://jboss.org/picketbox
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.picketbox.commons.cipher
+Bundle-Description: picketbox-commons-1.0.0.final-redhat-2
+Bundle-Name: picketbox-commons-1.0.0.final-redhat-2
+Bundle-Version: 1.0.0.final-redhat-2
+Export-Package: org.picketbox.commons.cipher;uses:="javax.crypto,javax
+ .crypto.spec",org.picketbox.commons.ssl;uses:="javax.net.ssl,org.pick
+ etbox.commons.cipher"
+Import-Package: java.io,java.lang,java.net,java.security,java.security
+ .cert,java.security.spec,java.util.logging,java.util.zip,javax.crypto
+ ,javax.crypto.spec,javax.net.ssl

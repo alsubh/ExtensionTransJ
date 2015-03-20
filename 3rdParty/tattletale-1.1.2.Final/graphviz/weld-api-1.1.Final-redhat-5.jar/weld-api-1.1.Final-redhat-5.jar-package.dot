@@ -1,0 +1,17 @@
+digraph weld_api_1_1_Final_redhat_5_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_weld_context -> javax_enterprise_context;
+  org_jboss_weld_context -> javax_enterprise_context_spi;
+  org_jboss_weld_context_bound -> javax_enterprise_util;
+  org_jboss_weld_context_bound -> javax_inject;
+  org_jboss_weld_context_bound -> org_jboss_weld_context;
+  org_jboss_weld_context_ejb -> javax_enterprise_util;
+  org_jboss_weld_context_ejb -> javax_inject;
+  org_jboss_weld_context_ejb -> org_jboss_weld_context;
+  org_jboss_weld_context_http -> javax_enterprise_util;
+  org_jboss_weld_context_http -> javax_inject;
+  org_jboss_weld_context_http -> javax_servlet_http;
+  org_jboss_weld_context_http -> org_jboss_weld_context;
+  org_jboss_weld_context_unbound -> javax_enterprise_util;
+  org_jboss_weld_context_unbound -> javax_inject;
+}

@@ -1,0 +1,6 @@
+digraph txw2_20110809_redhat_4_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  com_sun_xml_txw2 -> com_sun_xml_txw2_annotation;
+  com_sun_xml_txw2 -> com_sun_xml_txw2_output;
+  com_sun_xml_txw2_output -> com_sun_xml_txw2;
+}

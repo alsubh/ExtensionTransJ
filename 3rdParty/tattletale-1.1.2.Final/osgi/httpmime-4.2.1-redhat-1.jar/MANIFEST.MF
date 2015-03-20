@@ -1,0 +1,42 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Implementation-Vendor-Id: org.apache
+Specification-Title: HttpComponents HttpMime
+Scm-Url: https://svn.apache.org/repos/asf/httpcomponents/httpclient/ta
+ gs/4.2.1/httpmime
+Implementation-Title: HttpComponents HttpMime
+Build-Timestamp: Fri, 8 Mar 2013 13:08:29 -0500
+Implementation-Version: 4.2.1-redhat-1
+Java-Version: 1.6.0_24
+Scm-Connection: scm:svn:https://svn.apache.org/repos/asf/httpcomponent
+ s/httpclient/tags/4.2.1/httpmime
+Os-Arch: i386
+Specification-Vendor: The Apache Software Foundation
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+url: http://hc.apache.org/httpcomponents-client
+Implementation-Vendor: The Apache Software Foundation
+Os-Version: 2.6.32-279.22.1.el6.x86_64
+Scm-Revision: ??????
+X-Compile-Target-JDK: 1.5
+Implementation-Build: UNKNOWN_BRANCH@r??????; 2013-03-08 13:08:16-0500
+X-Compile-Source-JDK: 1.5
+Created-By: Apache Maven
+Build-Jdk: 1.6.0_24
+Implementation-URL: http://hc.apache.org/httpcomponents-client
+Specification-Version: 4.2.1-redhat-1
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.apache.http.entity.mime
+Bundle-Description: httpmime-4.2.1-redhat-1
+Bundle-Name: httpmime-4.2.1-redhat-1
+Bundle-Version: 0.0.0
+Export-Package: org.apache.http.entity.mime;uses:="org.apache.http,org
+ .apache.http.entity.mime.content,org.apache.http.message,org.apache.h
+ ttp.util",org.apache.http.entity.mime.content
+Import-Package: java.io,java.lang,java.nio,java.nio.charset,java.util,
+ org.apache.http;version="0.0.0",org.apache.http.message;version="0.0.
+ 0",org.apache.http.util;version="0.0.0"

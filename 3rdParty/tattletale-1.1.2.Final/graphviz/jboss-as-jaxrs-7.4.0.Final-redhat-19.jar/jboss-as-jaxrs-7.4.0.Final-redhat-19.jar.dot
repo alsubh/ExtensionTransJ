@@ -1,0 +1,17 @@
+digraph jboss_as_jaxrs_7_4_0_Final_redhat_19_dependencies {
+  node [shape = box, fontsize=10.0];
+  jboss_as_jaxrs_7_4_0_Final_redhat_19 -> async_http_servlet_3_0_2_3_8_Final_redhat_3;
+  jboss_as_jaxrs_7_4_0_Final_redhat_19 -> jandex_1_0_3_Final_redhat_2;
+  jboss_as_jaxrs_7_4_0_Final_redhat_19 -> jboss_as_controller_7_4_0_Final_redhat_19;
+  jboss_as_jaxrs_7_4_0_Final_redhat_19 -> jboss_as_ee_7_4_0_Final_redhat_19;
+  jboss_as_jaxrs_7_4_0_Final_redhat_19 -> jboss_as_ejb3_7_4_0_Final_redhat_19;
+  jboss_as_jaxrs_7_4_0_Final_redhat_19 -> jboss_as_server_7_4_0_Final_redhat_19;
+  jboss_as_jaxrs_7_4_0_Final_redhat_19 -> jboss_as_web_7_4_0_Final_redhat_19;
+  jboss_as_jaxrs_7_4_0_Final_redhat_19 -> jboss_as_weld_7_4_0_Final_redhat_19;
+  jboss_as_jaxrs_7_4_0_Final_redhat_19 -> jboss_cli_client;
+  jboss_as_jaxrs_7_4_0_Final_redhat_19 -> jboss_jaxrs_api_1_1_spec_1_0_1_Final_redhat_2;
+  jboss_as_jaxrs_7_4_0_Final_redhat_19 -> jboss_metadata_common_7_1_0_Final_redhat_1;
+  jboss_as_jaxrs_7_4_0_Final_redhat_19 -> jboss_metadata_web_7_1_0_Final_redhat_1;
+  jboss_as_jaxrs_7_4_0_Final_redhat_19 -> jboss_msc_1_1_5_Final_redhat_1;
+  jboss_as_jaxrs_7_4_0_Final_redhat_19 -> resteasy_jaxrs_2_3_8_Final_redhat_3;
+}

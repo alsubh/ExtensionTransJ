@@ -1,0 +1,4 @@
+digraph mail_1_4_5_redhat_1_dependencies {
+  node [shape = box, fontsize=10.0];
+  mail_1_4_5_redhat_1 -> activation_1_1_1_redhat_2;
+}

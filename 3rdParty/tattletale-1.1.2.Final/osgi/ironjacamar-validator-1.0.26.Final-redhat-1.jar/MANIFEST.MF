@@ -1,0 +1,43 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.8.2
+Implementation-Title: IronJacamar Validator
+Implementation-Version: 1.0.26.Final-redhat-1
+Implementation-Vendor-Id: org.jboss
+Created-By: 1.6.0_30-b30 (Sun Microsystems Inc.)
+Implementation-Vendor: The IronJacamar project (http://www.jboss.org/i
+ ronjacamar)
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.jca.validator
+Bundle-Description: ironjacamar-validator-1.0.26.Final-redhat-1
+Bundle-Name: ironjacamar-validator-1.0.26.Final-redhat-1
+Bundle-Version: 1.0.26.Final-redhat-1
+Export-Package: org.jboss.jca.validator;uses:="org.jboss.jca.common.an
+ notations,org.jboss.jca.common.api.metadata.ra,org.jboss.jca.common.a
+ pi.metadata.ra.ra10,org.jboss.jca.common.api.metadata.ra.ra15,org.jbo
+ ss.jca.common.api.metadata.ra.ra16,org.jboss.jca.common.metadata,org.
+ jboss.jca.common.spi.annotations.repository",org.jboss.jca.validator.
+ rules;uses:="org.jboss.jca.common.api.metadata.ra,org.jboss.jca.valid
+ ator",org.jboss.jca.validator.rules.ao;uses:="javax.resource,javax.re
+ source.spi,org.jboss.jca.validator,org.jboss.jca.validator.rules",org
+ .jboss.jca.validator.rules.as;uses:="javax.resource.spi,org.jboss.jca
+ .validator,org.jboss.jca.validator.rules",org.jboss.jca.validator.rul
+ es.cf;uses:="javax.resource,javax.resource.cci,org.jboss.jca.validato
+ r",org.jboss.jca.validator.rules.mc;uses:="javax.resource.spi,org.jbo
+ ss.jca.validator",org.jboss.jca.validator.rules.mcf;uses:="javax.reso
+ urce.spi,org.jboss.jca.validator,org.jboss.jca.validator.rules",org.j
+ boss.jca.validator.rules.ra;uses:="javax.resource.spi,org.jboss.jca.v
+ alidator,org.jboss.jca.validator.rules"
+Import-Package: java.io,java.lang,java.lang.reflect,java.net,java.secu
+ rity,java.util,java.util.jar,java.util.zip,javax.resource;version="1.
+ 6",javax.resource.cci;version="1.6",javax.resource.spi;version="1.6",
+ org.jboss.jca.common.annotations;version="1.0.26.Final-redhat-1",org.
+ jboss.jca.common.api.metadata.ra;version="1.0.26.Final-redhat-1",org.
+ jboss.jca.common.api.metadata.ra.ra10;version="1.0.26.Final-redhat-1"
+ ,org.jboss.jca.common.api.metadata.ra.ra15;version="1.0.26.Final-redh
+ at-1",org.jboss.jca.common.api.metadata.ra.ra16;version="1.0.26.Final
+ -redhat-1",org.jboss.jca.common.metadata;version="1.0.26.Final-redhat
+ -1",org.jboss.jca.common.spi.annotations.repository;version="1.0.26.F
+ inal-redhat-1"

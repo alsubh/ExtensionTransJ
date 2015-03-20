@@ -1,0 +1,7 @@
+digraph slf4j_jboss_logmanager_1_0_3_GA_redhat_1_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_slf4j_impl -> org_jboss_logmanager;
+  org_slf4j_impl -> org_slf4j;
+  org_slf4j_impl -> org_slf4j_helpers;
+  org_slf4j_impl -> org_slf4j_spi;
+}

@@ -1,0 +1,38 @@
+Manifest-Version: 1.0
+Bundle-License: http://repository.jboss.org/licenses/lgpl-2.1.txt
+Bundle-SymbolicName: org.jboss.spec.javax.management.j2ee.jboss-j2eemg
+ mt-api_1.1_spec
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Bnd-LastModified: 1345458214276
+Specification-Title: JSR-77: Java (TM) EE Management 1.1 API
+Implementation-Vendor-Id: org.jboss.spec.javax.management.j2ee
+Bundle-DocURL: http://www.jboss.org
+Import-Package: javax.ejb;version="[3.1,4)",javax.management
+Scm-Url: https://github.com/jboss/jboss-j2eemgmt-api_spec
+Export-Package: javax.management.j2ee.statistics;version="1.1",javax.m
+ anagement.j2ee;uses:="javax.management,javax.ejb";version="1.1"
+Bundle-Name: Java EE Management 1.1 API
+Implementation-Title: Java EE Management 1.1 API
+Bundle-Description: JSR-77: Java (TM) EE Management 1.1 API
+Implementation-Version: 1.0.1.Final-redhat-2
+Build-Timestamp: Mon, 20 Aug 2012 06:23:33 -0400
+Java-Version: 1.6.0_24
+Scm-Connection: scm:git:git@github.com:jboss/jboss-j2eemgmt-api_spec.g
+ it
+Specification-Vendor: Oracle
+Os-Arch: i386
+Bundle-ManifestVersion: 2
+Java-Vendor: Sun Microsystems Inc.
+Bundle-Vendor: JBoss by Red Hat
+Os-Name: Linux
+Tool: Bnd-1.50.0
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-279.2.1.el6.x86_64
+Scm-Revision: 3773bf2a3b7c51f454a9dff39d9fc46f4e1fd0ca
+Bundle-Version: 1.0.1.Final-redhat-2
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.6.0_24
+Specification-Version: 1.1
+Implementation-URL: http://www.jboss.org/jboss-j2eemgmt-api_1.1_spec
+

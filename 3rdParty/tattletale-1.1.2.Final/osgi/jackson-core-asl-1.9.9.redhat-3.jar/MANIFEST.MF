@@ -1,0 +1,38 @@
+Manifest-Version: 1.0
+Implementation-Title: Jackson JSON processor
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-SymbolicName: jackson-core-asl
+Implementation-Version: 1.9.9.redhat-3
+Built-By: mockbuild
+Specification-Vendor: http://www.ietf.org/rfc/rfc4627.txt
+Bundle-RequiredExecutionEnvironment: J2SE-1.5, JavaSE-1.6
+Bnd-LastModified: 1404426342461
+Bundle-ManifestVersion: 2
+Specification-Title: JSON - JavaScript Object Notation
+Bundle-Vendor: http://fasterxml.com
+Import-Package: org.codehaus.jackson;version="1.9",org.codehaus.jackso
+ n.annotate;version="1.9",org.codehaus.jackson.format;version="1.9",or
+ g.codehaus.jackson.impl;version="1.9",org.codehaus.jackson.io;version
+ ="1.9",org.codehaus.jackson.sym;version="1.9",org.codehaus.jackson.ty
+ pe;version="1.9",org.codehaus.jackson.util;version="1.9"
+Tool: Bnd-<unknown version>
+Implementation-Vendor: http://fasterxml.com
+Export-Package: org.codehaus.jackson;uses:="org.codehaus.jackson.forma
+ t,org.codehaus.jackson.io,org.codehaus.jackson.sym,org.codehaus.jacks
+ on.util,org.codehaus.jackson.impl,org.codehaus.jackson.annotate,org.c
+ odehaus.jackson.type";version="1.9.9.redhat-3",org.codehaus.jackson.a
+ nnotate;version="1.9.9.redhat-3",org.codehaus.jackson.format;uses:="o
+ rg.codehaus.jackson,org.codehaus.jackson.io";version="1.9.9.redhat-3"
+ ,org.codehaus.jackson.impl;uses:="org.codehaus.jackson,org.codehaus.j
+ ackson.format,org.codehaus.jackson.io,org.codehaus.jackson.sym,org.co
+ dehaus.jackson.util";version="1.9.9.redhat-3",org.codehaus.jackson.io
+ ;uses:="org.codehaus.jackson.util,org.codehaus.jackson";version="1.9.
+ 9.redhat-3",org.codehaus.jackson.sym;uses:="org.codehaus.jackson.util
+ ";version="1.9.9.redhat-3",org.codehaus.jackson.type;version="1.9.9.r
+ edhat-3",org.codehaus.jackson.util;uses:="org.codehaus.jackson.impl,o
+ rg.codehaus.jackson,org.codehaus.jackson.io";version="1.9.9.redhat-3"
+Bundle-Name: Jackson JSON processor
+Bundle-Version: 1.9.9.redhat-3
+Created-By: 1.7.0 (IBM Corporation)
+Specification-Version: 1.0
+

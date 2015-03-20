@@ -1,0 +1,65 @@
+Manifest-Version: 1.0
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-SymbolicName: org.apache.commons.collections
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Bnd-LastModified: 1384553504787
+Implementation-Vendor-Id: commons-collections
+Specification-Title: Commons Collections
+Bundle-DocURL: http://commons.apache.org/collections/
+Include-Resource: META-INF/LICENSE.txt=LICENSE.txt,META-INF/NOTICE.txt
+ =NOTICE.txt,META-INF/maven/commons-collections/commons-collections/de
+ pendency-overrides.properties=/tmp/mvndepext992870230971416397/common
+ s-collections/commons-collections/dependency-overrides.properties,MET
+ A-INF/maven/commons-collections/commons-collections/plugin-overrides.
+ properties=/tmp/mvndepext6881181407846806243/commons-collections/comm
+ ons-collections/plugin-overrides.properties,META-INF/maven/commons-co
+ llections/commons-collections/effective-pom.xml=/tmp/mvndepext8045951
+ 983235588757/commons-collections/commons-collections/effective-pom.xm
+ l,META-INF/NOTICE=target/maven-shared-archive-resources/META-INF/NOTI
+ CE,META-INF/DEPENDENCIES=target/maven-shared-archive-resources/META-I
+ NF/DEPENDENCIES,META-INF/LICENSE=target/maven-shared-archive-resource
+ s/META-INF/LICENSE
+Scm-Url: http://git.app.eng.bos.redhat.com/apache/commons-collections.
+ git
+Export-Package: org.apache.commons.collections.keyvalue;version="3.2.1
+ .redhat-3",org.apache.commons.collections.comparators;version="3.2.1.
+ redhat-3",org.apache.commons.collections;version="3.2.1.redhat-3",org
+ .apache.commons.collections.bidimap;version="3.2.1.redhat-3",org.apac
+ he.commons.collections.list;version="3.2.1.redhat-3",org.apache.commo
+ ns.collections.functors;version="3.2.1.redhat-3",org.apache.commons.c
+ ollections.collection;version="3.2.1.redhat-3",org.apache.commons.col
+ lections.iterators;version="3.2.1.redhat-3",org.apache.commons.collec
+ tions.bag;version="3.2.1.redhat-3",org.apache.commons.collections.map
+ ;version="3.2.1.redhat-3",org.apache.commons.collections.buffer;versi
+ on="3.2.1.redhat-3",org.apache.commons.collections.set;version="3.2.1
+ .redhat-3"
+Bundle-Name: Commons Collections
+Implementation-Title: Commons Collections
+Bundle-Description: Types that extend and augment the Java Collections
+  Framework.
+Build-Timestamp: Fri, 15 Nov 2013 17:11:40 -0500
+Implementation-Version: 3.2.1.redhat-3
+Java-Version: 1.6.0_28
+Scm-Connection: scm:git:git://git.app.eng.bos.redhat.com/apache/common
+ s-collections.git
+Os-Arch: amd64
+Specification-Vendor: JBoss by Red Hat
+Bundle-ManifestVersion: 2
+Java-Vendor: Sun Microsystems Inc.
+Bundle-Vendor: JBoss by Red Hat
+Os-Name: Linux
+Tool: Bnd-1.50.0
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-358.18.1.el6.x86_64
+Scm-Revision: 
+Bundle-Version: 3.2.1.redhat-3
+X-Compile-Target-JDK: 1.6
+Implementation-Build: UNKNOWN@r${buildNumber}; 2013-11-15 17:11:37-050
+ 0
+X-Compile-Source-JDK: 1.6
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.6.0_28
+Implementation-URL: http://commons.apache.org/collections/
+Specification-Version: 3.2.1.redhat-3
+

@@ -1,0 +1,9 @@
+digraph wildfly_patching_7_4_0_Final_redhat_19_dependencies {
+  node [shape = box, fontsize=10.0];
+  wildfly_patching_7_4_0_Final_redhat_19 -> jboss_as_cli_7_4_0_Final_redhat_19;
+  wildfly_patching_7_4_0_Final_redhat_19 -> jboss_as_controller_7_4_0_Final_redhat_19;
+  wildfly_patching_7_4_0_Final_redhat_19 -> jboss_as_controller_client_7_4_0_Final_redhat_19;
+  wildfly_patching_7_4_0_Final_redhat_19 -> jboss_as_version_7_4_0_Final_redhat_19;
+  wildfly_patching_7_4_0_Final_redhat_19 -> jboss_cli_client;
+  wildfly_patching_7_4_0_Final_redhat_19 -> jboss_msc_1_1_5_Final_redhat_1;
+}

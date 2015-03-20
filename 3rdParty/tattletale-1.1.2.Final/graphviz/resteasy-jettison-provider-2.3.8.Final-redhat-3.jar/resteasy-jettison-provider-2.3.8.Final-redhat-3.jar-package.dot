@@ -1,0 +1,12 @@
+digraph resteasy_jettison_provider_2_3_8_Final_redhat_3_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_resteasy_plugins_providers_jaxb_json -> javax_ws_rs;
+  org_jboss_resteasy_plugins_providers_jaxb_json -> javax_ws_rs_core;
+  org_jboss_resteasy_plugins_providers_jaxb_json -> javax_ws_rs_ext;
+  org_jboss_resteasy_plugins_providers_jaxb_json -> org_codehaus_jettison_badgerfish;
+  org_jboss_resteasy_plugins_providers_jaxb_json -> org_codehaus_jettison_json;
+  org_jboss_resteasy_plugins_providers_jaxb_json -> org_codehaus_jettison_mapped;
+  org_jboss_resteasy_plugins_providers_jaxb_json -> org_jboss_resteasy_annotations_providers_jaxb_json;
+  org_jboss_resteasy_plugins_providers_jaxb_json -> org_jboss_resteasy_plugins_providers_jaxb;
+  org_jboss_resteasy_plugins_providers_jaxb_json -> org_jboss_resteasy_util;
+}

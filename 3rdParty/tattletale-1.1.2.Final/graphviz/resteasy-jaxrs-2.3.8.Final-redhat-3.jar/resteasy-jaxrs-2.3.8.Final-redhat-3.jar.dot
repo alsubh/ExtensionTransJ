@@ -1,0 +1,14 @@
+digraph resteasy_jaxrs_2_3_8_Final_redhat_3_dependencies {
+  node [shape = box, fontsize=10.0];
+  resteasy_jaxrs_2_3_8_Final_redhat_3 -> activation_1_1_1_redhat_2;
+  resteasy_jaxrs_2_3_8_Final_redhat_3 -> commons_codec_1_4_redhat_3;
+  resteasy_jaxrs_2_3_8_Final_redhat_3 -> commons_io_2_1_redhat_3;
+  resteasy_jaxrs_2_3_8_Final_redhat_3 -> httpclient_4_2_1_redhat_1;
+  resteasy_jaxrs_2_3_8_Final_redhat_3 -> httpcore_4_2_1_redhat_1;
+  resteasy_jaxrs_2_3_8_Final_redhat_3 -> jboss_annotations_api_1_1_spec_1_0_1_Final_redhat_2;
+  resteasy_jaxrs_2_3_8_Final_redhat_3 -> jboss_jaxrs_api_1_1_spec_1_0_1_Final_redhat_2;
+  resteasy_jaxrs_2_3_8_Final_redhat_3 -> jboss_servlet_api_2_5_spec_1_0_1_Final_redhat_2;
+  resteasy_jaxrs_2_3_8_Final_redhat_3 -> log4j_jboss_logmanager_1_1_0_Final_redhat_2;
+  resteasy_jaxrs_2_3_8_Final_redhat_3 -> scannotation_1_0_3_redhat_4;
+  resteasy_jaxrs_2_3_8_Final_redhat_3 -> slf4j_api_1_7_2_redhat_3;
+}

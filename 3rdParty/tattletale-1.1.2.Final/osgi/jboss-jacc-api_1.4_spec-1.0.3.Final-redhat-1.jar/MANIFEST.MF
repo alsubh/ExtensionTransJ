@@ -1,0 +1,40 @@
+Manifest-Version: 1.0
+Bundle-License: http://repository.jboss.org/licenses/cddl.txt, http://
+ repository.jboss.org/licenses/gpl-2.0-ce.txt
+Bundle-SymbolicName: org.jboss.spec.javax.security.jacc.jboss-jacc-api
+ _1.4_spec
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Bnd-LastModified: 1382603121381
+Implementation-Vendor-Id: org.jboss.spec.javax.security.jacc
+Specification-Title: JSR-000115 Java(TM) Authorization Contract for Co
+ ntainers
+Bundle-DocURL: http://www.jboss.org
+Import-Package: javax.servlet.http;version="[3.0,4)"
+Scm-Url: https://github.com/jboss/jboss-jacc-api_spec
+Export-Package: javax.security.jacc;uses:="javax.servlet.http";version
+ ="1.4"
+Bundle-Name: JACC 1.4 API
+Implementation-Title: JACC 1.4 API
+Bundle-Description: JSR-000115 Java(TM) Authorization Contract for Con
+ tainers API
+Build-Timestamp: Thu, 24 Oct 2013 04:25:14 -0400
+Implementation-Version: 1.0.3.Final-redhat-1
+Java-Version: 1.6.0_24
+Scm-Connection: scm:git:git@github.com:jboss/jboss-jacc-api_spec.git
+Specification-Vendor: Oracle
+Os-Arch: amd64
+Bundle-ManifestVersion: 2
+Java-Vendor: Sun Microsystems Inc.
+Bundle-Vendor: JBoss by Red Hat
+Os-Name: Linux
+Tool: Bnd-1.50.0
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-358.18.1.el6.x86_64
+Scm-Revision: cbc0a01781e3250e5901feafade5d545037bb19a
+Bundle-Version: 1.0.3.Final-redhat-1
+Created-By: Apache Maven Bundle Plugin
+Implementation-URL: http://www.jboss.org/jboss-jacc-api_1.4_spec
+Build-Jdk: 1.6.0_24
+Specification-Version: 1.4
+

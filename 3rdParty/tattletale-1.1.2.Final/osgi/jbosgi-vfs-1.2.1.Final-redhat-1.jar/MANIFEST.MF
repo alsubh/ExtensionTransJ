@@ -1,0 +1,38 @@
+Manifest-Version: 1.0
+Implementation-Title: JBossOSGi VFS API
+Implementation-Version: 1.2.1.Final-redhat-1
+Build-Timestamp: Mon, 18 Feb 2013 21:49:06 -0500
+Archiver-Version: Plexus Archiver
+Java-Version: 1.6.0_24
+Built-By: mockbuild
+Scm-Connection: scm:git:git://github.com/jbosgi/jbosgi-parent.git/jbos
+ gi-vfs-parent/jbosgi-vfs
+Specification-Vendor: JBoss by Red Hat
+Os-Arch: amd64
+Specification-Title: JBossOSGi VFS API
+Implementation-Vendor-Id: org.jboss.osgi.vfs
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: http://github.com/jbosgi/jbosgi-parent/jbosgi-vfs-parent/jbos
+ gi-vfs
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-279.22.1.el6.x86_64
+Scm-Revision: 64bda68de8c2585a1599d3161ec8ad18674e485c
+Created-By: Apache Maven
+Build-Jdk: 1.6.0_24
+Specification-Version: 1.2.1.Final-redhat-1
+Implementation-URL: http://www.jboss.org/jbossas/osgi/jbosgi-vfs-paren
+ t/jbosgi-vfs
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.osgi.vfs
+Bundle-Description: jbosgi-vfs-1.2.1.Final-redhat-1
+Bundle-Name: jbosgi-vfs-1.2.1.Final-redhat-1
+Bundle-Version: 1.2.1.Final-redhat-1
+Export-Package: org.jboss.osgi.vfs;uses:="org.jboss.osgi.vfs.internal"
+ ,org.jboss.osgi.vfs.internal;uses:="org.jboss.logging"
+Import-Package: java.io,java.lang,java.net,java.security,java.security
+ .cert,java.util,java.util.jar,org.jboss.logging;version="7.4.0.Final-
+ redhat-19"

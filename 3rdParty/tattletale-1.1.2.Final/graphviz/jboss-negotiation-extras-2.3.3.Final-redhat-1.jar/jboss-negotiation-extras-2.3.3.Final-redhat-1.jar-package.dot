@@ -1,0 +1,12 @@
+digraph jboss_negotiation_extras_2_3_3_Final_redhat_1_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_security_negotiation -> org_jboss_logging;
+  org_jboss_security_negotiation -> org_jboss_security;
+  org_jboss_security_negotiation -> org_jboss_security_negotiation_common;
+  org_jboss_security_negotiation -> org_jboss_security_negotiation_prototype;
+  org_jboss_security_negotiation -> org_picketbox_commons_cipher;
+  org_jboss_security_negotiation_prototype -> org_jboss_security_util;
+  org_jboss_security_negotiation_spnego -> org_jboss_logging;
+  org_jboss_security_negotiation_spnego -> org_jboss_security_auth_spi;
+  org_jboss_security_negotiation_spnego -> org_jboss_security_negotiation;
+}

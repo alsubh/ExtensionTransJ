@@ -1,0 +1,6 @@
+digraph mod_cluster_container_catalina_1_2_9_Final_redhat_1_dependencies {
+  node [shape = box, fontsize=10.0];
+  mod_cluster_container_catalina_1_2_9_Final_redhat_1 -> jboss_servlet_api_2_5_spec_1_0_1_Final_redhat_2;
+  mod_cluster_container_catalina_1_2_9_Final_redhat_1 -> jbossweb_7_4_8_Final_redhat_4;
+  mod_cluster_container_catalina_1_2_9_Final_redhat_1 -> mod_cluster_container_spi_1_2_9_Final_redhat_1;
+}

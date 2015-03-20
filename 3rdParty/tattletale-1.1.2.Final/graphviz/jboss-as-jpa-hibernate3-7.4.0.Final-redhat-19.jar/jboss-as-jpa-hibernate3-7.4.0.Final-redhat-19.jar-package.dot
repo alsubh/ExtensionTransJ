@@ -1,0 +1,30 @@
+digraph jboss_as_jpa_hibernate3_7_4_0_Final_redhat_19_package_dependencies {
+  node [shape = box, fontsize=10.0];
+  org_jboss_as_jpa_hibernate3 -> javax_transaction;
+  org_jboss_as_jpa_hibernate3 -> org_hibernate;
+  org_jboss_as_jpa_hibernate3 -> org_hibernate_cfg;
+  org_jboss_as_jpa_hibernate3 -> org_hibernate_ejb_packaging;
+  org_jboss_as_jpa_hibernate3 -> org_hibernate_transaction;
+  org_jboss_as_jpa_hibernate3 -> org_jboss_as_clustering_infinispan_subsystem;
+  org_jboss_as_jpa_hibernate3 -> org_jboss_as_clustering_jgroups_subsystem;
+  org_jboss_as_jpa_hibernate3 -> org_jboss_as_jpa;
+  org_jboss_as_jpa_hibernate3 -> org_jboss_as_jpa_spi;
+  org_jboss_as_jpa_hibernate3 -> org_jboss_jandex;
+  org_jboss_as_jpa_hibernate3 -> org_jboss_msc_service;
+  org_jboss_as_jpa_hibernate3 -> org_jboss_vfs;
+  org_jboss_as_jpa_hibernate3_infinispan -> javax_persistence;
+  org_jboss_as_jpa_hibernate3_infinispan -> javax_persistence_spi;
+  org_jboss_as_jpa_hibernate3_infinispan -> org_hibernate_cache;
+  org_jboss_as_jpa_hibernate3_infinispan -> org_hibernate_cache_infinispan;
+  org_jboss_as_jpa_hibernate3_infinispan -> org_hibernate_cache_infinispan_impl;
+  org_jboss_as_jpa_hibernate3_infinispan -> org_infinispan;
+  org_jboss_as_jpa_hibernate3_infinispan -> org_infinispan_manager;
+  org_jboss_as_jpa_hibernate3_infinispan -> org_jboss_as_clustering_infinispan_subsystem;
+  org_jboss_as_jpa_hibernate3_infinispan -> org_jboss_as_clustering_msc;
+  org_jboss_as_jpa_hibernate3_infinispan -> org_jboss_as_jpa_hibernate3;
+  org_jboss_as_jpa_hibernate3_infinispan -> org_jboss_as_jpa_spi;
+  org_jboss_as_jpa_hibernate3_infinispan -> org_jboss_as_server;
+  org_jboss_as_jpa_hibernate3_infinispan -> org_jboss_msc_inject;
+  org_jboss_as_jpa_hibernate3_infinispan -> org_jboss_msc_service;
+  org_jboss_as_jpa_hibernate3_infinispan -> org_jboss_msc_value;
+}

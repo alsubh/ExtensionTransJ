@@ -1,0 +1,76 @@
+Manifest-Version: 1.0
+Implementation-Title: JBoss Application Server: Service Archive Subsys
+ tem
+Build-Timestamp: Fri, 11 Jul 2014 12:34:05 -0400
+Implementation-Version: 7.4.0.Final-redhat-19
+Java-Version: 1.6.0_30
+Archiver-Version: Plexus Archiver
+Built-By: mockbuild
+Scm-Connection: scm:git:git@github.com:jbossas/jboss-as.git/jboss-as-s
+ ar
+Specification-Vendor: JBoss by Red Hat
+Os-Arch: i386
+JBossAS-Release-Version: 7.4.0.Final-redhat-19
+Implementation-Vendor-Id: org.jboss.as
+Specification-Title: JBoss Application Server: Service Archive Subsyst
+ em
+Java-Vendor: Sun Microsystems Inc.
+Os-Name: Linux
+Scm-Url: https://github.com/jbossas/jboss-as
+Implementation-Vendor: JBoss by Red Hat
+Os-Version: 2.6.32-431.17.1.el6.x86_64
+Scm-Revision: b0d14b662d07cb1fcc0d8ac40c811345853866fd
+JBossAS-Release-Codename: Janus
+Created-By: Apache Maven
+Implementation-URL: http://www.jboss.org/jboss-as-parent/jboss-as-sar
+Build-Jdk: 1.6.0_30
+Specification-Version: 7.4.0.Final-redhat-19
+
+
+### OSGi information
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.jboss.as.service
+Bundle-Description: jboss-as-sar-7.4.0.Final-redhat-19
+Bundle-Name: jboss-as-sar-7.4.0.Final-redhat-19
+Bundle-Version: 7.4.0.Final-redhat-19
+Export-Package: org.jboss.as.service;uses:="org.jboss.as.controller,or
+ g.jboss.as.controller.descriptions,org.jboss.as.controller.operations
+ .common,org.jboss.as.controller.parsing,org.jboss.as.controller.persi
+ stence,org.jboss.as.controller.registry,org.jboss.as.ee.structure,org
+ .jboss.as.jmx,org.jboss.as.naming,org.jboss.as.server,org.jboss.as.se
+ rver.deployment,org.jboss.as.server.deployment.module,org.jboss.as.se
+ rver.deployment.reflect,org.jboss.as.service.component,org.jboss.as.s
+ ervice.descriptor,org.jboss.common.beans.property.finder,org.jboss.dm
+ r,org.jboss.logging,org.jboss.logging.annotations,org.jboss.metadata.
+ property,org.jboss.modules,org.jboss.msc.inject,org.jboss.msc.service
+ ,org.jboss.msc.value,org.jboss.staxmapper,org.jboss.vfs,org.jboss.vfs
+ .util",org.jboss.as.service.component;uses:="org.jboss.as.ee.componen
+ t,org.jboss.as.naming,org.jboss.as.server.deployment,org.jboss.as.ser
+ ver.deployment.reflect,org.jboss.as.service,org.jboss.as.service.desc
+ riptor,org.jboss.modules,org.jboss.msc.service",org.jboss.as.service.
+ descriptor;uses:="org.jboss.as.server.deployment,org.jboss.as.service
+ ,org.jboss.metadata.property,org.jboss.staxmapper"
+Import-Package: java.beans,java.io,java.lang,java.lang.reflect,java.se
+ curity,java.util,javax.management,javax.xml.namespace,javax.xml.strea
+ m,org.jboss.as.controller;version="7.4.0.Final-redhat-19",org.jboss.a
+ s.controller.descriptions;version="7.4.0.Final-redhat-19",org.jboss.a
+ s.controller.operations.common;version="7.4.0.Final-redhat-19",org.jb
+ oss.as.controller.parsing;version="7.4.0.Final-redhat-19",org.jboss.a
+ s.controller.persistence;version="7.4.0.Final-redhat-19",org.jboss.as
+ .controller.registry;version="7.4.0.Final-redhat-19",org.jboss.as.ee.
+ component;version="7.4.0.Final-redhat-19",org.jboss.as.ee.structure;v
+ ersion="7.4.0.Final-redhat-19",org.jboss.as.jmx;version="7.4.0.Final-
+ redhat-19",org.jboss.as.naming;version="7.4.0.Final-redhat-19",org.jb
+ oss.as.server;version="7.4.0.Final-redhat-19",org.jboss.as.server.dep
+ loyment;version="7.4.0.Final-redhat-19",org.jboss.as.server.deploymen
+ t.module;version="7.4.0.Final-redhat-19",org.jboss.as.server.deployme
+ nt.reflect;version="7.4.0.Final-redhat-19",org.jboss.common.beans.pro
+ perty.finder;version="1.1.0.Final-redhat-1",org.jboss.dmr;version="7.
+ 4.0.Final-redhat-19",org.jboss.logging;version="7.4.0.Final-redhat-19
+ ",org.jboss.logging.annotations,org.jboss.metadata.property;version="
+ 7.1.0.Final-redhat-1",org.jboss.modules;version="7.4.0.Final-redhat-1
+ 9",org.jboss.msc.inject;version="1.1.5.Final-redhat-1",org.jboss.msc.
+ service;version="1.1.5.Final-redhat-1",org.jboss.msc.value;version="1
+ .1.5.Final-redhat-1",org.jboss.staxmapper;version="7.4.0.Final-redhat
+ -19",org.jboss.vfs;version="7.4.0.Final-redhat-19",org.jboss.vfs.util
+ ;version="7.4.0.Final-redhat-19"
