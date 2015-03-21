@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<transaction-service>
+	<properties name="jdbc"	type="system">
+		<property name="DatabaseURL" value='jdbc:sqlserver://129.123.7.41:1433;databaseName=Userdb;user=anas;password=tedi;integratedSecurity=true' />
+		<property name="UserName" value="anas" />
+		<property name="Password" value="tedi" />
+	</properties>
+</transaction-service>

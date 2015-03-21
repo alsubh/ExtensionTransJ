@@ -1,0 +1,21 @@
+package com.configration;
+
+import java.sql.SQLException;
+
+public class sqlStatments {
+
+	public sqlStatments(){
+		
+	}
+	
+	private void sqlStatement(String SQL) {
+		try {
+			stmt = sqlConn.createStatement();
+			// execute insert SQL statement
+			stmt.executeUpdate(SQL);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

@@ -1,0 +1,72 @@
+package com.pile;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+import com.configration.*;
+import com.object.Goo;
+
+public class GooPile implements IPile{
+
+	private int count;
+	public static Connection sqlConn = dbConnection.setupGooPileConnection("GooPile", "tedi", "tedi");
+	
+	public static List<Goo> gooPile = new ArrayList<Goo>();
+	
+	public GooPile(){	
+	}
+
+	@Override
+	public void add(Object obj) {
+		// TODO Auto-generated method stub
+		Goo goo = (Goo)obj;
+		
+        String SQL = "INSERT INTO Goo(name, code, type, price)" +
+        		"VALUES("+goo.getName()+","+ goo.getCode()+
+        		","+goo.getType()+","+goo.getPrice()+");";  
+        sqlStatement(SQL);  
+		//gooPile.add(goo);
+	}
+
+	@Override
+	public void remove(Object obj) {
+		// TODO Auto-generated method stub
+		Goo goo = (Goo)obj;
+		String SQL = "DELETE FROM Goo WHERE name="+goo.getName()+
+				", code="+goo.getCode()+", type="+goo.getType()+
+				", ID="+goo.getID()+";";
+		sqlStatement(SQL);
+		int index= gooPile.indexOf(goo);
+		gooPile.remove(index);
+	}
+
+	@Override
+	public int count() {
+		// TODO Auto-generated method stub
+		String SQL = "SELECT count(name) FROM Goo";
+	    Statement stmt;
+		try {
+			stmt = sqlConn.createStatement(); 
+	    ResultSet rs = stmt.executeQuery(SQL);
+	      // Iterate through the data in the result set and display it.  
+	    count= rs.getInt("count");
+	      System.out.println(rs.getString(1));
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		count = gooPile.size();
+		return count;
+	}
+	
+	private void sqlStatement(String SQL) {
+		try {
+			Statement stmt = sqlConn.createStatement();
+			// execute insert SQL stetement
+			stmt.executeUpdate(SQL);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

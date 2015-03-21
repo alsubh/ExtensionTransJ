@@ -1,0 +1,30 @@
+package com.client;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import processedComponent.PolishedWidget;
+import processedComponent.RawWidget;
+import processedComponent.RoughWidget;
+
+import com.object.Goo;
+import com.transaction.T1;
+
+public class client {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		T1 t1= new T1();
+		List<Goo> goos= new ArrayList<Goo>();
+		RawWidget  raw = new RawWidget();
+		RoughWidget rough= new RoughWidget();
+		PolishedWidget polished= new PolishedWidget();
+		= t1.getGooFromPile(2);
+		
+	}
+
+}
