@@ -3,6 +3,8 @@
  */
 package umjdt.joinpoints;
 
+import javax.transaction.SystemException;
+
 import org.aspectj.lang.JoinPoint;
 
 import umjdt.concepts.Lock;
@@ -37,34 +39,18 @@ public class LockingJP extends TransJP {
 	public LockingJP(TID _tid, Resource _resource) {
 		super();
 		super.setTid(_tid);
-		this.resource = _resource;
+		this.setResource(_resource);
 	}
 
 	public LockingJP(TID _tid, Resource resource, AccessType lockType) {
 		super();
 		this.setTid(_tid);
-		this.resource = resource;
-		this.lockType = lockType;
+		this.setResource(resource);
+		this.setLockType(lockType);
 	}
 
-	public LockingJP(TransJP _transjp) {
+	public LockingJP(TransJP _transjp) throws SystemException {
 		super(_transjp);
-	}
-
-	public Resource getResource() {
-		return resource;
-	}
-
-	public void setResource(Resource resource) {
-		this.resource = resource;
-	}
-
-	public AccessType getLockType() {
-		return lockType;
-	}
-
-	public void setLockType(AccessType lockType) {
-		this.lockType = lockType;
 	}
 
 	public Lock getLock() {
@@ -85,5 +71,21 @@ public class LockingJP extends TransJP {
 
 	public void setState(int state) {
 		this.state = state;
+	}
+
+	public Resource getResource() {
+		return resource;
+	}
+
+	public void setResource(Resource resource) {
+		this.resource = resource;
+	}
+
+	public AccessType getLockType() {
+		return lockType;
+	}
+
+	public void setLockType(AccessType lockType) {
+		this.lockType = lockType;
 	}
 }

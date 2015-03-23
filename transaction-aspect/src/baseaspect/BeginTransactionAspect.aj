@@ -16,11 +16,11 @@ public abstract aspect BeginTransactionAspect extends TransactionAspect
 	void around(BeginEventJP _beginEventJp) : TransactionBegin (_beginEventJp)
 	{											
 		begin(_beginEventJp);
-   
 		proceed(_beginEventJp);
 	}
 
 	public void begin(BeginEventJP _beginEventJp)
-	{		
+	{
+		_beginEventJp.setBeginDemarcate(_beginEventJp);
 	} 
 }

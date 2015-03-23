@@ -7,6 +7,8 @@ import javax.transaction.xa.XAException;
 import javax.transaction.xa.XAResource;
 import javax.transaction.xa.Xid;
 
+import org.omg.CosTransactions.Status;
+
 import com.sun.org.apache.bcel.internal.generic.INSTANCEOF;
 
 import sun.awt.SunToolkit.InfiniteLoop;
@@ -35,6 +37,8 @@ public aspect ResourceHoldingJoinpointTracker
 	private StartHoldingResourceEventJP startHoldEventjp= null;
 	private EndHoldingResourceEventJP endHoldEventjp =null;
 	
+	private CommitResourceEventJP commitResourceEventjp= null;
+	private AbortResourceEventJP abortResourceEventjp = null;
 	
 	/*
 	 * Starts work on behalf of a transaction branch specified in xid.
@@ -55,8 +59,6 @@ public aspect ResourceHoldingJoinpointTracker
 	pointcut EndHoldingResource(XAResource _resource): 
 		execution(* javax..XAResource+.end(..)) && target(_resource);
 	
-	
-
 	void around(Xid _xid, XAResource _resource): StartHoldingResource(_xid, _resource)
 	{
 		try
@@ -105,37 +107,50 @@ public aspect ResourceHoldingJoinpointTracker
      * @pram boolean (onePhase If true, the resource manager should use a one-phase commit protocol to commit the work done on behalf of xid.)
      * @param resource(target)
      */
-    pointcut CommitResource(Xid xid, XAResource resource): 
-		execution(* javax.transaction.xa.XAResource+.commit(..)) && args(xid, resource, ..);
+    pointcut CommitResource(Xid xid, XAResource resource): execution(* javax.transaction.xa.XAResource+.commit(..)) && args(xid) && target(resource);
     /**
      * Informs the resource manager to roll back work done on 
      * behalf of a transaction branch.
      * @param xid
      * @param resource
      */
-    pointcut AbortResource(Xid xid, XAResource resource):
-    	execution(* javax.transaction.xa.XAResource+.rollback(..)) && args(xid, resource, ..);
+    pointcut AbortResource(Xid xid): execution(* javax.transaction.xa.XAResource+.rollback(..)) && args(xid) && target(XAResource);
 
-    public void CommitResourceJoinPoint(CommitResourceEventJP _commitResourceJp)
-    {}
-
-    public void AbortResourceJoinPoint(AbortResourceEventJP _abortResourceJp)
-    {}
+    void around(Xid _xid, XAResource _resource): CommitResource(_xid, _resource){
+    	try 
+    	{
+    		proceed(_xid, _resource);
+			commitResourceEventjp= new  CommitResourceEventJP(_xid, _resource);
+			commitResourceEventjp.setStatus(Status._StatusCommitted);
+			commitResourceEventjp.setCommitResourceJP(thisJoinPoint);
+			CommitResourceJoinPoint(commitResourceEventjp);
+		}
+    	catch (XAException e) 
+    	{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
+    }
     
-    //Defined for methods
-	pointcut Lock(): execution(* *+.*lock*(..)) ;
-	pointcut Unlock(): execution(* *+.*unlock*(..)) || execution(* *+.*release*(..));
+    void around(Xid _xid) throws XAException: AbortResource(_xid){
+    	proceed(_xid);
+    	abortResourceEventjp = new AbortResourceEventJP();
+		abortResourceEventjp.setAbortResourceJP(thisJoinPoint);
+		commitResourceEventjp.setStatus(Status._StatusRolledBack);
+
+		for(Object o : thisJoinPoint.getArgs())
+		{
+			if(o instanceof XAResource)
+			{
+				abortResourceEventjp.setResource(new Resource((XAResource)thisJoinPoint.getTarget(), _xid));
+			}
+		}
 	
-	Object around(): Lock(){
-		Object lock= proceed();
-		endHoldEventjp = new EndHoldingResourceEventJP();
-		EndResourceJoinPoint(endHoldEventjp);
-		return lock;
-	}
-	
-	void around(): Unlock(){
-		proceed();
-		endHoldEventjp = new EndHoldingResourceEventJP();
-		EndResourceJoinPoint(endHoldEventjp);
-	}	
+		AbortResourceJoinPoint(abortResourceEventjp);
+    }
+    
+    public void CommitResourceJoinPoint(CommitResourceEventJP _commitResourceJp){}
+
+    public void AbortResourceJoinPoint(AbortResourceEventJP _abortResourceJp){}	
 }

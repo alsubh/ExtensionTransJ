@@ -44,7 +44,7 @@ public class EndHoldingResourceEventJP {
 
 	public EndHoldingResourceEventJP(Transaction _transaction) {
 		timestamp = new Timestamp().currentTimeStamp();
-		this.transaction = _transaction;
+		this.setTransaction(_transaction);
 	}
 
 	public JoinPoint getEndResourceJP() {

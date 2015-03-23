@@ -26,6 +26,7 @@ public class DelistResourceEventJP {
 	private Resource resource;
 	private Transaction transaction;
 	private AccessType accesskind;
+	private int state;
 
 	public DelistResourceEventJP() {
 		super();
@@ -103,5 +104,13 @@ public class DelistResourceEventJP {
 
 	public void setTransaction(Transaction transaction) {
 		this.transaction = transaction;
+	}
+
+	public int getState() {
+		return state;
+	}
+
+	public void setState(int state) {
+		this.state = state;
 	}
 }

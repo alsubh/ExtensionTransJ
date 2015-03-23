@@ -9,5 +9,5 @@ package baseaspect;
  */
 public abstract aspect TransactionCompletionAspect 
 {
-
+	
 }

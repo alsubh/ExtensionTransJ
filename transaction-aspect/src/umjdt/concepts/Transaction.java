@@ -1,14 +1,14 @@
 package umjdt.concepts;
 
 import java.io.Serializable;
-import com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionImple;
-
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.List;
 import java.util.logging.Logger;
 
 import javax.transaction.TransactionManager;
 import javax.transaction.UserTransaction;
-import javax.transaction.xa.XAResource;
 import javax.transaction.xa.Xid;
 
 import umjdt.joinpoints.TransJP;
@@ -19,333 +19,321 @@ import umjdt.util.Timestamp;
 import umjdt.util.TransType;
 import umjdt.util.TransactionThread;
 
-public class Transaction extends TransactionImple implements javax.transaction.Transaction, Serializable
-{
+import com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionImple;
+
+public class Transaction extends TransactionImple implements
+		javax.transaction.Transaction, Serializable {
 	private static final long serialVersionUID = 1L;
-	Logger log = Logger.getLogger(this.getClass().getName()); 
-		
+	Logger log = Logger.getLogger(this.getClass().getName());
+
+	private TID tid;
 	private int status;
 	private int timeout;
 	private Timestamp timestamp;
 	private int transactionType;
 	private Transaction parentTransaction;
 	private BackgroundThread thread;
+
 	private TransactionManager manager;
 	private UserTransaction user;
+
 	private List<Operation> operations = new ArrayList<Operation>();
 	private HashMap<Xid, Resource> resources;
 	private Hashtable<TID, SubTransaction> _ChildTransactions;
 	private Hashtable<String, Thread> _childThreads;
-	
-	public Transaction() 
-	{
+
+	public Transaction() {
 		super();
-		initialization(timeout);
+		initialization();
 	}
 
-	public Transaction(int _timeout) 
-	{
+	public Transaction(int _timeout) {
 		super(_timeout);
-		initialization(_timeout);
+		initialization();
+	}
+
+	public Transaction(TransactionManager _manager) {
+		super();
+		this.manager = _manager;
+		initialization();
+	}
+
+	public Transaction(UserTransaction _user) {
+		super();
+		this.user = _user;
+		initialization();
 	}
 
 	/**
 	 * @param timeout
 	 */
-	private void initialization(int timeout) 
-	{
-		//this.multiOperationMap = HashMultimap.create();
+	private void initialization() {
+		// this.multiOperationMap = HashMultimap.create();
 		this.resources = new HashMap<Xid, Resource>();
-		this._ChildTransactions=new Hashtable<TID, SubTransaction>();
-		this._childThreads= new Hashtable<String, Thread>();
+		this._ChildTransactions = new Hashtable<TID, SubTransaction>();
+		this._childThreads = new Hashtable<String, Thread>();
 		this.timestamp = new Timestamp(timeout);
 		addThread();
 	}
-	
+
 	/**
-	 * Register the current thread with the transaction. This operation is not affected by the state of the transaction.
+	 * Register the current thread with the transaction. This operation is not
+	 * affected by the state of the transaction.
 	 */
-	public boolean addThread()
-	{
+	public boolean addThread() {
 		return addThread(TransactionThread.currentTransaction());
 	}
-	
-	public boolean addThread(Transaction _transaction)
-	{
-		if(_transaction !=null)
-		{
+
+	public boolean addThread(Transaction _transaction) {
+		if (_transaction != null) {
 			TransactionThread.pushTransaction(this);
 			return true;
 		}
 		return false;
 	}
-		
-	 /**
-     * Remove a child transaction.
-     */
-    public final boolean removeChildTransaction (Transaction trans)
-    {
-        if (trans == null)
-            return false;
 
-        boolean result = false;
+	/**
+	 * Remove a child transaction.
+	 */
+	public final boolean removeChildTransaction(Transaction trans) {
+		if (trans == null)
+			return false;
 
-        criticalStart();
+		boolean result = false;
 
-        synchronized (this)
-        {
-            if (_ChildTransactions != null)
-            {
-                _ChildTransactions.remove(trans.getTId());
-                result = true;
-            }
-        }
-        criticalEnd();
-        return result;
-    }
-    
+		criticalStart();
+
+		synchronized (this) {
+			if (_ChildTransactions != null) {
+				_ChildTransactions.remove(trans.getTId());
+				result = true;
+			}
+		}
+		criticalEnd();
+		return result;
+	}
+
 	/**
 	 * @return the number of threads associated with this transaction.
 	 * 
 	 */
-	public final int activeThreads ()
-	{
-		 if (_childThreads != null)
-			 return _childThreads.size();
-		 else
-			 return 0;
+	public final int activeThreads() {
+		if (_childThreads != null)
+			return _childThreads.size();
+		else
+			return 0;
 	}
-    
+
 	/**
-     * @return the TID that the transaction's intentions list will be saved under.
-     */
-    public TID getSavingId ()
-    {
-        return getTId();
-    }
+	 * @return the TID that the transaction's intentions list will be saved
+	 *         under.
+	 */
+	public TID getSavingId() {
+		return getTId();
+	}
 
-    public String toString ()
-    {
-        return new String("Transaction: " + getTId() + " status: " + Status.stringForm(status));
-    }
-    
-    /**
-     * The following function returns the TID of the top-level transaction. If
-     * this is the top-level transaction then it is equivalent to calling
-     * getId().
-     *
-     */
+	@Override
+	public String toString() {
+		return new String("Transaction: " + getTId() + " status: "
+				+ Status.stringForm(status));
+	}
 
-    public final TID topLevelActionId ()
-    {
-        Transaction root = this;
+	/**
+	 * The following function returns the TID of the top-level transaction. If
+	 * this is the top-level transaction then it is equivalent to calling
+	 * getId().
+	 * 
+	 */
 
-        while (root.parent() != null)
-            root = root.parent();
+	public final TID topLevelActionId() {
+		Transaction root = this;
 
-        return root.getTId();
-    }
+		while (root.parent() != null)
+			root = root.parent();
 
-    /**
-     * @return a reference to the top-level transaction. If this is the
-     *         top-level transaction then a reference to itself will be
-     *         returned.
-     */
+		return root.getTId();
+	}
 
-    public final Transaction topLevelTransaction ()
-    {
-        Transaction root = this;
+	/**
+	 * @return a reference to the top-level transaction. If this is the
+	 *         top-level transaction then a reference to itself will be
+	 *         returned.
+	 */
 
-        while (root.parent() != null)
-            root = root.parent();
+	public final Transaction topLevelTransaction() {
+		Transaction root = this;
 
-        return root;
-    }
-    
-    /**
-     * @return a reference to the parent Transaction
-     */
+		while (root.parent() != null)
+			root = root.parent();
 
-    public final Transaction parent ()
-    {
-        if (transactionType == TransType.NESTED)
-            return parentTransaction;
-        else
-            return null;
-    }
-   
-    /**
-     * Add the current thread to the list of threads associated with this
-     * transaction.
-     */
-    public final boolean addChildThread ()
-    {
-        return addChildThread(Thread.currentThread());
-    }
-    
-    /**
-     * Add the specified thread to the list of threads associated with this
-     * transaction.
-     */
-    public final boolean addChildThread (Thread t)
-    {
-        if (t == null)
-            return false;
+		return root;
+	}
 
-        boolean result = false;
+	/**
+	 * @return a reference to the parent Transaction
+	 */
 
-        criticalStart();
+	public final Transaction parent() {
+		if (transactionType == TransType.NESTED)
+			return parentTransaction;
+		else
+			return null;
+	}
 
-        synchronized (this)
-        {
-            if (status <= Status.ABORTING)
-            {
-                if (_childThreads == null)
-                    _childThreads = new Hashtable<String, Thread>();
-                _childThreads.put(ThreadUtil.getThreadId(t), t); // makes sure so we don't get duplicates
+	/**
+	 * Add the current thread to the list of threads associated with this
+	 * transaction.
+	 */
+	public final boolean addChildThread() {
+		return addChildThread(Thread.currentThread());
+	}
 
-                result = true;
-            }
-        }
-        criticalEnd();
-        return result;
-    }
+	/**
+	 * Add the specified thread to the list of threads associated with this
+	 * transaction.
+	 */
+	public final boolean addChildThread(Thread t) {
+		if (t == null)
+			return false;
 
-    /**
-     * Remove a child thread. The current thread is removed.
-     */
-    public final boolean removeChildThread ()
-    {
-        return removeChildThread(ThreadUtil.getThreadId());
-    }
+		boolean result = false;
 
-    /**
-     * Defines the start of a critical region by setting the critical flag. If
-     * the signal handler is called the class variable abortAndExit is set. The
-     * value of this variable is checked in the corresponding operation to end
-     * the critical region.
-     */
+		criticalStart();
 
-    protected final void criticalStart ()
-    {
-        //	_lock.lock();
-    }
+		synchronized (this) {
+			if (status <= Status.STATUS_ROLLING_BACK) {
+				if (_childThreads == null)
+					_childThreads = new Hashtable<String, Thread>();
+				_childThreads.put(ThreadUtil.getThreadId(t), t); // makes sure
+																	// so we
+																	// don't get
+																	// duplicates
 
-    /**
-     * Defines the end of a critical region by resetting the critical flag. If
-     * the signal handler is called the class variable abortAndExit is set. The
-     * value of this variable is checked when ending the critical region.
-     */
+				result = true;
+			}
+		}
+		criticalEnd();
+		return result;
+	}
 
-    protected final void criticalEnd ()
-    {
-        //	_lock.unlock();
-    }
-    
-    public final boolean removeChildThread (String threadId)
-    {
+	/**
+	 * Remove a child thread. The current thread is removed.
+	 */
+	public final boolean removeChildThread() {
+		return removeChildThread(ThreadUtil.getThreadId());
+	}
 
-        if (threadId == null)
-            return false;
+	/**
+	 * Defines the start of a critical region by setting the critical flag. If
+	 * the signal handler is called the class variable abortAndExit is set. The
+	 * value of this variable is checked in the corresponding operation to end
+	 * the critical region.
+	 */
 
-        boolean result = false;
+	protected final void criticalStart() {
+		// _lock.lock();
+	}
 
-        criticalStart();
+	/**
+	 * Defines the end of a critical region by resetting the critical flag. If
+	 * the signal handler is called the class variable abortAndExit is set. The
+	 * value of this variable is checked when ending the critical region.
+	 */
 
-        synchronized (this)
-        {
-            if (_childThreads != null)
-            {
-                _childThreads.remove(threadId);
-                result = true;
-            }
-        }
+	protected final void criticalEnd() {
+		// _lock.unlock();
+	}
 
-        criticalEnd();
+	public final boolean removeChildThread(String threadId) {
 
-        return result;
-    }
+		if (threadId == null)
+			return false;
 
-    /**
-     * Add a new child transaction to the transaction.
-     */
-    public final boolean addChildTransaction (SubTransaction trans)
-    {
-        if (trans == null)
-            return false;
+		boolean result = false;
 
-        boolean result = false;
-        criticalStart();
-        synchronized (this)
-        {
-               /*
-                * Must be <= as we sometimes need to do processing during commit phase.
-               */
+		criticalStart();
 
-            if (status <= Status.ABORTING)
-            {
-                if (_ChildTransactions == null)
-                    _ChildTransactions = new Hashtable<TID, SubTransaction>();
-                _ChildTransactions.put(trans.getTId(), trans);
-                result = true;
-            }
-        }
+		synchronized (this) {
+			if (_childThreads != null) {
+				_childThreads.remove(threadId);
+				result = true;
+			}
+		}
 
-        criticalEnd();
-        return result;
-    }
-    
-    public final boolean isAncestor (TID ancestor)
-    {
-        boolean res = false;
-        
-        if (getTId().equals(ancestor)) /* actions are their own ancestors */
-            res = true;
-        else
-        {
-            if ((parentTransaction != null) && (transactionType != TransType.TOP_LEVEL))
-                res = parentTransaction.isAncestor(ancestor);
-        }
-        return res;
-    }
-    
- 	@Override
- 	public boolean equals(Object _obj){ 
- 		Transaction  tempTransaction = (Transaction)_obj;
- 		if(tempTransaction.getTId().equals(this.getTId()))
- 			return true;
- 		return false;
- 	}
+		criticalEnd();
 
-    public final int typeOfTransaction ()
-    {
-        return transactionType;
-    }
-	
-	public TID getTId(){
+		return result;
+	}
+
+	/**
+	 * Add a new child transaction to the transaction.
+	 */
+	public final boolean addChildTransaction(SubTransaction trans) {
+		if (trans == null)
+			return false;
+
+		boolean result = false;
+		criticalStart();
+		synchronized (this) {
+			/*
+			 * Must be <= as we sometimes need to do processing during commit
+			 * phase.
+			 */
+
+			if (status <= Status.STATUS_ROLLEDBACK) {
+				if (_ChildTransactions == null)
+					_ChildTransactions = new Hashtable<TID, SubTransaction>();
+				_ChildTransactions.put(trans.getTId(), trans);
+				result = true;
+			}
+		}
+
+		criticalEnd();
+		return result;
+	}
+
+	public final boolean isAncestor(TID ancestor) {
+		boolean res = false;
+
+		if (getTId().equals(ancestor)) /* actions are their own ancestors */
+			res = true;
+		else {
+			if ((parentTransaction != null)
+					&& (transactionType != TransType.TOP_LEVEL))
+				res = parentTransaction.isAncestor(ancestor);
+		}
+		return res;
+	}
+
+	@Override
+	public boolean equals(Object _obj) {
+		Transaction tempTransaction = (Transaction) _obj;
+		if (tempTransaction.getTId().equals(this.getTId()))
+			return true;
+		return false;
+	}
+
+	public final int typeOfTransaction() {
+		return transactionType;
+	}
+
+	public TID getTId() {
 		return tid;
 	}
 
 	public void setTId(TID _id) {
 		this.tid = _id;
 	}
-	
-	public int getTimeout() 
-	{
-		return timeout;
-	}
 
-	public void setTimeout(int timeout) 
-	{
+	public void setTimeout(int timeout) {
 		this.timeout = timeout;
 	}
-	public List<Operation> getOperations() 
-	{
+
+	public List<Operation> getOperations() {
 		return operations;
 	}
 
-	public void setOperations(List<Operation> operations) 
-	{
+	public void setOperations(List<Operation> operations) {
 		this.operations = operations;
 	}
 
@@ -357,48 +345,35 @@ public class Transaction extends TransactionImple implements javax.transaction.T
 		this.timestamp = timestamp;
 	}
 
-	public HashMap getResources() {
-		return resources;
-	}
-
 	public void setResources(HashMap resources) {
 		this.resources = resources;
 	}
-	
-	public int getTransactionType()
-	{
-		if(this.getChildTransactions()> 1)
+
+	public int getTransactionType() {
+		if (this.getChildTransactions() > 1)
 			return TransType.NESTED;
 		return TransType.FLAT;
 	}
-	
-	public int getChildTransactions()
-	{
+
+	public int getChildTransactions() {
 		int number = this._ChildTransactions.size();
 		return number;
 	}
-	
-	public boolean occuredIn(TransJP _transjp)
-	{
-		boolean result= false;
-		if(_transjp.getTid().equals(getTId()))
-		{
-			result= true;
+
+	public boolean occuredIn(TransJP _transjp) {
+		boolean result = false;
+		if (_transjp.getTid().equals(getTId())) {
+			result = true;
 		}
 		return result;
 	}
-	
-	private TID tid;
+
 	public TID getTid() {
 		return tid;
 	}
 
 	public void setTid(TID tid) {
 		this.tid = tid;
-	}
-
-	public int getStatus() {
-		return status;
 	}
 
 	public void setStatus(int status) {
@@ -449,7 +424,7 @@ public class Transaction extends TransactionImple implements javax.transaction.T
 	public void setTransactionType(int transactionType) {
 		this.transactionType = transactionType;
 	}
-	
+
 	public BackgroundThread getTransactionThread() {
 		return thread;
 	}

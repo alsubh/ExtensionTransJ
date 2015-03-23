@@ -26,6 +26,7 @@ public class EnlistResourceEventJP {
 	private Resource resource;
 	private Transaction transaction;
 	private AccessType accessKind;
+	private int state;
 
 	public EnlistResourceEventJP() {
 		enlistResourceTimestamp = new Timestamp().currentTimeStamp();
@@ -101,5 +102,13 @@ public class EnlistResourceEventJP {
 
 	public void setTransaction(Transaction transaction) {
 		this.transaction = transaction;
+	}
+
+	public int getState() {
+		return state;
+	}
+
+	public void setState(int state) {
+		this.state = state;
 	}
 }

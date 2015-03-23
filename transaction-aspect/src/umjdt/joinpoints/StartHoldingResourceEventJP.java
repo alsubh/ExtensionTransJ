@@ -26,23 +26,23 @@ public class StartHoldingResourceEventJP {
 	private JoinPoint startResourceJP;
 
 	public StartHoldingResourceEventJP() {
-		timestamp = new Timestamp().currentTimeStamp();
+		setTimestamp(new Timestamp().currentTimeStamp());
 	}
 
 	public StartHoldingResourceEventJP(Xid _xid) {
-		timestamp = new Timestamp().currentTimeStamp();
+		setTimestamp(new Timestamp().currentTimeStamp());
 		this.setXid(_xid);
 	}
 
 	public StartHoldingResourceEventJP(Xid _xid, XAResource _xaresource)
 			throws XAException {
-		timestamp = new Timestamp().currentTimeStamp();
+		setTimestamp(new Timestamp().currentTimeStamp());
 		this.setXid(_xid);
 		this.resource = new Resource(_xaresource, _xid);
 	}
 
 	public StartHoldingResourceEventJP(Transaction _transaction) {
-		timestamp = new Timestamp().currentTimeStamp();
+		setTimestamp(new Timestamp().currentTimeStamp());
 		this.transaction = _transaction;
 	}
 
@@ -70,19 +70,19 @@ public class StartHoldingResourceEventJP {
 		this.transaction = transaction;
 	}
 
-	public Timestamp getTimestamp() {
-		return timestamp;
-	}
-
-	public void setTimestamp(Timestamp timestamp) {
-		this.timestamp = timestamp;
-	}
-
 	public Xid getXid() {
 		return xid;
 	}
 
 	public void setXid(Xid xid) {
 		this.xid = xid;
+	}
+
+	public Timestamp getTimestamp() {
+		return timestamp;
+	}
+
+	public void setTimestamp(Timestamp timestamp) {
+		this.timestamp = timestamp;
 	}
 }

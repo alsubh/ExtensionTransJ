@@ -1,61 +1,56 @@
 package umjdt.joinpoints;
 
-import context.Context;
 import java.util.logging.Logger;
+
+import javax.transaction.SystemException;
 
 import umjdt.concepts.TID;
 import umjdt.concepts.Transaction;
 import umjdt.util.BackgroundThread;
+import context.Context;
 
-public class TransJP extends EventJP
-{
+public class TransJP extends EventJP {
 	Logger logger = Logger.getLogger(TransJP.class.toString());
-	
+
 	private TID tid;
-	private int status; 
+	private int status;
 	private BeginEventJP beginDemarcate;
 	private EndEventJP endDemarcate;
-	private Transaction transaction; 
+	private Transaction transaction;
 	private BackgroundThread thread;
-	
-	public TransJP()
-	{
+
+	public TransJP() {
 		super();
 		this.thread = new BackgroundThread(Thread.currentThread());
 	}
-	
-	public TransJP(TID _tid)
-	{
+
+	public TransJP(TID _tid) {
 		super();
-		this.tid= _tid;
-		this.thread = new BackgroundThread(Thread.currentThread());	
+		this.tid = _tid;
+		this.thread = new BackgroundThread(Thread.currentThread());
 	}
-	
-	public TransJP(Transaction _transaction)
-	{
+
+	public TransJP(Transaction _transaction) {
 		this.transaction = _transaction;
-		this.tid= _transaction.getTid();
+		this.tid = _transaction.getTid();
 		this.thread = new BackgroundThread(Thread.currentThread());
 	}
-	
-	public TransJP(TransJP _transjp)
-	{
-		this.transaction= _transjp.getTransaction();
-		this.tid= _transjp.getTransaction().getTid();
+
+	public TransJP(TransJP _transjp) throws SystemException {
+		this.transaction = _transjp.getTransaction();
+		this.tid = _transjp.getTransaction().getTid();
 		this.status = _transjp.getTransaction().getStatus();
-		this.thread= _transjp.getThread();
+		this.thread = _transjp.getThread();
 	}
-	
-	public boolean occurredIn(Context _context, TransJP _tJP)
-	{
-		boolean result=false;
-		if(_context.getTransJp().equals(_tJP))
-		{
-			result=true;
+
+	public boolean occurredIn(Context _context, TransJP _tJP) {
+		boolean result = false;
+		if (_context.getTransJp().equals(_tJP)) {
+			result = true;
 		}
 		return result;
 	}
-	
+
 	public Transaction getTransaction() {
 		return transaction;
 	}
@@ -103,5 +98,4 @@ public class TransJP extends EventJP
 	public void setTid(TID tid) {
 		this.tid = tid;
 	}
-
 }

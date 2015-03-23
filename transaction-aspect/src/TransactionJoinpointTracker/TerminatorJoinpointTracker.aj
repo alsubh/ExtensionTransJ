@@ -8,9 +8,9 @@ import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
 
-import javax.transaction.Status;
 import javax.transaction.SystemException;
 import javax.transaction.TransactionManager;
+import javax.transaction.UserTransaction;
 import javax.transaction.xa.XAException;
 import javax.transaction.xa.XAResource;
 import javax.transaction.xa.Xid;
@@ -28,6 +28,7 @@ import umjdt.concepts.Transaction;
 import umjdt.joinpoints.AbortEventJP;
 import umjdt.joinpoints.CommitEventJP;
 import umjdt.joinpoints.EndEventJP;
+import umjdt.util.Status;
 
 /**
  * @author AnasAlsubh
@@ -41,7 +42,7 @@ public abstract aspect TerminatorJoinpointTracker extends TransactionTracker
 	protected CommitEventJP commitJp=null;
 	protected AbortEventJP abortJp=null;
 	
-	before(Transaction _transaction): CommitTransaction(_transaction)
+	before(): CommitTransaction()
 	{		
 		try
 		{
@@ -53,9 +54,9 @@ public abstract aspect TerminatorJoinpointTracker extends TransactionTracker
 			//System.out.println(_this.getClass());
 		
 			//Transaction transaction = (Transaction) TransactionImple.getTransaction(tid.getUid());
-			commitJp = new CommitEventJP(_transaction);
+			commitJp = new CommitEventJP();
 			commitJp.setCommitJP(thisJoinPoint);
-			contexinfo(commitJp, target, _transaction);
+			contexinfo(commitJp, target);
 
 		}
 		catch(Exception ex)
@@ -64,7 +65,7 @@ public abstract aspect TerminatorJoinpointTracker extends TransactionTracker
 		}		
 	}
 	
-	after(Transaction _transaction) throws SystemException: CommitTransaction(_transaction)
+	after() throws SystemException: CommitTransaction()
 	{
 		Object target= thisJoinPoint.getTarget();
 		//System.out.println(target.getClass());
@@ -73,16 +74,14 @@ public abstract aspect TerminatorJoinpointTracker extends TransactionTracker
 		Object _this = thisJoinPoint.getThis();
 		//System.out.println(_this.getClass());
 
-		//Transaction transaction = (Transaction) TransactionImple.getTransaction(_tid.getUid());
-		CommitEventJP commitjp = new CommitEventJP(_transaction);
+		CommitEventJP commitjp = new CommitEventJP();
 		commitjp.setCommitJP(thisJoinPoint);
 		commitjp.setStatus(Status.STATUS_COMMITTED);
-		commitjp.setTid(_transaction.getTid());
 		
-		contexinfo(commitjp, target, _transaction);
+		contexinfo(commitjp, target);
 	}
 	
-	before(Transaction _transaction): AbortTransaction(_transaction)
+	before(): AbortTransaction()
 	{
 		try
 		{
@@ -92,11 +91,10 @@ public abstract aspect TerminatorJoinpointTracker extends TransactionTracker
 			//System.out.println(args.getClass());
 			Object _this = thisJoinPoint.getThis();
 			//System.out.println(_this.getClass());
-	
-			//Transaction transaction = (Transaction) TransactionImple.getTransaction(_tid.getUid());
-			abortJp = new AbortEventJP(_transaction);
+
+			abortJp = new AbortEventJP();
 			abortJp.setAbortJP(thisJoinPoint);
-			contexinfo(abortJp,target, _transaction);
+			contexinfo(abortJp,target);
 
 		}
 		catch(Exception ex)
@@ -105,7 +103,7 @@ public abstract aspect TerminatorJoinpointTracker extends TransactionTracker
 		}
 	}
 		
-	after(Transaction _transaction): AbortTransaction(_transaction)
+	after(): AbortTransaction()
 	{
 		Object target= thisJoinPoint.getTarget();
 		//System.out.println(target.getClass());
@@ -116,60 +114,78 @@ public abstract aspect TerminatorJoinpointTracker extends TransactionTracker
 		try 
 		{
 			//Transaction transaction = (Transaction) TransactionImple.getTransaction(_tid.getUid());
-			AbortEventJP abortjp = new AbortEventJP(_transaction);
+			AbortEventJP abortjp = new AbortEventJP();
 			abortjp.setAbortJP(thisJoinPoint);
 			abortjp.setStatus(Status.STATUS_ROLLEDBACK);
-			abortjp.setTid(_transaction.getTid());
-			contexinfo(abortjp, target, _transaction);
+			contexinfo(abortjp, target);
 		} 
 		catch (SystemException e) 
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 	
-	private void contexinfo(EndEventJP _endJP,Object _target, Transaction _transaction) throws SystemException 
+	private void contexinfo(EndEventJP _endJP, Object _target) throws SystemException 
 	{
-		Xid xid= _transaction.getTid().getXid();
+		if(_target !=null)
+		{
+			if(_target instanceof TransactionManager)
+			{
+				_endJP.setManager((TransactionManager)_target);
+				//transaction currently associated with thread.
+				transaction = (Transaction)_endJP.getManager().getTransaction();
+			}
+			else if(_target instanceof UserTransaction)
+			{
+				_endJP.setUser((UserTransaction)_target);
+				transaction = (Transaction) TransactionImple.getTransaction();
+			}
+		} 
+		_endJP.setTid(transaction.getTid());
+		Xid xid= transaction.getTid().getXid();
 		//System.out.println(_"TxId= "+ transaction.getTxId());
-		int status= _transaction.getStatus();
-		int timeout = _transaction.getTimeout();
-		Map<XAResource, TxInfo> resources= _transaction.getResources();
-		List<Resource> resourceList= new ArrayList<>();
+		int status= transaction.getStatus();
+		int timeout = transaction.getTimeout();
 		
-		for(XAResource xares : resources.keySet())
+		List<Resource> resourceList= new ArrayList<>();		
+		if(transaction.getResources().size() > 0)
 		{
-			Resource res;
-			try 
+			for(XAResource xares : transaction.getResources().keySet())
 			{
-				res = new Resource(xares);
-				res.setXid(resources.get(xares).xid());
-				res.setState(resources.get(xares).getState());// TMFAIL for abort and TMSUCESS for commit
-				resourceList.add(res);
-			}
-			catch (XAException e) 
-			{
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				Resource res;
+				try 
+				{
+					res = new Resource(xares);
+					res.setXid(transaction.getResources().get(xares).xid());
+					res.setState(transaction.getResources().get(xares).getState());// TMFAIL for abort and TMSUCESS for commit
+					resourceList.add(res);
+				}
+				catch (XAException e) 
+				{
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		}
+		
 		List<SubTransaction> subtransactions= new ArrayList<>();
-	
-		for(Uid _uid : TransactionImple.getTransactions().keySet())
+		if(TransactionImple.getTransactions().size() > 0)
 		{
-			SubTransaction sub= new SubTransaction(new TID(xid, _uid));
-			TID tid= sub.getTid();
-			sub = (SubTransaction)TransactionImple.getTransactions().get(_uid);
-			sub.setStatus(sub.getStatus());
-			sub.setTimeout(sub.getTimeout());	
-			subtransactions.add(sub);
+			for(Uid _uid : TransactionImple.getTransactions().keySet())
+			{
+				SubTransaction sub= new SubTransaction(new TID(xid, _uid));
+				TID tid= sub.getTid();
+				sub = (SubTransaction)TransactionImple.getTransactions().get(_uid);
+				sub.setStatus(sub.getStatus());
+				sub.setTimeout(sub.getTimeout());	
+				subtransactions.add(sub);
+			}
 		}
 		
-		if(_endJP.getClass().isInstance(CommitEventJP.class))
-			passContextInfo(commitJp, _target, _transaction, subtransactions, xid, resourceList, status, timeout);
+		if(_endJP instanceof CommitEventJP)
+			passContextInfo(commitJp, _target, transaction, subtransactions, xid, resourceList, status, timeout);
 		else
-			passContextInfo(abortJp, _target, _transaction, subtransactions, xid, resourceList, status, timeout);
+			passContextInfo(abortJp, _target, transaction, subtransactions, xid, resourceList, status, timeout);
 	}
 
 	private void passContextInfo(CommitEventJP commitJP, Object _target,
@@ -183,7 +199,7 @@ public abstract aspect TerminatorJoinpointTracker extends TransactionTracker
 		commiteventJp.setResources(resourceList);
 		commiteventJp.setTid(new TID(xid));
 		commiteventJp.setTransactions(transactions);
-		commiteventJp.setTransaction((umjdt.concepts.Transaction) transaction);
+		commiteventJp.setTransaction(transaction);
 		if((_target !=null) && (_target.getClass().equals(TransactionManager.class)))
 			commiteventJp.setManager((TransactionManager)_target);
 		

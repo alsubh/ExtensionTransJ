@@ -3,6 +3,7 @@ package umjdt.joinpoints;
 import java.util.TimerTask;
 import java.util.logging.Level;
 
+import javax.transaction.SystemException;
 import javax.transaction.TransactionManager;
 import javax.transaction.UserTransaction;
 
@@ -15,8 +16,10 @@ import umjdt.util.Constants;
 import umjdt.util.Timestamp;
 
 public class BeginEventJP extends TransJP {
+
 	private TransactionManager manager;
 	private UserTransaction user;
+
 	private Timestamp beginTime;
 	private int timeout;
 	private TID tid;
@@ -44,7 +47,7 @@ public class BeginEventJP extends TransJP {
 		startThread();
 	}
 
-	public BeginEventJP(TransJP _transjp) {
+	public BeginEventJP(TransJP _transjp) throws SystemException {
 		super(_transjp);
 		startThread();
 	}

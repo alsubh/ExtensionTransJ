@@ -1,5 +1,7 @@
 package umjdt.joinpoints.lock;
 
+import javax.transaction.SystemException;
+
 import umjdt.concepts.Lock;
 import umjdt.concepts.Operation;
 import umjdt.concepts.Resource;
@@ -27,7 +29,7 @@ public class LockingJP extends TransJP {
 		super(_transaction);
 	}
 
-	public LockingJP(TransJP _transjp) {
+	public LockingJP(TransJP _transjp) throws SystemException {
 		super(_transjp);
 	}
 
