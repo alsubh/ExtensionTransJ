@@ -26,14 +26,14 @@ import javax.ejb.Stateless;
 @Stateless
 public class Tester {
 
-    /**
-     * Default constructor. 
-     */
-    public Tester() {
-        // TODO Auto-generated constructor stub
-    }
-    
-    public static void main (String[] args)
+	/**
+	 * Default constructor.
+	 */
+	public Tester() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main (String[] args)
     {
     	Connection conn = null;
     	Connection conn2 = null;
@@ -48,9 +48,9 @@ public class Tester {
     		InitialContext cnx = (InitialContext) cUtil.getInitialContext();
     		
     		DriverManager.registerDriver(new com.arjuna.ats.jdbc.TransactionalDriver());
-    		String url = 
+    		String url ="HELLO"; 
     		System.out.println("\nCreating connection to database: "+url);
-    		
     	}
+    	
     }
 }

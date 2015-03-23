@@ -1,0 +1,82 @@
+/**
+ * 
+ */
+package TransactionJoinpointTracker;
+
+import javax.transaction.SystemException;
+import javax.transaction.TransactionManager;
+import javax.transaction.UserTransaction;
+
+import org.apache.log4j.Logger;
+import org.aspectj.lang.ProceedingJoinPoint;
+
+import umjdt.concepts.TID;
+import umjdt.concepts.Transaction;
+import umjdt.joinpoints.BeginEventJP;
+import umjdt.util.Timestamp;
+
+/**
+ * @author AnasAlsubh
+ *
+ */
+public abstract aspect InitiatorJoinpointTracker extends TransactionTracker
+{
+	private Logger logger = Logger.getLogger(TransactionTracker.class);
+	
+	protected BeginEventJP beginEventJp=null;
+		
+	before() : OpenTransaction()
+	{
+		//No context information
+		beginEventJp = new BeginEventJP();
+		beginEventJp.setBeginJP(thisJoinPoint);
+		beginEventJp.setBeginTime(new Timestamp().currentTimeStamp());
+	}
+	
+	after() throws SystemException: OpenTransaction()
+	{	
+		beginEventJp = new BeginEventJP();
+		beginEventJp.setBeginJP(thisJoinPoint);
+		beginEventJp.setBeginTime(new Timestamp().currentTimeStamp());
+		passContextInfo(beginEventJp, thisJoinPoint.getTarget());
+	}
+
+	private void passContextInfo(BeginEventJP eventJp, Object _target) 
+	{	
+		transaction = new Transaction();
+		try 
+		{
+			BeginEventJP beginJp= eventJp;
+			
+			if(_target !=null)
+			{
+				if(_target instanceof TransactionManager)
+				{
+					beginJp.setManager((TransactionManager)_target);
+					//transaction currently associated with thread.
+					transaction = (Transaction)beginJp.getManager().getTransaction();
+					beginJp.setTransaction(transaction);
+				}
+				else if(_target instanceof UserTransaction)
+				{
+					beginJp.setUser((UserTransaction)_target);
+				}
+			}
+			transactionUid = transaction.get_uid();
+			globalxid = transaction.getTxId();
+			status =transaction.getStatus();
+			timeout = transaction.getTimeout();
+			
+			beginJp.setTid(new TID(globalxid, transactionUid));
+			beginJp.setStatus(transaction.getStatus());
+			beginJp.setTimeout(transaction.getTimeout());
+			
+			BeginJoinPoint(beginJp);
+		} 
+		catch (SystemException e) 
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}
