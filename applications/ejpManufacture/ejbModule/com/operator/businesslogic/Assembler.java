@@ -32,7 +32,16 @@ public class Assembler implements Production {
 	private final GadgetPile gadgetPileObject = new GadgetPile();
 	private final WidgetPile widgetPileObject = new WidgetPile();
 
-	javax.transaction.TransactionManager manager;
+	private javax.transaction.TransactionManager manager = com.arjuna.ats.jta.TransactionManager
+			.transactionManager();
+
+	public javax.transaction.TransactionManager getManager() {
+		return manager;
+	}
+
+	public void setManager(javax.transaction.TransactionManager manager) {
+		this.manager = manager;
+	}
 
 	public Assembler() {
 		manager = com.arjuna.ats.jta.TransactionManager.transactionManager();

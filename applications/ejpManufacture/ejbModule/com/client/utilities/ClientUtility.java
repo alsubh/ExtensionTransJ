@@ -15,6 +15,7 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.XAConnection;
 import javax.sql.XADataSource;
+import javax.transaction.TransactionManager;
 import javax.transaction.xa.XAResource;
 import javax.transaction.xa.Xid;
 
@@ -36,7 +37,6 @@ import org.omg.CosTransactions.Unavailable;
 import com.arjuna.ArjunaOTS.Current;
 import com.arjuna.ats.arjuna.common.CoordinatorEnvironmentBean;
 import com.arjuna.ats.internal.jta.transaction.arjunacore.subordinate.TransactionImple;
-import com.arjuna.ats.internal.jta.transaction.jts.TransactionManagerImple;
 import com.arjuna.ats.internal.jta.xa.XID;
 import com.arjuna.ats.internal.jts.orbspecific.ControlImple;
 import com.arjuna.ats.internal.jts.orbspecific.CurrentImple;
@@ -46,6 +46,7 @@ import com.arjuna.ats.jta.cdi.TransactionContext;
 import com.arjuna.ats.jta.xa.XidImple;
 import com.microsoft.sqlserver.jdbc.SQLServerConnection;
 import com.microsoft.sqlserver.jdbc.SQLServerXADataSource;
+import com.pile.businesslogic.WidgetPile;
 
 @TransactionAttribute(TransactionAttributeType.REQUIRED)
 @TransactionManagement(TransactionManagementType.BEAN)
@@ -112,8 +113,8 @@ public class ClientUtility {
 		}
 	}
 
-	private static Connection registerDriver(String username, String password,
-			String dbName, String sqlStatement) {
+	private static Connection registerDriver(TransactionManager manager,
+			String username, String password, String dbName, String sqlStatement) {
 		Connection conn = null;
 		Context context = null;
 		try {
@@ -134,7 +135,7 @@ public class ClientUtility {
 			com.microsoft.sqlserver.jdbc.SQLServerConnection mc = (SQLServerConnection) wc
 					.getUnderlyingConnection();
 			System.out.println(mc.getMetaData());
-			manageXADataSource(ds, conn, sqlStatement);
+			manageXADataSource(manager, ds, conn, sqlStatement);
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.exit(0);
@@ -175,24 +176,23 @@ public class ClientUtility {
 	}
 
 	// JNDI: Java Naming and Directory Interface
-	public static void manageXADataSource(XADataSource ds, Connection con,
-			String sqlStatement) {
+	public static void manageXADataSource(TransactionManager manager,
+			XADataSource ds, Connection con, String sqlStatement) {
 		// Create the XA data source and XA ready connection.
 		XAResource xaRes = null;
-		javax.transaction.TransactionManager tm = new TransactionManagerImple();
 
 		try {
 			XAConnection xaCon = ds.getXAConnection();
 			con = xaCon.getConnection();
 
-			tm.begin();
-
-			javax.transaction.Transaction transaction = tm.getTransaction();
+			javax.transaction.Transaction transaction = manager
+					.getTransaction();
 
 			// Get the XAResource object and set the timeout value.
 			xaRes = xaCon.getXAResource();
 			xaRes.setTransactionTimeout(0);
-			transaction.enlistResource(xaRes);
+			WidgetPile.xaResource = xaRes;
+			transaction.enlistResource(WidgetPile.xaResource);
 
 			// Perform the XA transaction.
 			xaRes.start(getXid(), XAResource.TMNOFLAGS);
@@ -201,8 +201,8 @@ public class ClientUtility {
 			xaRes.end(getXid(), XAResource.TMSUCCESS);
 			// Commit the transaction.
 			xaRes.commit(getXid(), true);
-			tm.getTransaction().delistResource(xaRes, XAResource.TMSUCCESS);
-			tm.commit();
+			manager.getTransaction()
+					.delistResource(xaRes, XAResource.TMSUCCESS);
 
 			// Cleanup.
 			con.close();
@@ -221,10 +221,11 @@ public class ClientUtility {
 		return (Xid) xid;
 	}
 
-	public static Connection setupGooPileXAConnection(String dbtype,
-			String dbName, String userName, String password, String sqlStatement) {
+	public static Connection setupGooPileXAConnection(
+			TransactionManager manager, String dbtype, String dbName,
+			String userName, String password, String sqlStatement) {
 		loadDrivers(dbtype);
-		Connection con = registerDriver(userName, password, dbName,
+		Connection con = registerDriver(manager, userName, password, dbName,
 				sqlStatement);
 		return con;
 	}

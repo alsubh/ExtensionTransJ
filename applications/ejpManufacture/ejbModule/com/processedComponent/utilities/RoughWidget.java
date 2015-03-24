@@ -1,22 +1,20 @@
 package com.processedComponent.utilities;
 
-import java.util.List;
+import javax.annotation.Resource;
 
-import com.entity.businesslogic.*;
+import com.entity.businesslogic.Widget;
 
+@Resource(name = "java:/MSSQLXADS/Rough")
 public class RoughWidget extends Widget {
-	
-//	public RoughWidget(){
-//	}
-	
-	
-	public RoughWidget(RawWidget rawWidget)
-	{
+
+	// public RoughWidget(){
+	// }
+
+	public RoughWidget(RawWidget rawWidget) {
 		super(rawWidget.getGooList());
 	}
-	
-	public RoughWidget(String name, String code, RawWidget rawWidget)
-	{
-		super(name, "Rough", "Rough"+code);	
-	}	
+
+	public RoughWidget(String name, String code, RawWidget rawWidget) {
+		super(name, "Rough", "Rough" + code);
+	}
 }

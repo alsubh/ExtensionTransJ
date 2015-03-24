@@ -29,9 +29,6 @@ public class T1 {
 	PolishedWidget polishedWidget;
 	Polisher polisher = new Polisher();
 
-	javax.transaction.TransactionManager manager = com.arjuna.ats.jta.TransactionManager
-			.transactionManager();
-
 	public T1() {
 	}
 
@@ -39,14 +36,14 @@ public class T1 {
 	public List<Goo> getGooFromPile(int numberOfGoos)
 			throws IllegalStateException, SecurityException, SystemException {
 		try {
-			manager.begin();
+			builder.getManager().begin();
 			goos = builder.getGooList(numberOfGoos);
 			// delete that goo from the pile
-			manager.commit();
+			builder.getManager().commit();
 		} catch (SecurityException | IllegalStateException | RollbackException
 				| HeuristicMixedException | HeuristicRollbackException
 				| NotSupportedException | SystemException e) {
-			manager.rollback();
+			builder.getManager().rollback();
 			e.printStackTrace();
 		}
 		return goos;
@@ -57,22 +54,9 @@ public class T1 {
 		builder.setName(name);
 		builder.setCode(code);
 		try {
-			manager.begin();
-
 			rawWidget = (RawWidget) builder.create(goo);
 
-			manager.commit();
-		} catch (SecurityException | IllegalStateException | RollbackException
-				| HeuristicMixedException | HeuristicRollbackException
-				| NotSupportedException | SystemException e) {
-			// TODO Auto-generated catch block
-			try {
-				manager.rollback();
-			} catch (IllegalStateException | SecurityException
-					| SystemException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
+		} catch (SecurityException | IllegalStateException e) {
 			e.printStackTrace();
 		}
 		return rawWidget;
@@ -86,15 +70,15 @@ public class T1 {
 		baker.setCode(code);
 		baker.setStyle("Rough");
 		try {
-			manager.begin();
 
+			baker.getManager().begin();
 			roughWidget = (RoughWidget) baker.create(rawWidget);
+			baker.getManager().commit();
 
-			manager.commit();
-		} catch (SecurityException | IllegalStateException | RollbackException
+		} catch (NotSupportedException | RollbackException
 				| HeuristicMixedException | HeuristicRollbackException
-				| NotSupportedException | SystemException e) {
-			manager.rollback();
+				| SecurityException | IllegalStateException e) {
+			baker.getManager().rollback();
 			e.printStackTrace();
 		}
 		return roughWidget;
@@ -108,18 +92,18 @@ public class T1 {
 		polisher.setStyle("Polished");
 
 		try {
-			manager.begin();
 
+			polisher.getManager().begin();
 			polishedWidget = (PolishedWidget) polisher.create(roughWidget);
-
-			manager.commit();
-		} catch (SecurityException | IllegalStateException | RollbackException
+			polisher.getManager().commit();
+		} catch (NotSupportedException | RollbackException
 				| HeuristicMixedException | HeuristicRollbackException
-				| NotSupportedException | SystemException e) {
+				| SecurityException | SystemException | IllegalStateException e) {
 			try {
-				manager.rollback();
+				polisher.getManager().rollback();
 			} catch (IllegalStateException | SecurityException
 					| SystemException e1) {
+				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
 			e.printStackTrace();
@@ -131,16 +115,16 @@ public class T1 {
 	// Put Polish Widget in a Widget Pile
 	public void putInWidgetPile(PolishedWidget pWidget) {
 		try {
-			manager.begin();
+			polisher.getManager().begin();
 
 			polisher.add(pWidget);
 
-			manager.commit();
+			polisher.getManager().commit();
 		} catch (SecurityException | IllegalStateException | RollbackException
 				| HeuristicMixedException | HeuristicRollbackException
 				| NotSupportedException | SystemException e) {
 			try {
-				manager.rollback();
+				polisher.getManager().rollback();
 			} catch (IllegalStateException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();

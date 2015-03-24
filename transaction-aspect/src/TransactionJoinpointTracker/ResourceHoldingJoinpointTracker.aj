@@ -7,19 +7,12 @@ import javax.transaction.xa.XAException;
 import javax.transaction.xa.XAResource;
 import javax.transaction.xa.Xid;
 
-import org.omg.CosTransactions.Status;
-
-import com.sun.org.apache.bcel.internal.generic.INSTANCEOF;
-
-import sun.awt.SunToolkit.InfiniteLoop;
-import sun.security.jca.GetInstance.Instance;
-import umjdt.concepts.Lock;
 import umjdt.concepts.Resource;
 import umjdt.joinpoints.AbortResourceEventJP;
 import umjdt.joinpoints.CommitResourceEventJP;
 import umjdt.joinpoints.EndHoldingResourceEventJP;
 import umjdt.joinpoints.StartHoldingResourceEventJP;
-import umjdt.util.Timestamp;
+
 
 /**
  * @author AnasAlsubh
@@ -121,7 +114,7 @@ public aspect ResourceHoldingJoinpointTracker
     	{
     		proceed(_xid, _resource);
 			commitResourceEventjp= new  CommitResourceEventJP(_xid, _resource);
-			commitResourceEventjp.setStatus(Status._StatusCommitted);
+			commitResourceEventjp.setStatus(javax.transaction.Status.STATUS_COMMITTED);
 			commitResourceEventjp.setCommitResourceJP(thisJoinPoint);
 			CommitResourceJoinPoint(commitResourceEventjp);
 		}
@@ -137,7 +130,7 @@ public aspect ResourceHoldingJoinpointTracker
     	proceed(_xid);
     	abortResourceEventjp = new AbortResourceEventJP();
 		abortResourceEventjp.setAbortResourceJP(thisJoinPoint);
-		commitResourceEventjp.setStatus(Status._StatusRolledBack);
+		commitResourceEventjp.setStatus(javax.transaction.Status.STATUS_ROLLEDBACK);
 
 		for(Object o : thisJoinPoint.getArgs())
 		{
