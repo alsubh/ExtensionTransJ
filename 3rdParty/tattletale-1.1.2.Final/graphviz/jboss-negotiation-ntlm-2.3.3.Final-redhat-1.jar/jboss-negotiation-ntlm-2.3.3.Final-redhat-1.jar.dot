@@ -1,4 +1,0 @@
-digraph jboss_negotiation_ntlm_2_3_3_Final_redhat_1_dependencies {
-  node [shape = box, fontsize=10.0];
-  jboss_negotiation_ntlm_2_3_3_Final_redhat_1 -> jboss_negotiation_common_2_3_3_Final_redhat_1;
-}

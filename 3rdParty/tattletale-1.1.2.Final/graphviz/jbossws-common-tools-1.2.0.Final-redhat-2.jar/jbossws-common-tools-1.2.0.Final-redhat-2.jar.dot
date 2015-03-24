@@ -1,6 +1,0 @@
-digraph jbossws_common_tools_1_2_0_Final_redhat_2_dependencies {
-  node [shape = box, fontsize=10.0];
-  jbossws_common_tools_1_2_0_Final_redhat_2 -> java_getopt_1_0_13_redhat_4;
-  jbossws_common_tools_1_2_0_Final_redhat_2 -> jbossws_api_1_0_2_Final_redhat_1;
-  jbossws_common_tools_1_2_0_Final_redhat_2 -> log4j_jboss_logmanager_1_1_0_Final_redhat_2;
-}

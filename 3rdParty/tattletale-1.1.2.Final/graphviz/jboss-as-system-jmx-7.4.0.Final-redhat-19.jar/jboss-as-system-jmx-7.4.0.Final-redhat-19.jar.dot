@@ -1,4 +1,0 @@
-digraph jboss_as_system_jmx_7_4_0_Final_redhat_19_dependencies {
-  node [shape = box, fontsize=10.0];
-  jboss_as_system_jmx_7_4_0_Final_redhat_19 -> jboss_cli_client;
-}

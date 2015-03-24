@@ -1,6 +1,0 @@
-digraph jboss_jaspi_api_1_0_spec_1_0_1_Final_redhat_2_package_dependencies {
-  node [shape = box, fontsize=10.0];
-  javax_security_auth_message_callback -> javax_crypto;
-  javax_security_auth_message_config -> javax_security_auth_message;
-  javax_security_auth_message_module -> javax_security_auth_message;
-}

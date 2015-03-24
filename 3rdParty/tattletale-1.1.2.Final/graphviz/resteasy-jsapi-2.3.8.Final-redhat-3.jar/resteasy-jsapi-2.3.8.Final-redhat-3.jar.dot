@@ -1,6 +1,0 @@
-digraph resteasy_jsapi_2_3_8_Final_redhat_3_dependencies {
-  node [shape = box, fontsize=10.0];
-  resteasy_jsapi_2_3_8_Final_redhat_3 -> jboss_jaxrs_api_1_1_spec_1_0_1_Final_redhat_2;
-  resteasy_jsapi_2_3_8_Final_redhat_3 -> jboss_servlet_api_2_5_spec_1_0_1_Final_redhat_2;
-  resteasy_jsapi_2_3_8_Final_redhat_3 -> resteasy_jaxrs_2_3_8_Final_redhat_3;
-}

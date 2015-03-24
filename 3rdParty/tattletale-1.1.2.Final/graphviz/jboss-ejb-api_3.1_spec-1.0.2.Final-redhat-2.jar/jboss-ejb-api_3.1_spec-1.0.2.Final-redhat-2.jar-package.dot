@@ -1,9 +1,0 @@
-digraph jboss_ejb_api_3_1_spec_1_0_2_Final_redhat_2_package_dependencies {
-  node [shape = box, fontsize=10.0];
-  javax_ejb -> javax_transaction;
-  javax_ejb -> javax_xml_rpc_handler;
-  javax_ejb_embeddable -> javax_ejb;
-  javax_ejb_embeddable -> javax_ejb_spi;
-  javax_ejb_spi -> javax_ejb;
-  javax_ejb_spi -> javax_ejb_embeddable;
-}

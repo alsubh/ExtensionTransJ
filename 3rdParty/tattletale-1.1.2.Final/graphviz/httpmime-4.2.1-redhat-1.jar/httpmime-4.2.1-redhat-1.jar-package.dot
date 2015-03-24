@@ -1,7 +1,0 @@
-digraph httpmime_4_2_1_redhat_1_package_dependencies {
-  node [shape = box, fontsize=10.0];
-  org_apache_http_entity_mime -> org_apache_http;
-  org_apache_http_entity_mime -> org_apache_http_entity_mime_content;
-  org_apache_http_entity_mime -> org_apache_http_message;
-  org_apache_http_entity_mime -> org_apache_http_util;
-}

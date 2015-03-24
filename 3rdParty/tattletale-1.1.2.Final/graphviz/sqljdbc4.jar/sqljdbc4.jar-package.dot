@@ -1,5 +1,0 @@
-digraph sqljdbc4_package_dependencies {
-  node [shape = box, fontsize=10.0];
-  com_microsoft_sqlserver_jdbc -> javax_net_ssl;
-  com_microsoft_sqlserver_jdbc -> microsoft_sql;
-}

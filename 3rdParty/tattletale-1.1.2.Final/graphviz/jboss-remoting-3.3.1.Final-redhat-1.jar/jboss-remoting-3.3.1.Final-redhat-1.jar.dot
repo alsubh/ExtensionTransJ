@@ -1,4 +1,0 @@
-digraph jboss_remoting_3_3_1_Final_redhat_1_dependencies {
-  node [shape = box, fontsize=10.0];
-  jboss_remoting_3_3_1_Final_redhat_1 -> jboss_cli_client;
-}

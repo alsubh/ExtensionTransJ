@@ -1,4 +1,0 @@
-digraph sqljdbc4_dependencies {
-  node [shape = box, fontsize=10.0];
-  sqljdbc4 -> jboss_client;
-}

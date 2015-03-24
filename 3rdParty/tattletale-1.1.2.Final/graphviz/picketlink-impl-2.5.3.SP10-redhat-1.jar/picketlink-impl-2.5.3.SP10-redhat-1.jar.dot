@@ -1,9 +1,0 @@
-digraph picketlink_impl_2_5_3_SP10_redhat_1_dependencies {
-  node [shape = box, fontsize=10.0];
-  picketlink_impl_2_5_3_SP10_redhat_1 -> cdi_api_1_0_SP4_redhat_4;
-  picketlink_impl_2_5_3_SP10_redhat_1 -> hibernate_jpa_2_0_api_1_0_1_Final_redhat_2;
-  picketlink_impl_2_5_3_SP10_redhat_1 -> javax_inject_1_redhat_4;
-  picketlink_impl_2_5_3_SP10_redhat_1 -> picketlink_api_2_5_3_SP10_redhat_1;
-  picketlink_impl_2_5_3_SP10_redhat_1 -> picketlink_idm_api_2_5_3_SP10_redhat_1;
-  picketlink_impl_2_5_3_SP10_redhat_1 -> picketlink_idm_impl_2_5_3_SP10_redhat_1;
-}

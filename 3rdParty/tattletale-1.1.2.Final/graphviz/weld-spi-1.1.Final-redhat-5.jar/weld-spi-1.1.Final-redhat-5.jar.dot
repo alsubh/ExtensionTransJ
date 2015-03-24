@@ -1,9 +1,0 @@
-digraph weld_spi_1_1_Final_redhat_5_dependencies {
-  node [shape = box, fontsize=10.0];
-  weld_spi_1_1_Final_redhat_5 -> cdi_api_1_0_SP4_redhat_4;
-  weld_spi_1_1_Final_redhat_5 -> hibernate_jpa_2_0_api_1_0_1_Final_redhat_2;
-  weld_spi_1_1_Final_redhat_5 -> jboss_annotations_api_1_1_spec_1_0_1_Final_redhat_2;
-  weld_spi_1_1_Final_redhat_5 -> jboss_client;
-  weld_spi_1_1_Final_redhat_5 -> jboss_servlet_api_2_5_spec_1_0_1_Final_redhat_2;
-  weld_spi_1_1_Final_redhat_5 -> validation_api_1_0_0_GA_redhat_2;
-}

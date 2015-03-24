@@ -1,4 +1,0 @@
-digraph jdom_1_1_2_redhat_4_dependencies {
-  node [shape = box, fontsize=10.0];
-  jdom_1_1_2_redhat_4 -> jaxen_1_1_3_redhat_4;
-}

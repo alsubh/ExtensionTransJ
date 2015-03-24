@@ -1,6 +1,0 @@
-digraph jboss_negotiation_extras_2_3_3_Final_redhat_1_dependencies {
-  node [shape = box, fontsize=10.0];
-  jboss_negotiation_extras_2_3_3_Final_redhat_1 -> jboss_cli_client;
-  jboss_negotiation_extras_2_3_3_Final_redhat_1 -> jboss_negotiation_common_2_3_3_Final_redhat_1;
-  jboss_negotiation_extras_2_3_3_Final_redhat_1 -> picketbox_commons_1_0_0_final_redhat_2;
-}

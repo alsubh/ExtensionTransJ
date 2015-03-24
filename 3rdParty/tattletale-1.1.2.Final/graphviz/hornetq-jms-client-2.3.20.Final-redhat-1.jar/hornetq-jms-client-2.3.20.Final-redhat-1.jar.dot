@@ -1,7 +1,0 @@
-digraph hornetq_jms_client_2_3_20_Final_redhat_1_dependencies {
-  node [shape = box, fontsize=10.0];
-  hornetq_jms_client_2_3_20_Final_redhat_1 -> hornetq_commons_2_3_20_Final_redhat_1;
-  hornetq_jms_client_2_3_20_Final_redhat_1 -> hornetq_core_client_2_3_20_Final_redhat_1;
-  hornetq_jms_client_2_3_20_Final_redhat_1 -> jboss_cli_client;
-  hornetq_jms_client_2_3_20_Final_redhat_1 -> jboss_client;
-}

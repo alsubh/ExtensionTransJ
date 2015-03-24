@@ -1,8 +1,0 @@
-digraph uddi_ws_3_1_3_redhat_3_dependencies {
-  node [shape = box, fontsize=10.0];
-  uddi_ws_3_1_3_redhat_3 -> jboss_jaxb_api_2_2_spec_1_0_4_Final_redhat_2;
-  uddi_ws_3_1_3_redhat_3 -> jboss_jaxws_api_2_2_spec_2_0_2_Final_redhat_1;
-  uddi_ws_3_1_3_redhat_3 -> jboss_saaj_api_1_3_spec_1_0_3_Final_redhat_1;
-  uddi_ws_3_1_3_redhat_3 -> jcl_over_slf4j_1_7_2_redhat_3;
-  uddi_ws_3_1_3_redhat_3 -> jsr181_api_1_0_MR1_redhat_6;
-}

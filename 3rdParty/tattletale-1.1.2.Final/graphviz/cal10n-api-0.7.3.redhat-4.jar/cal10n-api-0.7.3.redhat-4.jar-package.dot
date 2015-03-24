@@ -1,6 +1,0 @@
-digraph cal10n_api_0_7_3_redhat_4_package_dependencies {
-  node [shape = box, fontsize=10.0];
-  ch_qos_cal10n -> ch_qos_cal10n_util;
-  ch_qos_cal10n_util -> ch_qos_cal10n;
-  ch_qos_cal10n_verifier -> ch_qos_cal10n_util;
-}

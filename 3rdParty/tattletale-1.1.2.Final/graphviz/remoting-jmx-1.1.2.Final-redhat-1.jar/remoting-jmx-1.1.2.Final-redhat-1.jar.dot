@@ -1,4 +1,0 @@
-digraph remoting_jmx_1_1_2_Final_redhat_1_dependencies {
-  node [shape = box, fontsize=10.0];
-  remoting_jmx_1_1_2_Final_redhat_1 -> jboss_cli_client;
-}

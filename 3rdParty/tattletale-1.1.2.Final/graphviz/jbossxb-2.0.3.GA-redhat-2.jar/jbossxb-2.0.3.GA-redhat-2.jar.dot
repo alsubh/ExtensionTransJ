@@ -1,8 +1,0 @@
-digraph jbossxb_2_0_3_GA_redhat_2_dependencies {
-  node [shape = box, fontsize=10.0];
-  jbossxb_2_0_3_GA_redhat_2 -> activation_1_1_1_redhat_2;
-  jbossxb_2_0_3_GA_redhat_2 -> jboss_cli_client;
-  jbossxb_2_0_3_GA_redhat_2 -> jboss_common_core_2_2_17_GA_redhat_2;
-  jbossxb_2_0_3_GA_redhat_2 -> jboss_jaxb_api_2_2_spec_1_0_4_Final_redhat_2;
-  jbossxb_2_0_3_GA_redhat_2 -> xercesImpl_2_9_1_redhat_5;
-}

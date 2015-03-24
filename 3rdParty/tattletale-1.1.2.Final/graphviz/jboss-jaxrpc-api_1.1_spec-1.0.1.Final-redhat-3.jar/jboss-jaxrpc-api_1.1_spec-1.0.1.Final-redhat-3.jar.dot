@@ -1,5 +1,0 @@
-digraph jboss_jaxrpc_api_1_1_spec_1_0_1_Final_redhat_3_dependencies {
-  node [shape = box, fontsize=10.0];
-  jboss_jaxrpc_api_1_1_spec_1_0_1_Final_redhat_3 -> jboss_saaj_api_1_3_spec_1_0_3_Final_redhat_1;
-  jboss_jaxrpc_api_1_1_spec_1_0_1_Final_redhat_3 -> jboss_servlet_api_2_5_spec_1_0_1_Final_redhat_2;
-}

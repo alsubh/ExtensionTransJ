@@ -1,9 +1,0 @@
-digraph velocity_1_7_redhat_3_dependencies {
-  node [shape = box, fontsize=10.0];
-  velocity_1_7_redhat_3 -> commons_collections_3_2_1_redhat_3;
-  velocity_1_7_redhat_3 -> commons_lang_2_6_redhat_3;
-  velocity_1_7_redhat_3 -> jboss_servlet_api_2_5_spec_1_0_1_Final_redhat_2;
-  velocity_1_7_redhat_3 -> jcl_over_slf4j_1_7_2_redhat_3;
-  velocity_1_7_redhat_3 -> jdom_1_1_2_redhat_4;
-  velocity_1_7_redhat_3 -> log4j_jboss_logmanager_1_1_0_Final_redhat_2;
-}

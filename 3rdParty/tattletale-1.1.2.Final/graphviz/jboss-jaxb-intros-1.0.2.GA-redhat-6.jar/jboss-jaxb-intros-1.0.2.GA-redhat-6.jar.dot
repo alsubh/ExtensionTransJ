@@ -1,7 +1,0 @@
-digraph jboss_jaxb_intros_1_0_2_GA_redhat_6_dependencies {
-  node [shape = box, fontsize=10.0];
-  jboss_jaxb_intros_1_0_2_GA_redhat_6 -> commons_beanutils_1_8_3_redhat_6;
-  jboss_jaxb_intros_1_0_2_GA_redhat_6 -> jaxb_impl_2_2_5_redhat_8;
-  jboss_jaxb_intros_1_0_2_GA_redhat_6 -> jboss_jaxb_api_2_2_spec_1_0_4_Final_redhat_2;
-  jboss_jaxb_intros_1_0_2_GA_redhat_6 -> jcl_over_slf4j_1_7_2_redhat_3;
-}

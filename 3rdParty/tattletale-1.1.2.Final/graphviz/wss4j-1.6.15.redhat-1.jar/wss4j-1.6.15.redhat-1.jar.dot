@@ -1,8 +1,0 @@
-digraph wss4j_1_6_15_redhat_1_dependencies {
-  node [shape = box, fontsize=10.0];
-  wss4j_1_6_15_redhat_1 -> jcl_over_slf4j_1_7_2_redhat_3;
-  wss4j_1_6_15_redhat_1 -> joda_time_1_6_2_redhat_4;
-  wss4j_1_6_15_redhat_1 -> opensaml_2_5_3_redhat_2;
-  wss4j_1_6_15_redhat_1 -> xmlsec_1_5_6_redhat_1;
-  wss4j_1_6_15_redhat_1 -> xmltooling_1_3_4_redhat_3;
-}

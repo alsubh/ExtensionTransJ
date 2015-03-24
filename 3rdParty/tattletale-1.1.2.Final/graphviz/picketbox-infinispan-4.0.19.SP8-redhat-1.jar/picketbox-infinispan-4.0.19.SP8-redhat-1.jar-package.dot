@@ -1,9 +1,0 @@
-digraph picketbox_infinispan_4_0_19_SP8_redhat_1_package_dependencies {
-  node [shape = box, fontsize=10.0];
-  org_jboss_security_authentication -> javax_security_jacc;
-  org_jboss_security_authentication -> org_jboss_security;
-  org_jboss_security_authentication -> org_jboss_security_auth_callback;
-  org_jboss_security_authentication -> org_jboss_security_auth_login;
-  org_jboss_security_authentication -> org_jboss_security_config;
-  org_jboss_security_authentication -> org_jboss_security_plugins;
-}

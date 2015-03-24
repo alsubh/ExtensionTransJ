@@ -1,7 +1,0 @@
-digraph jcl_over_slf4j_1_7_2_redhat_3_package_dependencies {
-  node [shape = box, fontsize=10.0];
-  org_apache_commons_logging -> org_apache_commons_logging_impl;
-  org_apache_commons_logging_impl -> org_apache_commons_logging;
-  org_apache_commons_logging_impl -> org_slf4j;
-  org_apache_commons_logging_impl -> org_slf4j_spi;
-}

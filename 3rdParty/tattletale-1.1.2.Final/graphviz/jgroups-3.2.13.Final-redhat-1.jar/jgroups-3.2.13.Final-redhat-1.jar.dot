@@ -1,4 +1,0 @@
-digraph jgroups_3_2_13_Final_redhat_1_dependencies {
-  node [shape = box, fontsize=10.0];
-  jgroups_3_2_13_Final_redhat_1 -> log4j_jboss_logmanager_1_1_0_Final_redhat_2;
-}

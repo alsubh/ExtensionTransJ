@@ -1,4 +1,0 @@
-digraph jboss_el_api_2_2_spec_1_0_4_Final_redhat_1_package_dependencies {
-  node [shape = box, fontsize=10.0];
-  javax_el -> org_jboss_el_cache;
-}

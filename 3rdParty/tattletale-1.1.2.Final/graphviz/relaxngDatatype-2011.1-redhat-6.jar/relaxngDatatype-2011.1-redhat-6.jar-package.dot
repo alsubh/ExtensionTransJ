@@ -1,4 +1,0 @@
-digraph relaxngDatatype_2011_1_redhat_6_package_dependencies {
-  node [shape = box, fontsize=10.0];
-  org_relaxng_datatype_helpers -> org_relaxng_datatype;
-}

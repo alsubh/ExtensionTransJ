@@ -1,6 +1,0 @@
-digraph dom4j_1_6_1_redhat_6_dependencies {
-  node [shape = box, fontsize=10.0];
-  dom4j_1_6_1_redhat_6 -> jaxen_1_1_3_redhat_4;
-  dom4j_1_6_1_redhat_6 -> jboss_jaxb_api_2_2_spec_1_0_4_Final_redhat_2;
-  dom4j_1_6_1_redhat_6 -> relaxngDatatype_2011_1_redhat_6;
-}

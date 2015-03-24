@@ -1,7 +1,0 @@
-digraph jsf_api_1_2_15_b01_redhat_11_dependencies {
-  node [shape = box, fontsize=10.0];
-  jsf_api_1_2_15_b01_redhat_11 -> jboss_el_api_2_2_spec_1_0_4_Final_redhat_1;
-  jsf_api_1_2_15_b01_redhat_11 -> jboss_jsp_api_2_2_spec_1_0_1_Final_redhat_2;
-  jsf_api_1_2_15_b01_redhat_11 -> jboss_jstl_api_1_2_spec_1_0_6_Final_redhat_1;
-  jsf_api_1_2_15_b01_redhat_11 -> jboss_servlet_api_2_5_spec_1_0_1_Final_redhat_2;
-}

@@ -1,5 +1,0 @@
-digraph xom_1_2_7_redhat_4_dependencies {
-  node [shape = box, fontsize=10.0];
-  xom_1_2_7_redhat_4 -> jaxen_1_1_3_redhat_4;
-  xom_1_2_7_redhat_4 -> xercesImpl_2_9_1_redhat_5;
-}

@@ -1,4 +1,0 @@
-digraph aesh_0_33_12_redhat_1_dependencies {
-  node [shape = box, fontsize=10.0];
-  aesh_0_33_12_redhat_1 -> jansi_1_9_redhat_4;
-}

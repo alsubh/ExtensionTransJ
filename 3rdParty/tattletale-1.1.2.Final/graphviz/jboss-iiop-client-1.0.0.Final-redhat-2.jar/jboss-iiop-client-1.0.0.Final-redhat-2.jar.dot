@@ -1,6 +1,0 @@
-digraph jboss_iiop_client_1_0_0_Final_redhat_2_dependencies {
-  node [shape = box, fontsize=10.0];
-  jboss_iiop_client_1_0_0_Final_redhat_2 -> jacorb_2_3_2_redhat_6;
-  jboss_iiop_client_1_0_0_Final_redhat_2 -> jboss_client;
-  jboss_iiop_client_1_0_0_Final_redhat_2 -> jboss_rmi_api_1_0_spec_1_0_4_Final_redhat_2;
-}

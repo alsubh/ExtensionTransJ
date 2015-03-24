@@ -1,4 +1,0 @@
-digraph slf4j_api_1_7_2_redhat_3_dependencies {
-  node [shape = box, fontsize=10.0];
-  slf4j_api_1_7_2_redhat_3 -> slf4j_jboss_logmanager_1_0_3_GA_redhat_1;
-}

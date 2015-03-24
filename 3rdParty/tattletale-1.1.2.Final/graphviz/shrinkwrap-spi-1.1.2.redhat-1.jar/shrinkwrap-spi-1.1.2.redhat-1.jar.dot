@@ -1,4 +1,0 @@
-digraph shrinkwrap_spi_1_1_2_redhat_1_dependencies {
-  node [shape = box, fontsize=10.0];
-  shrinkwrap_spi_1_1_2_redhat_1 -> shrinkwrap_api_1_1_2_redhat_1;
-}

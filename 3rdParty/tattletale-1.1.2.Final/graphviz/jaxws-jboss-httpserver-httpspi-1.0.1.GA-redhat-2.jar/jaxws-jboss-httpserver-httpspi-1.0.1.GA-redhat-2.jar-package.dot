@@ -1,5 +1,0 @@
-digraph jaxws_jboss_httpserver_httpspi_1_0_1_GA_redhat_2_package_dependencies {
-  node [shape = box, fontsize=10.0];
-  org_jboss_ws_httpserver_httpspi -> javax_xml_ws_spi_http;
-  org_jboss_ws_httpserver_httpspi -> org_jboss_com_sun_net_httpserver;
-}

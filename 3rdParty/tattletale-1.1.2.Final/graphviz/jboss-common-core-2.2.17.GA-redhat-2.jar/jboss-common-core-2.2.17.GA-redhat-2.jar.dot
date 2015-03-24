@@ -1,4 +1,0 @@
-digraph jboss_common_core_2_2_17_GA_redhat_2_dependencies {
-  node [shape = box, fontsize=10.0];
-  jboss_common_core_2_2_17_GA_redhat_2 -> jboss_cli_client;
-}

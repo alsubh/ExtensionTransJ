@@ -1,4 +1,0 @@
-digraph xnio_nio_3_0_10_GA_redhat_1_dependencies {
-  node [shape = box, fontsize=10.0];
-  xnio_nio_3_0_10_GA_redhat_1 -> jboss_cli_client;
-}

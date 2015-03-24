@@ -1,7 +1,0 @@
-digraph jaxb_impl_2_2_5_redhat_8_dependencies {
-  node [shape = box, fontsize=10.0];
-  jaxb_impl_2_2_5_redhat_8 -> activation_1_1_1_redhat_2;
-  jaxb_impl_2_2_5_redhat_8 -> istack_commons_runtime_2_6_1_redhat_2;
-  jaxb_impl_2_2_5_redhat_8 -> jboss_jaxb_api_2_2_spec_1_0_4_Final_redhat_2;
-  jaxb_impl_2_2_5_redhat_8 -> txw2_20110809_redhat_4;
-}

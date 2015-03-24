@@ -1,4 +1,0 @@
-digraph xsom_20110809_redhat_3_dependencies {
-  node [shape = box, fontsize=10.0];
-  xsom_20110809_redhat_3 -> relaxngDatatype_2011_1_redhat_6;
-}

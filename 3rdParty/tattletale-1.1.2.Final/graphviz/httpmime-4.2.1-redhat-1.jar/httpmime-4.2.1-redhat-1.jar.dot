@@ -1,4 +1,0 @@
-digraph httpmime_4_2_1_redhat_1_dependencies {
-  node [shape = box, fontsize=10.0];
-  httpmime_4_2_1_redhat_1 -> httpcore_4_2_1_redhat_1;
-}

@@ -1,7 +1,0 @@
-digraph serializer_2_7_1_redhat_7_package_dependencies {
-  node [shape = box, fontsize=10.0];
-  org_apache_xml_serializer -> org_apache_xml_serializer_dom3;
-  org_apache_xml_serializer -> org_apache_xml_serializer_utils;
-  org_apache_xml_serializer_dom3 -> org_apache_xml_serializer;
-  org_apache_xml_serializer_dom3 -> org_apache_xml_serializer_utils;
-}

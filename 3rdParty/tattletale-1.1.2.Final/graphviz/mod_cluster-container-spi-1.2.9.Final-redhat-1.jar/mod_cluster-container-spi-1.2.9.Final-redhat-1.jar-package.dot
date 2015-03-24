@@ -1,5 +1,0 @@
-digraph mod_cluster_container_spi_1_2_9_Final_redhat_1_package_dependencies {
-  node [shape = box, fontsize=10.0];
-  org_jboss_modcluster_container -> javax_servlet;
-  org_jboss_modcluster_container -> javax_servlet_http;
-}

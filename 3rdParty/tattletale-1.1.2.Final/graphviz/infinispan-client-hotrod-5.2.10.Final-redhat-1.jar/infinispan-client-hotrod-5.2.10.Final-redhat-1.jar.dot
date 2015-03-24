@@ -1,7 +1,0 @@
-digraph infinispan_client_hotrod_5_2_10_Final_redhat_1_dependencies {
-  node [shape = box, fontsize=10.0];
-  infinispan_client_hotrod_5_2_10_Final_redhat_1 -> commons_pool_1_6_redhat_6;
-  infinispan_client_hotrod_5_2_10_Final_redhat_1 -> infinispan_core_5_2_10_Final_redhat_1;
-  infinispan_client_hotrod_5_2_10_Final_redhat_1 -> jboss_cli_client;
-  infinispan_client_hotrod_5_2_10_Final_redhat_1 -> jcip_annotations_1_0_redhat_6;
-}

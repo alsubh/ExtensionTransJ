@@ -1,4 +1,0 @@
-digraph jboss_jaxws_api_2_2_spec_2_0_2_Final_redhat_1_package_dependencies {
-  node [shape = box, fontsize=10.0];
-  javax_xml_ws -> javax_xml_ws_spi_http;
-}

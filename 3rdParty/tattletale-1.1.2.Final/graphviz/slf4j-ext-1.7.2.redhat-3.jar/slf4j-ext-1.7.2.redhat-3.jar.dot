@@ -1,7 +1,0 @@
-digraph slf4j_ext_1_7_2_redhat_3_dependencies {
-  node [shape = box, fontsize=10.0];
-  slf4j_ext_1_7_2_redhat_3 -> cal10n_api_0_7_3_redhat_4;
-  slf4j_ext_1_7_2_redhat_3 -> commons_lang_2_6_redhat_3;
-  slf4j_ext_1_7_2_redhat_3 -> javassist_3_18_1_GA_redhat_1;
-  slf4j_ext_1_7_2_redhat_3 -> slf4j_api_1_7_2_redhat_3;
-}

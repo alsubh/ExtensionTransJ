@@ -1,8 +1,0 @@
-digraph jbossws_spi_2_3_0_Final_redhat_1_dependencies {
-  node [shape = box, fontsize=10.0];
-  jbossws_spi_2_3_0_Final_redhat_1 -> jboss_cli_client;
-  jbossws_spi_2_3_0_Final_redhat_1 -> jboss_client;
-  jbossws_spi_2_3_0_Final_redhat_1 -> jboss_jaxws_api_2_2_spec_2_0_2_Final_redhat_1;
-  jbossws_spi_2_3_0_Final_redhat_1 -> jboss_servlet_api_2_5_spec_1_0_1_Final_redhat_2;
-  jbossws_spi_2_3_0_Final_redhat_1 -> jbossws_api_1_0_2_Final_redhat_1;
-}

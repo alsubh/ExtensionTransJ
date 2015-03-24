@@ -1,4 +1,0 @@
-digraph jboss_j2eemgmt_api_1_1_spec_1_0_1_Final_redhat_2_package_dependencies {
-  node [shape = box, fontsize=10.0];
-  javax_management_j2ee -> javax_ejb;
-}

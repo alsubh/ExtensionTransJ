@@ -1,7 +1,0 @@
-digraph saaj_impl_1_3_16_redhat_3_dependencies {
-  node [shape = box, fontsize=10.0];
-  saaj_impl_1_3_16_redhat_3 -> activation_1_1_1_redhat_2;
-  saaj_impl_1_3_16_redhat_3 -> jaxen_1_1_3_redhat_4;
-  saaj_impl_1_3_16_redhat_3 -> jboss_saaj_api_1_3_spec_1_0_3_Final_redhat_1;
-  saaj_impl_1_3_16_redhat_3 -> xercesImpl_2_9_1_redhat_5;
-}

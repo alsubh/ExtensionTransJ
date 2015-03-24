@@ -1,8 +1,0 @@
-digraph jboss_as_security_api_7_4_0_Final_redhat_19_package_dependencies {
-  node [shape = box, fontsize=10.0];
-  org_jboss_as_security_api -> org_jboss_as_core_security;
-  org_jboss_as_security_api -> org_jboss_as_security_remoting;
-  org_jboss_as_security_api -> org_jboss_remoting3;
-  org_jboss_as_security_api -> org_jboss_remoting3_security;
-  org_jboss_as_security_api -> org_jboss_security;
-}

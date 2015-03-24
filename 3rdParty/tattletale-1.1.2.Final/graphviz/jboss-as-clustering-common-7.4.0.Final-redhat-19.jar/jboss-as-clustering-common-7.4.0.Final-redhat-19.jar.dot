@@ -1,6 +1,0 @@
-digraph jboss_as_clustering_common_7_4_0_Final_redhat_19_dependencies {
-  node [shape = box, fontsize=10.0];
-  jboss_as_clustering_common_7_4_0_Final_redhat_19 -> jboss_as_server_7_4_0_Final_redhat_19;
-  jboss_as_clustering_common_7_4_0_Final_redhat_19 -> jboss_cli_client;
-  jboss_as_clustering_common_7_4_0_Final_redhat_19 -> jboss_msc_1_1_5_Final_redhat_1;
-}

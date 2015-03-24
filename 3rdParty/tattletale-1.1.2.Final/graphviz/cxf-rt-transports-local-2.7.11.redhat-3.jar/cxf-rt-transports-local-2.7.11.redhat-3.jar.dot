@@ -1,5 +1,0 @@
-digraph cxf_rt_transports_local_2_7_11_redhat_3_dependencies {
-  node [shape = box, fontsize=10.0];
-  cxf_rt_transports_local_2_7_11_redhat_3 -> cxf_api_2_7_11_redhat_3;
-  cxf_rt_transports_local_2_7_11_redhat_3 -> jboss_annotations_api_1_1_spec_1_0_1_Final_redhat_2;
-}

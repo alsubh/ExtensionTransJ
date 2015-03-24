@@ -1,5 +1,0 @@
-digraph cxf_xjc_ts_2_6_1_redhat_2_dependencies {
-  node [shape = box, fontsize=10.0];
-  cxf_xjc_ts_2_6_1_redhat_2 -> codemodel_2_6_redhat_2;
-  cxf_xjc_ts_2_6_1_redhat_2 -> jaxb_xjc_2_2_5_redhat_8;
-}
