@@ -1,0 +1,10 @@
+#Tue Mar 24 22:05:46 MDT 2015
+l=Project example name
+ct=examples
+d=1427256346899
+c=1
+cmp=examples
+a=create
+cl=org.jboss.archetype.eap\:jboss-javaee6-webapp-archetype\:6.3.0.GA
+v=2.0.2
+s=0

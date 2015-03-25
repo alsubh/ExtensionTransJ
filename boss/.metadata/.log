@@ -1,0 +1,2110 @@
+!SESSION 2015-03-24 21:23:07.557 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_40
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product com.jboss.devstudio.core.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.jboss.devstudio.core.product
+
+!ENTRY org.eclipse.equinox.ds 2 0 2015-03-24 21:24:43.612
+!MESSAGE [SCR] Enabling components of bundle com.jboss.devstudio.core.usage.branding did not complete in 30000 ms 
+
+!ENTRY org.eclipse.equinox.ds 2 0 2015-03-24 21:24:43.616
+!MESSAGE [SCR - WorkThread] Timeout occurred! Thread was blocked on processing [QueuedJob] WorkPerformer: org.eclipse.equinox.internal.ds.SCRManager@12e72fc2; actionType 1
+
+!ENTRY org.eclipse.core.contenttype 4 0 2015-03-24 21:24:48.617
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; osgi.identity="org.eclipse.core.contenttype"; type="osgi.bundle"; version:Version="3.4.200.v20140207-1251"; singleton:="true" [id=71] STARTED [STARTED]
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:329)
+	at org.eclipse.osgi.container.Module.start(Module.java:389)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.equinox.registry 4 0 2015-03-24 21:24:53.701
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; osgi.identity="org.eclipse.equinox.registry"; type="osgi.bundle"; version:Version="3.5.400.v20140428-1507"; singleton:="true" [id=332] STARTED [STARTED]
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:329)
+	at org.eclipse.osgi.container.Module.start(Module.java:389)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2015-03-24 21:29:29.336
+!MESSAGE No repository found at http://download.eclipse.org/tools.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2015-03-24 21:29:31.050
+!MESSAGE No repository found at http://eclipse.org/aspectj.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2015-03-24 21:29:33.802
+!MESSAGE No repository found at http://eclipse.org/ajdt.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2015-03-24 21:29:34.739
+!MESSAGE Server returned lastModified <= 0 for http://download.eclipes.org/tools/content.jar
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1002 2015-03-24 21:29:35.057
+!MESSAGE Unable to read repository at http://download.eclipes.org/tools.
+!STACK 0
+java.io.IOException: http://download.eclipes.org/tools is not a valid repository location.
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:102)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:151)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:129)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:73)
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-03-24 21:29:48.240
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-03-24 21:29:48.243
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\AnasAlsubh'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:50.994
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.atlassian.connector.commons_3.2.2.v20130909.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:51.065
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.atlassian.connector.eclipse.bamboo_3.2.2.v20130909.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:51.132
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.atlassian.connector.eclipse.commons_3.2.2.v20130909.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:51.166
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.atlassian.connector.eclipse.directclickthrough_3.2.2.v20130909.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:51.221
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.atlassian.connector.eclipse.jira_3.2.2.v20130909.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:51.455
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.atlassian.connector.eclipse.monitor_3.2.2.v20130909.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:51.617
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.atlassian.connector.eclipse_3.2.2.v20130909.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:51.678
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.collabnet.subversion.merge.feature_4.0.2.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:51.857
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.github.sevntu.checkstyle.checks.feature_1.10.0.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:51.958
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\edu.umd.cs.findbugs.plugin.eclipse_3.0.0.20140706-2cfb468.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:52.025
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\net.java.dev.jna_3.5.2.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:52.108
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\net.sf.eclipsecs_5.7.0.201402131929.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:52.248
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\net.sourceforge.pmd.eclipse_4.0.4.v20140909-1748.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:52.336
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.aspectj_1.8.1.20140516080300.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:52.428
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.ajdt_2.2.4.e44x-20140516-1000.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:52.473
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.contribution.weaving_2.2.4.e44x-20140516-1000.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:52.619
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.contribution.xref_2.2.4.e44x-20140516-1000.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:52.753
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.draw2d_3.9.101.201408150207.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:52.827
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.egit.mylyn_3.4.2.201412180340-r.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:52.940
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.equinox.weaving.sdk_1.1.0.I20140501-0200.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:53.372
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.builds_1.6.2.v20150218-0552.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:53.468
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.commons.repositories.http_1.6.2.v20150217-2244.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:53.716
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.commons.soap_feature_3.11.0.v20131219-1119.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:53.815
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.github.feature_3.4.2.201412180340-r.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:53.862
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.git_1.6.2.v20150217-2249.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:53.978
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.hudson_1.6.2.v20150218-0552.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:54.169
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.ide_feature_3.14.2.v20150218-0125.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:54.368
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.java_feature_3.14.2.v20150218-0125.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:54.482
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.pde_feature_3.14.2.v20150218-0125.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:54.583
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.tasks.ide_3.14.2.v20150217-2341.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:54.655
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.team_feature_3.14.2.v20150218-0125.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:54.744
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.versions_1.6.2.v20150217-2249.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:54.830
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.zest_1.5.101.201408150207.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:55.064
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.jboss.tools.common.mylyn.feature_3.6.2.CR1-v20150312-0213-B97.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:55.098
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.jboss.tools.forge.ext.feature_1.3.3.CR1-v20150312-0233-B97.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:55.233
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.jboss.tools.jst.angularjs.feature_3.6.2.Beta1-v20150225-0358-B109.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:55.343
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.jboss.tools.m2e.wro4j.feature_1.1.0.201406251020.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:55.381
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.jboss.tools.maven.jbosspackaging.feature_1.6.2.CR1-v20150312-1720-B119.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:55.434
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.jboss.tools.vpe.cordovasim.feature_3.6.2.CR1-v20150312-2113-B89.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:55.573
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.ajdt.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:55.604
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.aop.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:55.884
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.autowire.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:55.980
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.batch.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:56.077
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.data.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:56.129
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:56.177
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.integration.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:56.272
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.maven.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:56.337
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.mylyn.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:56.432
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.osgi.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:56.469
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.security.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:56.525
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.webflow.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:56.596
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springsource.ide.eclipse.commons_3.6.0.201407080544-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:56.679
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.testng.eclipse_6.8.6.20130914_0724.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:56.734
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.tigris.subversion.clientadapter.feature_1.10.1.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:56.810
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.tigris.subversion.clientadapter.javahl.feature_1.8.8.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:56.874
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.tigris.subversion.clientadapter.svnkit.feature_1.8.3.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:57.009
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.tigris.subversion.subclipse.graph.feature_1.1.1.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:57.162
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.tigris.subversion.subclipse.mylyn_3.0.0.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:57.214
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.tigris.subversion.subclipse_1.10.4.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:57.363
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.tmatesoft.svnkit_1.8.4.r10218_v20140302_1242.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.210
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.atlassian.connector.commons_3.2.2.v20130909.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.213
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.atlassian.connector.eclipse.bamboo_3.2.2.v20130909.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.216
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.atlassian.connector.eclipse.commons_3.2.2.v20130909.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.218
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.atlassian.connector.eclipse.directclickthrough_3.2.2.v20130909.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.221
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.atlassian.connector.eclipse.jira_3.2.2.v20130909.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.223
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.atlassian.connector.eclipse.monitor_3.2.2.v20130909.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.226
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.atlassian.connector.eclipse_3.2.2.v20130909.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.228
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.collabnet.subversion.merge.feature_4.0.2.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.230
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.github.sevntu.checkstyle.checks.feature_1.10.0.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.233
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\edu.umd.cs.findbugs.plugin.eclipse_3.0.0.20140706-2cfb468.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.235
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\net.java.dev.jna_3.5.2.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.238
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\net.sf.eclipsecs_5.7.0.201402131929.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.240
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\net.sourceforge.pmd.eclipse_4.0.4.v20140909-1748.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.243
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.aspectj_1.8.1.20140516080300.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.245
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.ajdt_2.2.4.e44x-20140516-1000.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.247
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.contribution.weaving_2.2.4.e44x-20140516-1000.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.250
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.contribution.xref_2.2.4.e44x-20140516-1000.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.256
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.draw2d_3.9.101.201408150207.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.259
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.egit.mylyn_3.4.2.201412180340-r.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.263
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.equinox.weaving.sdk_1.1.0.I20140501-0200.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.267
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.builds_1.6.2.v20150218-0552.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.270
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.commons.repositories.http_1.6.2.v20150217-2244.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.273
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.commons.soap_feature_3.11.0.v20131219-1119.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.276
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.github.feature_3.4.2.201412180340-r.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.279
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.git_1.6.2.v20150217-2249.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.433
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.hudson_1.6.2.v20150218-0552.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.435
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.ide_feature_3.14.2.v20150218-0125.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.438
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.java_feature_3.14.2.v20150218-0125.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.440
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.pde_feature_3.14.2.v20150218-0125.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.443
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.tasks.ide_3.14.2.v20150217-2341.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.446
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.team_feature_3.14.2.v20150218-0125.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.448
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.versions_1.6.2.v20150217-2249.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.453
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.zest_1.5.101.201408150207.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.457
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.jboss.tools.common.mylyn.feature_3.6.2.CR1-v20150312-0213-B97.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.460
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.jboss.tools.forge.ext.feature_1.3.3.CR1-v20150312-0233-B97.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.464
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.jboss.tools.jst.angularjs.feature_3.6.2.Beta1-v20150225-0358-B109.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.467
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.jboss.tools.m2e.wro4j.feature_1.1.0.201406251020.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.470
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.jboss.tools.maven.jbosspackaging.feature_1.6.2.CR1-v20150312-1720-B119.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.473
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.jboss.tools.vpe.cordovasim.feature_3.6.2.CR1-v20150312-2113-B89.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.476
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.ajdt.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.479
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.aop.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.482
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.autowire.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.484
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.batch.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.487
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.data.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.489
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.492
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.integration.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.495
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.maven.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.497
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.mylyn.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.499
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.osgi.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.501
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.security.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.504
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.webflow.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.507
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springsource.ide.eclipse.commons_3.6.0.201407080544-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.509
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.testng.eclipse_6.8.6.20130914_0724.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.511
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.tigris.subversion.clientadapter.feature_1.10.1.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.514
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.tigris.subversion.clientadapter.javahl.feature_1.8.8.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.516
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.tigris.subversion.clientadapter.svnkit.feature_1.8.3.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.518
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.tigris.subversion.subclipse.graph.feature_1.1.1.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.521
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.tigris.subversion.subclipse.mylyn_3.0.0.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.523
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.tigris.subversion.subclipse_1.10.4.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-24 21:29:58.526
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.tmatesoft.svnkit_1.8.4.r10218_v20140302_1242.jar.
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2015-03-24 21:59:41.698
+!MESSAGE Could not auto-share project transaction-aspect
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: Provided SVN information does not match that on disk for project 'transaction-aspect'.
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2015-03-24 21:59:41.698
+!MESSAGE Provided SVN information does not match that on disk for project 'transaction-aspect'.
+
+!ENTRY org.eclipse.jface 2 0 2015-03-24 22:55:59.137
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-03-24 22:55:59.137
+!MESSAGE A conflict occurred for CTRL+SHIFT+G:
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.search.references.in.workspace,References in Workspace,
+		Search for references to the selected element in the workspace,
+		Category(org.eclipse.search.ui.category.search,Search,Search command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@61861a79,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.jboss.tools.seam.ui.find.references,Find Seam References,
+		Find Seam References,
+		Category(org.eclipse.search.ui.category.search,Search,Search command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@183006e6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.springframework.ide.eclipse.beans.ui.editor.commands.searchBeanReferences,Spring Beans References Search,
+		,
+		Category(org.eclipse.search.ui.category.search,Search,Search command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@f229f65,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2015-03-24 23:08:17.667
+!MESSAGE The server "jboss-eap" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_40 
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2015-03-24 23:52:27.280
+!MESSAGE The server "jboss-eap" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_40 
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2015-03-24 23:59:12.561
+!MESSAGE The server "jboss-eap" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_40 
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2015-03-25 00:20:36.205
+!MESSAGE The server "jboss-eap" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_40 
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2015-03-25 01:27:29.678
+!MESSAGE Content is not allowed in prolog.
+!STACK 0
+org.xml.sax.SAXParseException; systemId: file:/C:/3rdParty/ironjacamar-jdbc.jar; lineNumber: 1; columnNumber: 1; Content is not allowed in prolog.
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at javax.xml.parsers.DocumentBuilder.parse(Unknown Source)
+	at org.eclipse.equinox.internal.p2.ui.UpdateManagerCompatibility.parse(UpdateManagerCompatibility.java:54)
+	at org.eclipse.equinox.internal.p2.ui.UpdateManagerCompatibility.readBookmarkFile(UpdateManagerCompatibility.java:206)
+	at org.eclipse.equinox.internal.p2.ui.UpdateManagerCompatibility.importSites(UpdateManagerCompatibility.java:195)
+	at org.eclipse.equinox.p2.ui.RepositoryManipulationPage$22.run(RepositoryManipulationPage.java:724)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.equinox.p2.ui.RepositoryManipulationPage.importRepositories(RepositoryManipulationPage.java:722)
+	at org.eclipse.equinox.p2.ui.RepositoryManipulationPage$17.handleEvent(RepositoryManipulationPage.java:522)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:832)
+	at org.eclipse.jface.window.Window.open(Window.java:808)
+	at org.eclipse.ui.internal.dialogs.WorkbenchPreferenceDialog.open(WorkbenchPreferenceDialog.java:221)
+	at org.eclipse.ui.internal.OpenPreferencesAction.run(OpenPreferencesAction.java:66)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:519)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:420)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2015-03-25 01:30:11.423
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://download.eclipse.org/tools.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:692)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2015-03-25 01:30:11.423
+!MESSAGE No repository found at http://download.eclipse.org/tools.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2015-03-25 01:30:12.620
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://eclipse.org/aspectj.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:692)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2015-03-25 01:30:12.620
+!MESSAGE No repository found at http://eclipse.org/aspectj.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2015-03-25 01:30:14.483
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://eclipse.org/ajdt.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:692)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2015-03-25 01:30:14.483
+!MESSAGE No repository found at http://eclipse.org/ajdt.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2015-03-25 01:30:16.068
+!MESSAGE Server returned lastModified <= 0 for http://download.eclipes.org/tools/content.jar
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2015-03-25 01:30:16.324
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at http://download.eclipes.org/tools.
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:128)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.IOException: http://download.eclipes.org/tools is not a valid repository location.
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:102)
+	... 10 more
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1002 2015-03-25 01:30:16.324
+!MESSAGE Unable to read repository at http://download.eclipes.org/tools.
+!STACK 0
+java.io.IOException: http://download.eclipes.org/tools is not a valid repository location.
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:102)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2015-03-25 01:30:16.379
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at file:/C:/3rdParty/ironjacamar-1.2.2.Final/bin/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:692)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2015-03-25 01:30:16.379
+!MESSAGE No repository found at file:/C:/3rdParty/ironjacamar-1.2.2.Final/bin/.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2015-03-25 01:30:17.309
+!MESSAGE Server returned lastModified <= 0 for https://issues.jboss.org/browse/JBJCA-1243/content.jar
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2015-03-25 01:30:20.980
+!MESSAGE Unable to read repository at https://issues.jboss.org/browse/JBJCA-1243.
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at https://issues.jboss.org/browse/JBJCA-1243.
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:128)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.ProvisioningUI.loadMetadataRepository(ProvisioningUI.java:439)
+	at org.eclipse.equinox.internal.p2.ui.model.MetadataRepositoryElement.getMetadataRepository(MetadataRepositoryElement.java:127)
+	at org.eclipse.equinox.internal.p2.ui.model.MetadataRepositoryElement.fetchChildren(MetadataRepositoryElement.java:76)
+	at org.eclipse.equinox.internal.p2.ui.model.RemoteQueriedElement.fetchDeferredChildren(RemoteQueriedElement.java:34)
+	at org.eclipse.ui.progress.DeferredTreeContentManager$1.run(DeferredTreeContentManager.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.IOException: https://issues.jboss.org/browse/JBJCA-1243 is not a valid repository location.
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:102)
+	... 11 more
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1002 2015-03-25 01:30:20.980
+!MESSAGE Unable to read repository at https://issues.jboss.org/browse/JBJCA-1243.
+!STACK 0
+java.io.IOException: https://issues.jboss.org/browse/JBJCA-1243 is not a valid repository location.
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:102)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.ProvisioningUI.loadMetadataRepository(ProvisioningUI.java:439)
+	at org.eclipse.equinox.internal.p2.ui.model.MetadataRepositoryElement.getMetadataRepository(MetadataRepositoryElement.java:127)
+	at org.eclipse.equinox.internal.p2.ui.model.MetadataRepositoryElement.fetchChildren(MetadataRepositoryElement.java:76)
+	at org.eclipse.equinox.internal.p2.ui.model.RemoteQueriedElement.fetchDeferredChildren(RemoteQueriedElement.java:34)
+	at org.eclipse.ui.progress.DeferredTreeContentManager$1.run(DeferredTreeContentManager.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2015-03-25 01:30:22.234
+!MESSAGE Server returned lastModified <= 0 for https://issues.jboss.org/browse/JBJCA-1243/content.jar
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2015-03-25 01:30:22.786
+!MESSAGE Unable to read repository at https://issues.jboss.org/browse/JBJCA-1243.
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at https://issues.jboss.org/browse/JBJCA-1243.
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:128)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.ProvisioningUI.loadMetadataRepository(ProvisioningUI.java:439)
+	at org.eclipse.equinox.internal.p2.ui.model.MetadataRepositoryElement.getMetadataRepository(MetadataRepositoryElement.java:127)
+	at org.eclipse.equinox.internal.p2.ui.model.MetadataRepositoryElement.getRepository(MetadataRepositoryElement.java:116)
+	at org.eclipse.equinox.internal.p2.ui.model.MetadataRepositoryElement.getQueryable(MetadataRepositoryElement.java:110)
+	at org.eclipse.equinox.internal.p2.ui.QueryProvider.getQueryDescriptor(QueryProvider.java:88)
+	at org.eclipse.equinox.internal.p2.ui.model.QueriedElement.fetchChildren(QueriedElement.java:101)
+	at org.eclipse.equinox.internal.p2.ui.model.MetadataRepositoryElement.fetchChildren(MetadataRepositoryElement.java:78)
+	at org.eclipse.equinox.internal.p2.ui.model.RemoteQueriedElement.fetchDeferredChildren(RemoteQueriedElement.java:34)
+	at org.eclipse.ui.progress.DeferredTreeContentManager$1.run(DeferredTreeContentManager.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.IOException: https://issues.jboss.org/browse/JBJCA-1243 is not a valid repository location.
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:102)
+	... 15 more
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1002 2015-03-25 01:30:22.786
+!MESSAGE Unable to read repository at https://issues.jboss.org/browse/JBJCA-1243.
+!STACK 0
+java.io.IOException: https://issues.jboss.org/browse/JBJCA-1243 is not a valid repository location.
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:102)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.ProvisioningUI.loadMetadataRepository(ProvisioningUI.java:439)
+	at org.eclipse.equinox.internal.p2.ui.model.MetadataRepositoryElement.getMetadataRepository(MetadataRepositoryElement.java:127)
+	at org.eclipse.equinox.internal.p2.ui.model.MetadataRepositoryElement.getRepository(MetadataRepositoryElement.java:116)
+	at org.eclipse.equinox.internal.p2.ui.model.MetadataRepositoryElement.getQueryable(MetadataRepositoryElement.java:110)
+	at org.eclipse.equinox.internal.p2.ui.QueryProvider.getQueryDescriptor(QueryProvider.java:88)
+	at org.eclipse.equinox.internal.p2.ui.model.QueriedElement.fetchChildren(QueriedElement.java:101)
+	at org.eclipse.equinox.internal.p2.ui.model.MetadataRepositoryElement.fetchChildren(MetadataRepositoryElement.java:78)
+	at org.eclipse.equinox.internal.p2.ui.model.RemoteQueriedElement.fetchDeferredChildren(RemoteQueriedElement.java:34)
+	at org.eclipse.ui.progress.DeferredTreeContentManager$1.run(DeferredTreeContentManager.java:238)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2015-03-25 01:30:53.620
+!MESSAGE Connection to https://jboss.orghttps/issues.jboss.org/browse/JBJCA/fixforversion/12326342/p2.index failed on jboss.orghttps. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: jboss.orghttps
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(Unknown Source)
+	at java.net.InetAddress.getAddressesFromNameService(Unknown Source)
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2015-03-25 02:03:19.920
+!MESSAGE The server "jboss-eap" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_40 
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2015-03-25 02:29:23.250
+!MESSAGE The server "jboss-eap" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_40 
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2015-03-25 02:38:40.000
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://download.eclipse.org/tools.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:692)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2015-03-25 02:38:40.000
+!MESSAGE No repository found at http://download.eclipse.org/tools.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2015-03-25 02:38:41.241
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://eclipse.org/aspectj.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:692)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2015-03-25 02:38:41.241
+!MESSAGE No repository found at http://eclipse.org/aspectj.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2015-03-25 02:38:43.137
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://eclipse.org/ajdt.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:692)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2015-03-25 02:38:43.137
+!MESSAGE No repository found at http://eclipse.org/ajdt.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2015-03-25 02:38:43.836
+!MESSAGE Server returned lastModified <= 0 for http://download.eclipes.org/tools/content.jar
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2015-03-25 02:38:44.222
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at http://download.eclipes.org/tools.
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:128)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.IOException: http://download.eclipes.org/tools is not a valid repository location.
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:102)
+	... 10 more
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1002 2015-03-25 02:38:44.222
+!MESSAGE Unable to read repository at http://download.eclipes.org/tools.
+!STACK 0
+java.io.IOException: http://download.eclipes.org/tools is not a valid repository location.
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:102)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2015-03-25 02:38:44.228
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at file:/C:/3rdParty/ironjacamar-1.2.2.Final/bin/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:692)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2015-03-25 02:38:44.229
+!MESSAGE No repository found at file:/C:/3rdParty/ironjacamar-1.2.2.Final/bin/.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2015-03-25 02:38:48.011
+!MESSAGE Server returned lastModified <= 0 for http://download.eclipes.org/tools/content.jar
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:49.524
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\plugins\jboss-xa-jdbc.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:49.889
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.atlassian.connector.commons_3.2.2.v20130909.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.020
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.atlassian.connector.eclipse.bamboo_3.2.2.v20130909.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.078
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.atlassian.connector.eclipse.commons_3.2.2.v20130909.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.132
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.atlassian.connector.eclipse.directclickthrough_3.2.2.v20130909.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.141
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.atlassian.connector.eclipse.jira_3.2.2.v20130909.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.200
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.atlassian.connector.eclipse.monitor_3.2.2.v20130909.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.208
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.atlassian.connector.eclipse_3.2.2.v20130909.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.227
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.collabnet.subversion.merge.feature_4.0.2.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.248
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.github.sevntu.checkstyle.checks.feature_1.10.0.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.262
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\edu.umd.cs.findbugs.plugin.eclipse_3.0.0.20140706-2cfb468.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.269
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\net.java.dev.jna_3.5.2.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.282
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\net.sf.eclipsecs_5.7.0.201402131929.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.295
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\net.sourceforge.pmd.eclipse_4.0.4.v20140909-1748.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.305
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.aspectj_1.8.1.20140516080300.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.322
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.ajdt_2.2.4.e44x-20140516-1000.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.351
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.contribution.weaving_2.2.4.e44x-20140516-1000.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.364
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.contribution.xref_2.2.4.e44x-20140516-1000.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.378
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.draw2d_3.9.101.201408150207.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.390
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.egit.mylyn_3.4.2.201412180340-r.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.402
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.equinox.weaving.sdk_1.1.0.I20140501-0200.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.417
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.builds_1.6.2.v20150218-0552.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.440
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.commons.repositories.http_1.6.2.v20150217-2244.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.448
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.commons.soap_feature_3.11.0.v20131219-1119.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.461
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.github.feature_3.4.2.201412180340-r.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.475
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.git_1.6.2.v20150217-2249.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.499
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.hudson_1.6.2.v20150218-0552.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.525
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.ide_feature_3.14.2.v20150218-0125.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.548
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.java_feature_3.14.2.v20150218-0125.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.563
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.pde_feature_3.14.2.v20150218-0125.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.572
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.tasks.ide_3.14.2.v20150217-2341.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.585
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.team_feature_3.14.2.v20150218-0125.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.617
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.versions_1.6.2.v20150217-2249.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.638
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.zest_1.5.101.201408150207.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.650
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.jboss.tools.common.mylyn.feature_3.6.2.CR1-v20150312-0213-B97.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.663
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.jboss.tools.forge.ext.feature_1.3.3.CR1-v20150312-0233-B97.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.676
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.jboss.tools.jst.angularjs.feature_3.6.2.Beta1-v20150225-0358-B109.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.692
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.jboss.tools.m2e.wro4j.feature_1.1.0.201406251020.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.699
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.jboss.tools.maven.jbosspackaging.feature_1.6.2.CR1-v20150312-1720-B119.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.711
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.jboss.tools.vpe.cordovasim.feature_3.6.2.CR1-v20150312-2113-B89.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.722
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.ajdt.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.739
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.aop.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.813
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.autowire.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.823
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.batch.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.827
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.data.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.839
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.853
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.integration.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.866
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.maven.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.869
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.mylyn.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.881
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.osgi.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.921
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.security.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.935
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.webflow.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.956
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springsource.ide.eclipse.commons_3.6.0.201407080544-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.971
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.testng.eclipse_6.8.6.20130914_0724.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.977
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.tigris.subversion.clientadapter.feature_1.10.1.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.985
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.tigris.subversion.clientadapter.javahl.feature_1.8.8.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:50.992
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.tigris.subversion.clientadapter.svnkit.feature_1.8.3.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.076
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.tigris.subversion.subclipse.graph.feature_1.1.1.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.146
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.tigris.subversion.subclipse.mylyn_3.0.0.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.227
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.tigris.subversion.subclipse_1.10.4.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.236
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.tmatesoft.svnkit_1.8.4.r10218_v20140302_1242.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.685
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\plugins\jboss-xa-jdbc.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.751
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.atlassian.connector.commons_3.2.2.v20130909.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.754
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.atlassian.connector.eclipse.bamboo_3.2.2.v20130909.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.757
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.atlassian.connector.eclipse.commons_3.2.2.v20130909.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.760
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.atlassian.connector.eclipse.directclickthrough_3.2.2.v20130909.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.763
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.atlassian.connector.eclipse.jira_3.2.2.v20130909.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.765
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.atlassian.connector.eclipse.monitor_3.2.2.v20130909.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.768
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.atlassian.connector.eclipse_3.2.2.v20130909.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.771
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.collabnet.subversion.merge.feature_4.0.2.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.773
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\com.github.sevntu.checkstyle.checks.feature_1.10.0.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.776
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\edu.umd.cs.findbugs.plugin.eclipse_3.0.0.20140706-2cfb468.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.778
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\net.java.dev.jna_3.5.2.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.780
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\net.sf.eclipsecs_5.7.0.201402131929.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.783
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\net.sourceforge.pmd.eclipse_4.0.4.v20140909-1748.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.785
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.aspectj_1.8.1.20140516080300.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.788
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.ajdt_2.2.4.e44x-20140516-1000.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.790
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.contribution.weaving_2.2.4.e44x-20140516-1000.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.793
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.contribution.xref_2.2.4.e44x-20140516-1000.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.796
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.draw2d_3.9.101.201408150207.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.799
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.egit.mylyn_3.4.2.201412180340-r.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.803
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.equinox.weaving.sdk_1.1.0.I20140501-0200.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.806
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.builds_1.6.2.v20150218-0552.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.809
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.commons.repositories.http_1.6.2.v20150217-2244.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.811
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.commons.soap_feature_3.11.0.v20131219-1119.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.814
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.github.feature_3.4.2.201412180340-r.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.817
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.git_1.6.2.v20150217-2249.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.820
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.hudson_1.6.2.v20150218-0552.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.822
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.ide_feature_3.14.2.v20150218-0125.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.825
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.java_feature_3.14.2.v20150218-0125.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.827
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.pde_feature_3.14.2.v20150218-0125.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.829
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.tasks.ide_3.14.2.v20150217-2341.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.832
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.team_feature_3.14.2.v20150218-0125.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.834
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.mylyn.versions_1.6.2.v20150217-2249.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.838
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.eclipse.zest_1.5.101.201408150207.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.841
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.jboss.tools.common.mylyn.feature_3.6.2.CR1-v20150312-0213-B97.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.844
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.jboss.tools.forge.ext.feature_1.3.3.CR1-v20150312-0233-B97.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.847
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.jboss.tools.jst.angularjs.feature_3.6.2.Beta1-v20150225-0358-B109.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.849
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.jboss.tools.m2e.wro4j.feature_1.1.0.201406251020.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.852
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.jboss.tools.maven.jbosspackaging.feature_1.6.2.CR1-v20150312-1720-B119.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.855
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.jboss.tools.vpe.cordovasim.feature_3.6.2.CR1-v20150312-2113-B89.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.858
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.ajdt.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.860
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.aop.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.862
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.autowire.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.865
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.batch.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.867
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.data.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.870
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.872
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.integration.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.875
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.maven.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.877
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.mylyn.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.880
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.osgi.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.882
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.security.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.885
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springframework.ide.eclipse.webflow.feature_3.6.0.201407080615-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.888
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.springsource.ide.eclipse.commons_3.6.0.201407080544-RELEASE.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.890
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.testng.eclipse_6.8.6.20130914_0724.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.892
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.tigris.subversion.clientadapter.feature_1.10.1.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.895
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.tigris.subversion.clientadapter.javahl.feature_1.8.8.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.897
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.tigris.subversion.clientadapter.svnkit.feature_1.8.3.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.899
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.tigris.subversion.subclipse.graph.feature_1.1.1.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.902
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.tigris.subversion.subclipse.mylyn_3.0.0.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.904
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.tigris.subversion.subclipse_1.10.4.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2015-03-25 02:38:51.907
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\AnasAlsubh\jbdevstudio\studio\features\org.tmatesoft.svnkit_1.8.4.r10218_v20140302_1242.jar.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2015-03-25 02:38:52.721
+!MESSAGE Server returned lastModified <= 0 for http://download.eclipes.org/tools/content.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2015-03-25 02:38:53.510
+!MESSAGE Server returned lastModified <= 0 for http://download.eclipes.org/tools/content.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2015-03-25 02:38:54.300
+!MESSAGE Server returned lastModified <= 0 for http://download.eclipes.org/tools/content.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2015-03-25 02:38:55.072
+!MESSAGE Server returned lastModified <= 0 for http://download.eclipes.org/tools/content.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2015-03-25 02:38:55.924
+!MESSAGE Server returned lastModified <= 0 for http://download.eclipes.org/tools/content.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2015-03-25 02:38:56.895
+!MESSAGE Server returned lastModified <= 0 for http://download.eclipes.org/tools/content.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2015-03-25 02:38:58.016
+!MESSAGE Server returned lastModified <= 0 for http://download.eclipes.org/tools/content.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2015-03-25 02:38:59.249
+!MESSAGE Server returned lastModified <= 0 for http://download.eclipes.org/tools/content.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2015-03-25 02:39:00.245
+!MESSAGE Server returned lastModified <= 0 for http://download.eclipes.org/tools/content.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2015-03-25 02:39:00.984
+!MESSAGE Server returned lastModified <= 0 for http://download.eclipes.org/tools/content.jar
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2015-03-25 02:40:26.063
+!MESSAGE The server "jboss-eap" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_40 
+
+!ENTRY org.eclipse.ui.navigator 4 2 2015-03-25 02:44:48.113
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.navigator".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jpt.common.ui.internal.jface.ItemTreeStateProviderManager.getChildren(ItemTreeStateProviderManager.java:74)
+	at org.eclipse.jpt.common.ui.internal.navigator.NavigatorContentProvider.getChildren(NavigatorContentProvider.java:109)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:96)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:275)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:94)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider$1.run(NavigatorContentServiceContentProvider.java:152)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.internalGetChildren(NavigatorContentServiceContentProvider.java:139)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.getChildren(NavigatorContentServiceContentProvider.java:125)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getRawChildren(AbstractTreeViewer.java:1365)
+	at org.eclipse.jface.viewers.TreeViewer.getRawChildren(TreeViewer.java:353)
+	at org.eclipse.jface.viewers.StructuredViewer.getFilteredChildren(StructuredViewer.java:905)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getSortedChildren(AbstractTreeViewer.java:617)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$1.run(AbstractTreeViewer.java:813)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:791)
+	at org.eclipse.jface.viewers.TreeViewer.createChildren(TreeViewer.java:611)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:762)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.handleTreeExpand(AbstractTreeViewer.java:1495)
+	at org.eclipse.jface.viewers.TreeViewer.handleTreeExpand(TreeViewer.java:903)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$4.treeExpanded(AbstractTreeViewer.java:1507)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:132)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Tree.wmNotifyChild(Tree.java:7633)
+	at org.eclipse.swt.widgets.Control.wmNotify(Control.java:5618)
+	at org.eclipse.swt.widgets.Composite.wmNotify(Composite.java:1935)
+	at org.eclipse.swt.widgets.Control.WM_NOTIFY(Control.java:5169)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4666)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProc(OS.java:2443)
+	at org.eclipse.swt.widgets.Tree.callWindowProc(Tree.java:1553)
+	at org.eclipse.swt.widgets.Tree.WM_LBUTTONDOWN(Tree.java:6501)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4646)
+	at org.eclipse.swt.widgets.Tree.windowProc(Tree.java:6024)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY org.eclipse.ui.navigator 4 0 2015-03-25 02:44:48.128
+!MESSAGE An exception occurred invoking extension: org.eclipse.jpt.jpa.ui.jpaNavigatorContent for object org.eclipse.jst.jee.ui.internal.navigator.web.WebAppProvider@6bf12d2f
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jpt.common.ui.internal.jface.ItemTreeStateProviderManager.getChildren(ItemTreeStateProviderManager.java:74)
+	at org.eclipse.jpt.common.ui.internal.navigator.NavigatorContentProvider.getChildren(NavigatorContentProvider.java:109)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:96)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:275)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:94)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider$1.run(NavigatorContentServiceContentProvider.java:152)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.internalGetChildren(NavigatorContentServiceContentProvider.java:139)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.getChildren(NavigatorContentServiceContentProvider.java:125)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getRawChildren(AbstractTreeViewer.java:1365)
+	at org.eclipse.jface.viewers.TreeViewer.getRawChildren(TreeViewer.java:353)
+	at org.eclipse.jface.viewers.StructuredViewer.getFilteredChildren(StructuredViewer.java:905)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getSortedChildren(AbstractTreeViewer.java:617)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$1.run(AbstractTreeViewer.java:813)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:791)
+	at org.eclipse.jface.viewers.TreeViewer.createChildren(TreeViewer.java:611)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:762)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.handleTreeExpand(AbstractTreeViewer.java:1495)
+	at org.eclipse.jface.viewers.TreeViewer.handleTreeExpand(TreeViewer.java:903)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$4.treeExpanded(AbstractTreeViewer.java:1507)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:132)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Tree.wmNotifyChild(Tree.java:7633)
+	at org.eclipse.swt.widgets.Control.wmNotify(Control.java:5618)
+	at org.eclipse.swt.widgets.Composite.wmNotify(Composite.java:1935)
+	at org.eclipse.swt.widgets.Control.WM_NOTIFY(Control.java:5169)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4666)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProc(OS.java:2443)
+	at org.eclipse.swt.widgets.Tree.callWindowProc(Tree.java:1553)
+	at org.eclipse.swt.widgets.Tree.WM_LBUTTONDOWN(Tree.java:6501)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4646)
+	at org.eclipse.swt.widgets.Tree.windowProc(Tree.java:6024)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY org.eclipse.ui.navigator 4 2 2015-03-25 02:45:03.037
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.navigator".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jpt.common.ui.internal.jface.ItemTreeStateProviderManager.getChildren(ItemTreeStateProviderManager.java:74)
+	at org.eclipse.jpt.common.ui.internal.navigator.NavigatorContentProvider.getChildren(NavigatorContentProvider.java:109)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:96)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:275)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:94)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider$1.run(NavigatorContentServiceContentProvider.java:152)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.internalGetChildren(NavigatorContentServiceContentProvider.java:139)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.getChildren(NavigatorContentServiceContentProvider.java:125)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getRawChildren(AbstractTreeViewer.java:1365)
+	at org.eclipse.jface.viewers.TreeViewer.getRawChildren(TreeViewer.java:353)
+	at org.eclipse.jface.viewers.StructuredViewer.getFilteredChildren(StructuredViewer.java:905)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getSortedChildren(AbstractTreeViewer.java:617)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$1.run(AbstractTreeViewer.java:813)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:791)
+	at org.eclipse.jface.viewers.TreeViewer.createChildren(TreeViewer.java:611)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:762)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.handleTreeExpand(AbstractTreeViewer.java:1495)
+	at org.eclipse.jface.viewers.TreeViewer.handleTreeExpand(TreeViewer.java:903)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$4.treeExpanded(AbstractTreeViewer.java:1507)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:132)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Tree.wmNotifyChild(Tree.java:7633)
+	at org.eclipse.swt.widgets.Control.wmNotify(Control.java:5618)
+	at org.eclipse.swt.widgets.Composite.wmNotify(Composite.java:1935)
+	at org.eclipse.swt.widgets.Control.WM_NOTIFY(Control.java:5169)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4666)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProc(OS.java:2443)
+	at org.eclipse.swt.widgets.Tree.callWindowProc(Tree.java:1553)
+	at org.eclipse.swt.widgets.Tree.WM_LBUTTONDOWN(Tree.java:6501)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4646)
+	at org.eclipse.swt.widgets.Tree.windowProc(Tree.java:6024)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY org.eclipse.ui.navigator 4 0 2015-03-25 02:45:03.045
+!MESSAGE An exception occurred invoking extension: org.eclipse.jpt.jpa.ui.jpaNavigatorContent for object org.jboss.tools.jsf.model.pv.JSFProjectTiles@7317bbcb
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jpt.common.ui.internal.jface.ItemTreeStateProviderManager.getChildren(ItemTreeStateProviderManager.java:74)
+	at org.eclipse.jpt.common.ui.internal.navigator.NavigatorContentProvider.getChildren(NavigatorContentProvider.java:109)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:96)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:275)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:94)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider$1.run(NavigatorContentServiceContentProvider.java:152)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.internalGetChildren(NavigatorContentServiceContentProvider.java:139)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.getChildren(NavigatorContentServiceContentProvider.java:125)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getRawChildren(AbstractTreeViewer.java:1365)
+	at org.eclipse.jface.viewers.TreeViewer.getRawChildren(TreeViewer.java:353)
+	at org.eclipse.jface.viewers.StructuredViewer.getFilteredChildren(StructuredViewer.java:905)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getSortedChildren(AbstractTreeViewer.java:617)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$1.run(AbstractTreeViewer.java:813)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:791)
+	at org.eclipse.jface.viewers.TreeViewer.createChildren(TreeViewer.java:611)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:762)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.handleTreeExpand(AbstractTreeViewer.java:1495)
+	at org.eclipse.jface.viewers.TreeViewer.handleTreeExpand(TreeViewer.java:903)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$4.treeExpanded(AbstractTreeViewer.java:1507)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:132)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Tree.wmNotifyChild(Tree.java:7633)
+	at org.eclipse.swt.widgets.Control.wmNotify(Control.java:5618)
+	at org.eclipse.swt.widgets.Composite.wmNotify(Composite.java:1935)
+	at org.eclipse.swt.widgets.Control.WM_NOTIFY(Control.java:5169)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4666)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProc(OS.java:2443)
+	at org.eclipse.swt.widgets.Tree.callWindowProc(Tree.java:1553)
+	at org.eclipse.swt.widgets.Tree.WM_LBUTTONDOWN(Tree.java:6501)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4646)
+	at org.eclipse.swt.widgets.Tree.windowProc(Tree.java:6024)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY org.eclipse.ui.navigator 4 2 2015-03-25 02:45:03.860
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.navigator".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jpt.common.ui.internal.jface.ItemTreeStateProviderManager.getChildren(ItemTreeStateProviderManager.java:74)
+	at org.eclipse.jpt.common.ui.internal.navigator.NavigatorContentProvider.getChildren(NavigatorContentProvider.java:109)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:96)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:275)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:94)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider$1.run(NavigatorContentServiceContentProvider.java:152)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.internalGetChildren(NavigatorContentServiceContentProvider.java:139)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.getChildren(NavigatorContentServiceContentProvider.java:125)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getRawChildren(AbstractTreeViewer.java:1365)
+	at org.eclipse.jface.viewers.TreeViewer.getRawChildren(TreeViewer.java:353)
+	at org.eclipse.jface.viewers.StructuredViewer.getFilteredChildren(StructuredViewer.java:905)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getSortedChildren(AbstractTreeViewer.java:617)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$1.run(AbstractTreeViewer.java:813)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:791)
+	at org.eclipse.jface.viewers.TreeViewer.createChildren(TreeViewer.java:611)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:762)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.handleTreeExpand(AbstractTreeViewer.java:1495)
+	at org.eclipse.jface.viewers.TreeViewer.handleTreeExpand(TreeViewer.java:903)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$4.treeExpanded(AbstractTreeViewer.java:1507)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:132)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Tree.wmNotifyChild(Tree.java:7633)
+	at org.eclipse.swt.widgets.Control.wmNotify(Control.java:5618)
+	at org.eclipse.swt.widgets.Composite.wmNotify(Composite.java:1935)
+	at org.eclipse.swt.widgets.Control.WM_NOTIFY(Control.java:5169)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4666)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProc(OS.java:2443)
+	at org.eclipse.swt.widgets.Tree.callWindowProc(Tree.java:1553)
+	at org.eclipse.swt.widgets.Tree.WM_LBUTTONDOWN(Tree.java:6501)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4646)
+	at org.eclipse.swt.widgets.Tree.windowProc(Tree.java:6024)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY org.eclipse.ui.navigator 4 0 2015-03-25 02:45:03.862
+!MESSAGE An exception occurred invoking extension: org.eclipse.jpt.jpa.ui.jpaNavigatorContent for object org.jboss.tools.jsf.model.pv.JSFProjectBeans@72e96d64
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jpt.common.ui.internal.jface.ItemTreeStateProviderManager.getChildren(ItemTreeStateProviderManager.java:74)
+	at org.eclipse.jpt.common.ui.internal.navigator.NavigatorContentProvider.getChildren(NavigatorContentProvider.java:109)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:96)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:275)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:94)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider$1.run(NavigatorContentServiceContentProvider.java:152)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.internalGetChildren(NavigatorContentServiceContentProvider.java:139)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.getChildren(NavigatorContentServiceContentProvider.java:125)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getRawChildren(AbstractTreeViewer.java:1365)
+	at org.eclipse.jface.viewers.TreeViewer.getRawChildren(TreeViewer.java:353)
+	at org.eclipse.jface.viewers.StructuredViewer.getFilteredChildren(StructuredViewer.java:905)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getSortedChildren(AbstractTreeViewer.java:617)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$1.run(AbstractTreeViewer.java:813)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:791)
+	at org.eclipse.jface.viewers.TreeViewer.createChildren(TreeViewer.java:611)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:762)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.handleTreeExpand(AbstractTreeViewer.java:1495)
+	at org.eclipse.jface.viewers.TreeViewer.handleTreeExpand(TreeViewer.java:903)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$4.treeExpanded(AbstractTreeViewer.java:1507)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:132)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Tree.wmNotifyChild(Tree.java:7633)
+	at org.eclipse.swt.widgets.Control.wmNotify(Control.java:5618)
+	at org.eclipse.swt.widgets.Composite.wmNotify(Composite.java:1935)
+	at org.eclipse.swt.widgets.Control.WM_NOTIFY(Control.java:5169)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4666)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProc(OS.java:2443)
+	at org.eclipse.swt.widgets.Tree.callWindowProc(Tree.java:1553)
+	at org.eclipse.swt.widgets.Tree.WM_LBUTTONDOWN(Tree.java:6501)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4646)
+	at org.eclipse.swt.widgets.Tree.windowProc(Tree.java:6024)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY org.eclipse.ui.navigator 4 2 2015-03-25 02:45:04.329
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.navigator".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jpt.common.ui.internal.jface.ItemTreeStateProviderManager.getChildren(ItemTreeStateProviderManager.java:74)
+	at org.eclipse.jpt.common.ui.internal.navigator.NavigatorContentProvider.getChildren(NavigatorContentProvider.java:109)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:96)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:275)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:94)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider$1.run(NavigatorContentServiceContentProvider.java:152)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.internalGetChildren(NavigatorContentServiceContentProvider.java:139)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.getChildren(NavigatorContentServiceContentProvider.java:125)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getRawChildren(AbstractTreeViewer.java:1365)
+	at org.eclipse.jface.viewers.TreeViewer.getRawChildren(TreeViewer.java:353)
+	at org.eclipse.jface.viewers.StructuredViewer.getFilteredChildren(StructuredViewer.java:905)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getSortedChildren(AbstractTreeViewer.java:617)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$1.run(AbstractTreeViewer.java:813)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:791)
+	at org.eclipse.jface.viewers.TreeViewer.createChildren(TreeViewer.java:611)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:762)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.handleTreeExpand(AbstractTreeViewer.java:1495)
+	at org.eclipse.jface.viewers.TreeViewer.handleTreeExpand(TreeViewer.java:903)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$4.treeExpanded(AbstractTreeViewer.java:1507)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:132)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Tree.wmNotifyChild(Tree.java:7633)
+	at org.eclipse.swt.widgets.Control.wmNotify(Control.java:5618)
+	at org.eclipse.swt.widgets.Composite.wmNotify(Composite.java:1935)
+	at org.eclipse.swt.widgets.Control.WM_NOTIFY(Control.java:5169)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4666)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProc(OS.java:2443)
+	at org.eclipse.swt.widgets.Tree.callWindowProc(Tree.java:1553)
+	at org.eclipse.swt.widgets.Tree.WM_LBUTTONDOWN(Tree.java:6501)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4646)
+	at org.eclipse.swt.widgets.Tree.windowProc(Tree.java:6024)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY org.eclipse.ui.navigator 4 0 2015-03-25 02:45:04.334
+!MESSAGE An exception occurred invoking extension: org.eclipse.jpt.jpa.ui.jpaNavigatorContent for object org.jboss.tools.jsf.model.pv.JSFProjectConfiguration@6cdd63fb
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jpt.common.ui.internal.jface.ItemTreeStateProviderManager.getChildren(ItemTreeStateProviderManager.java:74)
+	at org.eclipse.jpt.common.ui.internal.navigator.NavigatorContentProvider.getChildren(NavigatorContentProvider.java:109)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:96)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:275)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:94)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider$1.run(NavigatorContentServiceContentProvider.java:152)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.internalGetChildren(NavigatorContentServiceContentProvider.java:139)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.getChildren(NavigatorContentServiceContentProvider.java:125)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getRawChildren(AbstractTreeViewer.java:1365)
+	at org.eclipse.jface.viewers.TreeViewer.getRawChildren(TreeViewer.java:353)
+	at org.eclipse.jface.viewers.StructuredViewer.getFilteredChildren(StructuredViewer.java:905)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getSortedChildren(AbstractTreeViewer.java:617)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$1.run(AbstractTreeViewer.java:813)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:791)
+	at org.eclipse.jface.viewers.TreeViewer.createChildren(TreeViewer.java:611)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:762)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.handleTreeExpand(AbstractTreeViewer.java:1495)
+	at org.eclipse.jface.viewers.TreeViewer.handleTreeExpand(TreeViewer.java:903)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$4.treeExpanded(AbstractTreeViewer.java:1507)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:132)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Tree.wmNotifyChild(Tree.java:7633)
+	at org.eclipse.swt.widgets.Control.wmNotify(Control.java:5618)
+	at org.eclipse.swt.widgets.Composite.wmNotify(Composite.java:1935)
+	at org.eclipse.swt.widgets.Control.WM_NOTIFY(Control.java:5169)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4666)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProc(OS.java:2443)
+	at org.eclipse.swt.widgets.Tree.callWindowProc(Tree.java:1553)
+	at org.eclipse.swt.widgets.Tree.WM_LBUTTONDOWN(Tree.java:6501)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4646)
+	at org.eclipse.swt.widgets.Tree.windowProc(Tree.java:6024)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY org.eclipse.ui.navigator 4 2 2015-03-25 02:45:04.905
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.navigator".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jpt.common.ui.internal.jface.ItemTreeStateProviderManager.getChildren(ItemTreeStateProviderManager.java:74)
+	at org.eclipse.jpt.common.ui.internal.navigator.NavigatorContentProvider.getChildren(NavigatorContentProvider.java:109)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:96)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:275)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:94)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider$1.run(NavigatorContentServiceContentProvider.java:152)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.internalGetChildren(NavigatorContentServiceContentProvider.java:139)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.getChildren(NavigatorContentServiceContentProvider.java:125)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getRawChildren(AbstractTreeViewer.java:1365)
+	at org.eclipse.jface.viewers.TreeViewer.getRawChildren(TreeViewer.java:353)
+	at org.eclipse.jface.viewers.StructuredViewer.getFilteredChildren(StructuredViewer.java:905)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getSortedChildren(AbstractTreeViewer.java:617)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$1.run(AbstractTreeViewer.java:813)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:791)
+	at org.eclipse.jface.viewers.TreeViewer.createChildren(TreeViewer.java:611)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:762)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.handleTreeExpand(AbstractTreeViewer.java:1495)
+	at org.eclipse.jface.viewers.TreeViewer.handleTreeExpand(TreeViewer.java:903)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$4.treeExpanded(AbstractTreeViewer.java:1507)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:132)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Tree.wmNotifyChild(Tree.java:7633)
+	at org.eclipse.swt.widgets.Control.wmNotify(Control.java:5618)
+	at org.eclipse.swt.widgets.Composite.wmNotify(Composite.java:1935)
+	at org.eclipse.swt.widgets.Control.WM_NOTIFY(Control.java:5169)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4666)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProc(OS.java:2443)
+	at org.eclipse.swt.widgets.Tree.callWindowProc(Tree.java:1553)
+	at org.eclipse.swt.widgets.Tree.WM_LBUTTONDOWN(Tree.java:6501)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4646)
+	at org.eclipse.swt.widgets.Tree.windowProc(Tree.java:6024)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY org.eclipse.ui.navigator 4 0 2015-03-25 02:45:04.908
+!MESSAGE An exception occurred invoking extension: org.eclipse.jpt.jpa.ui.jpaNavigatorContent for object org.jboss.tools.jsf.model.pv.JSFProjectResourceBundles@5f6ea138
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jpt.common.ui.internal.jface.ItemTreeStateProviderManager.getChildren(ItemTreeStateProviderManager.java:74)
+	at org.eclipse.jpt.common.ui.internal.navigator.NavigatorContentProvider.getChildren(NavigatorContentProvider.java:109)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:96)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:275)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:94)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider$1.run(NavigatorContentServiceContentProvider.java:152)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.internalGetChildren(NavigatorContentServiceContentProvider.java:139)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.getChildren(NavigatorContentServiceContentProvider.java:125)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getRawChildren(AbstractTreeViewer.java:1365)
+	at org.eclipse.jface.viewers.TreeViewer.getRawChildren(TreeViewer.java:353)
+	at org.eclipse.jface.viewers.StructuredViewer.getFilteredChildren(StructuredViewer.java:905)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getSortedChildren(AbstractTreeViewer.java:617)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$1.run(AbstractTreeViewer.java:813)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:791)
+	at org.eclipse.jface.viewers.TreeViewer.createChildren(TreeViewer.java:611)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:762)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.handleTreeExpand(AbstractTreeViewer.java:1495)
+	at org.eclipse.jface.viewers.TreeViewer.handleTreeExpand(TreeViewer.java:903)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$4.treeExpanded(AbstractTreeViewer.java:1507)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:132)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Tree.wmNotifyChild(Tree.java:7633)
+	at org.eclipse.swt.widgets.Control.wmNotify(Control.java:5618)
+	at org.eclipse.swt.widgets.Composite.wmNotify(Composite.java:1935)
+	at org.eclipse.swt.widgets.Control.WM_NOTIFY(Control.java:5169)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4666)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProc(OS.java:2443)
+	at org.eclipse.swt.widgets.Tree.callWindowProc(Tree.java:1553)
+	at org.eclipse.swt.widgets.Tree.WM_LBUTTONDOWN(Tree.java:6501)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4646)
+	at org.eclipse.swt.widgets.Tree.windowProc(Tree.java:6024)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY org.eclipse.ui.navigator 4 2 2015-03-25 02:45:05.736
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.navigator".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jpt.common.ui.internal.jface.ItemTreeStateProviderManager.getChildren(ItemTreeStateProviderManager.java:74)
+	at org.eclipse.jpt.common.ui.internal.navigator.NavigatorContentProvider.getChildren(NavigatorContentProvider.java:109)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:96)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:275)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:94)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider$1.run(NavigatorContentServiceContentProvider.java:152)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.internalGetChildren(NavigatorContentServiceContentProvider.java:139)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.getChildren(NavigatorContentServiceContentProvider.java:125)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getRawChildren(AbstractTreeViewer.java:1365)
+	at org.eclipse.jface.viewers.TreeViewer.getRawChildren(TreeViewer.java:353)
+	at org.eclipse.jface.viewers.StructuredViewer.getFilteredChildren(StructuredViewer.java:905)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getSortedChildren(AbstractTreeViewer.java:617)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$1.run(AbstractTreeViewer.java:813)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:791)
+	at org.eclipse.jface.viewers.TreeViewer.createChildren(TreeViewer.java:611)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:762)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.handleTreeExpand(AbstractTreeViewer.java:1495)
+	at org.eclipse.jface.viewers.TreeViewer.handleTreeExpand(TreeViewer.java:903)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$4.treeExpanded(AbstractTreeViewer.java:1507)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:132)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Tree.wmNotifyChild(Tree.java:7633)
+	at org.eclipse.swt.widgets.Control.wmNotify(Control.java:5618)
+	at org.eclipse.swt.widgets.Composite.wmNotify(Composite.java:1935)
+	at org.eclipse.swt.widgets.Control.WM_NOTIFY(Control.java:5169)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4666)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProc(OS.java:2443)
+	at org.eclipse.swt.widgets.Tree.callWindowProc(Tree.java:1553)
+	at org.eclipse.swt.widgets.Tree.WM_LBUTTONDOWN(Tree.java:6501)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4646)
+	at org.eclipse.swt.widgets.Tree.windowProc(Tree.java:6024)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY org.eclipse.ui.navigator 4 0 2015-03-25 02:45:05.739
+!MESSAGE An exception occurred invoking extension: org.eclipse.jpt.jpa.ui.jpaNavigatorContent for object org.jboss.tools.jsf.model.pv.JSFProjectTagLibs@631720c6
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jpt.common.ui.internal.jface.ItemTreeStateProviderManager.getChildren(ItemTreeStateProviderManager.java:74)
+	at org.eclipse.jpt.common.ui.internal.navigator.NavigatorContentProvider.getChildren(NavigatorContentProvider.java:109)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:96)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:275)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:94)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider$1.run(NavigatorContentServiceContentProvider.java:152)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.internalGetChildren(NavigatorContentServiceContentProvider.java:139)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.getChildren(NavigatorContentServiceContentProvider.java:125)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getRawChildren(AbstractTreeViewer.java:1365)
+	at org.eclipse.jface.viewers.TreeViewer.getRawChildren(TreeViewer.java:353)
+	at org.eclipse.jface.viewers.StructuredViewer.getFilteredChildren(StructuredViewer.java:905)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getSortedChildren(AbstractTreeViewer.java:617)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$1.run(AbstractTreeViewer.java:813)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:791)
+	at org.eclipse.jface.viewers.TreeViewer.createChildren(TreeViewer.java:611)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:762)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.handleTreeExpand(AbstractTreeViewer.java:1495)
+	at org.eclipse.jface.viewers.TreeViewer.handleTreeExpand(TreeViewer.java:903)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$4.treeExpanded(AbstractTreeViewer.java:1507)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:132)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Tree.wmNotifyChild(Tree.java:7633)
+	at org.eclipse.swt.widgets.Control.wmNotify(Control.java:5618)
+	at org.eclipse.swt.widgets.Composite.wmNotify(Composite.java:1935)
+	at org.eclipse.swt.widgets.Control.WM_NOTIFY(Control.java:5169)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4666)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProc(OS.java:2443)
+	at org.eclipse.swt.widgets.Tree.callWindowProc(Tree.java:1553)
+	at org.eclipse.swt.widgets.Tree.WM_LBUTTONDOWN(Tree.java:6501)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4646)
+	at org.eclipse.swt.widgets.Tree.windowProc(Tree.java:6024)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)

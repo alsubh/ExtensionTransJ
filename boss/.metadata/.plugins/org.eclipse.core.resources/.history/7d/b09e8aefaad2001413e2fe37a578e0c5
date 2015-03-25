@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datasources>
+  <local-tx-datasource>
+  <jndi-name>DefaultDS</jndi-name>
+  <connection-url>jdbc:sqlserver://localhost:1433;DatabaseName=pubs</connection-url>
+  <driver-class>com.microsoft.sqlserver.jdbc.SQLServerDriver</driver-class>
+  <user-name>sa</user-name>
+  <password>jboss</password>
+  <check-valid-connection-sql>SELECT 1 FROM sysobjects</check-valid-connection-sql>
+  <metadata>
+	  <type-mapping>MS SQLSERVER2000</type-mapping>
+  </metadata>
+  </local-tx-datasource>
+</datasources> 
