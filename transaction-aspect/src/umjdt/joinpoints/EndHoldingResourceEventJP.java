@@ -27,23 +27,23 @@ public class EndHoldingResourceEventJP {
 	private JoinPoint endResourceJP;
 
 	public EndHoldingResourceEventJP() {
-		timestamp = new Timestamp().currentTimeStamp();
+		timestamp = new Timestamp() ;
 	}
 
 	public EndHoldingResourceEventJP(Xid _xid) {
-		timestamp = new Timestamp().currentTimeStamp();
+		timestamp = new Timestamp() ;
 		this.setXid(_xid);
 	}
 
 	public EndHoldingResourceEventJP(Xid _xid, XAResource _xaresource)
 			throws XAException {
-		timestamp = new Timestamp().currentTimeStamp();
+		timestamp = new Timestamp() ;
 		this.setXid(_xid);
 		this.resource = new Resource(_xaresource, _xid);
 	}
 
 	public EndHoldingResourceEventJP(Transaction _transaction) {
-		timestamp = new Timestamp().currentTimeStamp();
+		timestamp = new Timestamp() ;
 		this.setTransaction(_transaction);
 	}
 

@@ -1,7 +1,7 @@
 package umjdt.joinpoints;
 
 import java.util.Timer;
-import umjdt.concepts.TID;
+import umjdt.concepts.Xid;
 import umjdt.util.Timestamp;
 
 public class EventJP 

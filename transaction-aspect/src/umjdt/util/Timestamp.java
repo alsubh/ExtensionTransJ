@@ -8,11 +8,11 @@ public class Timestamp implements Comparable<Timestamp> {
 	private Date localTime;
 	private long deltaTime = 0;
 	private long timestampPluDelta;
-	Calendar calendar = Calendar.getInstance();
-	Date now = calendar.getTime();
+	private Calendar calendar = Calendar.getInstance();
+	private Date now = calendar.getTime();
 
 	public Timestamp() {
-		localTime = new Date();
+		localTime = calendar.getTime();
 		deltaTime = Constants.TimeToWait;
 		setTimestampPluDelta(getTimestampPluDelta());
 	}
@@ -55,11 +55,5 @@ public class Timestamp implements Comparable<Timestamp> {
 			return 1;
 		else
 			return -1;
-	}
-
-	public Timestamp currentTimeStamp() {
-		// a java current time (now) instance
-		Timestamp currentTimestamp = new Timestamp(now.getTime());
-		return currentTimestamp;
 	}
 }

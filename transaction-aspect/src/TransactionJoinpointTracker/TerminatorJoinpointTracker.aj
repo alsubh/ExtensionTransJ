@@ -23,7 +23,7 @@ import com.arjuna.ats.internal.jta.xa.TxInfo;
 
 import umjdt.concepts.Resource;
 import umjdt.concepts.SubTransaction;
-import umjdt.concepts.TID;
+import umjdt.concepts.Xid;
 import umjdt.concepts.Transaction;
 import umjdt.joinpoints.AbortEventJP;
 import umjdt.joinpoints.CommitEventJP;
@@ -173,8 +173,8 @@ public abstract aspect TerminatorJoinpointTracker extends TransactionTracker
 		{
 			for(Uid _uid : TransactionImple.getTransactions().keySet())
 			{
-				SubTransaction sub= new SubTransaction(new TID(xid, _uid));
-				TID tid= sub.getTid();
+				SubTransaction sub= new SubTransaction(new Xid(xid, _uid));
+				Xid tid= sub.getTid();
 				sub = (SubTransaction)TransactionImple.getTransactions().get(_uid);
 				sub.setStatus(sub.getStatus());
 				sub.setTimeout(sub.getTimeout());	
@@ -197,7 +197,7 @@ public abstract aspect TerminatorJoinpointTracker extends TransactionTracker
 		commiteventJp.setStatus(Status.STATUS_COMMITTING);
 		commiteventJp.setTimeout(timeout);
 		commiteventJp.setResources(resourceList);
-		commiteventJp.setTid(new TID(xid));
+		commiteventJp.setTid(new Xid(xid));
 		commiteventJp.setTransactions(transactions);
 		commiteventJp.setTransaction(transaction);
 		if((_target !=null) && (_target.getClass().equals(TransactionManager.class)))
@@ -216,7 +216,7 @@ public abstract aspect TerminatorJoinpointTracker extends TransactionTracker
 		aborteventJp.setStatus(Status.STATUS_ROLLING_BACK);
 		aborteventJp.setTimeout(timeout);
 		aborteventJp.setResources(resourceList);
-		aborteventJp.setTid(new TID(xid));
+		aborteventJp.setTid(new Xid(xid));
 		aborteventJp.setTransactions(transactions);
 		aborteventJp.setTransaction((umjdt.concepts.Transaction) transaction);
 		if((_target !=null) && (_target.getClass().equals(TransactionManager.class)))

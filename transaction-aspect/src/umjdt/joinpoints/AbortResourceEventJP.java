@@ -25,17 +25,17 @@ public class AbortResourceEventJP {
 	private final Timestamp timestamp;
 
 	public AbortResourceEventJP() {
-		timestamp = new Timestamp().currentTimeStamp();
+		timestamp = new Timestamp() ;
 	}
 
 	public AbortResourceEventJP(Xid _xid) {
-		timestamp = new Timestamp().currentTimeStamp();
+		timestamp = new Timestamp() ;
 		this.setXid(_xid);
 	}
 
 	public AbortResourceEventJP(Xid _xid, XAResource _resource)
 			throws XAException {
-		timestamp = new Timestamp().currentTimeStamp();
+		timestamp = new Timestamp() ;
 		this.setXid(_xid);
 		this.setResource(new Resource(_resource, _xid));
 	}

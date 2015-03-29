@@ -9,7 +9,7 @@ import javax.transaction.UserTransaction;
 
 import org.aspectj.lang.JoinPoint;
 
-import umjdt.concepts.TID;
+import umjdt.concepts.Xid;
 import umjdt.concepts.Transaction;
 import umjdt.util.BackgroundThread;
 import umjdt.util.Constants;
@@ -22,7 +22,7 @@ public class BeginEventJP extends TransJP {
 
 	private Timestamp beginTime;
 	private int timeout;
-	private TID tid;
+	private Xid tid;
 	private JoinPoint beginJP;
 
 	public BeginEventJP() {
@@ -37,7 +37,7 @@ public class BeginEventJP extends TransJP {
 		startThread();
 	}
 
-	public BeginEventJP(TID _tid) {
+	public BeginEventJP(Xid _tid) {
 		super(_tid);
 		startThread();
 	}
@@ -52,7 +52,7 @@ public class BeginEventJP extends TransJP {
 		startThread();
 	}
 
-	public BeginEventJP(TID _tid, Transaction _transaction,
+	public BeginEventJP(Xid _tid, Transaction _transaction,
 			TransactionManager _manager, UserTransaction _user,
 			BackgroundThread _thread, int _timeout) {
 		super();
@@ -61,7 +61,7 @@ public class BeginEventJP extends TransJP {
 		this.manager = _manager;
 		this.user = _user;
 		this.setUser(_user);
-		this.beginTime = new Timestamp().currentTimeStamp();
+		this.beginTime = new Timestamp() ;
 		super.setBeginDemarcate(this);
 		super.setThread(_thread);
 		startThread();
@@ -111,13 +111,11 @@ public class BeginEventJP extends TransJP {
 		this.timeout = timeout;
 	}
 
-	@Override
-	public TID getTid() {
+	public Xid getTid() {
 		return tid;
 	}
 
-	@Override
-	public void setTid(TID tid) {
+	public void setTid(Xid tid) {
 		this.tid = tid;
 	}
 

@@ -2,7 +2,7 @@ package umjdt.joinpoints.transaction;
 
 import javax.transaction.SystemException;
 
-import umjdt.concepts.TID;
+import umjdt.concepts.Xid;
 import umjdt.concepts.Transaction;
 import umjdt.joinpoints.AbortEventJP;
 import umjdt.joinpoints.AfterCompletionJP;
@@ -25,7 +25,7 @@ public class OuterTransactionJP extends TransJP {
 		super.setTransaction(getTransaction());
 	}
 
-	public OuterTransactionJP(TID _tid) {
+	public OuterTransactionJP(Xid _tid) {
 		super();
 		super.setTid(_tid);
 	}
@@ -34,7 +34,7 @@ public class OuterTransactionJP extends TransJP {
 		super(_transaction);
 	}
 
-	public OuterTransactionJP(TID _tid, Transaction _transaction,
+	public OuterTransactionJP(Xid _tid, Transaction _transaction,
 			BackgroundThread _thread, BeginEventJP _beginJp,
 			CommitEventJP _commitJp) {
 		super.setTransaction(_transaction);
@@ -46,7 +46,7 @@ public class OuterTransactionJP extends TransJP {
 		super.setEndDemarcate(_commitJp);
 	}
 
-	public OuterTransactionJP(TID _tid, Transaction _transaction,
+	public OuterTransactionJP(Xid _tid, Transaction _transaction,
 			BackgroundThread _thread, BeginEventJP _beginJp,
 			AbortEventJP _abortJp) {
 		super.setTransaction(_transaction);

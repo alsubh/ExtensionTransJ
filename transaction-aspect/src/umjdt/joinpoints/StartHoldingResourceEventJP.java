@@ -26,23 +26,23 @@ public class StartHoldingResourceEventJP {
 	private JoinPoint startResourceJP;
 
 	public StartHoldingResourceEventJP() {
-		setTimestamp(new Timestamp().currentTimeStamp());
+		setTimestamp(new Timestamp());
 	}
 
 	public StartHoldingResourceEventJP(Xid _xid) {
-		setTimestamp(new Timestamp().currentTimeStamp());
+		setTimestamp(new Timestamp());
 		this.setXid(_xid);
 	}
 
 	public StartHoldingResourceEventJP(Xid _xid, XAResource _xaresource)
 			throws XAException {
-		setTimestamp(new Timestamp().currentTimeStamp());
+		setTimestamp(new Timestamp());
 		this.setXid(_xid);
 		this.resource = new Resource(_xaresource, _xid);
 	}
 
 	public StartHoldingResourceEventJP(Transaction _transaction) {
-		setTimestamp(new Timestamp().currentTimeStamp());
+		setTimestamp(new Timestamp());
 		this.transaction = _transaction;
 	}
 

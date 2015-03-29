@@ -6,7 +6,7 @@ public class Lock implements umjdt.util.Lock {
 
 	private static final long serialVersionUID = 1L;
 
-	private TID tid;
+	private Xid tid;
 	private Thread owner;
 	private boolean reenterant;
 	// number of transactions
@@ -24,12 +24,12 @@ public class Lock implements umjdt.util.Lock {
 		semaphore();
 	}
 
-	public Lock(TID _tid) {
+	public Lock(Xid _tid) {
 		this.tid = _tid;
 		semaphore();
 	}
 
-	public Lock(TID _tid, Thread _owner) {
+	public Lock(Xid _tid, Thread _owner) {
 		this.setTid(_tid);
 		this.owner = _owner;
 		semaphore();
@@ -123,11 +123,11 @@ public class Lock implements umjdt.util.Lock {
 		this.reenterant = reenterant;
 	}
 
-	public TID getTid() {
+	public Xid getTid() {
 		return tid;
 	}
 
-	public void setTid(TID tid) {
+	public void setTid(Xid tid) {
 		this.tid = tid;
 	}
 }

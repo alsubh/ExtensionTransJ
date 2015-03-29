@@ -10,7 +10,7 @@ import org.aspectj.lang.JoinPoint;
 
 import umjdt.concepts.Resource;
 import umjdt.concepts.SubTransaction;
-import umjdt.concepts.TID;
+import umjdt.concepts.Xid;
 import umjdt.concepts.Transaction;
 import umjdt.util.BackgroundThread;
 import umjdt.util.Timestamp;
@@ -28,9 +28,9 @@ public class CommitEventJP extends EndEventJP {
 		}
 	}
 
-	public CommitEventJP(TID _tid) {
+	public CommitEventJP(Xid _tid) {
 		super.setTid(_tid);
-		this.commitTimestamp = new Timestamp().currentTimeStamp();
+		this.commitTimestamp = new Timestamp() ;
 		super.setEndDemarcate(this);
 		if (super.getThread() != null) {
 			super.getThread().stop();
@@ -40,14 +40,14 @@ public class CommitEventJP extends EndEventJP {
 	public CommitEventJP(Transaction _transaction) {
 		super();
 		super.setTransaction(_transaction);
-		this.commitTimestamp = new Timestamp().currentTimeStamp();
+		this.commitTimestamp = new Timestamp() ;
 		super.setEndDemarcate(this);
 		if (super.getThread() != null) {
 			super.getThread().stop();
 		}
 	}
 
-	public CommitEventJP(TID _tid, umjdt.concepts.Transaction _transaction,
+	public CommitEventJP(Xid _tid, umjdt.concepts.Transaction _transaction,
 			TransactionManager _manager, UserTransaction _user, int _timeout,
 			int _status, List<SubTransaction> transactionlist,
 			List<Resource> resources, Timestamp _endTime,
@@ -55,7 +55,7 @@ public class CommitEventJP extends EndEventJP {
 		super(_tid, _transaction, _manager, _user, _timeout, _status,
 				transactionlist, resources, _endTime, _thread);
 
-		this.commitTimestamp = new Timestamp().currentTimeStamp();
+		this.commitTimestamp = new Timestamp() ;
 		super.setStatus(_status);
 		super.setEndDemarcate(this);
 		if (super.getThread() != null) {

@@ -2,15 +2,15 @@ package umjdt.util;
 
 import java.util.Hashtable;
 
-import umjdt.concepts.TID;
+import umjdt.concepts.Xid;
 import context.Context;
 
 public class TransactionJPRegistry
 {
 	
-	private static Hashtable<TID, Context> contextRegistry = new Hashtable<>();
+	private static Hashtable<Xid, Context> contextRegistry = new Hashtable<>();
 	
-	public Context lookup(TID cid)
+	public Context lookup(Xid cid)
 	{
 		Context result= new Context();
 		return result;

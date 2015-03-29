@@ -6,14 +6,14 @@ import test.operationNum;
 import umjdt.concepts.Lock;
 import umjdt.concepts.Operation;
 import umjdt.concepts.Resource;
-import umjdt.concepts.TID;
+import umjdt.concepts.Xid;
 import umjdt.joinpoints.TransJP;
 import umjdt.util.AccessType;
 import umjdt.util.Timestamp;
 
 public class OperationJP extends TransJP
 {
-	private TID tid;
+	private Xid tid;
 	private Operation operation;
 	private Object [] arguments;
 	private AccessType accessType;
@@ -39,28 +39,28 @@ public class OperationJP extends TransJP
 		setThread(_transjp.getThread());
 		setStatus(_transjp.getStatus());
 		setTimeout(_transjp.getTimeout());
-		this.timestamp = new Timestamp().currentTimeStamp();
+		this.timestamp = new Timestamp();
 		setTimestamp(timestamp);
 	}
 	
-	public OperationJP(TID _tid, Operation _operation)
+	public OperationJP(Xid _tid, Operation _operation)
 	{
 		super(_tid);
 		this.setOperation(_operation);
-		this.timestamp = new Timestamp().currentTimeStamp();
+		this.timestamp = new Timestamp();
 	}
 	
-	public OperationJP(TID tid, Operation operation, Object[] arguments, AccessType accessType) 
+	public OperationJP(Xid tid, Operation operation, Object[] arguments, AccessType accessType) 
 	{
 		super();
 		this.tid = tid;
 		this.operation = operation;
 		this.arguments = arguments;
 		this.accessType = accessType;
-		this.timestamp = new Timestamp().currentTimeStamp();
+		this.timestamp = new Timestamp();
 	}
 
-	public OperationJP(TID tid, Operation operation, Object[] arguments, AccessType accessType, Resource resource) 
+	public OperationJP(Xid tid, Operation operation, Object[] arguments, AccessType accessType, Resource resource) 
 	{
 		super();
 		this.tid = tid;
@@ -68,14 +68,14 @@ public class OperationJP extends TransJP
 		this.arguments = arguments;
 		this.accessType = accessType;
 		this.resource = resource;
-		this.timestamp = new Timestamp().currentTimeStamp();
+		this.timestamp = new Timestamp();
 	}
 	
-	public TID getTid() {
+	public Xid getTid() {
 		return tid;
 	}
 
-	public void setTid(TID tid) {
+	public void setTid(Xid tid) {
 		this.tid = tid;
 	}
 

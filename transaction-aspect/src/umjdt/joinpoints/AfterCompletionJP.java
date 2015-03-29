@@ -7,7 +7,7 @@ import java.util.Timer;
 
 import org.aspectj.lang.JoinPoint;
 
-import umjdt.concepts.TID;
+import umjdt.concepts.Xid;
 import umjdt.concepts.Transaction;
 import umjdt.util.Timestamp;
 
@@ -17,7 +17,7 @@ import umjdt.util.Timestamp;
  */
 public class AfterCompletionJP {
 
-	private TID tid;
+	private Xid tid;
 	private Transaction transaction;
 	private JoinPoint afterCompletionJp;
 	private int status;
@@ -25,24 +25,24 @@ public class AfterCompletionJP {
 	private Timer timer;
 
 	public AfterCompletionJP() {
-		timestamp = new Timestamp().currentTimeStamp();
+		timestamp = new Timestamp() ;
 	}
 
-	public AfterCompletionJP(TID _tid) {
+	public AfterCompletionJP(Xid _tid) {
 		this.setTid(_tid);
-		timestamp = new Timestamp().currentTimeStamp();
+		timestamp = new Timestamp() ;
 	}
 
 	public AfterCompletionJP(Transaction _transaction) {
 		this.setTransaction(_transaction);
-		timestamp = new Timestamp().currentTimeStamp();
+		timestamp = new Timestamp() ;
 	}
 
-	public TID getTid() {
+	public Xid getTid() {
 		return tid;
 	}
 
-	public void setTid(TID tid) {
+	public void setTid(Xid tid) {
 		this.tid = tid;
 	}
 

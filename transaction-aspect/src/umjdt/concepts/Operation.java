@@ -24,38 +24,38 @@ public class Operation implements Cloneable, Serializable{
 	{
 		this.setOperationNr(IdNumber.Create());
 		setThread(Thread.currentThread());
-		setTimestamp(new Timestamp().currentTimeStamp());
+		setTimestamp(new Timestamp());
 	}
 	
-	public Operation(TID _transactionId)
+	public Operation(Xid _transactionId)
 	{
 		setOperationNr(IdNumber.Create(_transactionId));
 		setThread(Thread.currentThread());
-		setTimestamp(new Timestamp().currentTimeStamp());
+		setTimestamp(new Timestamp());
 	}
 	
-	public Operation(TID _transactionId, Method _method)
+	public Operation(Xid _transactionId, Method _method)
 	{
 		setOperationNr(IdNumber.Create(_transactionId));
 		setMethod(_method);
 		setThread(Thread.currentThread());
-		setTimestamp(new Timestamp().currentTimeStamp());
+		setTimestamp(new Timestamp());
 	}
 		
-	public Operation(TID _transactionId, short _opNmr)
+	public Operation(Xid _transactionId, short _opNmr)
 	{
 		setOperationNr(IdNumber.Create(_transactionId, _opNmr));
 		setThread(Thread.currentThread());
-		setTimestamp(new Timestamp().currentTimeStamp());
+		setTimestamp(new Timestamp());
 	}
 
-	public Operation(TID _transactionId, String _name, AccessType _type)
+	public Operation(Xid _transactionId, String _name, AccessType _type)
 	{
 		setOperationNr(IdNumber.Create(_transactionId));
 		this.setName(_name);
 		this.setType(_type);
 		setThread(Thread.currentThread());
-		setTimestamp(new Timestamp().currentTimeStamp());
+		setTimestamp(new Timestamp());
 	}
 	
 	public String getName(){

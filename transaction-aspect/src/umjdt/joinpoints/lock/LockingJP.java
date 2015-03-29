@@ -5,7 +5,7 @@ import javax.transaction.SystemException;
 import umjdt.concepts.Lock;
 import umjdt.concepts.Operation;
 import umjdt.concepts.Resource;
-import umjdt.concepts.TID;
+import umjdt.concepts.Xid;
 import umjdt.concepts.Transaction;
 import umjdt.joinpoints.EndHoldingResourceEventJP;
 import umjdt.joinpoints.StartHoldingResourceEventJP;
@@ -13,7 +13,7 @@ import umjdt.joinpoints.TransJP;
 import umjdt.util.AccessType;
 
 public class LockingJP extends TransJP {
-	private TID tid;
+	private Xid tid;
 	private Lock lock;
 	private Resource resource;
 	private Operation operation;
@@ -21,7 +21,7 @@ public class LockingJP extends TransJP {
 	private StartHoldingResourceEventJP startHoldingResourceEventJP;
 	private EndHoldingResourceEventJP endHoldingResourceEventJP;
 
-	public LockingJP(TID _tid) {
+	public LockingJP(Xid _tid) {
 		super(_tid);
 	}
 
@@ -33,7 +33,7 @@ public class LockingJP extends TransJP {
 		super(_transjp);
 	}
 
-	public LockingJP(Lock _lock, TID _tid, Resource _resource,
+	public LockingJP(Lock _lock, Xid _tid, Resource _resource,
 			AccessType _lockType) {
 		super();
 		this.lock = _lock;
@@ -42,7 +42,7 @@ public class LockingJP extends TransJP {
 		this.lockType = _lockType;
 	}
 
-	public LockingJP(TID _tid, AccessType _lockType,
+	public LockingJP(Xid _tid, AccessType _lockType,
 			StartHoldingResourceEventJP _startHoldingResourceEventJP,
 			EndHoldingResourceEventJP _endHoldingResourceEventJP) {
 		super();
@@ -61,12 +61,12 @@ public class LockingJP extends TransJP {
 	}
 
 	@Override
-	public TID getTid() {
+	public Xid getTid() {
 		return tid;
 	}
 
 	@Override
-	public void setTid(TID tid) {
+	public void setTid(Xid tid) {
 		this.tid = tid;
 	}
 

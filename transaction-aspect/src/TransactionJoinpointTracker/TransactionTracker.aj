@@ -6,12 +6,12 @@ package TransactionJoinpointTracker;
 import org.apache.log4j.Logger;
 
 import com.arjuna.ats.arjuna.common.Uid;
+import com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionImple;
 
 import javax.transaction.TransactionManager;
 import javax.transaction.xa.XAResource;
 import javax.transaction.xa.Xid;
 
-import umjdt.concepts.TID;
 import umjdt.concepts.Transaction;
 import umjdt.joinpoints.AbortEventJP;
 import umjdt.joinpoints.BeginEventJP;
@@ -22,6 +22,8 @@ import umjdt.joinpoints.EnlistResourceEventJP;
 import umjdt.joinpoints.lock.LockingJP;
 import umjdt.joinpoints.transaction.InnerTransactionJP;
 import umjdt.joinpoints.transaction.OuterTransactionJP;
+import utilities.ConvertTime;
+
 import javax.transaction.UserTransaction;
 import javax.transaction.TransactionManager;;
 
@@ -34,7 +36,7 @@ public abstract aspect TransactionTracker
 {
 	private Logger logger = Logger.getLogger(TransactionTracker.class);
 	
-	protected Transaction transaction= null;
+	protected TransactionImple transaction= null;
 	protected TransactionManager manager=null;
 	protected UserTransaction user=null;
 	protected Uid transactionUid= null;
@@ -100,7 +102,10 @@ public abstract aspect TransactionTracker
 	 */
     pointcut AfterCompletion (int state): call(* javax..*+.afterCompletion(..)) && target(Transaction) && args(state);
    
-	public void BeginJoinPoint(BeginEventJP _beginJp){}
+	public void BeginJoinPoint(BeginEventJP _beginJp){
+	       System.out.println("_____________ "+ _beginJp.getTid());
+
+	}
     public void CommitJoinPoint(EndEventJP _commitJp){}
     public void AbortJoinPoint(EndEventJP _abortJp){}
     public void LockResourceJoinPoint(EnlistResourceEventJP _enlistResourceJp){}

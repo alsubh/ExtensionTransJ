@@ -26,17 +26,17 @@ public class CommitResourceEventJP {
 	private boolean onePhase;
 
 	public CommitResourceEventJP() {
-		timestamp = new Timestamp().currentTimeStamp();
+		timestamp = new Timestamp() ;
 	}
 
 	public CommitResourceEventJP(Xid _xid) {
-		timestamp = new Timestamp().currentTimeStamp();
+		timestamp = new Timestamp() ;
 		this.xid = _xid;
 	}
 
 	public CommitResourceEventJP(Xid _xid, XAResource _resource)
 			throws XAException {
-		timestamp = new Timestamp().currentTimeStamp();
+		timestamp = new Timestamp() ;
 		this.xid = _xid;
 		this.resource = new Resource(_resource, _xid);
 	}

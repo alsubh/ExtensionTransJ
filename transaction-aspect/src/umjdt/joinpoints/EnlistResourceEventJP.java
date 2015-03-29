@@ -8,7 +8,7 @@ import java.util.Timer;
 import org.aspectj.lang.JoinPoint;
 
 import umjdt.concepts.Resource;
-import umjdt.concepts.TID;
+import umjdt.concepts.Xid;
 import umjdt.concepts.Transaction;
 import umjdt.util.AccessType;
 import umjdt.util.Timestamp;
@@ -22,35 +22,35 @@ public class EnlistResourceEventJP {
 	private Timer timer;
 	private Timestamp enlistResourceTimestamp;
 	private JoinPoint enlistResourceJP;
-	private TID tid;
+	private Xid tid;
 	private Resource resource;
 	private Transaction transaction;
 	private AccessType accessKind;
 	private int state;
 
 	public EnlistResourceEventJP() {
-		enlistResourceTimestamp = new Timestamp().currentTimeStamp();
+		enlistResourceTimestamp = new Timestamp() ;
 	}
 
-	public EnlistResourceEventJP(TID _tid) {
-		enlistResourceTimestamp = new Timestamp().currentTimeStamp();
+	public EnlistResourceEventJP(Xid _tid) {
+		enlistResourceTimestamp = new Timestamp() ;
 		this.tid = _tid;
 	}
 
 	public EnlistResourceEventJP(Transaction _transaction) {
-		enlistResourceTimestamp = new Timestamp().currentTimeStamp();
+		enlistResourceTimestamp = new Timestamp() ;
 		this.setTransaction(_transaction);
 	}
 
-	public EnlistResourceEventJP(TID _tid, Resource _resource) {
-		enlistResourceTimestamp = new Timestamp().currentTimeStamp();
+	public EnlistResourceEventJP(Xid _tid, Resource _resource) {
+		enlistResourceTimestamp = new Timestamp() ;
 		this.setTid(_tid);
 		this.setResource(_resource);
 	}
 
-	public EnlistResourceEventJP(TID _tid, Resource _resource,
+	public EnlistResourceEventJP(Xid _tid, Resource _resource,
 			AccessType lockType) {
-		enlistResourceTimestamp = new Timestamp().currentTimeStamp();
+		enlistResourceTimestamp = new Timestamp() ;
 		this.setTid(_tid);
 		this.setResource(_resource);
 		this.accessKind = lockType;
@@ -80,11 +80,11 @@ public class EnlistResourceEventJP {
 		this.enlistResourceJP = enlistResourceJP;
 	}
 
-	public TID getTid() {
+	public Xid getTid() {
 		return tid;
 	}
 
-	public void setTid(TID tid) {
+	public void setTid(Xid tid) {
 		this.tid = tid;
 	}
 

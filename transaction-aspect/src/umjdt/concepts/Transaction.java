@@ -19,14 +19,14 @@ import umjdt.util.Timestamp;
 import umjdt.util.TransType;
 import umjdt.util.TransactionThread;
 
+import com.arjuna.ats.internal.jta.transaction.arjunacore.BaseTransaction;
 import com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionImple;
 
-public class Transaction extends TransactionImple implements
-		javax.transaction.Transaction, Serializable {
+public class Transaction extends TransactionImple implements javax.transaction.Transaction, Serializable {
 	private static final long serialVersionUID = 1L;
 	Logger log = Logger.getLogger(this.getClass().getName());
 
-	private TID tid;
+	private Xid tid;
 	private int status;
 	private int timeout;
 	private Timestamp timestamp;
@@ -39,7 +39,7 @@ public class Transaction extends TransactionImple implements
 
 	private List<Operation> operations = new ArrayList<Operation>();
 	private HashMap<Xid, Resource> resources;
-	private Hashtable<TID, SubTransaction> _ChildTransactions;
+	private Hashtable<Xid, SubTransaction> _ChildTransactions;
 	private Hashtable<String, Thread> _childThreads;
 
 	public Transaction() {
@@ -48,7 +48,7 @@ public class Transaction extends TransactionImple implements
 	}
 
 	public Transaction(int _timeout) {
-		super(_timeout);
+		super();
 		initialization();
 	}
 
@@ -70,7 +70,7 @@ public class Transaction extends TransactionImple implements
 	private void initialization() {
 		// this.multiOperationMap = HashMultimap.create();
 		this.resources = new HashMap<Xid, Resource>();
-		this._ChildTransactions = new Hashtable<TID, SubTransaction>();
+		this._ChildTransactions = new Hashtable<Xid, SubTransaction>();
 		this._childThreads = new Hashtable<String, Thread>();
 		this.timestamp = new Timestamp(timeout);
 		addThread();
@@ -128,7 +128,7 @@ public class Transaction extends TransactionImple implements
 	 * @return the TID that the transaction's intentions list will be saved
 	 *         under.
 	 */
-	public TID getSavingId() {
+	public Xid getSavingId() {
 		return getTId();
 	}
 
@@ -145,7 +145,7 @@ public class Transaction extends TransactionImple implements
 	 * 
 	 */
 
-	public final TID topLevelActionId() {
+	public final Xid topLevelActionId() {
 		Transaction root = this;
 
 		while (root.parent() != null)
@@ -282,7 +282,7 @@ public class Transaction extends TransactionImple implements
 
 			if (status <= Status.STATUS_ROLLEDBACK) {
 				if (_ChildTransactions == null)
-					_ChildTransactions = new Hashtable<TID, SubTransaction>();
+					_ChildTransactions = new Hashtable<Xid, SubTransaction>();
 				_ChildTransactions.put(trans.getTId(), trans);
 				result = true;
 			}
@@ -292,7 +292,7 @@ public class Transaction extends TransactionImple implements
 		return result;
 	}
 
-	public final boolean isAncestor(TID ancestor) {
+	public final boolean isAncestor(Xid ancestor) {
 		boolean res = false;
 
 		if (getTId().equals(ancestor)) /* actions are their own ancestors */
@@ -317,11 +317,11 @@ public class Transaction extends TransactionImple implements
 		return transactionType;
 	}
 
-	public TID getTId() {
+	public Xid getTId() {
 		return tid;
 	}
 
-	public void setTId(TID _id) {
+	public void setTId(Xid _id) {
 		this.tid = _id;
 	}
 
@@ -368,11 +368,11 @@ public class Transaction extends TransactionImple implements
 		return result;
 	}
 
-	public TID getTid() {
+	public Xid getTid() {
 		return tid;
 	}
 
-	public void setTid(TID tid) {
+	public void setTid(Xid tid) {
 		this.tid = tid;
 	}
 
@@ -404,12 +404,12 @@ public class Transaction extends TransactionImple implements
 		this.user = user;
 	}
 
-	public Hashtable<TID, SubTransaction> get_ChildTransactions() {
+	public Hashtable<Xid, SubTransaction> get_ChildTransactions() {
 		return _ChildTransactions;
 	}
 
 	public void set_ChildTransactions(
-			Hashtable<TID, SubTransaction> _ChildTransactions) {
+			Hashtable<Xid, SubTransaction> _ChildTransactions) {
 		this._ChildTransactions = _ChildTransactions;
 	}
 

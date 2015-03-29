@@ -10,7 +10,9 @@ import javax.transaction.UserTransaction;
 import org.apache.log4j.Logger;
 import org.aspectj.lang.ProceedingJoinPoint;
 
-import umjdt.concepts.TID;
+import com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionImple;
+
+import umjdt.concepts.Xid;
 import umjdt.concepts.Transaction;
 import umjdt.joinpoints.BeginEventJP;
 import umjdt.util.Timestamp;
@@ -30,20 +32,19 @@ public abstract aspect InitiatorJoinpointTracker extends TransactionTracker
 		//No context information
 		beginEventJp = new BeginEventJP();
 		beginEventJp.setBeginJP(thisJoinPoint);
-		beginEventJp.setBeginTime(new Timestamp().currentTimeStamp());
+		beginEventJp.setBeginTime(new Timestamp());
 	}
 	
 	after() throws SystemException: OpenTransaction()
 	{	
 		beginEventJp = new BeginEventJP();
 		beginEventJp.setBeginJP(thisJoinPoint);
-		beginEventJp.setBeginTime(new Timestamp().currentTimeStamp());
+		beginEventJp.setBeginTime(new Timestamp());
 		passContextInfo(beginEventJp, thisJoinPoint.getTarget());
 	}
 
 	private void passContextInfo(BeginEventJP eventJp, Object _target) 
 	{	
-		transaction = new Transaction();
 		try 
 		{
 			BeginEventJP beginJp= eventJp;
@@ -54,7 +55,7 @@ public abstract aspect InitiatorJoinpointTracker extends TransactionTracker
 				{
 					beginJp.setManager((TransactionManager)_target);
 					//transaction currently associated with thread.
-					transaction = (Transaction)beginJp.getManager().getTransaction();
+					transaction =  TransactionImple.getTransaction();
 					beginJp.setTransaction(transaction);
 				}
 				else if(_target instanceof UserTransaction)
@@ -67,7 +68,8 @@ public abstract aspect InitiatorJoinpointTracker extends TransactionTracker
 			status =transaction.getStatus();
 			timeout = transaction.getTimeout();
 			
-			beginJp.setTid(new TID(globalxid, transactionUid));
+			//beginJp.setTid(new Xid(globalxid, transactionUid));
+			beginJp.setTid(globalxid);
 			beginJp.setStatus(transaction.getStatus());
 			beginJp.setTimeout(transaction.getTimeout());
 			

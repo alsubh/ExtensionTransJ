@@ -3,43 +3,55 @@ package umjdt.joinpoints;
 import java.util.logging.Logger;
 
 import javax.transaction.SystemException;
+import javax.transaction.TransactionManager;
+import javax.transaction.xa.Xid;
 
-import umjdt.concepts.TID;
-import umjdt.concepts.Transaction;
+import com.arjuna.ats.internal.jta.transaction.arjunacore.*;
+import com.arjuna.ats.jta.UserTransaction;
+
 import umjdt.util.BackgroundThread;
 import context.Context;
 
 public class TransJP extends EventJP {
 	Logger logger = Logger.getLogger(TransJP.class.toString());
 
-	private TID tid;
+	//private TID tid;
+	private Xid tid;
 	private int status;
 	private BeginEventJP beginDemarcate;
 	private EndEventJP endDemarcate;
-	private Transaction transaction;
 	private BackgroundThread thread;
+	private Object manager;
+	private TransactionImple transaction;
+	
 
 	public TransJP() {
 		super();
 		this.thread = new BackgroundThread(Thread.currentThread());
 	}
+	
+	public TransJP(Object manager) throws SystemException { //userTransaction or TransactionManager
+		super();
+		this.thread = new BackgroundThread(Thread.currentThread());
+		this.setManager(manager);
+	}
 
-	public TransJP(TID _tid) {
+	public TransJP(Xid _tid) {
 		super();
 		this.tid = _tid;
 		this.thread = new BackgroundThread(Thread.currentThread());
 	}
 
-	public TransJP(Transaction _transaction) {
+	public TransJP(TransactionImple _transaction) {
 		this.transaction = _transaction;
-		this.tid = _transaction.getTid();
+		this.tid = _transaction.getTxId();
 		this.thread = new BackgroundThread(Thread.currentThread());
 	}
 
 	public TransJP(TransJP _transjp) throws SystemException {
-		this.transaction = _transjp.getTransaction();
-		this.tid = _transjp.getTransaction().getTid();
-		this.status = _transjp.getTransaction().getStatus();
+		//this.transaction = _transjp.getTransaction();
+		//this.tid = transaction.getTid();
+		this.status = transaction.getStatus();
 		this.thread = _transjp.getThread();
 	}
 
@@ -49,14 +61,6 @@ public class TransJP extends EventJP {
 			result = true;
 		}
 		return result;
-	}
-
-	public Transaction getTransaction() {
-		return transaction;
-	}
-
-	public void setTransaction(Transaction transaction) {
-		this.transaction = transaction;
 	}
 
 	public int getStatus() {
@@ -91,11 +95,51 @@ public class TransJP extends EventJP {
 		this.thread = thread;
 	}
 
-	public TID getTid() {
+	
+	public Xid getTid() {
 		return tid;
 	}
 
-	public void setTid(TID tid) {
+	public void setTid(Xid tid) {
 		this.tid = tid;
+	}
+	
+	/**
+	 * @return the transaction
+	 */
+	public TransactionImple getTransaction() {
+		return transaction;
+	}
+
+	/**
+	 * @param transaction the transaction to set
+	 */
+	public void setTransaction(TransactionImple transaction) {
+		this.transaction = transaction;
+	}
+
+	/**
+	 * @return the manager
+	 */
+	public Object getManager() {
+		return manager;
+	}
+
+	/**
+	 * @param manager the manager to set
+	 * @throws SystemException 
+	 */
+	public void setManager(Object manager) throws SystemException {
+		if(manager instanceof TransactionManager)
+		{
+			this.manager = (TransactionManager) manager;
+			this.setTransaction((TransactionImple) (((TransactionManager) manager).getTransaction()));
+		}
+		else if (manager instanceof UserTransaction)
+		{
+			this.manager = (UserTransaction) manager;
+			this.transaction= null;
+			
+		}
 	}
 }

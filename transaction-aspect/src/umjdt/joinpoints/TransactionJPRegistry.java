@@ -8,16 +8,16 @@ import java.util.Map;
 import java.util.Map.Entry;
 import org.apache.log4j.Logger;
 
-import umjdt.concepts.TID;
+import umjdt.concepts.Xid;
 
 public class TransactionJPRegistry 
 {
 	Logger logger = Logger.getLogger(TransactionJPRegistry.class);
 
 	
-	private static Hashtable<TID, TransJP> transactionJPs;
+	private static Hashtable<Xid, TransJP> transactionJPs;
 	
-	public static boolean add(TID _key, TransJP _transjp)
+	public static boolean add(Xid _key, TransJP _transjp)
 	{
 		boolean result= false;
 		try
@@ -32,7 +32,7 @@ public class TransactionJPRegistry
 		return result;
 	}
 	
-	public static boolean remove(TID _key)
+	public static boolean remove(Xid _key)
 	{
 		boolean result= false;
 		try
@@ -57,13 +57,13 @@ public class TransactionJPRegistry
 			 while(itr.hasNext())
 			 {
 				result.add(((TransJP) itr.next()));
-				System.out.println(itr.next() + " Transaction ID: " + ((TransJP) itr.next()).getTransaction().getTId());
+				System.out.println(itr.next() + " Transaction ID: " + ((TransJP) itr.next()).getTransaction().getTxId());
 			 }
 		}
 		return result;
 	}
 	
-	public static TransJP lookup(TID _tid)
+	public static TransJP lookup(Xid _tid)
 	{
 		for (Object o: transactionJPs.entrySet())
 		 {

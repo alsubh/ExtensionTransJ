@@ -12,7 +12,7 @@ public class Constants
 	 
 	 public static void loadProperties()
 		{
-			String path = "C:\\Users\\AnasAlsubh\\workspace\\test\\transaction-aspect\\";
+			String path = "C:\\Users\\AnasAlsubh\\Documents\\TransJ\\tool\\transaction-aspect\\src\\umjdt\\util\\";
 		       try {
 		    	  props.load(new FileInputStream(path+"constants.properties")); 
 			} catch (Exception e) {

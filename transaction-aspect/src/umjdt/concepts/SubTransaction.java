@@ -15,14 +15,14 @@ public class SubTransaction extends Transaction implements Serializable
 	private int timeout;
 	private IdNumber subTid;
 		
-	public SubTransaction(TID _tid)
+	public SubTransaction(Xid _tid)
 	{
 		super();
 		subTid = IdNumber.Create(_tid);
 		setSubTid(subTid);
 	}
 	
-	public SubTransaction(TID _tid, int _timeout)
+	public SubTransaction(Xid _tid, int _timeout)
 	{
 		super(_timeout);
 		this.timeout=_timeout;

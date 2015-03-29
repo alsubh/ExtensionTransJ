@@ -2,7 +2,7 @@ package umjdt.util;
 
 import java.io.Serializable;
 
-import umjdt.concepts.TID;
+import umjdt.concepts.Xid;
 
 public class IdNumber implements Comparable, Serializable {
 
@@ -12,8 +12,8 @@ public class IdNumber implements Comparable, Serializable {
 	private static final long serialVersionUID = 1L;
 	private static short nextSeqNumber = 1;  // Start with operation #1
     public static IdNumber Empty;
-    public static TID LocalTransactionId; // Local transaction Id -- set once when the operation joins the transaction application
-    public TID transactionId;
+    public static Xid LocalTransactionId; // Local transaction Id -- set once when the operation joins the transaction application
+    public Xid transactionId;
     public short SeqOperationNumber;
     
     public static IdNumber Create() {
@@ -23,7 +23,7 @@ public class IdNumber implements Comparable, Serializable {
         return result;
     }
     
-    public static IdNumber Create(TID _transactionId)
+    public static IdNumber Create(Xid _transactionId)
     {
     	IdNumber result = new IdNumber();
         result.transactionId = _transactionId;
@@ -31,7 +31,7 @@ public class IdNumber implements Comparable, Serializable {
         return result;
     }
 
-    public static IdNumber Create(TID _transactionId, short _operationSeqNur) {
+    public static IdNumber Create(Xid _transactionId, short _operationSeqNur) {
     	IdNumber result = new IdNumber();
         result.transactionId = _transactionId;
         result.SeqOperationNumber = _operationSeqNur;

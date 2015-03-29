@@ -5,7 +5,7 @@ package umjdt.joinpoints;
 
 import org.aspectj.lang.JoinPoint;
 
-import umjdt.concepts.TID;
+import umjdt.concepts.Xid;
 import umjdt.concepts.Transaction;
 import umjdt.util.Timestamp;
 
@@ -14,30 +14,30 @@ import umjdt.util.Timestamp;
  * 
  */
 public class BeforeCompletionJP {
-	private TID tid;
+	private Xid tid;
 	private Transaction transaction;
 	private JoinPoint beforeCompletionJp;
 	private Timestamp timestamp;
 
 	public BeforeCompletionJP() {
-		setTimestamp(new Timestamp().currentTimeStamp());
+		setTimestamp(new Timestamp() );
 	}
 
-	public BeforeCompletionJP(TID _tid) {
+	public BeforeCompletionJP(Xid _tid) {
 		this.setTid(_tid);
-		setTimestamp(new Timestamp().currentTimeStamp());
+		setTimestamp(new Timestamp() );
 	}
 
 	public BeforeCompletionJP(Transaction _transaction) {
 		this.setTransaction(_transaction);
-		setTimestamp(new Timestamp().currentTimeStamp());
+		setTimestamp(new Timestamp() );
 	}
 
-	public TID getTid() {
+	public Xid getTid() {
 		return tid;
 	}
 
-	public void setTid(TID tid) {
+	public void setTid(Xid tid) {
 		this.tid = tid;
 	}
 

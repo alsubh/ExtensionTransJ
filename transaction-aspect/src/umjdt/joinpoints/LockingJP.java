@@ -9,7 +9,7 @@ import org.aspectj.lang.JoinPoint;
 
 import umjdt.concepts.Lock;
 import umjdt.concepts.Resource;
-import umjdt.concepts.TID;
+import umjdt.concepts.Xid;
 import umjdt.concepts.Transaction;
 import umjdt.util.AccessType;
 
@@ -28,7 +28,7 @@ public class LockingJP extends TransJP {
 		super();
 	}
 
-	public LockingJP(TID _tid) {
+	public LockingJP(Xid _tid) {
 		super(_tid);
 	}
 
@@ -36,13 +36,13 @@ public class LockingJP extends TransJP {
 		super(_transaction);
 	}
 
-	public LockingJP(TID _tid, Resource _resource) {
+	public LockingJP(Xid _tid, Resource _resource) {
 		super();
 		super.setTid(_tid);
 		this.setResource(_resource);
 	}
 
-	public LockingJP(TID _tid, Resource resource, AccessType lockType) {
+	public LockingJP(Xid _tid, Resource resource, AccessType lockType) {
 		super();
 		this.setTid(_tid);
 		this.setResource(resource);

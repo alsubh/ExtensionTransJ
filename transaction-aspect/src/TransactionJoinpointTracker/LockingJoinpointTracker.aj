@@ -39,7 +39,7 @@ public abstract aspect LockingJoinpointTracker extends TransactionTracker
 			enlistResourceEventJp.setTid(_transaction.getTid());
 			enlistResourceEventJp.setResource(new Resource(_resource, _transaction.getTxId()));
 			enlistResourceEventJp.setState(Status.STATUS_LOCKED);
-			enlistResourceEventJp.setEnlistResourceTimestamp(new Timestamp().currentTimeStamp());
+			enlistResourceEventJp.setEnlistResourceTimestamp(new Timestamp());
 			enlistResourceEventJp.setEnlistResourceJP(thisJoinPoint);
 			LockResourceJoinPoint(enlistResourceEventJp);
 			
@@ -82,7 +82,7 @@ public abstract aspect LockingJoinpointTracker extends TransactionTracker
 			}
 			delistResourceEventJp.setResource(resource);
 			delistResourceEventJp.setState(Status.STATUS_RELEASED);
-			delistResourceEventJp.setDelistResourceTimestamp(new Timestamp().currentTimeStamp());
+			delistResourceEventJp.setDelistResourceTimestamp(new Timestamp());
 			UnlockResourceJoinPoint(delistResourceEventJp);
 		}
 		catch(Exception ex)

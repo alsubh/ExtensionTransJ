@@ -12,7 +12,7 @@ import org.aspectj.lang.JoinPoint;
 
 import umjdt.concepts.Resource;
 import umjdt.concepts.SubTransaction;
-import umjdt.concepts.TID;
+import umjdt.concepts.Xid;
 import umjdt.concepts.Transaction;
 import umjdt.util.BackgroundThread;
 import umjdt.util.Constants;
@@ -34,13 +34,13 @@ public class EndEventJP extends TransJP {
 		super.getThread().stop();
 	}
 
-	public EndEventJP(TID _tid) {
+	public EndEventJP(Xid _tid) {
 		super();
 		super.setTid(_tid);
 		super.getThread().stop();
 	}
 
-	public EndEventJP(TID _tid, Transaction _transaction,
+	public EndEventJP(Xid _tid, Transaction _transaction,
 			TransactionManager _manager, UserTransaction _user, int _timeout,
 			int _status, List<SubTransaction> transactionlist,
 			List<Resource> resources, Timestamp _endTime,
