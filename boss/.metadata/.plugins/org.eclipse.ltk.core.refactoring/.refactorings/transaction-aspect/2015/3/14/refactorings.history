@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;umjdt.concepts.TID&apos; to &apos;Xid&apos;&#x0D;&#x0A;- Original project: &apos;transaction-aspect&apos;&#x0D;&#x0A;- Original element: &apos;umjdt.concepts.TID&apos;&#x0D;&#x0A;- Renamed element: &apos;umjdt.concepts.Xid&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;TID&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;umjdt.concepts{TID.java[TID" matchStrategy="1" name="Xid" qualified="false" references="true" similarDeclarations="false" stamp="1427591345554" textual="false" version="1.0"/>
+</session>

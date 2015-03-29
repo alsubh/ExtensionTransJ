@@ -1,0 +1,66 @@
+/**
+ * 
+ */
+package test;
+
+
+import com.arjuna.ats.arjuna.AtomicAction;
+
+import TransactionJoinpointTracker.InitiatorJoinpointTracker;
+import umjdt.util.Timestamp;
+
+/**
+ * @author AnasAlsubh
+ *
+ */
+public aspect testAspect extends InitiatorJoinpointTracker
+{
+	pointcut testBegin(): call(* com..*+.begin(..));
+	pointcut testCommit(): call(* com..*+.commit(..));
+	pointcut testAbort(): call(* com..*+.abort(..));
+	pointcut testRollback(): call(* com..*+.rollback(..));
+	
+	Timestamp time= new Timestamp();
+	int actionNumber =0;
+	
+	int around(): testBegin()
+	{
+		actionNumber = actionNumber +1;
+		
+		//System.out.println("before begin" + thisJoinPoint.getTarget().toString() + "Get " + thisJoinPoint.getThis().toString() + "Singature = " + thisJoinPoint.getSignature().toString());
+		int i = proceed();
+		System.out.println("After begin "+ actionNumber +":"+ thisJoinPoint.getTarget() + "Get " + thisJoinPoint.getThis() + "Singature = " + thisJoinPoint.getSignature() + "Time =" + time.getLocalTime()+  "Result of Action " + actionNumber +":" + i);
+		return i;
+	}
+	
+	int around(): testCommit()
+	{
+		AtomicAction ac =null;
+		if(thisJoinPoint.getTarget().toString() !=null)
+			{
+			 ac = (AtomicAction)thisJoinPoint.getTarget();
+			}
+		if(thisJoinPoint.getThis() !=null)
+		{
+			
+		}
+		
+		System.out.println("before begin" + thisJoinPoint.getTarget().toString() + "Get " + thisJoinPoint.getThis().toString() + "Singature = " + thisJoinPoint.getSignature().toString());
+		int i = proceed();
+		
+		System.out.println("After commit "+ actionNumber +":"+ thisJoinPoint.getTarget() + " Get " + thisJoinPoint.getThis() + "Singature = " + thisJoinPoint.getSignature() +  "Time =" + time.getLocalTime() + "Result of Action " + actionNumber +":" + i);
+		System.out.println("\n");
+		return i;
+	}
+
+	
+	int around(): testAbort()
+	{
+		
+		//System.out.println("before begin" + thisJoinPoint.getTarget().toString() + "Get " + thisJoinPoint.getThis().toString() + "Singature = " + thisJoinPoint.getSignature().toString());
+		int i = proceed();
+		System.out.println("After Abort "+ actionNumber +":"+ thisJoinPoint.getTarget() + "Get " + thisJoinPoint.getThis() + "Singature = " + thisJoinPoint.getSignature() + "Time =" + time.getLocalTime()+  "Result of Action " + actionNumber +":" + i);
+		System.out.println("\n");
+		return i;
+	}
+}

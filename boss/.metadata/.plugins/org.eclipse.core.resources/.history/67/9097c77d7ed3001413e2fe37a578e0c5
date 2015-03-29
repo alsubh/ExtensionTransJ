@@ -1,0 +1,1 @@
+insert into member(ID, name, email, phone_number) values(5,'ali', 'al@yahoo.com', '8014445555');

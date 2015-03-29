@@ -1,0 +1,35 @@
+/**
+ * 
+ */
+package test;
+
+/**
+ * @author AnasAlsubh
+ *
+ */
+public aspect testAspect 
+{
+	pointcut testBegin(): call(* com.arjuna.ats.arjuna.AtomicAction+.begin(..));
+	pointcut testCommit(): call(* test.*.*+.commit(..));
+	
+	before(): testBegin()
+	{
+		System.out.println("before begin" + thisJoinPoint.getTarget().toString() + "Get " + thisJoinPoint.getThis().toString() + "Singature = " + thisJoinPoint.getSignature().toString());
+	}
+	
+	after(): testBegin()
+	{
+		System.out.println("After begin" + thisJoinPoint.getTarget() + "Get " + thisJoinPoint.getThis() + "Singature = " + thisJoinPoint.getSignature());
+	}
+	
+	before(): testCommit()
+	{
+		System.out.println("before commit" + thisJoinPoint.getTarget().toString() + "Get " + thisJoinPoint.getThis().toString() + "Singature = " + thisJoinPoint.getSignature().toString());
+	}
+	
+	after(): testCommit()
+	{
+		System.out.println("After commit" + thisJoinPoint.getTarget() + "Get " + thisJoinPoint.getThis() + "Singature = " + thisJoinPoint.getSignature());
+	}
+
+}

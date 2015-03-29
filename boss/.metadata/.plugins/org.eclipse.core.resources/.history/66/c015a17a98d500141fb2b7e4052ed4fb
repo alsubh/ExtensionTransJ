@@ -1,0 +1,53 @@
+/**
+ * 
+ */
+package test;
+
+
+import umjdt.util.Timestamp;
+
+/**
+ * @author AnasAlsubh
+ *
+ */
+public aspect testAspect 
+{
+	pointcut testBegin(): call(* com..*+.begin(..));
+	pointcut testCommit(): call(* com..*+.commit(..));
+	pointcut testAbort(): call(* com..AtomicAction*+.abort(..));
+	pointcut testRollback(): call(* com..*+.rollback(..));
+	
+	Timestamp time= new Timestamp();
+	int actionNumber =0;
+	
+	int around(): testBegin()
+	{
+		actionNumber = actionNumber +1;
+		
+		//System.out.println("before begin" + thisJoinPoint.getTarget().toString() + "Get " + thisJoinPoint.getThis().toString() + "Singature = " + thisJoinPoint.getSignature().toString());
+		int i = proceed();
+		System.out.println("After begin "+ actionNumber +":"+ thisJoinPoint.getTarget() + "Get " + thisJoinPoint.getThis() + "Singature = " + thisJoinPoint.getSignature() + "Time =" + time.getLocalTime()+  "Result of Action " + actionNumber +":" + i);
+		return i;
+	}
+	
+	int around(): testCommit()
+	{
+		actionNumber = actionNumber +1;
+		
+		//System.out.println("before begin" + thisJoinPoint.getTarget().toString() + "Get " + thisJoinPoint.getThis().toString() + "Singature = " + thisJoinPoint.getSignature().toString());
+		int i = proceed();
+		System.out.println("After commit "+ actionNumber +":"+ thisJoinPoint.getTarget() + " Get " + thisJoinPoint.getThis() + "Singature = " + thisJoinPoint.getSignature() +  "Time =" + time.getLocalTime() + "Result of Action " + actionNumber +":" + i);
+		
+		return i;
+	}
+
+	
+	int around(): testAbort()
+	{
+		actionNumber = actionNumber +1;
+		
+		//System.out.println("before begin" + thisJoinPoint.getTarget().toString() + "Get " + thisJoinPoint.getThis().toString() + "Singature = " + thisJoinPoint.getSignature().toString());
+		int i = proceed();
+		System.out.println("After Abort "+ actionNumber +":"+ thisJoinPoint.getTarget() + "Get " + thisJoinPoint.getThis() + "Singature = " + thisJoinPoint.getSignature() + "Time =" + time.getLocalTime()+  "Result of Action " + actionNumber +":" + i);		return i;
+	}
+}

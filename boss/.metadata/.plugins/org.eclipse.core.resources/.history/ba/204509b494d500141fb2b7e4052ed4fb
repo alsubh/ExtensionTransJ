@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package test;
+
+/**
+ * @author AnasAlsubh
+ *
+ */
+public aspect testAspect {
+
+}

@@ -1,0 +1,11 @@
+#Sat Mar 28 19:53:12 MDT 2015
+vl=How many times the 'Finish' button pressed during the day
+l=Wizard class name
+ct=jbt
+d=1427593992927
+c=0
+cmp=usage
+a=finishWizard
+cl=org.eclipse.ajdt.internal.ui.wizards.NewAspectCreationWizard
+v=2.0.2
+s=2
