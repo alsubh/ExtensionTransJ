@@ -144,6 +144,7 @@
  <validation>
   <core validator-id="jsf-verification"/>
   <core validator-id="jboss.cdi.core"/>
+  <core validator-id="jboss.jsf.core"/>
   <el>
    <linked-el length="24" name="%0" offset="3639" path="%1"/>
    <linked-el length="24" name="%0" offset="3947" path="%1"/>
