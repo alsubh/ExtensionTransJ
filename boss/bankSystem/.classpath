@@ -7,5 +7,7 @@
 	<classpathentry kind="lib" path="C:/3rdParty/narayana-jta-5.0.4.Final.jar" sourcepath="C:/Users/AnasAlsubh/.m2/repository/org/jboss/narayana/jta/narayana-jta/5.0.4.Final/narayana-jta-5.0.4.Final-sources.jar"/>
 	<classpathentry kind="lib" path="C:/3rdParty/narayana-jta-5.0.4.Final-sources.jar"/>
 	<classpathentry kind="lib" path="C:/3rdParty/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/3rdParty/h2-1.4.186.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AnasAlsubh/jbdevstudio/runtimes/jboss-eap/bin/client/jboss-client.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

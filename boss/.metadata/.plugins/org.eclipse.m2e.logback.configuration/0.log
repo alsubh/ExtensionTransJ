@@ -148,3 +148,16 @@ Caused by: java.io.IOException: CreateProcess error=2, The system cannot find th
 2015-03-30 11:16:58,096 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
 2015-03-30 11:16:58,098 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2015-03-30 11:16:58,099 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2015-03-31 03:35:23,080 [Worker-694] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2015-03-31 03:35:39,360 [Worker-694] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: org.jboss.tools.application:jboss-javaee6-Bankwebapp:0.0.1-SNAPSHOT @ C:\Users\AnasAlsubh\Documents\TransJ\ExtensionTransJ\boss\jboss-javaee6-Bankwebapp\pom.xml.
+2015-03-31 03:36:00,743 [Worker-694] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /jboss-javaee6-Bankwebapp/src/main/java
+2015-03-31 03:36:00,803 [Worker-694] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /jboss-javaee6-Bankwebapp/src/main/resources
+2015-03-31 03:36:00,803 [Worker-694] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /jboss-javaee6-Bankwebapp/src/test/java
+2015-03-31 03:36:00,803 [Worker-694] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /jboss-javaee6-Bankwebapp/src/test/resources
+2015-03-31 03:36:14,420 [Worker-694] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: org.jboss.tools.application:jboss-javaee6-Bankwebapp:0.0.1-SNAPSHOT @ C:\Users\AnasAlsubh\Documents\TransJ\ExtensionTransJ\boss\jboss-javaee6-Bankwebapp\pom.xml.
+2015-03-31 03:36:17,989 [Worker-694] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for jboss-javaee6-Bankwebapp
+2015-03-31 03:36:18,108 [Worker-694] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 55 sec
+2015-03-31 03:36:43,874 [Worker-707] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-03-31 03:36:43,958 [Worker-707] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2015-03-31 03:36:44,495 [Worker-707] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-03-31 03:36:44,499 [Worker-707] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
