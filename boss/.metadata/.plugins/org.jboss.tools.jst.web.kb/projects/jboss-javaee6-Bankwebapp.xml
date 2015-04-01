@@ -142,8 +142,6 @@
   <path value="C:/Users/AnasAlsubh/.m2/repository/org/jboss/as/jboss-as-remoting/7.2.0.Final/jboss-as-remoting-7.2.0.Final.jar"/>
  </paths>
  <validation>
-  <core validator-id="jsf-verification"/>
-  <core validator-id="jboss.cdi.core"/>
   <el>
    <linked-el length="24" name="%0" offset="3639" path="%1"/>
    <linked-el length="24" name="%0" offset="3947" path="%1"/>

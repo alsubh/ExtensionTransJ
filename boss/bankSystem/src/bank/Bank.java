@@ -247,7 +247,11 @@ public class Bank
             System.out.println("\nCreating connection to database: "); 
  
             // A JDBC connection is used to create and drop (where neccessary) the underlying database table 
+<<<<<<< HEAD
             Connection connection = arjunaJDBC2Driver.connect("jdbc:arjuna:jdbc/DB", dbProperties); //jdbc:arjuna:jboss/datasources/ExampleDS
+=======
+            Connection connection = arjunaJDBC2Driver.connect("java:jboss/datasources/ExampleDS", dbProperties); //jdbc:arjuna:jboss/datasources/ExampleDS
+>>>>>>> e3901f6d2fc89b17484f8d88c79e64063081d176
  
             Statement stmt = connection.createStatement();  // non-tx statement 
             if (BankClient.clean) 

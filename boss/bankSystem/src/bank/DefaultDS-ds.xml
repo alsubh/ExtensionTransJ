@@ -2,7 +2,11 @@
 <datasources xmlns="http://www.jboss.org/ironjacamar/schema">
  <datasource jndi-name="java:jboss/datasources/DefaultDS" enabled="true" 
      use-java-context="true" pool-name="DefaultDS">
+<<<<<<< HEAD
   <connection-url>jdbc:h2:mem:test</connection-url>
+=======
+  <connection-url>jdbc:h2:mem:sample</connection-url>
+>>>>>>> e3901f6d2fc89b17484f8d88c79e64063081d176
   <driver>h2-1.3.168.redhat-4.jar</driver>
   <pool></pool>
   <security>

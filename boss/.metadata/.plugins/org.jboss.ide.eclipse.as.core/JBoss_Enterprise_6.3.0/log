@@ -322,3 +322,94 @@
 
 !ENTRY org.jboss.ide.eclipse.as.core 1 0 2015-03-28 13:38:55.118
 !MESSAGE Module jboss-javaee6-webapp on JBoss Enterprise 6.3.0 not yet fully deployed. Waiting...
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2015-03-30 19:29:57.902
+!MESSAGE The server "JBoss Enterprise 6.3.0" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_40 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2015-03-30 19:30:03.397
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2015-03-30 19:30:27.017
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2015-03-30 21:22:06.140
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2015-03-30 21:23:49.927
+!MESSAGE The server "JBoss Enterprise 6.3.0" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_40 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2015-03-30 21:23:50.978
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2015-03-30 21:24:09.185
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2015-03-30 21:25:17.352
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2015-03-30 21:25:17.537
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2015-03-30 21:27:17.284
+!MESSAGE The server "JBoss Enterprise 6.3.0" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_40 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2015-03-30 21:27:18.310
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2015-03-30 21:27:22.312
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2015-03-30 22:27:31.841
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2015-03-30 22:28:38.463
+!MESSAGE The server "JBoss Enterprise 6.3.0" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_40 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2015-03-30 22:28:39.490
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2015-03-30 22:28:43.524
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2015-03-31 00:00:09.093
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2015-03-31 00:00:10.269
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2015-03-31 00:00:16.914
+!MESSAGE The server "JBoss Enterprise 6.3.0" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_40 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2015-03-31 00:00:18.033
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2015-03-31 00:00:27.838
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2015-03-31 00:01:47.690
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2015-03-31 00:02:50.778
+!MESSAGE The server "JBoss Enterprise 6.3.0" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_40 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2015-03-31 00:02:51.821
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2015-03-31 00:02:55.195
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2015-03-31 00:15:53.625
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2015-03-31 00:17:00.809
+!MESSAGE The server "JBoss Enterprise 6.3.0" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_40 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2015-03-31 00:17:01.856
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2015-03-31 00:17:05.793
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2015-03-31 03:53:55.812
+!MESSAGE Server processes have been terminated.

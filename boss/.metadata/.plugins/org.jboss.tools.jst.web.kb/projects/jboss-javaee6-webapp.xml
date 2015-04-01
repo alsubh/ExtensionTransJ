@@ -77,6 +77,7 @@
   <path value="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/tomcat-i18n-fr.jar"/>
  </paths>
  <validation>
+  <core validator-id="jsf-verification"/>
   <core validator-id="jboss.cdi.core">
    <linked-resource declaration="true" name="%1;%2;" path="%0"/>
    <linked-resource name="%0;%4;%5;%6;%7;" path="%3"/>
@@ -84,6 +85,7 @@
    <linked-resource name="%0;%5;%6;" path="%7"/>
    <linked-resource name="%8;%6;" path="%4"/>
   </core>
+  <core validator-id="jboss.jsf.core"/>
   <el>
    <linked-el length="27" name="%0" offset="2155" path="%10"/>
    <linked-el length="20" name="%0" offset="1733" path="%10"/>

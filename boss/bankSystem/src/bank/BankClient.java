@@ -555,6 +555,7 @@ public class BankClient
 
         try 
         { 
+<<<<<<< HEAD
         	//if (initialContext == null)
             {
             	Class jdbcDatasource = Class.forName("org.h2.jdbcx.JdbcDataSource");
@@ -569,6 +570,19 @@ public class BankClient
 	            //DataSource datasource = (DataSource) initialContext.lookup("java:/ExampleDS");
 	            //Connection con =  datasource.getConnection();
 	            initialContext.rebind("jdbc/DB", ds);	            
+=======
+        	if (initialContext == null)
+            {
+	        	properties.put(Context.INITIAL_CONTEXT_FACTORY, "org.jboss.naming.remote.client.InitialContextFactory");
+	            properties.put(Context.PROVIDER_URL,"remote://127.0.0.1:4447"); 
+	            properties.put(Context.SECURITY_PRINCIPAL, "admin");
+	            properties.put(Context.SECURITY_CREDENTIALS, "godanas2005!");
+	            properties.put("jboss.naming.client.ejb.context", true);
+	            // create a context passing these properties
+	            initialContext = new InitialContext(properties);
+	            DataSource datasource = (DataSource) initialContext.lookup("java:jboss/datasources/ExampleDS");
+	            Connection con =  datasource.getConnection();
+>>>>>>> e3901f6d2fc89b17484f8d88c79e64063081d176
             }
         } 
         catch (Exception ex) 

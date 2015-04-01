@@ -2,10 +2,16 @@
 <jboss-deployment-structure xmlns="urn:jboss:deployment-structure:1.1">
   <deployment>
     <dependencies>
+<<<<<<< HEAD
             <module name="com.h2database.h2"/>
             <module name="org.codehaus.jackson.jackson-core-asl"/>
             <module name="org.codehaus.jackson.jackson-mapper-asl"/>
             <module name="org.slf4j"/>
+=======
+	  <module name="com.microsoft.sqlServer" />
+	  <module name="com.sqlServer" />
+	  <module name="com.mysql" />
+>>>>>>> e3901f6d2fc89b17484f8d88c79e64063081d176
     </dependencies>
   </deployment>
 </jboss-deployment-structure>
