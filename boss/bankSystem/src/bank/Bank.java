@@ -8,14 +8,30 @@ package bank;
  *
  */
 
+import com.arjuna.ats.internal.jdbc.recovery.JDBCXARecovery;
 import com.arjuna.ats.jdbc.TransactionalDriver; 
  
+
+
+
+
+
+
+import com.arjuna.ats.jdbc.common.jdbcPropertyManager;
+
 import java.sql.Connection; 
 import java.sql.DriverManager; 
 import java.sql.ResultSet; 
 import java.sql.SQLException; 
 import java.sql.Statement; 
+import java.util.Hashtable;
 import java.util.Properties; 
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.XADataSource;
+
+import org.h2.jdbcx.JdbcDataSource;
  
  
 /**
@@ -49,10 +65,12 @@ public class Bank
             dbProperties = new Properties(); 
             dbProperties.put(TransactionalDriver.userName, BankClient.user); 
             dbProperties.put(TransactionalDriver.password, BankClient.password); 
+            dbProperties.setProperty(TransactionalDriver.dynamicClass,
+                    "com.arjuna.ats.internal.jdbc.drivers.PropertyFileDynamicClass");
  
             // Create the transactional driver to use to create the database 
             arjunaJDBC2Driver = new TransactionalDriver(); 
- 
+            
             // Create the table (will drop an existing table if it already exists) 
             create_table(); 
         } 
@@ -229,7 +247,7 @@ public class Bank
             System.out.println("\nCreating connection to database: "); 
  
             // A JDBC connection is used to create and drop (where neccessary) the underlying database table 
-            Connection connection = arjunaJDBC2Driver.connect("jdbc:arjuna:jdbc/DB", dbProperties); 
+            Connection connection = arjunaJDBC2Driver.connect("jdbc:arjuna:jdbc/DB", dbProperties); //jdbc:arjuna:jboss/datasources/ExampleDS
  
             Statement stmt = connection.createStatement();  // non-tx statement 
             if (BankClient.clean) 

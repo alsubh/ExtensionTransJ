@@ -7,16 +7,25 @@ package bank;
  * @author AnasAlsubh
  *
  */
+import com.arjuna.ats.jdbc.TransactionalDriver;
 import com.arjuna.ats.jdbc.common.jdbcPropertyManager; 
 
 import javax.naming.Context; 
 import javax.naming.InitialContext; 
 import javax.sql.DataSource; 
+
 import java.io.IOException; 
 import java.lang.reflect.Method; 
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.util.Hashtable; 
 import java.util.Properties; 
- 
+
+import org.h2.jdbcx.JdbcDataSource;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+
 /**
  * The <CODE>BankClient</CODE> application is an interactive CLI that allows the user of the JBoss Transactions product 
  * to manipulate a database backed bank under transactional control. 
@@ -41,12 +50,12 @@ public class BankClient
     /**
      * The oracle database's username. 
      */ 
-    static String user = "scott"; 
+    static String user = "sa"; 
  
     /**
      * The oracle database's password. 
      */ 
-    static String password = "tiger"; 
+    static String password = "sa"; 
  
     /**
      * The host to connect to where the <CODE>Bank</CODE> database is running. 
@@ -62,6 +71,8 @@ public class BankClient
      * The name of the database where the <CODE>Bank</CODE> table resides. 
      */ 
     private static String dbName = null; 
+	static Context initialContext = null;
+
  
     /**
      * Create a new BankClient indicating the Bank to execute updates and queries upon. 
@@ -528,44 +539,44 @@ public class BankClient
                 System.exit(0); 
             } 
         } 
-        try 
-        { 
-            // Create a new oracle XA DataSource, this datasource is used to indicate the location of the database to 
-            // store bank account details within 
-            // Use dynamic class loading to remove any trailmap build time dependency on the Oracle driver 
-            Class oracleXADataSource = Class.forName("oracle.jdbc.xa.client.OracleXADataSource"); 
-            DataSource ds = (DataSource) oracleXADataSource.newInstance(); 
-            // Use reflection as the datasource API does not provide a setURL method 
-            Method setUrlMethod = oracleXADataSource.getMethod("setURL", new Class[]{String.class}); 
-            // Use the oracle thin driver rather than oci 
-            setUrlMethod.invoke(ds, new Object[]{new String("jdbc:oracle:thin:@" + host + ":" + port + ":" + dbName)}); 
- 
-            // The datasource must be able to be resolved by the transaction manager so place it in a file system 
-            // based JNDI, this implies that other machines can see this file system location 
-            Hashtable env = new Hashtable(); 
-            env.put(Context.INITIAL_CONTEXT_FACTORY, "com.sun.jndi.fscontext.RefFSContextFactory"); 
-            env.put(Context.PROVIDER_URL, "file:/tmp/JNDI"); 
-            InitialContext ctx = new InitialContext(env); 
-            // This is the object to use so rebind rather than bind, some JNDI implementations would protect this 
-            // with the requirement to add <CODE>Context.SECURITY_CREDENTIALS</CODE> or the like 
-            ctx.rebind("jdbc/DB", ds); 
-        } 
-        catch (Exception ex) 
-        { 
-            System.err.println("Cannot create the Oracle datasource or bind it into JNDI"); 
-            ex.printStackTrace(); 
-            System.exit(0); 
-        } 
-        // Initialize the property manager with the correct JNDI credentials to use to log in to JNDI 
-        Hashtable<String, String> properties = new Hashtable<String, String>(); 
-        properties.put(Context.INITIAL_CONTEXT_FACTORY, "com.sun.jndi.fscontext.RefFSContextFactory"); 
-        properties.put(Context.PROVIDER_URL, "file:/tmp/JNDI"); 
-        jdbcPropertyManager.getJDBCEnvironmentBean().setJndiProperties(properties); 
+        
+        Properties jndiProps = createContext(); 
+        jdbcPropertyManager.getJDBCEnvironmentBean().setJndiProperties(jndiProps); 
  
         // Create a local representation of a bank and then create a bank client to interact with it 
         Bank bank = new Bank(); 
         BankClient client = new BankClient(bank); 
         // Start the bank client CLI 
         client.start(); 
-    } 
+    }
+
+	private static Properties createContext() {
+		Properties properties = new Properties();
+
+        try 
+        { 
+        	//if (initialContext == null)
+            {
+            	Class jdbcDatasource = Class.forName("org.h2.jdbcx.JdbcDataSource");
+            	JdbcDataSource ds= (JdbcDataSource) jdbcDatasource.newInstance();
+	        	properties.put(Context.INITIAL_CONTEXT_FACTORY, "org.jboss.naming.remote.client.InitialContextFactory");
+	            properties.put(Context.PROVIDER_URL,"remote://127.0.0.1:4447"); 
+	            properties.put(Context.SECURITY_PRINCIPAL, "anasManagement");
+	            properties.put(Context.SECURITY_CREDENTIALS, "Godanas2005_");
+	            properties.put("jboss.naming.client.ejb.context", true);
+	            // create a context passing these properties
+	            initialContext = new InitialContext(properties);
+	            //DataSource datasource = (DataSource) initialContext.lookup("java:/ExampleDS");
+	            //Connection con =  datasource.getConnection();
+	            initialContext.rebind("jdbc/DB", ds);	            
+            }
+        } 
+        catch (Exception ex) 
+        { 
+            System.err.println("Cannot create the datasource or bind it into JNDI"); 
+            ex.printStackTrace(); 
+            System.exit(0); 
+        }
+		return properties;
+	} 
 }
