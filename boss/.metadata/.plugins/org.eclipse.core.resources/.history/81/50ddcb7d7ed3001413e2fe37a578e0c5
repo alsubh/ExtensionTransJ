@@ -1,1 +1,0 @@
-insert into Memeber(ID, Name, Email, Phone_Number) values(2,'Anas', 'Anas@yu.edu', '435666666');

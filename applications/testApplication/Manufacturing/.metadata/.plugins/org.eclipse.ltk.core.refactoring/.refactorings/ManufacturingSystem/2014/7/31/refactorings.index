@@ -1,5 +1,0 @@
-1406493927345	Extract method 'sqlStatement'
-1406495199753	Extract method 'sqlDriver'
-1406496725685	Rename field 'conn'
-1406661106327	Delete element
-1406743548876	Rename local variable 'widgetItem'
