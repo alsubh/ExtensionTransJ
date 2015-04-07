@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.Timer"/>
+<fullyQualifiedTypeName name="java.sql.Time"/>
+<fullyQualifiedTypeName name="umjdt.util.Timestamp"/>
+<fullyQualifiedTypeName name="TransactionJoinpointTracker.InitiatorJoinpointTracker"/>
+<fullyQualifiedTypeName name="com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionManagerImple"/>
+<fullyQualifiedTypeName name="com.arjuna.ats.jta.TransactionManager"/>
+<fullyQualifiedTypeName name="javax.transaction.Status"/>
+<fullyQualifiedTypeName name="umjdt.util.Status"/>
+<fullyQualifiedTypeName name="javax.transaction.TransactionManager"/>
+<fullyQualifiedTypeName name="com.arjuna.ats.internal.jta.transaction.arjunacore.BaseTransaction"/>
+<fullyQualifiedTypeName name="com.arjuna.ats.jta.UserTransaction"/>
+<fullyQualifiedTypeName name="javax.transaction.Transaction"/>
+<fullyQualifiedTypeName name="javax.transaction.xa.Xid"/>
+<fullyQualifiedTypeName name="com.arjuna.ats.internal.jta.transaction.arjunacore.subordinate.jca.TransactionImple"/>
+<fullyQualifiedTypeName name="com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionImple"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="utilities.ConvertTime"/>
+<fullyQualifiedTypeName name="umjdt.joinpoints.transaction.OuterTransactionJP"/>
+<fullyQualifiedTypeName name="com.arjuna.ats.arjuna.AtomicAction"/>
+<fullyQualifiedTypeName name="com.arjuna.ats.txoj.Lock"/>
+<fullyQualifiedTypeName name="com.arjuna.ats.txoj.LockMode"/>
+<fullyQualifiedTypeName name="com.arjuna.ats.txoj.LockResult"/>
+<fullyQualifiedTypeName name="com.arjuna.ats.txoj.LockManager"/>
+<fullyQualifiedTypeName name="TransactionJoinpointTracker.TransactionTracker"/>
+</qualifiedTypeNameHistroy>

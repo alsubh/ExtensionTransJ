@@ -1,0 +1,8 @@
+package com.configration;
+
+public class dbConnection {
+
+	private final String userName="tedi";
+	private final String password="tedi";
+	
+}

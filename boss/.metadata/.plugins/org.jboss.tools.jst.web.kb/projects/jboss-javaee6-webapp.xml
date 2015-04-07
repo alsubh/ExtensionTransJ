@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kb-project>
+ <depends-on-projects/>
+ <used-by-projects/>
+ <paths>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/org/jboss/arquillian/core/arquillian-core-impl-base/1.1.2.Final-wildfly-1/arquillian-core-impl-base-1.1.2.Final-wildfly-1.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/org/jboss/spec/javax/ejb/jboss-ejb-api_3.2_spec/1.0.0.Final/jboss-ejb-api_3.2_spec-1.0.0.Final.jar"/>
+  <path value="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/tomcat-dbcp.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/org/jboss/logging/jboss-logging/3.1.3.GA/jboss-logging-3.1.3.GA.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/org/jboss/arquillian/junit/arquillian-junit-container/1.1.2.Final-wildfly-1/arquillian-junit-container-1.1.2.Final-wildfly-1.jar"/>
+  <path value="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/tomcat-util-scan.jar"/>
+  <path value="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/catalina-tribes.jar"/>
+  <path value="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/jasper.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/org/hibernate/hibernate-validator/5.1.3.Final/hibernate-validator-5.1.3.Final.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/org/jboss/arquillian/container/arquillian-container-test-api/1.1.2.Final-wildfly-1/arquillian-container-test-api-1.1.2.Final-wildfly-1.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/org/jboss/shrinkwrap/shrinkwrap-spi/1.1.2/shrinkwrap-spi-1.1.2.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/org/jboss/spec/javax/faces/jboss-jsf-api_2.2_spec/2.2.8/jboss-jsf-api_2.2_spec-2.2.8.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/org/jboss/arquillian/test/arquillian-test-impl-base/1.1.2.Final-wildfly-1/arquillian-test-impl-base-1.1.2.Final-wildfly-1.jar"/>
+  <path value="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/annotations-api.jar"/>
+  <path value="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/catalina-storeconfig.jar"/>
+  <path value="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/jasper-el.jar"/>
+  <path value="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/tomcat-coyote.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/org/hibernate/hibernate-validator-annotation-processor/5.1.3.Final/hibernate-validator-annotation-processor-5.1.3.Final.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/javax/el/javax.el-api/3.0.0/javax.el-api-3.0.0.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/org/jboss/arquillian/config/arquillian-config-impl-base/1.1.2.Final-wildfly-1/arquillian-config-impl-base-1.1.2.Final-wildfly-1.jar"/>
+  <path value="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/websocket-api.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/javax/enterprise/cdi-api/1.2/cdi-api-1.2.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/org/jboss/arquillian/test/arquillian-test-spi/1.1.2.Final-wildfly-1/arquillian-test-spi-1.1.2.Final-wildfly-1.jar"/>
+  <path value="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/el-api.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/org/jboss/shrinkwrap/descriptors/shrinkwrap-descriptors-spi/2.0.0-alpha-3/shrinkwrap-descriptors-spi-2.0.0-alpha-3.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/org/jboss/arquillian/container/arquillian-container-test-spi/1.1.2.Final-wildfly-1/arquillian-container-test-spi-1.1.2.Final-wildfly-1.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/org/hibernate/hibernate-jpamodelgen/4.3.5.Final/hibernate-jpamodelgen-4.3.5.Final.jar"/>
+  <path value="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/catalina-ha.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/org/jboss/arquillian/protocol/arquillian-protocol-servlet/1.1.2.Final-wildfly-1/arquillian-protocol-servlet-1.1.2.Final-wildfly-1.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/com/fasterxml/classmate/1.0.0/classmate-1.0.0.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/org/jboss/logging/jboss-logging-annotations/1.2.0.Beta1/jboss-logging-annotations-1.2.0.Beta1.jar"/>
+  <path value="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/tomcat-jdbc.jar"/>
+  <path value="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/catalina.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/org/jboss/arquillian/container/arquillian-container-spi/1.1.2.Final-wildfly-1/arquillian-container-spi-1.1.2.Final-wildfly-1.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/org/jboss/arquillian/test/arquillian-test-api/1.1.2.Final-wildfly-1/arquillian-test-api-1.1.2.Final-wildfly-1.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/org/jboss/arquillian/container/arquillian-container-test-impl-base/1.1.2.Final-wildfly-1/arquillian-container-test-impl-base-1.1.2.Final-wildfly-1.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/org/jboss/arquillian/junit/arquillian-junit-core/1.1.2.Final-wildfly-1/arquillian-junit-core-1.1.2.Final-wildfly-1.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/org/jboss/arquillian/core/arquillian-core-api/1.1.2.Final-wildfly-1/arquillian-core-api-1.1.2.Final-wildfly-1.jar"/>
+  <path value="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/tomcat-spdy.jar"/>
+  <path value="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/tomcat-i18n-es.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/org/jboss/arquillian/config/arquillian-config-api/1.1.2.Final-wildfly-1/arquillian-config-api-1.1.2.Final-wildfly-1.jar"/>
+  <path value="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/tomcat-api.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/javax/interceptor/javax.interceptor-api/1.2/javax.interceptor-api-1.2.jar"/>
+  <path value="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/catalina-ant.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/org/jboss/spec/javax/annotation/jboss-annotations-api_1.2_spec/1.0.0.Final/jboss-annotations-api_1.2_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/junit/junit/4.11/junit-4.11.jar"/>
+  <path value="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/tomcat-i18n-ja.jar"/>
+  <path value="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/tomcat-websocket.jar"/>
+  <path value="/jboss-javaee6-webapp/src/main/webapp/WEB-INF/faces-config.xml">
+   <libraries>
+    <library class="faces-config">
+     <id class="model-object"
+      path="FileSystems/WEB-INF/faces-config.xml" project="jboss-javaee6-webapp"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/org/jboss/resteasy/jaxrs-api/3.0.10.Final/jaxrs-api-3.0.10.Final.jar"/>
+  <path value="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/jsp-api.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/org/jboss/arquillian/container/arquillian-container-impl-base/1.1.2.Final-wildfly-1/arquillian-container-impl-base-1.1.2.Final-wildfly-1.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/org/jboss/shrinkwrap/shrinkwrap-impl-base/1.1.2/shrinkwrap-impl-base-1.1.2.jar"/>
+  <path value="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/tomcat-jni.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/org/jboss/arquillian/core/arquillian-core-spi/1.1.2.Final-wildfly-1/arquillian-core-spi-1.1.2.Final-wildfly-1.jar"/>
+  <path value="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/ecj-4.4.2.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
+  <path value="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/servlet-api.jar"/>
+  <path value="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/tomcat-util.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/org/jboss/shrinkwrap/descriptors/shrinkwrap-descriptors-api-base/2.0.0-alpha-3/shrinkwrap-descriptors-api-base-2.0.0-alpha-3.jar"/>
+  <path value="C:/Users/AnasAlsubh/.m2/repository/org/jboss/shrinkwrap/shrinkwrap-api/1.1.2/shrinkwrap-api-1.1.2.jar"/>
+  <path value="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/tomcat-i18n-fr.jar"/>
+ </paths>
+ <validation>
+  <core validator-id="jsf-verification"/>
+  <core validator-id="jboss.cdi.core">
+   <linked-resource declaration="true" name="%1;%2;" path="%0"/>
+   <linked-resource name="%0;%4;%5;%6;%7;" path="%3"/>
+   <linked-resource declaration="true" name="%9;" path="%8"/>
+   <linked-resource name="%0;%5;%6;" path="%7"/>
+   <linked-resource name="%8;%6;" path="%4"/>
+  </core>
+  <core validator-id="jboss.jsf.core"/>
+  <el>
+   <linked-el length="27" name="%0" offset="2155" path="%10"/>
+   <linked-el length="20" name="%0" offset="1733" path="%10"/>
+   <linked-el length="21" name="%0" offset="1926" path="%10"/>
+   <linked-el length="55" name="%0" offset="2422" path="%10"/>
+   <linked-el length="37" name="%11" offset="3927" path="%10"/>
+   <linked-el length="51" name="%11" offset="3717" path="%10"/>
+   <linked-el length="20" name="%12" offset="4016" path="%13"/>
+   <linked-el length="20" name="%12" offset="3714" path="%13"/>
+   <linked-el length="18" name="%8" offset="2823" path="%10"/>
+   <linked-el length="25" name="%8" offset="2952" path="%10"/>
+   <linked-el length="35" name="%8" offset="2986" path="%10"/>
+   <linked-el length="21" name="%14" offset="8497" path="%13"/>
+   <linked-el length="21" name="%15" offset="8497" path="%13"/>
+   <linked-el length="52" name="%16" offset="3528" path="%10"/>
+   <linked-el length="45" name="%16" offset="3257" path="%10"/>
+   <linked-el length="27" name="%16" offset="3769" path="%10"/>
+   <linked-el length="27" name="%16" offset="2155" path="%10"/>
+   <linked-el length="46" name="%16" offset="3391" path="%10"/>
+   <linked-el length="20" name="%16" offset="1733" path="%10"/>
+   <linked-el length="51" name="%16" offset="3717" path="%10"/>
+   <linked-el length="21" name="%16" offset="1926" path="%10"/>
+   <linked-el length="43" name="%16" offset="3126" path="%10"/>
+   <linked-el length="157" name="%17" offset="3886" path="%18"/>
+   <linked-el length="186" name="%17" offset="25388" path="%18"/>
+   <linked-el length="156" name="%17" offset="7711" path="%18"/>
+   <linked-el length="177" name="%17" offset="12064" path="%18"/>
+   <linked-el length="167" name="%17" offset="11296" path="%18"/>
+   <linked-el length="174" name="%17" offset="21407" path="%18"/>
+   <linked-el length="174" name="%17" offset="22180" path="%18"/>
+   <linked-el length="158" name="%17" offset="15159" path="%18"/>
+   <linked-el length="171" name="%17" offset="30647" path="%18"/>
+   <linked-el length="166" name="%17" offset="8894" path="%18"/>
+   <linked-el length="137" name="%17" offset="6716" path="%18"/>
+   <linked-el length="174" name="%17" offset="21810" path="%18"/>
+   <linked-el length="137" name="%17" offset="5170" path="%18"/>
+   <linked-el length="170" name="%17" offset="13360" path="%18"/>
+   <linked-el length="181" name="%17" offset="32180" path="%18"/>
+   <linked-el length="175" name="%17" offset="25779" path="%18"/>
+   <linked-el length="185" name="%17" offset="24842" path="%18"/>
+   <linked-el length="119" name="%17" offset="34184" path="%18"/>
+   <linked-el length="165" name="%17" offset="9480" path="%18"/>
+   <linked-el length="158" name="%17" offset="16011" path="%18"/>
+   <linked-el length="157" name="%17" offset="3462" path="%18"/>
+   <linked-el length="177" name="%17" offset="11674" path="%18"/>
+   <linked-el length="171" name="%17" offset="31386" path="%18"/>
+   <linked-el length="170" name="%17" offset="13719" path="%18"/>
+   <linked-el length="171" name="%17" offset="19102" path="%18"/>
+   <linked-el length="121" name="%17" offset="33309" path="%18"/>
+   <linked-el length="119" name="%17" offset="33821" path="%18"/>
+   <linked-el length="171" name="%17" offset="29468" path="%18"/>
+   <linked-el length="137" name="%17" offset="6300" path="%18"/>
+   <linked-el length="171" name="%17" offset="30994" path="%18"/>
+   <linked-el length="170" name="%17" offset="14225" path="%18"/>
+   <linked-el length="171" name="%17" offset="19477" path="%18"/>
+   <linked-el length="171" name="%17" offset="18708" path="%18"/>
+   <linked-el length="19" name="%17" offset="27027" path="%18"/>
+   <linked-el length="174" name="%17" offset="20712" path="%18"/>
+   <linked-el length="166" name="%17" offset="8168" path="%18"/>
+   <linked-el length="171" name="%17" offset="17383" path="%18"/>
+   <linked-el length="157" name="%17" offset="4203" path="%18"/>
+   <linked-el length="165" name="%17" offset="9836" path="%18"/>
+   <linked-el length="158" name="%17" offset="15586" path="%18"/>
+   <linked-el length="171" name="%17" offset="19937" path="%18"/>
+   <linked-el length="171" name="%17" offset="29925" path="%18"/>
+   <linked-el length="181" name="%17" offset="18275" path="%18"/>
+   <linked-el length="137" name="%17" offset="6007" path="%18"/>
+   <linked-el length="181" name="%17" offset="31742" path="%18"/>
+   <linked-el length="171" name="%17" offset="17778" path="%18"/>
+   <linked-el length="175" name="%17" offset="10223" path="%18"/>
+   <linked-el length="171" name="%17" offset="17012" path="%18"/>
+   <linked-el length="156" name="%17" offset="7284" path="%18"/>
+   <linked-el length="174" name="%17" offset="22985" path="%18"/>
+   <linked-el length="174" name="%17" offset="23360" path="%18"/>
+   <linked-el length="29" name="%17" offset="28998" path="%18"/>
+   <linked-el length="171" name="%17" offset="30278" path="%18"/>
+   <linked-el length="157" name="%17" offset="4569" path="%18"/>
+   <linked-el length="137" name="%17" offset="5721" path="%18"/>
+   <linked-el length="175" name="%17" offset="10588" path="%18"/>
+   <linked-el length="177" name="%17" offset="12635" path="%18"/>
+   <linked-el length="184" name="%17" offset="23889" path="%18"/>
+   <linked-el length="186" name="%17" offset="26193" path="%18"/>
+   <linked-el length="166" name="%17" offset="8534" path="%18"/>
+   <linked-el length="174" name="%17" offset="22612" path="%18"/>
+   <linked-el length="184" name="%17" offset="24404" path="%18"/>
+   <linked-el length="21" name="%19" offset="8653" path="%13"/>
+   <linked-el length="31" name="%19" offset="9240" path="%13"/>
+   <linked-el length="26" name="%19" offset="9991" path="%13"/>
+   <linked-el length="20" name="%19" offset="4016" path="%13"/>
+   <linked-el length="20" name="%19" offset="3714" path="%13"/>
+   <linked-el length="21" name="%19" offset="12177" path="%13"/>
+   <linked-el length="27" name="%1" offset="2155" path="%10"/>
+   <linked-el length="20" name="%1" offset="1733" path="%10"/>
+   <linked-el length="21" name="%1" offset="1926" path="%10"/>
+   <linked-el length="31" name="%20" offset="9240" path="%13"/>
+   <linked-el length="31" name="%21" offset="9240" path="%13"/>
+   <linked-el length="21" name="%22" offset="8653" path="%13"/>
+   <linked-el length="21" name="%22" offset="12177" path="%13"/>
+   <linked-el length="31" name="%23" offset="9240" path="%13"/>
+   <linked-el length="26" name="%24" offset="9991" path="%13"/>
+   <linked-el length="20" name="%25" offset="4016" path="%13"/>
+   <linked-el length="20" name="%25" offset="3714" path="%13"/>
+   <linked-el length="21" name="%26" offset="8653" path="%13"/>
+   <linked-el length="21" name="%26" offset="12177" path="%13"/>
+   <linked-el length="55" name="%2" offset="2422" path="%10"/>
+   <linked-el length="18" name="%9" offset="2823" path="%10"/>
+   <linked-el length="25" name="%9" offset="2952" path="%10"/>
+   <linked-el length="52" name="%9" offset="3528" path="%10"/>
+   <linked-el length="45" name="%9" offset="3257" path="%10"/>
+   <linked-el length="27" name="%9" offset="3769" path="%10"/>
+   <linked-el length="35" name="%9" offset="2986" path="%10"/>
+   <linked-el length="46" name="%9" offset="3391" path="%10"/>
+   <linked-el length="51" name="%9" offset="3717" path="%10"/>
+   <linked-el length="43" name="%9" offset="3126" path="%10"/>
+   <linked-el length="26" name="%27" offset="9991" path="%13"/>
+   <linked-el length="37" name="%28" offset="3927" path="%10"/>
+   <linked-el length="51" name="%28" offset="3717" path="%10"/>
+  </el>
+ </validation>
+ <aliases>
+  <alias
+   path="/jboss-javaee6-webapp/src/main/java/org/jboss/tools/examples/data/MemberRepository.java" value="%4"/>
+  <alias path="request" value="%11"/>
+  <alias path="/jboss-javaee6-webapp/src/main/webapp/index.xhtml" value="%10"/>
+  <alias
+   path="/jboss-javaee6-webapp/src/main/java/org/jboss/tools/examples/util/Resources.java" value="%3"/>
+  <alias path="/jboss-javaee6-webapp/pom.xml" value="%13"/>
+  <alias path="project" value="%15"/>
+  <alias
+   path="/jboss-javaee6-webapp/src/main/java/org/jboss/tools/examples/rest/MemberResourceRESTService.java" value="%6"/>
+  <alias
+   path="/jboss-javaee6-webapp/src/main/java/org/jboss/tools/examples/service/MemberRegistration.java" value="%7"/>
+  <alias path="version.war" value="%22"/>
+  <alias path="version.surefire" value="%24"/>
+  <alias path="memberController" value="%2"/>
+  <alias path="members" value="%9"/>
+  <alias
+   path="/jboss-javaee6-webapp/src/main/java/org/jboss/tools/examples/controller/MemberController.java" value="%0"/>
+  <alias path="version.jboss.bom" value="%12"/>
+  <alias
+   path="/jboss-javaee6-webapp/src/main/java/org/jboss/tools/examples/data/MemberListProducer.java" value="%8"/>
+  <alias path="project.artifactId" value="%14"/>
+  <alias
+   path="/jboss-javaee6-webapp/src/main/java/org/jboss/tools/examples/model/Member.java" value="%16"/>
+  <alias path="currentProject" value="%17"/>
+  <alias path="version" value="%19"/>
+  <alias path="/jboss-javaee6-webapp/.cheatsheet.xml" value="%18"/>
+  <alias path="newMember" value="%1"/>
+  <alias path="version.wildfly.maven.plugin" value="%20"/>
+  <alias path="version.wildfly.maven" value="%21"/>
+  <alias path="version.wildfly" value="%23"/>
+  <alias
+   path="/jboss-javaee6-webapp/src/test/java/org/jboss/tools/examples/test/MemberRegistrationTest.java" value="%5"/>
+  <alias path="version.jboss" value="%25"/>
+  <alias path="version.war.plugin" value="%26"/>
+  <alias path="version.surefire.plugin" value="%27"/>
+  <alias path="request.contextPath" value="%28"/>
+ </aliases>
+ <includes/>
+ <uris>
+  <uri value="http://java.sun.com/jsf/core">
+   <prefix>f</prefix>
+  </uri>
+  <uri value="http://java.sun.com/jsf/html">
+   <prefix>h</prefix>
+  </uri>
+ </uris>
+</kb-project>

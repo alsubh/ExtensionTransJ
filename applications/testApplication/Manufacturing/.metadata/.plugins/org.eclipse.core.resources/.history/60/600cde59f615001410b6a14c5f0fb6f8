@@ -1,0 +1,136 @@
+package operator;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import processedComponent.RawWidget;
+
+import com.object.Gadget;
+import com.object.Goo;
+import com.object.Widget;
+import com.pile.GadgetPile;
+import com.pile.GooPile;
+import com.pile.WidgetPile;
+
+public class Builder implements Productor{
+	
+	private String name; 
+	private String type;
+	private String code;
+	private List<Goo> goolist = new ArrayList<Goo>();
+	private RawWidget rawWidget;
+	private int numberOfGoosInPile;
+	private GooPile goopile; 
+	private Statement stmt;
+	
+	public Builder(){
+		goopile = new GooPile();
+	}
+	
+	public List<Goo> getGooList(int numberOfGoos)
+	{
+		numberOfGoosInPile= goopile.count();
+		
+		int i =0;
+		Goo goo =new Goo();
+		while(i< numberOfGoos)
+		{
+			//if(GooPile.gooPile.size() !=0)
+			if(numberOfGoosInPile !=0)
+			{
+				goo= retrieveGoo();
+				//goo= GooPile.gooPile.get(i);
+				goolist.add(goo);
+				remove(goo);
+			}
+			i++;
+		}
+		return goolist;
+	}
+	
+	private Goo retrieveGoo() {
+		String SQL = "SELECT count(name) FROM Goo";
+		try {
+			stmt = sqlConn.createStatement(); 
+			ResultSet rs = stmt.executeQuery(SQL);
+	        // Iterate through the data in the result set and display it.  
+			count= rs.getInt("count");
+			System.out.println(" Number of Goos in the GooPile="+rs.getString(1));
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		return null;
+	}
+
+	@Override
+	public Object create(Object goolist) {
+		rawWidget = new RawWidget(name, code, (List<Goo>)goolist);
+		//add(rawWidget);
+		return rawWidget;
+	}
+	@Override
+	public void add(Object obj) {
+		// TODO Auto-generated method stub
+		
+		// add new rawwidget to the widget pile table in DB
+		WidgetPile.widgetPile.add(rawWidget);
+	}
+	
+	@Override
+	public void remove(Object obj) {
+
+		// remove the goo from the GooPile table in DB 
+		for(Goo go : GooPile.gooPile)
+		{
+			if(go.equals(obj))
+			{
+				GooPile.gooPile.remove(go);
+				break;
+			}
+		}
+	}
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public List<Goo> getGoolist() {
+		return goolist;
+	}
+
+	public void setGoolist(List<Goo> goolist) {
+		this.goolist = goolist;
+	}
+
+	public RawWidget getRawWidget() {
+		return rawWidget;
+	}
+
+	public void setRawWidget(RawWidget rawWidget) {
+		this.rawWidget = rawWidget;
+	}
+
+}

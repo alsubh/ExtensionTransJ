@@ -1,0 +1,8 @@
+127.0.0.1 - - [28/Mar/2015:13:19:56 -0600] "GET / HTTP/1.1" 404 994
+127.0.0.1 - - [28/Mar/2015:13:22:02 -0600] "GET /javaee-simplewebapp/ HTTP/1.1" 200 949
+127.0.0.1 - - [28/Mar/2015:13:22:02 -0600] "GET /javaee-simplewebapp/index.jsf HTTP/1.1" 404 1052
+127.0.0.1 - - [28/Mar/2015:13:22:32 -0600] "GET / HTTP/1.1" 404 994
+127.0.0.1 - - [28/Mar/2015:13:22:46 -0600] "GET /javaee-simplewebapp/index.jsf HTTP/1.1" 404 1052
+127.0.0.1 - - [28/Mar/2015:13:38:37 -0600] "GET / HTTP/1.1" 404 994
+127.0.0.1 - - [28/Mar/2015:13:38:39 -0600] "GET /jboss-javaee6-webapp/ HTTP/1.1" 200 949
+127.0.0.1 - - [28/Mar/2015:13:38:40 -0600] "GET /jboss-javaee6-webapp/index.jsf HTTP/1.1" 404 1054

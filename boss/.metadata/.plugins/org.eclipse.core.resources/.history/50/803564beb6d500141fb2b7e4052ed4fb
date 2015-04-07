@@ -1,0 +1,67 @@
+/**
+ * 
+ */
+package TransactionJoinpointTracker;
+
+import javax.transaction.SystemException;
+
+import umjdt.joinpoints.AbortEventJP;
+import umjdt.joinpoints.BeginEventJP;
+import umjdt.joinpoints.CommitEventJP;
+import umjdt.util.Status;
+import umjdt.util.Timestamp;
+
+/**
+ * @author AnasAlsubh
+ *
+ */
+public aspect OuterJoinpointTracker extends TransactionTracker
+{
+	protected BeginEventJP beginEventJp=null;
+	
+	before() : OpenTransaction()
+	{
+		//No context information
+		beginEventJp = new BeginEventJP();
+		beginEventJp.setBeginJP(thisJoinPoint);
+		beginEventJp.setBeginTime(new Timestamp());
+	}
+	
+	after() throws SystemException: CommitTransaction()
+	{
+		Object target= thisJoinPoint.getTarget();
+		//System.out.println(target.getClass());
+		Object[] args= thisJoinPoint.getArgs();
+		//System.out.println(args.getClass());
+		Object _this = thisJoinPoint.getThis();
+		//System.out.println(_this.getClass());
+
+		CommitEventJP commitjp = new CommitEventJP();
+		commitjp.setCommitJP(thisJoinPoint);
+		commitjp.setStatus(Status.STATUS_COMMITTED);
+		
+		contexinfo(commitjp, target);
+	}
+	
+	after(): AbortTransaction()
+	{
+		Object target= thisJoinPoint.getTarget();
+		//System.out.println(target.getClass());
+		Object[] args= thisJoinPoint.getArgs();
+		//System.out.println(args.getClass());
+		Object _this = thisJoinPoint.getThis();
+		//System.out.println(_this.getClass());
+		try 
+		{
+			//Transaction transaction = (Transaction) TransactionImple.getTransaction(_tid.getUid());
+			AbortEventJP abortjp = new AbortEventJP();
+			abortjp.setAbortJP(thisJoinPoint);
+			abortjp.setStatus(Status.STATUS_ROLLEDBACK);
+			contexinfo(abortjp, target);
+		} 
+		catch (SystemException e) 
+		{
+			e.printStackTrace();
+		}
+	}
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="operator.Builder"/>
+<fullyQualifiedTypeName name="operator.Baker"/>
+<fullyQualifiedTypeName name="operator.Polisher"/>
+<fullyQualifiedTypeName name="javax.xml.bind.annotation.W3CDomHandler"/>
+<fullyQualifiedTypeName name="com.client.client"/>
+<fullyQualifiedTypeName name="com.transaction.T1"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.concurrent.ArrayBlockingQueue"/>
+<fullyQualifiedTypeName name="processedComponent.RawWidget"/>
+<fullyQualifiedTypeName name="processedComponent.PolishedWidget"/>
+<fullyQualifiedTypeName name="java.text.DateFormat"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="com.configration.dbConnection"/>
+<fullyQualifiedTypeName name="com.configration.sqlStatments"/>
+<fullyQualifiedTypeName name="com.pile.GooPile"/>
+<fullyQualifiedTypeName name="com.object.Goo"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.object.Gadget"/>
+<fullyQualifiedTypeName name="com.pile.WidgetPile"/>
+<fullyQualifiedTypeName name="processedComponent.RoughWidget"/>
+<fullyQualifiedTypeName name="com.object.Widget"/>
+</qualifiedTypeNameHistroy>

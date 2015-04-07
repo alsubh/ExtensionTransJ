@@ -1,0 +1,56 @@
+/**
+ * 
+ */
+package test;
+
+
+/**
+ * @author AnasAlsubh
+ *
+ */
+public class NestedTransactionExample {
+	
+	public boolean set (int index, int value)
+	{
+	    boolean result = false;
+	    AtomicAction A = new AtomicAction();
+
+	    A.begin();
+
+	    // We need to set a WRITE lock as we want to modify the state.
+
+	    if (setlock(new Lock(LockMode.WRITE), 0) == LockResult.GRANTED)
+		{
+		    elements[index] = value;
+		    if ((value > 0) && (index > highestIndex))
+			highestIndex = index;
+		    A.commit(true);
+		    result = true;
+		}
+	    else
+		A.rollback();
+
+	    return result;
+	}
+
+	public int get (int index)  // assume -1 means error
+	{
+	    AtomicAction A = new AtomicAction();
+
+	    A.begin();
+
+	    // We only need a READ lock as the state is unchanged.
+
+	    if (setlock(new Lock(LockMode.READ), 0) == LockResult.GRANTED)
+		{
+		    A.commit(true);
+
+		    return elements[index];
+		}
+	    else
+		A.rollback();
+
+	    return -1;
+	}
+
+}
